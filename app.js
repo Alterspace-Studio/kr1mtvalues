@@ -28,6 +28,7 @@ const catVar = (c) => `var(--${(c || "other").toLowerCase()})`;
 // 별 단계 값이 없으면 0성 가치에 기본 차이를 더해 채운다 (data/items.js의 SITE.starOffsets)
 const STAR_OFFSETS = SITE.starOffsets || { 1: 0, 2: 0, 3: 20000, 4: 110000, 5: 200000 };
 ITEMS.forEach((it) => {
+  if (it.category === "Soldier") { it.stars = null; return; } // 병사는 별 강화가 없다 (0성만)
   if (isUntradeable(it) || it.value == null) return;
   const base = it.stars?.["0"] ?? it.value;
   const filled = { 0: base };
