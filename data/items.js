@@ -692,10 +692,10 @@ window.ITEMS = [
   {
     id: "super-tiger-mech", name: "Super Tiger Mech", category: "Land",
     aliases: ["Tiger Mech", "타이거 메카"],
-    value: null, demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    value: 400000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 8, vfm: null },
     obtain: "", updated: "2026-11-17",
-    history: [],
+    history: [{"date": "2026-11", "value": 400000}],
     image: "images/super-tiger-mech.png",
     note: "", noteKo: "",
   },
