@@ -82,7 +82,7 @@ input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); ou
 .val { font-size: 20px; font-weight: 800; font-variant-numeric: tabular-nums; }
 .tags { display: flex; gap: 4px; flex-wrap: wrap; }
 .tag { font-size: 11px; padding: 2px 9px; border-radius: var(--pill); background: var(--panel-2); color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
-.tag.le { background: var(--grad); color: var(--on-accent); font-weight: 700; }
+.tag.le { background: linear-gradient(120deg, #e0243a, #1a1214); color: var(--on-accent); font-weight: 700; }
 .tag.no { color: var(--accent); }
 .tag.sample { border: 1px dashed var(--muted); background: none; }
 .trend.up { color: var(--up); } .trend.down { color: var(--down); } .trend.stable { color: var(--muted); }
