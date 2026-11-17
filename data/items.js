@@ -792,7 +792,7 @@ window.ITEMS = [
   {
     id: "top3-ghostwind", name: "Top3 GhostWind", category: "Air",
     aliases: ["Top3 Ghostwind", "Top3", "탑3 고스트윈드"],
-    value: null, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
+    value: null, demand: null, trend: null, tradeable: false, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: 10, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [],
@@ -870,14 +870,14 @@ window.ITEMS = [
     note: "Fighter jet.", noteKo: "전투기.",
   },
   {
-    id: "s67", name: "S67", category: "Air",
-    aliases: ["S-67"],
+    id: "super-yf1", name: "Super YF1", category: "Air",
+    aliases: ["YF1", "YF-1", "Super YF-1"],
     value: null, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: 6, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [],
-    image: "images/s67.png",
-    note: "Helicopter.", noteKo: "헬기.",
+    image: "images/super-yf1.png",
+    note: "Aircraft.", noteKo: "항공기.",
   },
   {
     id: "plat-skyhammer", name: "Plat Skyhammer", category: "Air",
@@ -968,5 +968,15 @@ window.ITEMS = [
     history: [{"date": "2026-11", "value": 4000000}],
     image: "images/super-doomsday-truck.png",
     note: "Missile launcher truck.", noteKo: "미사일 발사 트럭.",
+  },
+  {
+    id: "super-a50", name: "Super A50", category: "Air",
+    aliases: ["A50", "A-50", "Super A-50"],
+    value: null, demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    stats: { pvp: 2, vfm: null },
+    obtain: "", updated: "2026-11-17",
+    history: [],
+    image: "images/super-a50.png",
+    note: "Radar plane.", noteKo: "조기경보기.",
   },
 ];
