@@ -224,10 +224,11 @@ window.ITEMS = [
   {
     id: "silkfire-x", name: "Silkfire X", category: "Air",
     aliases: ["SFX", "Silkfire", "SilkfireX", "실크파이어"],
-    value: null, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    value: 2700000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stars: { "0": 2700000, "5": 3300000 },
     stats: { pvp: 9, vfm: 6.5, diff: 6.5 },
     obtain: "", updated: "2026-11-17",
-    history: [],
+    history: [{"date": "2026-11", "value": 2700000}],
     image: "",
     note: "Fighter jet.", noteKo: "전투기.",
   },
