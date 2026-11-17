@@ -227,3 +227,4 @@ input[type=search]:focus, select:focus, .trade-input:focus { border-color: var(-
 .thumb[style*="images/"] { background-size: cover; }
 .video { position: relative; aspect-ratio: 16 / 9; max-width: 100%; border-radius: var(--radius); overflow: hidden; background: #000; }
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.tag.legendary { background: linear-gradient(120deg, #f7c948, #e08a00); text-shadow: 0 1px 2px rgba(0,0,0,.25); }
