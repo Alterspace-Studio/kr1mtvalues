@@ -24,6 +24,13 @@ const gem = (n) => (n == null ? "—" : `${GEM} ${compact(n)}`);
 const isUntradeable = (it) => it.tradeable === false;
 const byId = (id) => ITEMS.find((i) => i.id === id);
 const catVar = (c) => `var(--${(c || "other").toLowerCase()})`;
+// 최근 변동: 가치 기록의 마지막 두 점 차이 { diff, pct, date }
+const lastChange = (it) => {
+  const h = it.history || []; if (h.length < 2 || isUntradeable(it)) return null;
+  const a = h.at(-2).value, b = h.at(-1).value;
+  return { diff: b - a, pct: a ? Math.round(((b - a) / a) * 100) : 0, date: h.at(-1).date };
+};
+const changeTag = (c, withPct) => !c ? "" : `<span class="chg ${c.diff > 0 ? "up" : c.diff < 0 ? "down" : "stable"}" title="${esc(c.date)}">${c.diff > 0 ? "▲ +" : c.diff < 0 ? "▼ -" : "■ "}${compact(Math.abs(c.diff))}${withPct ? ` <small>(${c.pct > 0 ? "+" : ""}${c.pct}%)</small>` : ""}</span>`;
 
 // 별 단계 값이 없으면 0성 가치에 기본 차이를 더해 채운다 (data/items.js의 SITE.starOffsets)
 const STAR_OFFSETS = SITE.starOffsets || { 1: 0, 2: 0, 3: 20000, 4: 110000, 5: 200000 };
@@ -49,7 +56,7 @@ const STR = {
     untradeable: "Untradeable", sample: "Sample",
     value: "Value (Gems)", demand: "Demand", trendL: "Trend", obtain: "Obtain", byStars: "Value by stars",
     perf: "Performance", pvp: "PVP", vfm: "Value for money", diff: "Difficulty",
-    history: "Value history", lastChanged: "Last changed", close: "Close",
+    history: "Value history", lastChanged: "Last changed", lastChange: "Last change", close: "Close",
     pick: "— pick —", pickHint: "Pick items to compare.",
     youGive: "You give", youGet: "You get", addItem: "Add item…", add: "Add", total: "Total",
     star: "Stars", addFirst: "Add items to compare", fair: "FAIR", win: "WIN", lose: "LOSE",
@@ -68,7 +75,7 @@ const STR = {
     untradeable: "거래 불가", sample: "예시",
     value: "가치 (젬)", demand: "수요", trendL: "추세", obtain: "얻는 법", byStars: "별 단계별 가치",
     perf: "성능", pvp: "PVP", vfm: "가성비", diff: "난이도",
-    history: "가치 변화", lastChanged: "마지막 수정", close: "닫기",
+    history: "가치 변화", lastChanged: "마지막 수정", lastChange: "최근 변동", close: "닫기",
     pick: "— 선택 —", pickHint: "비교할 항목을 고르세요.",
     youGive: "내가 주는 것", youGet: "내가 받는 것", addItem: "항목 추가…", add: "추가", total: "합계",
     star: "별", addFirst: "항목을 넣어 비교하세요", fair: "공정", win: "이득", lose: "손해",
@@ -184,7 +191,7 @@ function renderGrid() {
       <button class="card" data-id="${esc(it.id)}" style="--cat:${catVar(it.category)}">
         ${thumb(it)}
         <h3>${esc(it.name)}</h3>
-        <div class="meta"><span class="val">${valueOf(it)}</span><span class="trend ${it.trend}" title="${T().trend[it.trend] || ""}">${TREND[it.trend] || ""}</span></div>
+        <div class="meta"><span class="val">${valueOf(it)}</span>${lastChange(it) ? changeTag(lastChange(it)) : `<span class="trend ${it.trend}" title="${T().trend[it.trend] || ""}">${TREND[it.trend] || ""}</span>`}</div>
         <div class="meta">${demandBar(it.demand)}<span class="tags">${tags(it)}</span></div>
       </button>`).join("")
     : `<div class="empty">${T().noMatch}</div>`;
@@ -248,7 +255,7 @@ function openDetail(id) {
     <div class="d-body">
       <div class="tags">${tags(it)}</div>
       <div class="kv">
-        <div><span>${t.value}</span><b>${valueOf(it)}</b></div>
+        <div><span>${t.value}</span><b>${valueOf(it)}</b>${lastChange(it) ? `<div class="kv-sub">${changeTag(lastChange(it), true)}</div>` : ""}</div>
         <div><span>${t.demand}</span><b>${it.demand ?? "—"}/10</b></div>
         <div><span>${t.trendL}</span><b class="trend ${it.trend}">${TREND[it.trend] || ""} ${t.trend[it.trend] || "—"}</b></div>
         <div><span>${t.obtain}</span><b>${esc(it.obtain || "—")}</b></div>

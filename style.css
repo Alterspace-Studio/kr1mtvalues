@@ -194,3 +194,10 @@ td .gauge { justify-items: end; }
   .top .tab { flex: 1; padding: 6px 4px; font-size: 12px; }
 }
 .gauge.diff .g-fg { stroke: #c2423c; }
+.chg { font-size: 13px; font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.chg.up { color: var(--up); } .chg.down { color: var(--down); } .chg.stable { color: var(--muted); }
+.chg small { font-weight: 600; }
+.kv .kv-sub { margin-top: 2px; padding: 0; background: none; border-radius: 0; }
+.kv span.chg { display: inline; font-size: 12px; text-transform: none; letter-spacing: 0; }
+.kv span.chg.up { color: var(--up); } .kv span.chg.down { color: var(--down); } .kv span.chg.stable { color: var(--muted); }
+.kv span.chg small { margin: 0; color: inherit; }
