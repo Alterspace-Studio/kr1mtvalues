@@ -126,7 +126,9 @@ const demandBar = (d) => pips((d ?? 0) / 2, 5, `${T().demand} ${d ?? "—"}/10`)
 function gauge(v, label, size = 72, cls = "") {
   const r = 30, c = 2 * Math.PI * r;
   const f = v == null ? 0 : Math.max(0, Math.min(10, v)) / 10;
-  return `<div class="gauge ${cls}" style="--size:${size}px" title="${esc(label)} ${v ?? "—"}/10">
+  // 점수가 높을수록 빨강: 0점 연한 노랑 → 5점 주황 → 10점 빨강
+  const col = `hsl(${Math.round(48 - 46 * f)} ${Math.round(80 + 6 * f)}% ${Math.round(62 - 15 * f)}%)`;
+  return `<div class="gauge ${cls}" style="--size:${size}px;--g:${col}" title="${esc(label)} ${v ?? "—"}/10">
     <svg viewBox="0 0 72 72"><circle class="g-bg" cx="36" cy="36" r="${r}"/>
       ${f > 0 ? `<circle class="g-fg" cx="36" cy="36" r="${r}" stroke-dasharray="${(c * f).toFixed(1)} ${c.toFixed(1)}" transform="rotate(-90 36 36)"/>` : ""}
       <text x="36" y="41" text-anchor="middle">${v == null ? "—" : +(+v).toFixed(1)}</text></svg>
