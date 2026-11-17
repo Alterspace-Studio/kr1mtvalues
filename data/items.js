@@ -989,4 +989,14 @@ window.ITEMS = [
     image: "",
     note: "Mech. New limited item.", noteKo: "메카. 새 한정판.",
   },
+  {
+    id: "super-ace-pilot", name: "Super Ace Pilot", category: "Soldier",
+    aliases: ["Ace Pilot", "에이스 파일럿", "슈퍼 에이스"],
+    value: 700000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 700000}],
+    image: "images/super-ace-pilot.png",
+    note: "Soldier.", noteKo: "병사.",
+  },
 ];

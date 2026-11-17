@@ -151,7 +151,7 @@ function tags(it) {
 function thumb(it) {
   return it.image
     ? `<div class="thumb" style="background-image:url('${esc(it.image)}')"></div>`
-    : `<div class="thumb">${CAT_ICON[it.category] || "◆"}</div>`;
+    : `<div class="thumb noimg"><span>No Image</span></div>`;
 }
 const starLabel = (k) => (+k >= 0 && +k <= 5 ? "★".repeat(+k) + "☆".repeat(5 - +k) : esc(k));
 // 별 단계 슬라이더. 데이터에 있는 단계만 칸으로 쓴다(0~5 중 빠진 단계는 건너뜀).
