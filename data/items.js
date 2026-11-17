@@ -16,7 +16,7 @@
 //   obtain     얻는 방법
 //   updated    값을 마지막으로 바꾼 날 "YYYY-MM-DD"
 //   history    젬 가치 변화 [{ date, value }]. 가치를 바꿀 때마다 끝에 추가. date는 "YYYY-MM" 또는 같은 달 안 변화는 "YYYY-MM-DD"
-//   image      이미지 경로 (images/xxx.png, 없으면 빈 문자열)
+//   image      게임 아이콘 경로 images/<id>.png (없으면 빈 문자열)
 //   note       메모 (영어), noteKo: 한국어 메모
 //   aliases    검색용 다른 이름 (예: ["Abrams", "에이브럼스"])
 
@@ -36,7 +36,7 @@ window.ITEMS = [
     stats: { pvp: 10, vfm: null },
     obtain: "Golden Crate", updated: "2026-11-17",
     history: [{"date": "2025-07", "value": 1040000}, {"date": "2025-08", "value": 1007500}, {"date": "2025-12", "value": 2684000}, {"date": "2026-03", "value": 520000}, {"date": "2026-05", "value": 3850000}, {"date": "2026-10", "value": 1905000}, {"date": "2026-11", "value": 15000000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/c/ce/LE1000BismarckInAction.png/revision/latest/scale-to-width-down/600",
+    image: "images/le-gold-bismarck.png",
     note: "Battleship. Released 2024-11-09.", noteKo: "전함. 2024-11-09 출시.",
   },
   {
@@ -46,7 +46,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "SeaBreacher-X Crate", updated: "2026-07-15",
     history: [{"date": "2026-05", "value": 3000000}, {"date": "2026-06", "value": 4000000}, {"date": "2026-07", "value": 3800000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/2/23/SeaBreacher-X_golden_crate.png/revision/latest/scale-to-width-down/600",
+    image: "images/seabreacher-x.png",
     note: "Submarine. Released 2025-06-28.", noteKo: "잠수함. 2025-06-28 출시.",
   },
   {
@@ -56,7 +56,7 @@ window.ITEMS = [
     stats: { pvp: 8.5, vfm: 5.5, diff: 9.5 },
     obtain: "Rocket Plane Crate", updated: "2026-11-17",
     history: [{"date": "2025-10", "value": 1600000}, {"date": "2025-11", "value": 1000000}, {"date": "2026-08", "value": 3500000}, {"date": "2026-11", "value": 6000000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/d/de/LE1000RocketPlaneInAction.png/revision/latest/scale-to-width-down/600",
+    image: "images/le-rocket-plane.png",
     note: "Bomber. Released 2025-02-08.", noteKo: "폭격기. 2025-02-08 출시.",
   },
   {
@@ -66,7 +66,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "LE1000 Blackbird Crate", updated: "2026-11-17",
     history: [{"date": "2025-08", "value": 480000}, {"date": "2025-10", "value": 3200000}, {"date": "2025-11", "value": 2400000}, {"date": "2025-12", "value": 3700000}, {"date": "2026-06", "value": 2100000}, {"date": "2026-09", "value": 3000000}, {"date": "2026-11", "value": 4500000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/7/71/LE1000BlackbirdInAction.png/revision/latest/scale-to-width-down/600",
+    image: "images/le-blackbird.png",
     note: "Fighter jet. Released 2024-12-24.", noteKo: "전투기. 2024-12-24 출시.",
   },
   {
@@ -76,7 +76,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "Golden Crate", updated: "2026-11-17",
     history: [{"date": "2025-11", "value": 960000}, {"date": "2026-01", "value": 510000}, {"date": "2026-08", "value": 1400000}, {"date": "2026-10", "value": 2900000}, {"date": "2026-11", "value": 5500000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/d/d0/RatteInAction.png/revision/latest/scale-to-width-down/600",
+    image: "images/p1000-ratte.png",
     note: "Tank. Released 2025-03-08.", noteKo: "전차. 2025-03-08 출시.",
   },
   {
@@ -86,7 +86,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "Imperial Tank Crate", updated: "2026-06-13",
     history: [{"date": "2025-08", "value": 520000}, {"date": "2026-06", "value": 2600000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/9/9b/Super_Imperial_Tank.png/revision/latest/scale-to-width-down/600",
+    image: "images/super-imperial-tank.png",
     note: "Tank. Released 2025-05-03.", noteKo: "전차. 2025-05-03 출시.",
   },
   {
@@ -96,7 +96,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "Imperial Tank Crate", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 300000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/f/f7/ImperialTankInAction.png/revision/latest/scale-to-width-down/600",
+    image: "images/imperial-tank.png",
     note: "Tank. Released 2025-05-03.", noteKo: "전차. 2025-05-03 출시.",
   },
   {
@@ -106,7 +106,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "B21 Raider Crate", updated: "2026-11-17",
     history: [{"date": "2025-10", "value": 1500000}, {"date": "2026-06", "value": 1900000}, {"date": "2026-11", "value": 4300000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/c/cd/Super_B21.png/revision/latest/scale-to-width-down/600",
+    image: "images/sb-21.png",
     note: "Bomber. Released 2025-08-09.", noteKo: "폭격기. 2025-08-09 출시.",
   },
   {
@@ -116,17 +116,17 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2025-11", "value": 610000}, {"date": "2026-03", "value": 720000}, {"date": "2026-05", "value": 1500000}, {"date": "2026-11", "value": 4200000}],
-    image: "",
+    image: "images/jetpack-fighter.png",
     note: "Soldier.", noteKo: "병사.",
   },
   {
     id: "master-reaper", name: "Master Reaper", category: "Air",
     aliases: ["마리퍼", "마스터리퍼"],
-    value: 980000, demand: null, trend: "down", tradeable: true, limited: false, stock: null,
+    value: 980000, demand: null, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "Boss Fight: The Reaper", updated: "2025-12-21",
     history: [{"date": "2025-10", "value": 1000000}, {"date": "2025-11", "value": 780000}, {"date": "2025-12", "value": 980000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/c/c9/Master_Reaper.png/revision/latest/scale-to-width-down/600",
+    image: "images/master-reaper.png",
     note: "Sky fortress. Released 2025-05-24.", noteKo: "하늘 요새. 2025-05-24 출시.",
   },
   {
@@ -136,7 +136,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "LE Station", updated: "2026-11-08",
     history: [{"date": "2025-12", "value": 670000}, {"date": "2026-01", "value": 360000}, {"date": "2026-03", "value": 340000}, {"date": "2026-11", "value": 940000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/7/75/Darkstar_X.png/revision/latest/scale-to-width-down/600",
+    image: "images/darkstar-x.png",
     note: "Bomber. Released 2025-06-12.", noteKo: "폭격기. 2025-06-12 출시.",
   },
   {
@@ -146,7 +146,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "USS Missouri Crate", updated: "2026-05-12",
     history: [{"date": "2025-12", "value": 980000}, {"date": "2026-01", "value": 480000}, {"date": "2026-03", "value": 200000}, {"date": "2026-05", "value": 520000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/7/7c/Official_Promotional_Poster_of_the_USS_Missouri.png/revision/latest/scale-to-width-down/600",
+    image: "images/le-missouri.png",
     note: "Warship. Released 2025-11-29.", noteKo: "전함. 2025-11-29 출시.",
   },
   {
@@ -156,7 +156,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "Nuke Mortar Truck Crate", updated: "2026-11-17",
     history: [{"date": "2025-11", "value": 610000}, {"date": "2026-06", "value": 500000}, {"date": "2026-11", "value": 2000000}],
-    image: "",
+    image: "images/nuke-mortar.png",
     note: "Artillery. Released 2025-07-12.", noteKo: "포병. 2025-07-12 출시.",
   },
   {
@@ -166,7 +166,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "Project 665 Crate", updated: "2026-10-29",
     history: [{"date": "2026-01", "value": 460000}, {"date": "2026-02", "value": 280000}, {"date": "2026-09", "value": 290000}, {"date": "2026-10", "value": 480000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/a/a0/Nuke_Project_665.png/revision/latest/scale-to-width-down/600",
+    image: "images/nuke-project.png",
     note: "Submarine. Released 2025-10-04.", noteKo: "잠수함. 2025-10-04 출시.",
   },
   {
@@ -176,7 +176,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "Super Mech Crate", updated: "2026-11-17",
     history: [{"date": "2025-12", "value": 370000}, {"date": "2026-02", "value": 200000}, {"date": "2026-11", "value": 350000}],
-    image: "",
+    image: "images/super-mech.png",
     note: "Mech. Released 2025-12-13.", noteKo: "메카. 2025-12-13 출시.",
   },
   {
@@ -186,7 +186,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "Cobra Crate", updated: "2026-05-29",
     history: [{"date": "2025-11", "value": 400000}, {"date": "2026-02", "value": 130000}, {"date": "2026-05", "value": 180000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/3/3a/CobraInFlight.png/revision/latest/scale-to-width-down/600",
+    image: "images/le-cobra.png",
     note: "Helicopter. Released 2025-05-17.", noteKo: "헬기. 2025-05-17 출시.",
   },
   {
@@ -196,18 +196,18 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "Zumwalt Quest", updated: "2026-01-10",
     history: [{"date": "2025-11", "value": 490000}, {"date": "2026-01", "value": 170000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/2/2e/Zumwalt_InGame.png/revision/latest/scale-to-width-down/600",
+    image: "images/le-zumwalt.png",
     note: "Frigate. Released 2024-08-25.", noteKo: "호위함. 2024-08-25 출시.",
   },
   {
     id: "f35-billion", name: "F-35 Billion", category: "Air",
     aliases: ["F35 Billion", "F-35", "F35", "빌리언", "F35 빌리언"],
-    value: 48000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    value: 48000, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stars: { "0": 48000, "5": 300000 },
     stats: { pvp: 8, vfm: 10 },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 48000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/b/b1/F-35_Billion.png/revision/latest",
+    image: "images/f35-billion.png",
     note: "Fighter jet.", noteKo: "전투기.",
   },
   {
@@ -218,7 +218,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 1890000}],
-    image: "",
+    image: "images/super-x32.png",
     note: "Fighter jet. 0★ 1.89M, maxed (5★) 2.2M.", noteKo: "전투기. 0성 1.89M, 풀강(5성) 2.2M.",
   },
   {
@@ -229,7 +229,7 @@ window.ITEMS = [
     stats: { pvp: 9, vfm: 6.5, diff: 6.5 },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 2700000}],
-    image: "",
+    image: "images/silkfire-x.png",
     note: "Fighter jet.", noteKo: "전투기.",
   },
   {
@@ -239,17 +239,17 @@ window.ITEMS = [
     stats: { pvp: 4.5, vfm: 5, diff: 2 },
     obtain: "Golden Crate", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 700000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/f/f0/Gold_Izumo_fanmade_render.png/revision/latest/scale-to-width-down/600",
+    image: "images/le-gold-izumo.png",
     note: "Aircraft carrier. Released 2024-12-07. Image is a fan-made render.", noteKo: "항공모함. 2024-12-07 출시. 이미지는 팬메이드 렌더.",
   },
   {
     id: "overwatch", name: "Overwatch", category: "Air",
     aliases: ["오버워치"],
-    value: null, demand: null, trend: null, tradeable: false, limited: false, stock: null,
+    value: null, demand: null, trend: null, tradeable: false, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: 8.5, vfm: null, diff: 6 },
     obtain: "Space Project: Overwatch", updated: "2026-11-17",
     history: [],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/f/f2/Overwatch.png/revision/latest/scale-to-width-down/600",
+    image: "images/overwatch.png",
     note: "Fighter. Released 2026-06-06 (monthly event). Untradeable.", noteKo: "전투기. 2026-06-06 출시 (월간 이벤트). 거래 불가.",
   },
   {
@@ -259,7 +259,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 550000}],
-    image: "",
+    image: "images/infinity-car-x.png",
     note: "", noteKo: "",
   },
   {
@@ -269,7 +269,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "Exofighter Crate", updated: "2026-11-17",
     history: [{"date": "2026-05", "value": 250000}, {"date": "2026-11", "value": 600000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/2/27/SuperExofighterInAction.png/revision/latest/scale-to-width-down/600",
+    image: "images/super-exofighter.png",
     note: "Fighter jet. Released 2025-02-22.", noteKo: "전투기. 2025-02-22 출시.",
   },
   {
@@ -279,7 +279,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 1300000}],
-    image: "",
+    image: "images/f117-x.png",
     note: "Stealth jet.", noteKo: "스텔스기.",
   },
   {
@@ -289,7 +289,7 @@ window.ITEMS = [
     stats: { pvp: 7, vfm: 2, diff: 0.5 },
     obtain: "Mech Walker Crate", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 7000000}],
-    image: "",
+    image: "images/super-mech-walker.png",
     note: "Mech. Released 2026-03-07.", noteKo: "메카. 2026-03-07 출시.",
   },
   {
@@ -299,7 +299,7 @@ window.ITEMS = [
     stats: { pvp: 8, vfm: 10 },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11-10", "value": 550000}, {"date": "2026-11-17", "value": 280000}],
-    image: "",
+    image: "images/crimson-emergency-hauler.png",
     note: "", noteKo: "",
   },
   {
@@ -319,7 +319,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 1500000}],
-    image: "",
+    image: "images/super-horten.png",
     note: "Flying-wing aircraft.", noteKo: "전익기.",
   },
   {
@@ -329,7 +329,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 1500000}],
-    image: "",
+    image: "images/nuke-mech-destroyer.png",
     note: "Mech.", noteKo: "메카.",
   },
   {
@@ -339,7 +339,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 2300000}],
-    image: "",
+    image: "images/super-tesla-tank.png",
     note: "Tank.", noteKo: "전차.",
   },
   {
@@ -349,7 +349,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 800000}],
-    image: "",
+    image: "images/super-s67.png",
     note: "Helicopter.", noteKo: "헬기.",
   },
   {
@@ -359,7 +359,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "Battle Tank Crate", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 3400000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/4/48/LEBattleTankGold.png/revision/latest/scale-to-width-down/600",
+    image: "images/le-battle-tank.png",
     note: "Tank. Released 2025-01-11.", noteKo: "전차. 2025-01-11 출시.",
   },
   {
@@ -369,7 +369,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "Limited Stock (2,800 Robux)", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 650000}],
-    image: "",
+    image: "images/super-cfa44.png",
     note: "Super fighter. Released 2026-08-08.", noteKo: "슈퍼 전투기. 2026-08-08 출시.",
   },
   {
@@ -379,7 +379,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 1400000}],
-    image: "",
+    image: "images/raptor-x.png",
     note: "Fighter jet.", noteKo: "전투기.",
   },
   {
@@ -389,7 +389,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "Platinum Crate", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 6000000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/b/b8/Platinum_SB-12_loading_screen.png/revision/latest/scale-to-width-down/600",
+    image: "images/platinum-sb12.png",
     note: "Sky fortress. Released 2025-12-23.", noteKo: "하늘 요새. 2025-12-23 출시.",
   },
   {
@@ -399,7 +399,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "SM39 Razor Crate", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 3500000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/5/58/Super_Razor.png/revision/latest/scale-to-width-down/600",
+    image: "images/super-razor.png",
     note: "Fighter jet. Released 2026-04-04.", noteKo: "전투기. 2026-04-04 출시.",
   },
   {
@@ -409,17 +409,17 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 600000}],
-    image: "",
+    image: "images/super-x76.png",
     note: "", noteKo: "",
   },
   {
     id: "boss-ghostwind", name: "Boss Ghostwind", category: "Air",
     aliases: ["BOSS GhostWind", "Ghostwind", "GhostWind", "고스트윈드", "보스 고스트윈드"],
-    value: 1600000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    value: 1600000, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "Boss Fight: The GhostWind", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 1600000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/c/c0/BOSS_GhostWind.png/revision/latest/scale-to-width-down/600",
+    image: "images/boss-ghostwind.png",
     note: "Helicopter. Released 2025-11-15.", noteKo: "헬기. 2025-11-15 출시.",
   },
   {
@@ -429,7 +429,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 5500000}],
-    image: "https://static.wikia.nocookie.net/military-tycoon/images/5/54/SuperA14InFlight.png/revision/latest/scale-to-width-down/600",
+    image: "images/super-a14.png",
     note: "Fighter jet. Released 2025-04-19.", noteKo: "전투기. 2025-04-19 출시.",
   },
   {
@@ -439,7 +439,7 @@ window.ITEMS = [
     stats: { pvp: 8, vfm: 4.5, diff: 3.5 },
     obtain: "Beam Tank Crate", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 5800000}],
-    image: "",
+    image: "images/super-beam-tank.png",
     note: "Tank. Released 2026-04-18.", noteKo: "전차. 2026-04-18 출시.",
   },
 ];
