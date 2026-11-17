@@ -209,7 +209,9 @@ function chart(history, title, show) {
   if (!history || history.length < 2) return "";
   // 날짜(YYYY-MM)를 실제 시간 간격대로 배치하고, 눈금·면적·끝점 강조를 그린다
   const W = 480, H = 210, L = 50, R = 24, T = 30, B = 30;
-  const mon = (d) => { const [y, m] = d.split("-").map(Number); return y * 12 + (m || 1) - 1; };
+  // 날짜는 "YYYY-MM" 또는 "YYYY-MM-DD" (같은 달 안의 변화는 일 단위로 기록)
+  const mon = (d) => { const [y, m, dd] = d.split("-").map(Number); return y * 12 + (m || 1) - 1 + ((dd || 1) - 1) / 31; };
+  const dlabel = (d) => { const [y, m, dd] = d.split("-"); return dd ? `${+m}.${+dd}` : `${y.slice(2)}.${m}`; };
   const xs = history.map((h) => mon(h.date)), x0 = xs[0], xspan = xs.at(-1) - x0 || 1;
   const vs = history.map((h) => h.value);
   // 보기 좋은 눈금 (1·2·5 단위)
@@ -256,7 +258,7 @@ function chart(history, title, show) {
     <path class="c-line" d="${d}"/>
     ${pts.map((p, i) => `<g class="c-pt"><circle class="c-hit" cx="${p[0]}" cy="${p[1]}" r="12"/><circle class="c-dot${i === pts.length - 1 ? " last" : ""}" cx="${p[0]}" cy="${p[1]}" r="${i === pts.length - 1 ? 5 : 3.5}"/><title>${esc(history[i].date)}: ${show(vs[i])}</title></g>`).join("")}
     ${shown.map((i) => label(i, !below(i))).join("")}
-    ${xLabels.map((i) => `<text class="c-axis" x="${pts[i][0]}" y="${H - 8}" text-anchor="${i === 0 ? "start" : i === pts.length - 1 ? "end" : "middle"}">${esc(history[i].date.replace(/^20/, "").replace("-", "."))}</text>`).join("")}
+    ${xLabels.map((i) => `<text class="c-axis" x="${pts[i][0]}" y="${H - 8}" text-anchor="${i === 0 ? "start" : i === pts.length - 1 ? "end" : "middle"}">${esc(dlabel(history[i].date))}</text>`).join("")}
   </svg></div>`;
 }
 function openDetail(id) {

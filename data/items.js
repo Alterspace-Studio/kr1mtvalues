@@ -15,7 +15,7 @@
 //   stats      성능 { pvp, vfm, diff } 0~10 (PVP, 가성비, 난이도=다루기 어려운 정도, 소수 가능). 모르면 null
 //   obtain     얻는 방법
 //   updated    값을 마지막으로 바꾼 날 "YYYY-MM-DD"
-//   history    젬 가치 변화 [{ date, value }]. 가치를 바꿀 때마다 그 달 값을 끝에 추가
+//   history    젬 가치 변화 [{ date, value }]. 가치를 바꿀 때마다 끝에 추가. date는 "YYYY-MM" 또는 같은 달 안 변화는 "YYYY-MM-DD"
 //   image      이미지 경로 (images/xxx.png, 없으면 빈 문자열)
 //   note       메모 (영어), noteKo: 한국어 메모
 //   aliases    검색용 다른 이름 (예: ["Abrams", "에이브럼스"])
@@ -289,5 +289,15 @@ window.ITEMS = [
     history: [{"date": "2026-11", "value": 7000000}],
     image: "",
     note: "Mech. Released 2026-03-07.", noteKo: "메카. 2026-03-07 출시.",
+  },
+  {
+    id: "crimson-emergency-hauler", name: "Crimson Emergency Hauler", category: "Land",
+    aliases: ["Emergency Hauler", "Crimson Hauler", "크림슨", "크림슨 헐러"],
+    value: 280000, demand: null, trend: "down", tradeable: true, limited: false, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "", updated: "2026-11-17",
+    history: [{"date": "2026-11-10", "value": 550000}, {"date": "2026-11-17", "value": 280000}],
+    image: "",
+    note: "", noteKo: "",
   },
 ];
