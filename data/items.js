@@ -300,4 +300,14 @@ window.ITEMS = [
     image: "",
     note: "", noteKo: "",
   },
+  {
+    id: "cursed-m65", name: "Cursed M65", category: "Land",
+    aliases: ["M65", "Cursed", "저주 M65", "커스드"],
+    value: 600000, demand: null, trend: "down", tradeable: true, limited: false, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 600000}],
+    image: "",
+    note: "Artillery. Was about 2.2M at release.", noteKo: "포병. 출시 초반에는 약 2.2M.",
+  },
 ];
