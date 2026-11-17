@@ -340,4 +340,14 @@ window.ITEMS = [
     image: "",
     note: "Tank.", noteKo: "전차.",
   },
+  {
+    id: "super-s67", name: "Super S67", category: "Air",
+    aliases: ["S67", "S-67", "Super S-67", "슈퍼 S67"],
+    value: 800000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 800000}],
+    image: "",
+    note: "Helicopter.", noteKo: "헬기.",
+  },
 ];
