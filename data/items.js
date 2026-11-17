@@ -203,6 +203,7 @@ window.ITEMS = [
     id: "f35-billion", name: "F-35 Billion", category: "Air",
     aliases: ["F35 Billion", "F-35", "F35", "빌리언", "F35 빌리언"],
     value: 48000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stars: { "0": 48000, "5": 300000 },
     stats: { pvp: 8, vfm: 10 },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 48000}],
