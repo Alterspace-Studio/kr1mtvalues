@@ -263,7 +263,6 @@ function openDetail(id) {
         <div class="kv-vfm"><span>${t.vfm}</span>${vfmBar(it.stats?.vfm)}</div>
         <div><span>${t.demand}</span><b>${it.demand ?? "—"}/10</b></div>
         <div><span>${t.trendL}</span><b class="trend ${it.trend}">${TREND[it.trend] || ""} ${t.trend[it.trend] || "—"}</b></div>
-        <div><span>${t.obtain}</span><b>${esc(it.obtain || "—")}</b></div>
       </div>
       ${chart(it.history, t.history, gem)}
       ${(it.history || []).length ? `<details class="hist"><summary>${t.allChanges} (${it.history.length})</summary>${histTable(it)}</details>` : ""}
