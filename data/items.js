@@ -852,10 +852,10 @@ window.ITEMS = [
   {
     id: "zhi-19e", name: "Zhi 19E", category: "Air",
     aliases: ["Zhi-19E", "Zhi19", "즈히"],
-    value: null, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
+    value: 300000, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: 7, vfm: null },
     obtain: "", updated: "2026-11-17",
-    history: [],
+    history: [{"date": "2026-11", "value": 300000}],
     image: "images/zhi-19e.png",
     note: "Helicopter.", noteKo: "헬기.",
   },
