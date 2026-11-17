@@ -303,7 +303,7 @@ window.ITEMS = [
   {
     id: "cursed-m65", name: "Cursed M65", category: "Land",
     aliases: ["M65", "Cursed", "저주 M65", "커스드"],
-    value: 600000, demand: null, trend: "down", tradeable: true, limited: false, stock: null,
+    value: 600000, demand: null, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 600000}],
