@@ -222,11 +222,21 @@ window.ITEMS = [
   {
     id: "le-gold-izumo", name: "LE Gold Izumo", category: "Naval",
     aliases: ["Gold Izumo", "LE Gizumo", "Gizumo", "LE1000 Izumo", "골드 이즈모", "골이즈"],
-    value: null, demand: null, trend: null, tradeable: true, limited: true, stock: 1000,
+    value: 700000, demand: null, trend: "stable", tradeable: true, limited: true, stock: 1000,
     stats: { pvp: 4.5, vfm: 5, diff: 2 },
     obtain: "Golden Crate", updated: "2026-11-17",
     history: [],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/f/f0/Gold_Izumo_fanmade_render.png/revision/latest/scale-to-width-down/600",
     note: "Aircraft carrier. Released 2024-12-07. Image is a fan-made render.", noteKo: "항공모함. 2024-12-07 출시. 이미지는 팬메이드 렌더.",
+  },
+  {
+    id: "overwatch", name: "Overwatch", category: "Air",
+    aliases: ["오버워치"],
+    value: null, demand: null, trend: null, tradeable: false, limited: false, stock: null,
+    stats: { pvp: 8.5, vfm: null, diff: 6 },
+    obtain: "Space Project: Overwatch", updated: "2026-11-17",
+    history: [],
+    image: "https://static.wikia.nocookie.net/military-tycoon/images/f/f2/Overwatch.png/revision/latest/scale-to-width-down/600",
+    note: "Fighter. Released 2026-06-06 (monthly event). Untradeable.", noteKo: "전투기. 2026-06-06 출시 (월간 이벤트). 거래 불가.",
   },
 ];
