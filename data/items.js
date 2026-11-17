@@ -259,4 +259,14 @@ window.ITEMS = [
     image: "",
     note: "", noteKo: "",
   },
+  {
+    id: "super-exofighter", name: "Super Exo Fighter", category: "Air",
+    aliases: ["Super Exofighter", "Exofighter", "Exo Fighter", "슈퍼 엑소", "엑소파이터"],
+    value: 600000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "Exofighter Crate", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 600000}],
+    image: "https://static.wikia.nocookie.net/military-tycoon/images/2/27/SuperExofighterInAction.png/revision/latest/scale-to-width-down/600",
+    note: "Fighter jet. Released 2025-02-22.", noteKo: "전투기. 2025-02-22 출시.",
+  },
 ];
