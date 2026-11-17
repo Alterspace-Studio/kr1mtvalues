@@ -432,4 +432,14 @@ window.ITEMS = [
     image: "https://static.wikia.nocookie.net/military-tycoon/images/5/54/SuperA14InFlight.png/revision/latest/scale-to-width-down/600",
     note: "Fighter jet. Released 2025-04-19.", noteKo: "전투기. 2025-04-19 출시.",
   },
+  {
+    id: "super-beam-tank", name: "Super Beam Tank", category: "Land",
+    aliases: ["Beam Tank", "Super Beam", "빔탱크", "슈퍼 빔탱크"],
+    value: 5800000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stats: { pvp: 8, vfm: 4.5, diff: 3.5 },
+    obtain: "Beam Tank Crate", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 5800000}],
+    image: "",
+    note: "Tank. Released 2026-04-18.", noteKo: "전차. 2026-04-18 출시.",
+  },
 ];
