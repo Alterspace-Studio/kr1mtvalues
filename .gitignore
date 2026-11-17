@@ -2,3 +2,4 @@
 KakaoTalk_*.txt
 *.csv
 __pycache__/
+dist/
