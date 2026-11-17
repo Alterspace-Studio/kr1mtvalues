@@ -247,7 +247,7 @@ function chart(history, title, show) {
   const below = (i) => { const n = [pts[i - 1], pts[i + 1]].filter(Boolean); return n.some((q) => q[1] < pts[i][1] - 4) && pts[i][1] < H - B - 24; };
   return `<div><div class="c-head"><h4>${title}</h4><span class="c-delta ${dir}">${pct > 0 ? "▲ +" : pct < 0 ? "▼ " : ""}${pct}% <small>${esc(history[0].date)} →</small></span></div>
   <svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(title)}">
-    <defs><linearGradient id="cfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="c-stop1"/><stop offset="1" class="c-stop2"/></linearGradient></defs>
+    <defs><linearGradient id="cfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="c-stop1"/><stop offset="1" class="c-stop2"/></linearGradient><linearGradient id="cline" gradientUnits="userSpaceOnUse" x1="${L}" y1="0" x2="${W - R}" y2="0"><stop offset="0" class="c-g1"/><stop offset="1" class="c-g2"/></linearGradient></defs>
     ${ticks.map((v) => `<line class="c-grid" x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}"/><text class="c-axis" x="${L - 8}" y="${Y(v) + 3}" text-anchor="end">${esc(compact(v))}</text>`).join("")}
     <path class="c-area" d="${area}"/>
     <path class="c-line" d="${d}"/>
