@@ -422,4 +422,14 @@ window.ITEMS = [
     image: "https://static.wikia.nocookie.net/military-tycoon/images/c/c0/BOSS_GhostWind.png/revision/latest/scale-to-width-down/600",
     note: "Helicopter. Released 2025-11-15.", noteKo: "헬기. 2025-11-15 출시.",
   },
+  {
+    id: "super-a14", name: "Super A-14", category: "Air",
+    aliases: ["Super A14", "A-14", "A14", "A-14 Wolf", "슈퍼 A14"],
+    value: 5500000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 5500000}],
+    image: "https://static.wikia.nocookie.net/military-tycoon/images/5/54/SuperA14InFlight.png/revision/latest/scale-to-width-down/600",
+    note: "Fighter jet. Released 2025-04-19.", noteKo: "전투기. 2025-04-19 출시.",
+  },
 ];
