@@ -23,6 +23,8 @@ const compact = (n) => {
 const gem = (n) => (n == null ? "—" : `${GEM} ${compact(n)}`);
 const isUntradeable = (it) => it.tradeable === false;
 const byId = (id) => ITEMS.find((i) => i.id === id);
+// 등급 순서: 한정판(LE) 0, Exotic 1, Legendary 2, 그 외 3
+const grade = (it) => (it.limited ? 0 : it.rarity === "Exotic" ? 1 : it.rarity === "Legendary" ? 2 : 3);
 const catVar = (c) => `var(--${(c || "other").toLowerCase()})`;
 // 최근 변동: 가치 기록의 마지막 두 점 차이 { diff, pct, date }
 const lastChange = (it) => {
@@ -185,6 +187,7 @@ function renderGrid() {
     (!$("#onlyTradeable").checked || it.tradeable !== false) &&
     (!$("#onlyLimited").checked || it.limited)
   ).sort((a, b) => {
+    const g = grade(a) - grade(b); if (g) return g; // 등급 묶음 먼저: LE → Exotic → Legendary → 나머지
     const x = get(a), y = get(b);
     if (x === -1 || y === -1) return x === y ? 0 : x === -1 ? 1 : -1; // 값 없는 아이템은 항상 맨 뒤
     const r = x < y ? -1 : x > y ? 1 : 0;
