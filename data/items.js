@@ -973,7 +973,7 @@ window.ITEMS = [
     id: "super-a50", name: "Super A50", category: "Air",
     aliases: ["SA50", "A50", "A-50", "Super A-50"],
     value: 1000000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
-    stats: { pvp: 2, vfm: null },
+    stats: { pvp: 0.5, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 1000000}],
     image: "images/super-a50.png",
