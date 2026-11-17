@@ -802,10 +802,10 @@ window.ITEMS = [
   {
     id: "super-prey", name: "Super Prey", category: "Air",
     aliases: ["Prey", "프레이"],
-    value: null, demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    value: 1100000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 9, vfm: null },
     obtain: "", updated: "2026-11-17",
-    history: [],
+    history: [{"date": "2026-11", "value": 1100000}],
     image: "images/super-prey.png",
     note: "Aircraft.", noteKo: "항공기.",
   },
