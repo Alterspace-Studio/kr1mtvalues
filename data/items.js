@@ -862,10 +862,10 @@ window.ITEMS = [
   {
     id: "sukhoi-su57", name: "Sukhoi SU57", category: "Air",
     aliases: ["Su-57", "SU57", "수호이"],
-    value: null, demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    value: 700000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 7, vfm: null },
     obtain: "", updated: "2026-11-17",
-    history: [],
+    history: [{"date": "2026-11", "value": 700000}],
     image: "images/sukhoi-su57.png",
     note: "Fighter jet.", noteKo: "전투기.",
   },
