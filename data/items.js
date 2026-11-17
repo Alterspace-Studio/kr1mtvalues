@@ -46,7 +46,7 @@ window.ITEMS = [
     obtain: "SeaBreacher-X Crate", updated: "2026-07-15",
     history: [{"date": "2026-05", "value": 3000000}, {"date": "2026-06", "value": 4000000}, {"date": "2026-07", "value": 3800000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/2/23/SeaBreacher-X_golden_crate.png/revision/latest/scale-to-width-down/600",
-    note: "Submarine. Released 2025-06-28. Value estimated from KR trade chat (converted to gems).", noteKo: "잠수함. 2025-06-28 출시. 가치는 한국 거래방 거래를 젬으로 환산한 추정값.",
+    note: "Submarine. Released 2025-06-28.", noteKo: "잠수함. 2025-06-28 출시.",
   },
   {
     id: "le-rocket-plane", name: "LE Rocket Plane", category: "Air",
@@ -66,7 +66,7 @@ window.ITEMS = [
     obtain: "LE1000 Blackbird Crate", updated: "2026-09-25",
     history: [{"date": "2025-08", "value": 480000}, {"date": "2025-10", "value": 3200000}, {"date": "2025-11", "value": 2400000}, {"date": "2025-12", "value": 3700000}, {"date": "2026-06", "value": 2100000}, {"date": "2026-09", "value": 4500000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/7/71/LE1000BlackbirdInAction.png/revision/latest/scale-to-width-down/600",
-    note: "Fighter jet. Released 2024-12-24. Value estimated from KR trade chat (converted to gems).", noteKo: "전투기. 2024-12-24 출시. 가치는 한국 거래방 거래를 젬으로 환산한 추정값.",
+    note: "Fighter jet. Released 2024-12-24.", noteKo: "전투기. 2024-12-24 출시.",
   },
   {
     id: "p1000-ratte", name: "P.1000 Ratte", category: "Land",
@@ -76,7 +76,7 @@ window.ITEMS = [
     obtain: "Golden Crate", updated: "2026-10-31",
     history: [{"date": "2025-11", "value": 960000}, {"date": "2026-01", "value": 510000}, {"date": "2026-08", "value": 1400000}, {"date": "2026-10", "value": 3300000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/d/d0/RatteInAction.png/revision/latest/scale-to-width-down/600",
-    note: "Tank. Released 2025-03-08. Value estimated from KR trade chat (converted to gems).", noteKo: "전차. 2025-03-08 출시. 가치는 한국 거래방 거래를 젬으로 환산한 추정값.",
+    note: "Tank. Released 2025-03-08.", noteKo: "전차. 2025-03-08 출시.",
   },
   {
     id: "le-imperial-tank", name: "LE Imperial Tank", category: "Land",
@@ -86,7 +86,7 @@ window.ITEMS = [
     obtain: "Imperial Tank Crate", updated: "2026-06-13",
     history: [{"date": "2025-08", "value": 520000}, {"date": "2026-06", "value": 2800000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/f/f7/ImperialTankInAction.png/revision/latest/scale-to-width-down/600",
-    note: "Released 2025-05-03. Value estimated from KR trade chat (converted to gems).", noteKo: "2025-05-03 출시. 가치는 한국 거래방 거래를 젬으로 환산한 추정값.",
+    note: "Released 2025-05-03.", noteKo: "2025-05-03 출시.",
   },
   {
     id: "sb-21", name: "Super B21", category: "Air",
@@ -96,7 +96,7 @@ window.ITEMS = [
     obtain: "B21 Raider Crate", updated: "2026-06-12",
     history: [{"date": "2025-10", "value": 1500000}, {"date": "2026-06", "value": 1900000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/c/cd/Super_B21.png/revision/latest/scale-to-width-down/600",
-    note: "Bomber. Released 2025-08-09. Value estimated from KR trade chat (converted to gems).", noteKo: "폭격기. 2025-08-09 출시. 가치는 한국 거래방 거래를 젬으로 환산한 추정값.",
+    note: "Bomber. Released 2025-08-09.", noteKo: "폭격기. 2025-08-09 출시.",
   },
   {
     id: "jetpack-fighter", name: "Jetpack Fighter", category: "Soldier",
@@ -116,7 +116,7 @@ window.ITEMS = [
     obtain: "Boss Fight: The Reaper", updated: "2025-12-21",
     history: [{"date": "2025-10", "value": 1000000}, {"date": "2025-11", "value": 780000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/c/c9/Master_Reaper.png/revision/latest/scale-to-width-down/600",
-    note: "Sky fortress. Released 2025-05-24. Value estimated from KR trade chat (converted to gems).", noteKo: "하늘 요새. 2025-05-24 출시. 가치는 한국 거래방 거래를 젬으로 환산한 추정값.",
+    note: "Sky fortress. Released 2025-05-24.", noteKo: "하늘 요새. 2025-05-24 출시.",
   },
   {
     id: "darkstar-x", name: "Darkstar X", category: "Air",
@@ -126,7 +126,7 @@ window.ITEMS = [
     obtain: "LE Station", updated: "2026-11-08",
     history: [{"date": "2025-12", "value": 670000}, {"date": "2026-01", "value": 360000}, {"date": "2026-03", "value": 340000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/7/75/Darkstar_X.png/revision/latest/scale-to-width-down/600",
-    note: "Bomber. Released 2025-06-12. Value estimated from KR trade chat (converted to gems).", noteKo: "폭격기. 2025-06-12 출시. 가치는 한국 거래방 거래를 젬으로 환산한 추정값.",
+    note: "Bomber. Released 2025-06-12.", noteKo: "폭격기. 2025-06-12 출시.",
   },
   {
     id: "le-missouri", name: "LE Missouri", category: "Naval",
@@ -136,7 +136,7 @@ window.ITEMS = [
     obtain: "USS Missouri Crate", updated: "2026-05-12",
     history: [{"date": "2025-12", "value": 980000}, {"date": "2026-01", "value": 480000}, {"date": "2026-03", "value": 200000}, {"date": "2026-05", "value": 790000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/7/7c/Official_Promotional_Poster_of_the_USS_Missouri.png/revision/latest/scale-to-width-down/600",
-    note: "Warship. Released 2025-11-29. Value estimated from KR trade chat (converted to gems).", noteKo: "전함. 2025-11-29 출시. 가치는 한국 거래방 거래를 젬으로 환산한 추정값.",
+    note: "Warship. Released 2025-11-29.", noteKo: "전함. 2025-11-29 출시.",
   },
   {
     id: "nuke-mortar", name: "Nuke Mortar Truck", category: "Land",
@@ -146,7 +146,7 @@ window.ITEMS = [
     obtain: "Nuke Mortar Truck Crate", updated: "2026-06-02",
     history: [{"date": "2025-11", "value": 610000}],
     image: "",
-    note: "Artillery. Released 2025-07-12. Value estimated from KR trade chat (converted to gems).", noteKo: "포병. 2025-07-12 출시. 가치는 한국 거래방 거래를 젬으로 환산한 추정값.",
+    note: "Artillery. Released 2025-07-12.", noteKo: "포병. 2025-07-12 출시.",
   },
   {
     id: "nuke-project", name: "Nuke Project 665", category: "Naval",
@@ -156,7 +156,7 @@ window.ITEMS = [
     obtain: "Project 665 Crate", updated: "2026-10-29",
     history: [{"date": "2026-01", "value": 460000}, {"date": "2026-02", "value": 280000}, {"date": "2026-09", "value": 290000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/a/a0/Nuke_Project_665.png/revision/latest/scale-to-width-down/600",
-    note: "Submarine. Released 2025-10-04. Value estimated from KR trade chat (converted to gems).", noteKo: "잠수함. 2025-10-04 출시. 가치는 한국 거래방 거래를 젬으로 환산한 추정값.",
+    note: "Submarine. Released 2025-10-04.", noteKo: "잠수함. 2025-10-04 출시.",
   },
   {
     id: "super-mech", name: "Super Mech", category: "Land",
@@ -166,7 +166,7 @@ window.ITEMS = [
     obtain: "Super Mech Crate", updated: "2026-02-28",
     history: [{"date": "2025-12", "value": 370000}, {"date": "2026-02", "value": 200000}],
     image: "",
-    note: "Mech. Released 2025-12-13. Value estimated from KR trade chat (converted to gems).", noteKo: "메카. 2025-12-13 출시. 가치는 한국 거래방 거래를 젬으로 환산한 추정값.",
+    note: "Mech. Released 2025-12-13.", noteKo: "메카. 2025-12-13 출시.",
   },
   {
     id: "le-cobra", name: "LE Cobra", category: "Air",
@@ -176,7 +176,7 @@ window.ITEMS = [
     obtain: "Cobra Crate", updated: "2026-05-29",
     history: [{"date": "2025-11", "value": 400000}, {"date": "2026-02", "value": 130000}, {"date": "2026-05", "value": 230000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/3/3a/CobraInFlight.png/revision/latest/scale-to-width-down/600",
-    note: "Helicopter. Released 2025-05-17. Value estimated from KR trade chat (converted to gems).", noteKo: "헬기. 2025-05-17 출시. 가치는 한국 거래방 거래를 젬으로 환산한 추정값.",
+    note: "Helicopter. Released 2025-05-17.", noteKo: "헬기. 2025-05-17 출시.",
   },
   {
     id: "le-zumwalt", name: "LE Zumwalt", category: "Naval",
@@ -186,7 +186,7 @@ window.ITEMS = [
     obtain: "Zumwalt Quest", updated: "2026-01-10",
     history: [{"date": "2025-11", "value": 490000}, {"date": "2026-01", "value": 200000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/2/2e/Zumwalt_InGame.png/revision/latest/scale-to-width-down/600",
-    note: "Frigate. Released 2024-08-25. Value estimated from KR trade chat (converted to gems).", noteKo: "호위함. 2024-08-25 출시. 가치는 한국 거래방 거래를 젬으로 환산한 추정값.",
+    note: "Frigate. Released 2024-08-25.", noteKo: "호위함. 2024-08-25 출시.",
   },
   {
     id: "f35-billion", name: "F-35 Billion", category: "Air",
