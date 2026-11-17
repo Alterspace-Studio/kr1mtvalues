@@ -71,10 +71,10 @@ window.ITEMS = [
   {
     id: "p1000-ratte", name: "P.1000 Ratte", category: "Land",
     aliases: ["Ratte", "라테", "라떼"],
-    value: 2900000, demand: null, trend: "up", tradeable: true, limited: true, stock: 750,
+    value: 5500000, demand: null, trend: "up", tradeable: true, limited: true, stock: 750,
     stats: { pvp: null, vfm: null },
-    obtain: "Golden Crate", updated: "2026-10-31",
-    history: [{"date": "2025-11", "value": 960000}, {"date": "2026-01", "value": 510000}, {"date": "2026-08", "value": 1400000}, {"date": "2026-10", "value": 2900000}],
+    obtain: "Golden Crate", updated: "2026-11-17",
+    history: [{"date": "2025-11", "value": 960000}, {"date": "2026-01", "value": 510000}, {"date": "2026-08", "value": 1400000}, {"date": "2026-10", "value": 2900000}, {"date": "2026-11", "value": 5500000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/d/d0/RatteInAction.png/revision/latest/scale-to-width-down/600",
     note: "Tank. Released 2025-03-08.", noteKo: "전차. 2025-03-08 출시.",
   },
