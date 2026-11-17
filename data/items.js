@@ -152,10 +152,10 @@ window.ITEMS = [
   {
     id: "nuke-mortar", name: "Nuke Mortar Truck", category: "Land",
     aliases: ["Nuke Mortar", "핵박격", "핵모르타르"],
-    value: 500000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    value: 2000000, demand: null, trend: "up", tradeable: true, limited: false, stock: null,
     stats: { pvp: null, vfm: null },
-    obtain: "Nuke Mortar Truck Crate", updated: "2026-06-02",
-    history: [{"date": "2025-11", "value": 610000}, {"date": "2026-06", "value": 500000}],
+    obtain: "Nuke Mortar Truck Crate", updated: "2026-11-17",
+    history: [{"date": "2025-11", "value": 610000}, {"date": "2026-06", "value": 500000}, {"date": "2026-11", "value": 2000000}],
     image: "",
     note: "Artillery. Released 2025-07-12.", noteKo: "포병. 2025-07-12 출시.",
   },
