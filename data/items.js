@@ -209,4 +209,14 @@ window.ITEMS = [
     image: "",
     note: "Fighter jet. 0★ 1.89M, maxed (5★) 2.2M.", noteKo: "전투기. 0성 1.89M, 풀강(5성) 2.2M.",
   },
+  {
+    id: "silkfire-x", name: "Silkfire X", category: "Air",
+    aliases: ["Silkfire", "SilkfireX", "실크파이어"],
+    value: null, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stats: { pvp: 9, vfm: 6.5, diff: 6.5 },
+    obtain: "", updated: "2026-11-17",
+    history: [],
+    image: "",
+    note: "Fighter jet.", noteKo: "전투기.",
+  },
 ];
