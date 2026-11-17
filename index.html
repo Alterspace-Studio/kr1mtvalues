@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kr1mtvalues</title>
+  <meta name="description" content="Military Tycoon vehicle values and performance.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="logo">▲</span><span id="siteTitle">kr1mtvalues</span></div>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-view="values" data-i18n="tabValues"></button>
+      <button class="tab" data-view="compare" data-i18n="tabCompare"></button>
+      <button class="tab" data-view="trade" data-i18n="tabTrade"></button>
+    </nav>
+    <div class="updated"><span data-i18n="updated"></span> <span id="lastUpdated"></span></div>
+    <button class="lang" id="langBtn" aria-label="Language"></button>
+  </header>
+
+  <main>
+    <!-- 가치 목록 -->
+    <section id="view-values" class="view active">
+      <div class="toolbar">
+        <input id="search" type="search" data-i18n-ph="search" autocomplete="off">
+        <div class="chips" id="categoryChips"></div>
+        <select id="sort">
+          <option value="value-desc" data-i18n="sortValueDesc"></option>
+          <option value="value-asc" data-i18n="sortValueAsc"></option>
+          <option value="demand-desc" data-i18n="sortDemand"></option>
+          <option value="pvp-desc" data-i18n="sortPvp"></option>
+          <option value="boss-desc" data-i18n="sortBoss"></option>
+          <option value="vfm-desc" data-i18n="sortVfm"></option>
+          <option value="name-asc" data-i18n="sortName"></option>
+        </select>
+        <label class="check"><input type="checkbox" id="onlyTradeable"> <span data-i18n="onlyTradeable"></span></label>
+        <label class="check"><input type="checkbox" id="onlyLimited"> <span data-i18n="onlyLimited"></span></label>
+      </div>
+      <p class="count" id="resultCount"></p>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <!-- 성능 비교 -->
+    <section id="view-compare" class="view">
+      <div class="toolbar">
+        <select class="cmp-pick" data-slot="0"></select>
+        <select class="cmp-pick" data-slot="1"></select>
+        <select class="cmp-pick" data-slot="2"></select>
+      </div>
+      <div id="compareTable"></div>
+    </section>
+
+    <!-- 거래 계산기 -->
+    <section id="view-trade" class="view">
+      <div class="trade">
+        <div class="side" data-side="you">
+          <h2 data-i18n="youGive"></h2>
+          <div class="add"><input list="itemList" data-i18n-ph="addItem" class="trade-input"><button class="btn add-btn" data-i18n="add"></button></div>
+          <ul class="trade-list"></ul>
+          <div class="total"><span data-i18n="total"></span> <b class="sum">💎 0</b></div>
+        </div>
+        <div class="verdict" id="verdict"></div>
+        <div class="side" data-side="them">
+          <h2 data-i18n="youGet"></h2>
+          <div class="add"><input list="itemList" data-i18n-ph="addItem" class="trade-input"><button class="btn add-btn" data-i18n="add"></button></div>
+          <ul class="trade-list"></ul>
+          <div class="total"><span data-i18n="total"></span> <b class="sum">💎 0</b></div>
+        </div>
+      </div>
+      <datalist id="itemList"></datalist>
+      <p class="hint" data-i18n="tradeHint"></p>
+    </section>
+  </main>
+
+  <!-- 상세 창 -->
+  <dialog id="detail"><div id="detailBody"></div></dialog>
+
+  <footer class="foot" data-i18n="footer"></footer>
+
+  <script src="data/items.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# 카카오톡 대화 내보내기는 올리지 않는다
+KakaoTalk_*.txt
+*.csv
+__pycache__/
