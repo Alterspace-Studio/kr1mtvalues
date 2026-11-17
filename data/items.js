@@ -372,4 +372,14 @@ window.ITEMS = [
     image: "",
     note: "Super fighter. Released 2026-08-08.", noteKo: "슈퍼 전투기. 2026-08-08 출시.",
   },
+  {
+    id: "raptor-x", name: "Raptor X", category: "Air",
+    aliases: ["RaptorX", "Super Raptor X", "랩터", "랩터 X"],
+    value: 1400000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 1400000}],
+    image: "",
+    note: "Fighter jet.", noteKo: "전투기.",
+  },
 ];
