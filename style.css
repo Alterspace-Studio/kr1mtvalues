@@ -1,14 +1,15 @@
 :root {
-  --bg: #f4f5f2;
+  --bg: #f6f4f4;
   --panel: #ffffff;
-  --panel-2: #eef0ec;
-  --line: #d9ddd5;
-  --text: #1d2420;
-  --muted: #6b746d;
-  --accent: #a8822a;
+  --panel-2: #f1eded;
+  --line: #e2dada;
+  --text: #221c1d;
+  --muted: #776b6c;
+  --accent: #d92b3a;
   --on-accent: #ffffff;
-  --up: #2e8a4e;
-  --down: #c2423c;
+  --up: #d92b3a;   /* 오름 = 빨강 (한국식) */
+  --down: #2f6bd6; /* 내림 = 파랑 */
+  --diff: #3b3436; /* 난이도 게이지 */
   --land: #6f8a3c;
   --air: #3a78b8;
   --naval: #228a8a;
@@ -17,7 +18,7 @@
   --other: #8b95a3;
   --radius: 18px;
   --pill: 999px;
-  --shadow: 0 1px 2px rgba(20,30,20,.05), 0 4px 14px rgba(20,30,20,.05);
+  --shadow: 0 1px 2px rgba(60,20,24,.05), 0 4px 14px rgba(60,20,24,.06);
 }
 * { box-sizing: border-box; }
 body {
@@ -40,7 +41,7 @@ button, input, select { font: inherit; color: inherit; }
   background: none; border: 0; padding: 6px 14px; border-radius: var(--pill);
   color: var(--muted); cursor: pointer; text-transform: uppercase; font-size: 13px; letter-spacing: .05em;
 }
-.tab.active { color: var(--text); background: var(--panel); box-shadow: 0 1px 3px rgba(20,30,20,.12); }
+.tab.active { color: var(--text); background: var(--panel); box-shadow: 0 1px 3px rgba(60,20,24,.14); }
 .updated { margin-left: auto; color: var(--muted); font-size: 13px; }
 
 main { max-width: 1200px; margin: 0 auto; padding: 16px; }
@@ -68,7 +69,7 @@ input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); ou
   padding: 12px; cursor: pointer; display: flex; flex-direction: column; gap: 8px; text-align: left;
   box-shadow: var(--shadow); transition: transform .15s, box-shadow .15s;
 }
-.card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(20,30,20,.10); }
+.card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(217,43,58,.14); }
 .thumb {
   height: 110px; border-radius: calc(var(--radius) - 6px); background: var(--panel-2) center/contain no-repeat;
   display: grid; place-items: center; color: var(--muted); font-size: 28px;
@@ -79,7 +80,7 @@ input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); ou
 .tags { display: flex; gap: 4px; flex-wrap: wrap; }
 .tag { font-size: 11px; padding: 2px 9px; border-radius: var(--pill); background: var(--panel-2); color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
 .tag.le { background: var(--accent); color: var(--on-accent); font-weight: 700; }
-.tag.no { color: var(--down); }
+.tag.no { color: var(--accent); }
 .tag.sample { border: 1px dashed var(--muted); background: none; }
 .trend.up { color: var(--up); } .trend.down { color: var(--down); } .trend.stable { color: var(--muted); }
 .pips { display: inline-flex; gap: 3px; vertical-align: middle; }
@@ -99,9 +100,9 @@ input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); ou
 
 dialog {
   width: min(640px, calc(100% - 32px)); background: var(--panel); color: var(--text);
-  border: 1px solid var(--line); border-radius: 26px; padding: 0; box-shadow: 0 20px 60px rgba(20,30,20,.25);
+  border: 1px solid var(--line); border-radius: 26px; padding: 0; box-shadow: 0 20px 60px rgba(60,20,24,.25);
 }
-dialog::backdrop { background: rgba(20,25,20,.35); }
+dialog::backdrop { background: rgba(34,20,22,.38); }
 .d-head { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--line); }
 .d-head h2 { margin: 0; }
 .d-body { padding: 20px; display: grid; gap: 14px; }
@@ -109,7 +110,7 @@ dialog::backdrop { background: rgba(20,25,20,.35); }
 .close:hover { color: var(--text); }
 .kv { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; }
 .kv div { background: var(--panel-2); padding: 8px 16px; border-radius: var(--radius); }
-.kv b .untrade { display: inline; font-size: .85em; color: var(--down); letter-spacing: .04em; }
+.kv b .untrade { display: inline; font-size: .85em; color: var(--accent); letter-spacing: .04em; }
 .kv span { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
 .kv b { font-variant-numeric: tabular-nums; }
 h4 { margin: 0 0 6px; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
@@ -161,7 +162,7 @@ td.best { color: var(--up); font-weight: 700; }
   .trade { grid-template-columns: 1fr; }
   .updated { margin-left: 0; width: 100%; }
 }
-.untrade { color: var(--down); font-weight: 700; font-size: .8em; text-transform: uppercase; letter-spacing: .04em; }
+.untrade { color: var(--accent); font-weight: 700; font-size: .8em; text-transform: uppercase; letter-spacing: .04em; }
 .star-box { background: var(--panel-2); border-radius: var(--radius); padding: 12px 18px; display: grid; gap: 6px; }
 .star-read { display: flex; justify-content: space-between; align-items: baseline; }
 .star-read .star { color: var(--accent); font-size: 18px; letter-spacing: 1px; }
@@ -193,7 +194,7 @@ td .gauge { justify-items: end; }
   .top .tabs { order: 3; width: 100%; }
   .top .tab { flex: 1; padding: 6px 4px; font-size: 12px; }
 }
-.gauge.diff .g-fg { stroke: #c2423c; }
+.gauge.diff .g-fg { stroke: var(--diff); }
 .chg { font-size: 13px; font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .chg.up { color: var(--up); } .chg.down { color: var(--down); } .chg.stable { color: var(--muted); }
 .chg small { font-weight: 600; }
@@ -201,3 +202,10 @@ td .gauge { justify-items: end; }
 .kv span.chg { display: inline; font-size: 12px; text-transform: none; letter-spacing: 0; }
 .kv span.chg.up { color: var(--up); } .kv span.chg.down { color: var(--down); } .kv span.chg.stable { color: var(--muted); }
 .kv span.chg small { margin: 0; color: inherit; }
+/* 빨간 포인트 */
+.tab.active { color: var(--accent); font-weight: 700; }
+.card:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+input[type=search]:focus, select:focus, .trade-input:focus { border-color: var(--accent); }
+.lang:hover, .btn:hover { border-color: var(--accent); }
+.val { color: var(--text); }
+.brand { color: var(--text); }
