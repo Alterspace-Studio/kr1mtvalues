@@ -402,4 +402,14 @@ window.ITEMS = [
     image: "https://static.wikia.nocookie.net/military-tycoon/images/5/58/Super_Razor.png/revision/latest/scale-to-width-down/600",
     note: "Fighter jet. Released 2026-04-04.", noteKo: "전투기. 2026-04-04 출시.",
   },
+  {
+    id: "super-x76", name: "Super X-76", category: "Air",
+    aliases: ["X-76", "X76", "Super X76", "슈퍼 X76"],
+    value: 600000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 600000}],
+    image: "",
+    note: "", noteKo: "",
+  },
 ];
