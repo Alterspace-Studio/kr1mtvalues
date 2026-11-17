@@ -670,8 +670,8 @@ window.ITEMS = [
     note: "", noteKo: "",
   },
   {
-    id: "super-an-jeep", name: "Super AN Jeep", category: "Land",
-    aliases: ["AN Jeep", "Jeep", "지프"],
+    id: "super-an-jeep", name: "Super Anti Nuke Jeep", category: "Land",
+    aliases: ["Super AN Jeep", "Anti Nuke Jeep", "AN Jeep", "Jeep", "안티 뉴크 지프", "지프"],
     value: null, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: 10, vfm: null },
     obtain: "", updated: "2026-11-17",
@@ -958,5 +958,15 @@ window.ITEMS = [
     history: [],
     image: "images/super-f24.png",
     note: "Fighter jet.", noteKo: "전투기.",
+  },
+  {
+    id: "super-doomsday-truck", name: "Super Doomsday Truck", category: "Land",
+    aliases: ["Super Doomsday", "Doomsday", "Doomsday Truck", "둠스데이"],
+    value: 4000000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    stats: { pvp: 6, vfm: null },
+    obtain: "", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 4000000}],
+    image: "images/super-doomsday-truck.png",
+    note: "Missile launcher truck.", noteKo: "미사일 발사 트럭.",
   },
 ];
