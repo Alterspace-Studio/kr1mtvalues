@@ -320,4 +320,14 @@ window.ITEMS = [
     image: "",
     note: "Flying-wing aircraft.", noteKo: "전익기.",
   },
+  {
+    id: "nuke-mech-destroyer", name: "Nuke Mech Destroyer", category: "Land",
+    aliases: ["Mech Destroyer", "Nuke Mech", "핵 메카 디스트로이어", "메카 디스트로이어"],
+    value: 1500000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 1500000}],
+    image: "",
+    note: "Mech.", noteKo: "메카.",
+  },
 ];
