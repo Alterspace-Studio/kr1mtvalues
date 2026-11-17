@@ -922,10 +922,10 @@ window.ITEMS = [
   {
     id: "limited-xf12", name: "Limited XF12", category: "Air",
     aliases: ["XF12", "XF-12"],
-    value: null, demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    value: 500000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 2, vfm: null },
     obtain: "", updated: "2026-11-17",
-    history: [],
+    history: [{"date": "2026-11", "value": 500000}],
     image: "images/limited-xf12.png",
     note: "Aircraft.", noteKo: "항공기.",
   },
