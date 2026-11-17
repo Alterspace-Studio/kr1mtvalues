@@ -310,4 +310,14 @@ window.ITEMS = [
     image: "",
     note: "Artillery. Released around 2026-11-03.", noteKo: "포병. 2026-11-03쯤 출시."
   },
+  {
+    id: "super-horten", name: "Super Horten", category: "Air",
+    aliases: ["Horten", "Horten Ho 229", "호르텐", "슈퍼 호르텐"],
+    value: 1500000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 1500000}],
+    image: "",
+    note: "Flying-wing aircraft.", noteKo: "전익기.",
+  },
 ];
