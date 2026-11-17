@@ -270,4 +270,14 @@ window.ITEMS = [
     image: "https://static.wikia.nocookie.net/military-tycoon/images/2/27/SuperExofighterInAction.png/revision/latest/scale-to-width-down/600",
     note: "Fighter jet. Released 2025-02-22.", noteKo: "전투기. 2025-02-22 출시.",
   },
+  {
+    id: "f117-x", name: "F117 X", category: "Air",
+    aliases: ["F-117 X", "F117X", "F-117X", "F117", "나이트호크"],
+    value: 1300000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 1300000}],
+    image: "",
+    note: "Stealth jet.", noteKo: "스텔스기.",
+  },
 ];
