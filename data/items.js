@@ -965,7 +965,7 @@ window.ITEMS = [
     value: 3300000, demand: null, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: 6, vfm: null },
     obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 4000000}, {"date": "2026-11-17", "value": 3300000}],
+    history: [{"date": "2026-11-10", "value": 6000000}, {"date": "2026-11-17", "value": 3300000}],
     image: "images/super-doomsday-truck.png",
     note: "Missile launcher truck.", noteKo: "미사일 발사 트럭.",
   },
