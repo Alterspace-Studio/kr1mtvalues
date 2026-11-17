@@ -202,10 +202,10 @@ window.ITEMS = [
   {
     id: "f35-billion", name: "F-35 Billion", category: "Air",
     aliases: ["F35 Billion", "F-35", "F35", "빌리언", "F35 빌리언"],
-    value: null, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    value: 48000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
     stats: { pvp: 8, vfm: 10 },
     obtain: "", updated: "2026-11-17",
-    history: [],
+    history: [{"date": "2026-11", "value": 48000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/b/b1/F-35_Billion.png/revision/latest",
     note: "Fighter jet.", noteKo: "전투기.",
   },
