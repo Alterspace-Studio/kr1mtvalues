@@ -439,7 +439,7 @@ window.ITEMS = [
     id: "super-a14", name: "Super A-14", category: "Air",
     aliases: ["Super A14", "A-14", "A14", "A-14 Wolf", "슈퍼 A14"],
     value: 5000000, range: [5000000, 5500000], demand: null, trend: null, tradeable: true, limited: true, stock: null,
-    stats: { pvp: 10, vfm: null },
+    stats: { pvp: 10, vfm: 4.5},
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 5000000}],
     image: "images/super-a14.png",
