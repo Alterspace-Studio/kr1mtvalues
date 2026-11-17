@@ -251,7 +251,7 @@ function chart(history, title, show) {
   const dir = pct > 0 ? "up" : pct < 0 ? "down" : "stable";
   const hiIdx = vs.indexOf(rawHi);
   // 날짜 글씨가 겹치지 않게 간격이 좁은 것은 건너뛴다 (마지막은 항상 표시)
-  const xLabels = []; pts.forEach((p, i) => { if (i === pts.length - 1) { while (xLabels.length && p[0] - pts[xLabels.at(-1)][0] < 44) xLabels.pop(); xLabels.push(i); } else if (!xLabels.length || p[0] - pts[xLabels.at(-1)][0] >= 44) xLabels.push(i); });
+  const xLabels = []; pts.forEach((p, i) => { if (i === pts.length - 1) { while (xLabels.length && p[0] - pts[xLabels.at(-1)][0] < 56) xLabels.pop(); xLabels.push(i); } else if (!xLabels.length || p[0] - pts[xLabels.at(-1)][0] >= 56) xLabels.push(i); });
   const label = (i, above = true) => `<text class="c-val${i === pts.length - 1 ? " last" : ""}" x="${pts[i][0]}" y="${pts[i][1] + (above ? -12 : 22)}" text-anchor="${i === 0 ? "start" : i === pts.length - 1 ? "end" : "middle"}">${esc(compact(vs[i]))}</text>`;
   const shown = [...new Set([hiIdx, pts.length - 1])]; // 최고점과 현재값만 숫자 표시 (나머지는 점에 손대면 보임)
   // 이웃 점이 더 높으면(화면상 위) 값 글씨를 점 아래에 둔다
