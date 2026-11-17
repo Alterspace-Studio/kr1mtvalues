@@ -14,7 +14,7 @@
 //   stats      성능 { pvp, vfm, diff } 0~10 (PVP, 가성비, 난이도=다루기 어려운 정도, 소수 가능). 모르면 null
 //   obtain     얻는 방법
 //   updated    값을 마지막으로 바꾼 날 "YYYY-MM-DD"
-//   history    젬 가치 변화 [{ date, value }] (거래방 시세를 젬으로 환산)
+//   history    젬 가치 변화 [{ date, value }]. 가치를 바꿀 때마다 그 달 값을 끝에 추가
 //   image      이미지 경로 (images/xxx.png, 없으면 빈 문자열)
 //   note       메모 (영어), noteKo: 한국어 메모
 //   aliases    검색용 다른 이름 (예: ["Abrams", "에이브럼스"])
@@ -34,7 +34,7 @@ window.ITEMS = [
     value: 15000000, demand: null, trend: null, tradeable: true, limited: true, stock: 1000,
     stats: { pvp: 10, vfm: null },
     obtain: "Golden Crate", updated: "2026-11-17",
-    history: [],
+    history: [{"date": "2026-11", "value": 15000000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/c/ce/LE1000BismarckInAction.png/revision/latest/scale-to-width-down/600",
     note: "Battleship. Released 2024-11-09.", noteKo: "전함. 2024-11-09 출시.",
   },
@@ -51,10 +51,10 @@ window.ITEMS = [
   {
     id: "le-rocket-plane", name: "LE Rocket Plane", category: "Air",
     aliases: ["Rocket Plane", "LERP", "리로플", "로플"],
-    value: 6000000, demand: null, trend: null, tradeable: true, limited: true, stock: 1000,
+    value: 6000000, demand: null, trend: "up", tradeable: true, limited: true, stock: 1000,
     stats: { pvp: 8.5, vfm: 5.5, diff: 9.5 },
     obtain: "Rocket Plane Crate", updated: "2026-11-17",
-    history: [],
+    history: [{"date": "2025-10", "value": 1600000}, {"date": "2025-11", "value": 1000000}, {"date": "2026-08", "value": 3500000}, {"date": "2026-11", "value": 6000000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/d/de/LE1000RocketPlaneInAction.png/revision/latest/scale-to-width-down/600",
     note: "Bomber. Released 2025-02-08.", noteKo: "폭격기. 2025-02-08 출시.",
   },
@@ -101,10 +101,10 @@ window.ITEMS = [
   {
     id: "jetpack-fighter", name: "Jetpack Fighter", category: "Soldier",
     aliases: ["Jetpack", "제팩", "제트팩"],
-    value: 4200000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    value: 4200000, demand: null, trend: "up", tradeable: true, limited: false, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
-    history: [],
+    history: [{"date": "2025-11", "value": 610000}, {"date": "2026-03", "value": 720000}, {"date": "2026-05", "value": 1500000}, {"date": "2026-11", "value": 4200000}],
     image: "",
     note: "Soldier.", noteKo: "병사.",
   },
@@ -205,7 +205,7 @@ window.ITEMS = [
     stars: { "0": 1890000, "5": 2200000 },
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
-    history: [],
+    history: [{"date": "2026-11", "value": 1890000}],
     image: "",
     note: "Fighter jet. 0★ 1.89M, maxed (5★) 2.2M.", noteKo: "전투기. 0성 1.89M, 풀강(5성) 2.2M.",
   },
@@ -225,7 +225,7 @@ window.ITEMS = [
     value: 700000, demand: null, trend: "stable", tradeable: true, limited: true, stock: 1000,
     stats: { pvp: 4.5, vfm: 5, diff: 2 },
     obtain: "Golden Crate", updated: "2026-11-17",
-    history: [],
+    history: [{"date": "2026-11", "value": 700000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/f/f0/Gold_Izumo_fanmade_render.png/revision/latest/scale-to-width-down/600",
     note: "Aircraft carrier. Released 2024-12-07. Image is a fan-made render.", noteKo: "항공모함. 2024-12-07 출시. 이미지는 팬메이드 렌더.",
   },
