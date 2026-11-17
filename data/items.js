@@ -22,7 +22,7 @@
 //   aliases    검색용 다른 이름 (예: ["Abrams", "에이브럼스"])
 
 window.SITE = {
-  title: "kr1mtvalues",
+  title: "KR1 Military Tycoon Values",
   valueUnit: "Gems",
   lastUpdated: "2026-11-17",
   // 별 단계 값이 없을 때 0성 가치에 더하는 기본 차이 (젬). 아이템에 stars를 적으면 그 값이 우선
