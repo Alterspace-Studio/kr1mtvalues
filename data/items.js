@@ -196,4 +196,15 @@ window.ITEMS = [
     image: "",
     note: "Fighter jet.", noteKo: "전투기.",
   },
+  {
+    id: "super-x32", name: "Super X-32", category: "Air",
+    aliases: ["X-32", "X32", "Super X32", "슈퍼 X-32", "슈X32"],
+    value: 1890000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stars: { "0": 1890000, "5": 2200000 },
+    stats: { pvp: null, boss: null, vfm: null },
+    obtain: "", updated: "2026-11-17",
+    history: [],
+    image: "",
+    note: "Fighter jet. 0★ 1.89M, maxed (5★) 2.2M.", noteKo: "전투기. 0성 1.89M, 풀강(5성) 2.2M.",
+  },
 ];
