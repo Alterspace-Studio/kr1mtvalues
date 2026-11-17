@@ -194,7 +194,7 @@ function renderGrid() {
         ${thumb(it)}
         <h3>${esc(it.name)}</h3>
         <div class="meta"><span class="val">${valueOf(it)}</span>${lastChange(it) ? changeTag(lastChange(it)) : `<span class="trend ${it.trend}" title="${T().trend[it.trend] || ""}">${TREND[it.trend] || ""}</span>`}</div>
-        <div class="meta">${demandBar(it.demand)}<span class="tags">${tags(it)}</span></div>
+        <div class="meta"><span class="tags">${tags(it)}</span></div>
       </button>`).join("")
     : `<div class="empty">${T().noMatch}</div>`;
 }

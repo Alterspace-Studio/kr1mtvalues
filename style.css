@@ -213,3 +213,4 @@ input[type=search]:focus, select:focus, .trade-input:focus { border-color: var(-
 .val { color: var(--text); }
 .brand { color: var(--text); }
 .c-g1 { stop-color: var(--g1); } .c-g2 { stop-color: var(--g2); }
+.card .tags { justify-content: flex-start; }
