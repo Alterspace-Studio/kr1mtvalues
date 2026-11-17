@@ -350,4 +350,14 @@ window.ITEMS = [
     image: "",
     note: "Helicopter.", noteKo: "헬기.",
   },
+  {
+    id: "le-battle-tank", name: "LE Battle Tank", category: "Land",
+    aliases: ["Battle Tank", "LE750 Battle Tank", "배틀탱크", "리배탱"],
+    value: 3400000, demand: null, trend: null, tradeable: true, limited: true, stock: 750,
+    stats: { pvp: null, vfm: null },
+    obtain: "Battle Tank Crate", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 3400000}],
+    image: "https://static.wikia.nocookie.net/military-tycoon/images/4/48/LEBattleTankGold.png/revision/latest/scale-to-width-down/600",
+    note: "Tank. Released 2025-01-11.", noteKo: "전차. 2025-01-11 출시.",
+  },
 ];
