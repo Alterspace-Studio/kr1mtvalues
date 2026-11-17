@@ -402,7 +402,7 @@ window.ITEMS = [
     id: "platinum-sb12", name: "Platinum SB-12", category: "Air",
     aliases: ["Platinum SB12", "SB12", "SB-12", "플래티넘", "플래티넘 SB12"],
     value: 6000000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
-    stats: { pvp: 4.5, vfm: null },
+    stats: { pvp: 3, vfm: null },
     obtain: "Platinum Crate", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 6000000}],
     image: "images/platinum-sb12.png",
