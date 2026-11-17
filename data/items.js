@@ -62,10 +62,10 @@ window.ITEMS = [
   {
     id: "le-blackbird", name: "LE Blackbird", category: "Air",
     aliases: ["Blackbird", "리블버", "블랙버드"],
-    value: 3000000, demand: null, trend: "up", tradeable: true, limited: true, stock: 1000,
+    value: 4500000, demand: null, trend: "up", tradeable: true, limited: true, stock: 1000,
     stats: { pvp: null, vfm: null },
-    obtain: "LE1000 Blackbird Crate", updated: "2026-09-25",
-    history: [{"date": "2025-08", "value": 480000}, {"date": "2025-10", "value": 3200000}, {"date": "2025-11", "value": 2400000}, {"date": "2025-12", "value": 3700000}, {"date": "2026-06", "value": 2100000}, {"date": "2026-09", "value": 3000000}],
+    obtain: "LE1000 Blackbird Crate", updated: "2026-11-17",
+    history: [{"date": "2025-08", "value": 480000}, {"date": "2025-10", "value": 3200000}, {"date": "2025-11", "value": 2400000}, {"date": "2025-12", "value": 3700000}, {"date": "2026-06", "value": 2100000}, {"date": "2026-09", "value": 3000000}, {"date": "2026-11", "value": 4500000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/7/71/LE1000BlackbirdInAction.png/revision/latest/scale-to-width-down/600",
     note: "Fighter jet. Released 2024-12-24.", noteKo: "전투기. 2024-12-24 출시.",
   },
