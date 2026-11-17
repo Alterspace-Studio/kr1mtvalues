@@ -113,10 +113,23 @@ dialog::backdrop { background: rgba(20,25,20,.35); }
 .kv span { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
 .kv b { font-variant-numeric: tabular-nums; }
 h4 { margin: 0 0 6px; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
-.chart { width: 100%; height: 120px; }
-.chart path { fill: none; stroke: var(--accent); stroke-width: 2; }
-.chart circle { fill: var(--accent); }
-.chart text { fill: var(--muted); font-size: 10px; }
+.chart { width: 100%; height: auto; display: block; background: var(--panel-2); border-radius: var(--radius); }
+.c-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.c-delta { font-size: 13px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.c-delta small { font-weight: 500; color: var(--muted); }
+.c-delta.up { color: var(--up); } .c-delta.down { color: var(--down); } .c-delta.stable { color: var(--muted); }
+.c-grid { stroke: var(--line); stroke-dasharray: 3 4; }
+.c-axis { fill: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.c-stop1 { stop-color: var(--accent); stop-opacity: .32; }
+.c-stop2 { stop-color: var(--accent); stop-opacity: 0; }
+.c-area { fill: url(#cfill); }
+.c-line { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.c-dot { fill: var(--panel); stroke: var(--accent); stroke-width: 2.5; }
+.c-dot.last { fill: var(--accent); stroke: var(--panel); stroke-width: 3; }
+.c-hit { fill: transparent; }
+.c-pt:hover .c-dot { r: 6; }
+.c-val { fill: var(--text); font-size: 14px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.c-val.last { fill: var(--accent); font-size: 16px; }
 
 table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
 tr:last-child > td { border-bottom: 0; }

@@ -197,15 +197,45 @@ $("#grid").addEventListener("click", (e) => {
 let openId = null;
 function chart(history, title, show) {
   if (!history || history.length < 2) return "";
-  const W = 560, H = 120, P = 24;
+  // 날짜(YYYY-MM)를 실제 시간 간격대로 배치하고, 눈금·면적·끝점 강조를 그린다
+  const W = 480, H = 210, L = 50, R = 24, T = 30, B = 30;
+  const mon = (d) => { const [y, m] = d.split("-").map(Number); return y * 12 + (m || 1) - 1; };
+  const xs = history.map((h) => mon(h.date)), x0 = xs[0], xspan = xs.at(-1) - x0 || 1;
   const vs = history.map((h) => h.value);
-  const lo = Math.min(...vs), hi = Math.max(...vs), span = hi - lo || 1;
-  const pts = history.map((h, i) => [P + (i * (W - 2 * P)) / (history.length - 1), H - P - ((h.value - lo) / span) * (H - 2 * P)]);
-  return `<div><h4>${title}</h4><svg class="chart" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
-    <path d="M${pts.map((p) => p.join(",")).join(" L")}"/>
-    ${pts.map((p, i) => `<circle cx="${p[0]}" cy="${p[1]}" r="3"><title>${esc(history[i].date)}: ${show(history[i].value)}</title></circle>`).join("")}
-    <text x="${P}" y="${H - 6}">${esc(history[0].date)}</text>
-    <text x="${W - P}" y="${H - 6}" text-anchor="end">${esc(history.at(-1).date)}</text>
+  // 보기 좋은 눈금 (1·2·5 단위)
+  const rawLo = Math.min(...vs), rawHi = Math.max(...vs);
+  const step0 = (rawHi - rawLo || rawHi || 1) / 3, mag = 10 ** Math.floor(Math.log10(step0));
+  const step = [1, 2, 5, 10].map((k) => k * mag).find((v) => v >= step0);
+  const lo = Math.max(0, Math.floor(rawLo / step) * step), hi = Math.ceil(rawHi / step) * step || step;
+  const X = (m) => L + ((m - x0) / xspan) * (W - L - R);
+  const Y = (v) => T + (1 - (v - lo) / (hi - lo || 1)) * (H - T - B);
+  const pts = history.map((h, i) => [X(xs[i]), Y(h.value)]);
+  // 부드러운 곡선 (단조 유지: 제어점을 이웃 점 높이 사이로 제한)
+  let d = `M${pts[0][0]},${pts[0][1]}`;
+  for (let i = 1; i < pts.length; i++) {
+    const [ax, ay] = pts[i - 1], [bx, by] = pts[i], dx = (bx - ax) / 2.5;
+    d += ` C${ax + dx},${ay} ${bx - dx},${by} ${bx},${by}`;
+  }
+  const area = `${d} L${pts.at(-1)[0]},${H - B} L${pts[0][0]},${H - B} Z`;
+  const ticks = []; for (let v = lo; v <= hi + step / 2; v += step) ticks.push(v);
+  const first = vs[0], last = vs.at(-1), pct = first ? Math.round(((last - first) / first) * 100) : 0;
+  const dir = pct > 0 ? "up" : pct < 0 ? "down" : "stable";
+  const hiIdx = vs.indexOf(rawHi);
+  // 날짜 글씨가 겹치지 않게 간격이 좁은 것은 건너뛴다 (마지막은 항상 표시)
+  const xLabels = []; pts.forEach((p, i) => { if (i === pts.length - 1) { while (xLabels.length && p[0] - pts[xLabels.at(-1)][0] < 44) xLabels.pop(); xLabels.push(i); } else if (!xLabels.length || p[0] - pts[xLabels.at(-1)][0] >= 44) xLabels.push(i); });
+  const label = (i, above = true) => `<text class="c-val${i === pts.length - 1 ? " last" : ""}" x="${pts[i][0]}" y="${pts[i][1] + (above ? -12 : 22)}" text-anchor="${i === 0 ? "start" : i === pts.length - 1 ? "end" : "middle"}">${esc(compact(vs[i]))}</text>`;
+  const shown = [...new Set([hiIdx, pts.length - 1])]; // 최고점과 현재값만 숫자 표시 (나머지는 점에 손대면 보임)
+  // 이웃 점이 더 높으면(화면상 위) 값 글씨를 점 아래에 둔다
+  const below = (i) => { const n = [pts[i - 1], pts[i + 1]].filter(Boolean); return n.some((q) => q[1] < pts[i][1] - 4) && pts[i][1] < H - B - 24; };
+  return `<div><div class="c-head"><h4>${title}</h4><span class="c-delta ${dir}">${pct > 0 ? "▲ +" : pct < 0 ? "▼ " : ""}${pct}% <small>${esc(history[0].date)} →</small></span></div>
+  <svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(title)}">
+    <defs><linearGradient id="cfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="c-stop1"/><stop offset="1" class="c-stop2"/></linearGradient></defs>
+    ${ticks.map((v) => `<line class="c-grid" x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}"/><text class="c-axis" x="${L - 8}" y="${Y(v) + 3}" text-anchor="end">${esc(compact(v))}</text>`).join("")}
+    <path class="c-area" d="${area}"/>
+    <path class="c-line" d="${d}"/>
+    ${pts.map((p, i) => `<g class="c-pt"><circle class="c-hit" cx="${p[0]}" cy="${p[1]}" r="12"/><circle class="c-dot${i === pts.length - 1 ? " last" : ""}" cx="${p[0]}" cy="${p[1]}" r="${i === pts.length - 1 ? 5 : 3.5}"/><title>${esc(history[i].date)}: ${show(vs[i])}</title></g>`).join("")}
+    ${shown.map((i) => label(i, !below(i))).join("")}
+    ${xLabels.map((i) => `<text class="c-axis" x="${pts[i][0]}" y="${H - 8}" text-anchor="${i === 0 ? "start" : i === pts.length - 1 ? "end" : "middle"}">${esc(history[i].date.replace(/^20/, "").replace("-", "."))}</text>`).join("")}
   </svg></div>`;
 }
 function openDetail(id) {
