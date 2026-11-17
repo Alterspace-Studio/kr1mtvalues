@@ -48,7 +48,7 @@ ITEMS.forEach((it) => {
 // ---------- 언어 ----------
 const STR = {
   en: {
-    tabValues: "Values", tabCompare: "Compare", tabTrade: "Trade Calc", updated: "Updated",
+    tabValues: "Values", tabCompare: "Compare", tabTrade: "Trade Calc", tabChanges: "Changes", chSearch: "Search changes...", chDate: "Date", chItem: "Item", chFrom: "Before", chTo: "After", chDiff: "Change", chFirst: "Listed", chCount: (n) => `${n} changes`, allChanges: "All changes", updated: "Updated",
     search: "Search vehicles, soldiers, drones…",
     sortValueDesc: "Value ↓", sortValueAsc: "Value ↑", sortDemand: "Demand ↓", sortPvp: "PVP ↓", sortVfm: "Value for money ↓", sortDiffAsc: "Easiest first", sortDiffDesc: "Hardest first", sortName: "Name A–Z",
     onlyTradeable: "Tradeable only", onlyLimited: "Limited only",
@@ -67,7 +67,7 @@ const STR = {
     langBtn: "한국어",
   },
   ko: {
-    tabValues: "가치", tabCompare: "비교", tabTrade: "거래 계산", updated: "업데이트",
+    tabValues: "가치", tabCompare: "비교", tabTrade: "거래 계산", tabChanges: "변경 기록", chSearch: "아이템 이름으로 찾기...", chDate: "날짜", chItem: "아이템", chFrom: "이전", chTo: "이후", chDiff: "변동", chFirst: "등록", chCount: (n) => `기록 ${n}개`, allChanges: "전체 수정 기록", updated: "업데이트",
     search: "탈것·병사·드론 검색…",
     sortValueDesc: "가치 높은 순", sortValueAsc: "가치 낮은 순", sortDemand: "수요 높은 순", sortPvp: "PVP 높은 순", sortVfm: "가성비 높은 순", sortDiffAsc: "쉬운 순", sortDiffDesc: "어려운 순", sortName: "이름 순",
     onlyTradeable: "거래 가능만", onlyLimited: "한정판만",
@@ -96,7 +96,7 @@ function applyLang() {
   $$("[data-i18n]").forEach((el) => (el.textContent = T()[el.dataset.i18n]));
   $$("[data-i18n-ph]").forEach((el) => (el.placeholder = T()[el.dataset.i18nPh]));
   $("#langBtn").textContent = T().langBtn;
-  renderChips(); renderGrid(); renderPickers(); renderCompare(); renderTrade();
+  renderChips(); renderGrid(); renderPickers(); renderCompare(); renderTrade(); renderChanges();
   if ($("#detail").open && openId) openDetail(openId);
 }
 $("#langBtn").addEventListener("click", () => {
@@ -289,6 +289,7 @@ function openDetail(id) {
         </div></div>` : ""}
       <div><h4>${t.perf}</h4><div class="gauges">${gauge(s.pvp, t.pvp)}${gauge(s.vfm, t.vfm)}${gauge(s.diff, t.diff, 72, "diff")}</div></div>
       ${chart(it.history, t.history, gem)}
+      ${(it.history || []).length ? `<details class="hist"><summary>${t.allChanges} (${it.history.length})</summary>${histTable(it)}</details>` : ""}
       ${it.video ? `<div><h4>${t.showcase}</h4><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${esc(it.video)}" title="${esc(it.name)} ${t.showcase}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>` : ""}
       ${noteOf(it) ? `<p class="hint">${esc(noteOf(it))}</p>` : ""}
       <p class="hint">${t.lastChanged} ${esc(it.updated || "—")}</p>
@@ -393,7 +394,30 @@ function updateTotals() {
   else { v.className = "verdict lose"; v.textContent = `${t.lose} −${gem(-diff)}`; }
 }
 
+// ---------- 변경 기록 ----------
+// 아이템 하나의 기록을 [날짜, 이전, 이후] 줄로 (첫 기록은 "등록")
+function rowsOf(it) {
+  const h = it.history || [];
+  return h.map((p, i) => ({ it, date: p.date, from: i ? h[i - 1].value : null, to: p.value }));
+}
+const dcell = (d) => { const p = d.split("-"); return p.length === 3 ? `<span class="y">${esc(p[0])}-</span>${esc(p[1] + "-" + p[2])}` : `<span class="y">20</span>${esc(p[0].slice(2) + "-" + p[1])}`; }; // 휴대폰에서는 연도를 숨긴다
+const diffCell = (r) => r.from == null ? `<span class="muted">${T().chFirst}</span>` : changeTag({ diff: r.to - r.from, pct: r.from ? Math.round(((r.to - r.from) / r.from) * 100) : 0, date: r.date }, true);
+function histTable(it) {
+  const rows = rowsOf(it).reverse();
+  return `<div class="table-wrap"><table class="changes"><tbody>${rows.map((r) => `<tr><td>${dcell(r.date)}</td><td>${r.from == null ? "—" : gem(r.from)}</td><td>${gem(r.to)}</td><td>${diffCell(r)}</td></tr>`).join("")}</tbody></table></div>`;
+}
+function renderChanges() {
+  const q = ($("#chSearch").value || "").trim().toLowerCase();
+  const key = (d) => d.length === 7 ? d + "-00" : d; // 월 단위 기록은 그 달 맨 앞으로
+  const rows = ITEMS.filter((it) => !q || it.name.toLowerCase().includes(q) || (it.aliases || []).some((a) => a.toLowerCase().includes(q)))
+    .flatMap(rowsOf).sort((a, b) => key(b.date).localeCompare(key(a.date)) || a.it.name.localeCompare(b.it.name));
+  $("#chCount").textContent = T().chCount(rows.length);
+  $("#chBody").innerHTML = rows.map((r) => `<tr data-id="${esc(r.it.id)}"><td>${dcell(r.date)}</td><td class="ch-item">${r.it.image ? `<span class="ch-ic" style="background-image:url('${esc(r.it.image)}')"></span>` : ""}${esc(r.it.name)}</td><td>${r.from == null ? "—" : gem(r.from)}</td><td>${gem(r.to)}</td><td>${diffCell(r)}</td></tr>`).join("");
+}
+$("#chSearch").addEventListener("input", renderChanges);
+$("#chBody").addEventListener("click", (e) => { const tr = e.target.closest("tr[data-id]"); if (tr) openDetail(tr.dataset.id); });
+
 // 시작
 applyLang();
 const start = location.hash.slice(1);
-if (["values", "compare", "trade"].includes(start)) showView(start);
+if (["values", "compare", "trade", "changes"].includes(start)) showView(start);

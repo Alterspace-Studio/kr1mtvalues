@@ -18,6 +18,7 @@
       <button class="tab active" data-view="values" data-i18n="tabValues"></button>
       <button class="tab" data-view="compare" data-i18n="tabCompare"></button>
       <button class="tab" data-view="trade" data-i18n="tabTrade"></button>
+      <button class="tab" data-view="changes" data-i18n="tabChanges"></button>
     </nav>
     <div class="updated"><span data-i18n="updated"></span> <span id="lastUpdated"></span></div>
     <button class="lang" id="langBtn" aria-label="Language"></button>
@@ -75,6 +76,13 @@
       </div>
       <datalist id="itemList"></datalist>
       <p class="hint" data-i18n="tradeHint"></p>
+    </section>
+
+    <!-- 변경 기록: 모든 아이템의 가치 변화 -->
+    <section id="view-changes" class="view">
+      <div class="toolbar"><input type="search" id="chSearch" data-i18n-ph="chSearch"></div>
+      <p class="count" id="chCount"></p>
+      <div class="table-wrap"><table class="changes"><thead><tr><th data-i18n="chDate"></th><th data-i18n="chItem"></th><th data-i18n="chFrom"></th><th data-i18n="chTo"></th><th data-i18n="chDiff"></th></tr></thead><tbody id="chBody"></tbody></table></div>
     </section>
   </main>
 
