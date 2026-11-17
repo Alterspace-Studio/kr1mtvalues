@@ -67,7 +67,7 @@ const STR = {
     trend: { up: "오름", down: "내림", stable: "유지" },
     untradeable: "거래 불가", sample: "예시",
     value: "가치 (젬)", demand: "수요", trendL: "추세", obtain: "얻는 법", byStars: "별 단계별 가치",
-    perf: "성능", pvp: "PVP", boss: "보스 레이드", vfm: "가성비", diff: "숙련도",
+    perf: "성능", pvp: "PVP", boss: "보스 레이드", vfm: "가성비", diff: "난이도",
     history: "가치 변화", lastChanged: "마지막 수정", close: "닫기",
     pick: "— 선택 —", pickHint: "비교할 항목을 고르세요.",
     youGive: "내가 주는 것", youGet: "내가 받는 것", addItem: "항목 추가…", add: "추가", total: "합계",
@@ -266,7 +266,7 @@ function renderCompare() {
     const show = key === "value" ? gem : fmt;
     return `<tr><td>${T()[key]}</td>${vs.map((v, j) => {
       const best = v != null && v === max && picks.length > 1 ? "best" : "";
-      if (kind === "diff") return `<td>${gauge(v, "", 48, "diff")}</td>`; // 숙련도는 높다고 좋은 게 아니라 강조 안 함
+      if (kind === "diff") return `<td>${gauge(v, "", 48, "diff")}</td>`; // 난이도는 높다고 좋은 게 아니라 강조 안 함
       if (kind === "grade") return `<td class="${best}">${gauge(v, "", 48)}</td>`;
       if (kind === "value" && v == null) return `<td>${valueOf(picks[j])}</td>`;
       return `<td class="${best}">${show(v)}${v != null && max > 0 ? `<div class="bar" style="width:${(v / max) * 100}%"></div>` : ""}</td>`;
