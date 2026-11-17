@@ -14,7 +14,7 @@
 //   stats      성능 { pvp, vfm, diff } 0~10 (PVP, 가성비, 난이도=다루기 어려운 정도, 소수 가능). 모르면 null
 //   obtain     얻는 방법
 //   updated    값을 마지막으로 바꾼 날 "YYYY-MM-DD"
-//   history    젬 가치 변화 [{ date, value }] (거래방 현금 거래를 그 달 "N:1" 젬 시세로 환산)
+//   history    젬 가치 변화 [{ date, value }] (거래방 시세를 젬으로 환산)
 //   image      이미지 경로 (images/xxx.png, 없으면 빈 문자열)
 //   note       메모 (영어), noteKo: 한국어 메모
 //   aliases    검색용 다른 이름 (예: ["Abrams", "에이브럼스"])

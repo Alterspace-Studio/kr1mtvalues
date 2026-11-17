@@ -3,3 +3,7 @@ KakaoTalk_*.txt
 *.csv
 __pycache__/
 dist/
+# 현금 시세 분석은 공개 저장소에 올리지 않는다 (로컬 보관)
+analysis/
+tools/analyze_trades.py
+tools/extract_trades.py
