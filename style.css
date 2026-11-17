@@ -111,7 +111,7 @@ dialog::backdrop { background: rgba(28,20,44,.38); }
 .d-body { padding: 20px; display: grid; gap: 14px; }
 .close { background: var(--panel-2); border: none; width: 34px; height: 34px; border-radius: 50%; font-size: 20px; line-height: 1; cursor: pointer; color: var(--muted); }
 .close:hover { color: var(--text); }
-.kv { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; }
+.kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(105px, 1fr)); gap: 8px; }
 .kv div { background: var(--panel-2); padding: 8px 16px; border-radius: var(--radius); }
 .kv b .untrade { display: inline; font-size: .85em; color: var(--accent); letter-spacing: .04em; }
 .kv span { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
@@ -261,3 +261,5 @@ table.changes tbody tr[data-id]:hover { background: var(--panel-2); }
 }
 .basis { font-size: .55em; font-weight: 700; color: var(--muted); vertical-align: middle; }
 .card .val { white-space: nowrap; } .card .meta { flex-wrap: wrap; row-gap: 2px; }
+.card .fresh { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: -4px; }
+.li-fresh { font-size: 12px; color: var(--muted); display: inline-flex; gap: 4px; align-items: center; cursor: pointer; }

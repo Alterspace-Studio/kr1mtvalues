@@ -34,22 +34,8 @@ const lastChange = (it) => {
 };
 const changeTag = (c, withPct) => !c ? "" : `<span class="chg ${c.diff > 0 ? "up" : c.diff < 0 ? "down" : "stable"}" title="${esc(c.date)}">${c.diff > 0 ? "▲ +" : c.diff < 0 ? "▼ -" : "■ "}${compact(Math.abs(c.diff))}${withPct ? ` <small>(${c.pct > 0 ? "+" : ""}${c.pct}%)</small>` : ""}</span>`;
 
-// 별 단계 값이 없으면 0성 가치에 기본 차이를 더해 채운다 (data/items.js의 SITE.starOffsets)
-const STAR_OFFSETS = SITE.starOffsets || { 1: 0, 2: 0, 3: 20000, 4: 110000, 5: 200000 };
-ITEMS.forEach((it) => {
-  if (it.category === "Soldier") { it.stars = null; return; } // 병사는 별 강화가 없다 (0성만)
-  if (isUntradeable(it) || it.value == null) return;
-  // basis: 5 이면 value가 5성(풀강) 기준 값이다. 0성은 기본 차이를 빼서 계산
-  const base = it.stars?.["0"] ?? (it.basis === 5 ? it.value - (STAR_OFFSETS[5] ?? 0) : it.value);
-  const filled = { 0: base };
-  for (let k = 1; k <= 5; k++) filled[k] = it.stars?.[k] ?? base + (STAR_OFFSETS[k] ?? 0);
-  if (it.basis === 5) filled[5] = it.value;
-  it.stars = filled;
-});
 // 범위 표시: range [최소, 최대] 또는 [최소, "+"] → "5M~5.5M", "6M+"
 const rangeText = (it) => !it.range ? gem(it.value) : it.range[1] === "+" ? `${gem(it.range[0])}+` : `${gem(it.range[0])}~${compact(it.range[1])}`;
-// 별 단계 값 글자: 기준 별 단계에는 범위를 그대로 보여 준다
-const starText = (it, k) => (it.range && +k === (it.basis ?? 0) ? rangeText(it) : gem(it.stars?.[k]));
 
 // ---------- 언어 ----------
 const STR = {
@@ -62,7 +48,7 @@ const STR = {
     cat: { All: "All", Land: "Land", Air: "Air", Naval: "Naval", Soldier: "Soldier", Drone: "Drone", Other: "Other" },
     trend: { up: "Rising", down: "Falling", stable: "Stable" },
     untradeable: "Untradeable", sample: "Sample",
-    value: "Value (Gems)", demand: "Demand", trendL: "Trend", obtain: "Obtain", byStars: "Value by stars",
+    value: "Value (Gems)", demand: "Demand", trendL: "Trend", obtain: "Obtain", fresh: "Fresh",
     perf: "Performance", pvp: "PVP", vfm: "Value for money", diff: "Difficulty",
     history: "Value history", showcase: "Showcase", lastChanged: "Last changed", lastChange: "Last change", close: "Close",
     pick: "— pick —", pickHint: "Pick items to compare.",
@@ -81,7 +67,7 @@ const STR = {
     cat: { All: "전체", Land: "지상", Air: "항공", Naval: "해군", Soldier: "병사", Drone: "드론", Other: "기타" },
     trend: { up: "오름", down: "내림", stable: "유지" },
     untradeable: "거래 불가", sample: "예시",
-    value: "가치 (젬)", demand: "수요", trendL: "추세", obtain: "얻는 법", byStars: "별 단계별 가치",
+    value: "가치 (젬)", demand: "수요", trendL: "추세", obtain: "얻는 법", fresh: "Fresh (0성)",
     perf: "성능", pvp: "PVP", vfm: "가성비", diff: "난이도",
     history: "가치 변화", showcase: "쇼케이스", lastChanged: "마지막 수정", lastChange: "최근 변동", close: "닫기",
     pick: "— 선택 —", pickHint: "비교할 항목을 고르세요.",
@@ -159,17 +145,7 @@ function thumb(it) {
     ? `<div class="thumb" style="background-image:url('${esc(it.image)}')"></div>`
     : `<div class="thumb noimg"><span>No Image</span></div>`;
 }
-const starLabel = (k) => (+k >= 0 && +k <= 5 ? "★".repeat(+k) + "☆".repeat(5 - +k) : esc(k));
-// 별 단계 슬라이더. 데이터에 있는 단계만 칸으로 쓴다(0~5 중 빠진 단계는 건너뜀).
-const starKeys = (it) => Object.keys(it.stars || {}).sort((a, b) => +a - +b);
-function starSlider(it, star, tag) {
-  const keys = starKeys(it);
-  const idx = Math.max(0, keys.indexOf(String(star)));
-  const ticks = keys.map((k) => `<span>${esc(k)}★</span>`).join("");
-  const attr = typeof tag === "number" ? `data-i="${tag}"` : `data-slider="${tag}"`;
-  return `<div class="slider"><input type="range" min="0" max="${keys.length - 1}" step="1" value="${idx}" ${attr} aria-label="${T().star}"><div class="ticks">${ticks}</div></div>`;
-}
-const valueOf = (it) => (isUntradeable(it) ? `<span class="untrade">${T().untradeable}</span>` : `${rangeText(it)}${it.basis === 5 ? ` <small class="basis">★5</small>` : ""}`);
+const valueOf = (it) => (isUntradeable(it) ? `<span class="untrade">${T().untradeable}</span>` : rangeText(it));
 const noteOf = (it) => (lang === "ko" ? it.noteKo ?? it.note : it.note ?? it.noteKo);
 
 // ---------- 가치 목록 ----------
@@ -207,6 +183,7 @@ function renderGrid() {
         ${thumb(it)}
         <h3>${esc(it.name)}</h3>
         <div class="meta"><span class="val">${valueOf(it)}</span>${lastChange(it) ? changeTag(lastChange(it)) : `<span class="trend ${it.trend}" title="${T().trend[it.trend] || ""}">${TREND[it.trend] || ""}</span>`}</div>
+        ${it.fresh != null ? `<div class="fresh">${T().fresh} ${gem(it.fresh)}</div>` : ""}
         <div class="meta"><span class="tags">${tags(it)}</span></div>
       </button>`).join("")
     : `<div class="empty">${T().noMatch}</div>`;
@@ -277,22 +254,17 @@ function openDetail(id) {
   const it = byId(id); if (!it) return;
   openId = id;
   const s = it.stats || {}, t = T();
-  const stars = it.stars ? Object.entries(it.stars) : [];
   $("#detailBody").innerHTML = `
     <div class="d-head"><h2>${esc(it.name)}</h2><button class="close" aria-label="${t.close}">×</button></div>
     <div class="d-body">
       <div class="tags">${tags(it)}</div>
       <div class="kv">
         <div><span>${t.value}</span><b>${valueOf(it)}</b>${lastChange(it) ? `<div class="kv-sub">${changeTag(lastChange(it), true)}</div>` : ""}</div>
+        ${it.fresh != null && !isUntradeable(it) ? `<div><span>${t.fresh}</span><b>${gem(it.fresh)}</b></div>` : ""}
         <div><span>${t.demand}</span><b>${it.demand ?? "—"}/10</b></div>
         <div><span>${t.trendL}</span><b class="trend ${it.trend}">${TREND[it.trend] || ""} ${t.trend[it.trend] || "—"}</b></div>
         <div><span>${t.obtain}</span><b>${esc(it.obtain || "—")}</b></div>
       </div>
-      ${stars.length && !isUntradeable(it) ? `<div><h4>${t.byStars}</h4>
-        <div class="star-box">
-          <div class="star-read"><span class="star" id="dStar">${starLabel(String(it.basis ?? starKeys(it)[0]))}</span><b id="dStarVal">${starText(it, it.basis ?? starKeys(it)[0])}</b></div>
-          ${starSlider(it, it.basis ?? starKeys(it)[0], "detail")}
-        </div></div>` : ""}
       <div><h4>${t.perf}</h4><div class="gauges">${gauge(s.pvp, t.pvp)}${gauge(s.vfm, t.vfm)}${gauge(s.diff, t.diff, 72, "diff")}</div></div>
       ${chart(it.history, t.history, gem)}
       ${(it.history || []).length ? `<details class="hist"><summary>${t.allChanges} (${it.history.length})</summary>${histTable(it)}</details>` : ""}
@@ -301,12 +273,6 @@ function openDetail(id) {
       <p class="hint">${t.lastChanged} ${esc(it.updated || "—")}</p>
     </div>`;
   $(".close", $("#detailBody")).addEventListener("click", () => $("#detail").close());
-  const sl = $('input[data-slider="detail"]', $("#detailBody"));
-  if (sl) sl.addEventListener("input", () => {
-    const k = starKeys(it)[+sl.value];
-    $("#dStar").innerHTML = starLabel(k);
-    $("#dStarVal").textContent = starText(it, k);
-  });
   if (!$("#detail").open) $("#detail").showModal();
 }
 $("#detail").addEventListener("click", (e) => { if (e.target.id === "detail") e.target.close(); });
@@ -349,14 +315,14 @@ function renderCompare() {
 // 별 단계를 고르면 그 단계 가치로 더한다.
 $("#itemList").innerHTML = ITEMS.filter((i) => i.tradeable !== false).map((i) => `<option value="${esc(i.name)}">`).join("");
 const trade = { you: [], them: [] };
-const entryValue = (e) => { const it = byId(e.id); return (e.star && it.stars?.[e.star]) ?? it.value ?? 0; };
+const entryValue = (e) => { const it = byId(e.id); return (e.fresh && it.fresh != null ? it.fresh : it.value) ?? 0; };
 $$(".side").forEach((side) => {
   const input = $(".trade-input", side);
   const list = trade[side.dataset.side];
   const add = () => {
     const it = ITEMS.find((i) => i.name.toLowerCase() === input.value.trim().toLowerCase());
     if (!it || it.tradeable === false) { input.select(); return; }
-    list.push({ id: it.id, star: it.stars ? starKeys(it)[0] : null }); input.value = ""; renderTrade();
+    list.push({ id: it.id, fresh: false }); input.value = ""; renderTrade();
   };
   $(".add-btn", side).addEventListener("click", add);
   input.addEventListener("keydown", (e) => { if (e.key === "Enter") add(); });
@@ -364,15 +330,10 @@ $$(".side").forEach((side) => {
     const b = e.target.closest("button[data-i]"); if (!b) return;
     list.splice(+b.dataset.i, 1); renderTrade();
   });
-  // 슬라이더를 끄는 동안 목록을 다시 그리지 않고 글자만 바꾼다.
-  $(".trade-list", side).addEventListener("input", (e) => {
-    const s = e.target.closest("input[data-i]"); if (!s) return;
-    const entry = list[+s.dataset.i], it = byId(entry.id);
-    entry.star = starKeys(it)[+s.value];
-    const li = s.closest("li");
-    $(".star", li).innerHTML = starLabel(entry.star);
-    $(".entry-val", li).textContent = gem(entryValue(entry));
-    updateTotals();
+  // Fresh 체크: 강화 안 한 가치로 계산
+  $(".trade-list", side).addEventListener("change", (e) => {
+    const c = e.target.closest("input[data-fresh]"); if (!c) return;
+    list[+c.dataset.fresh].fresh = c.checked; renderTrade();
   });
 });
 function renderTrade() {
@@ -380,7 +341,7 @@ function renderTrade() {
     const list = trade[side.dataset.side];
     $(".trade-list", side).innerHTML = list.map((e, i) => {
       const it = byId(e.id);
-      const slider = it.stars ? `<div class="li-star"><span class="star">${starLabel(e.star)}</span>${starSlider(it, e.star, i)}</div>` : "";
+      const slider = it.fresh != null ? `<label class="li-fresh"><input type="checkbox" data-fresh="${i}" ${e.fresh ? "checked" : ""}> ${T().fresh}</label>` : "";
       return `<li><div class="li-top"><span>${esc(it.name)}</span><span><span class="entry-val">${gem(entryValue(e))}</span> <button data-i="${i}" aria-label="×">×</button></span></div>${slider}</li>`;
     }).join("");
   });

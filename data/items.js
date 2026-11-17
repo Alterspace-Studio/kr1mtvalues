@@ -11,8 +11,8 @@
 //   tradeable  거래 가능 여부
 //   limited    한정판(LE) 여부, stock: 한정 수량 (모르면 null)
 //   rarity     등급 (선택). "Exotic"이면 무지개 태그
-//   basis      5 이면 value가 5성(풀강) 기준. range: [최소, 최대] 또는 [최소, "+"] 로 범위 표시 (value는 최소값)
-//   stars      별 단계별 가치 { "0": 숫자, "1": 숫자, ... "5": 숫자 } (별은 0~5). 빠진 단계는 SITE.starOffsets로 자동 계산. value는 0성 가치
+//   value      풀강(5성) 기준 가치. range: [최소, 최대] 또는 [최소, "+"] 로 범위 표시 (value는 최소값)
+//   fresh      강화 안 한(0성) 가치가 다를 때만 적는다
 //   stats      성능 { pvp, vfm, diff } 0~10 (PVP, 가성비, 난이도=다루기 어려운 정도, 소수 가능). 모르면 null
 //   obtain     얻는 방법
 //   updated    값을 마지막으로 바꾼 날 "YYYY-MM-DD"
@@ -26,8 +26,6 @@ window.SITE = {
   title: "KR1 Military Tycoon Values",
   valueUnit: "Gems",
   lastUpdated: "2026-11-17",
-  // 별 단계 값이 없을 때 0성 가치에 더하는 기본 차이 (젬). 아이템에 stars를 적으면 그 값이 우선
-  starOffsets: { 1: 0, 2: 0, 3: 20000, 4: 110000, 5: 200000 },
 };
 
 window.ITEMS = [
@@ -45,7 +43,7 @@ window.ITEMS = [
   {
     id: "seabreacher-x", name: "SeaBreacher-X", category: "Naval",
     aliases: ["Seabreacher", "시브", "시브리쳐"],
-    value: 4500000, basis: 5, demand: null, trend: "stable", tradeable: true, limited: true, stock: null,
+    value: 4500000, demand: null, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "SeaBreacher-X Crate", updated: "2026-11-17",
     history: [{"date": "2026-05", "value": 3000000}, {"date": "2026-06", "value": 4000000}, {"date": "2026-07", "value": 3800000}, {"date": "2026-11", "value": 4500000}],
@@ -56,7 +54,7 @@ window.ITEMS = [
   {
     id: "le-rocket-plane", name: "LE Rocket Plane", category: "Air",
     aliases: ["Rocket Plane", "LERP", "리로플", "로플"],
-    value: 6000000, basis: 5, range: [6000000, "+"], demand: null, trend: "up", tradeable: true, limited: true, stock: 1000,
+    value: 6000000, range: [6000000, "+"], demand: null, trend: "up", tradeable: true, limited: true, stock: 1000,
     stats: { pvp: 10, vfm: 5.5, diff: 9.5 },
     obtain: "Rocket Plane Crate", updated: "2026-11-17",
     history: [{"date": "2025-10", "value": 1600000}, {"date": "2025-11", "value": 1000000}, {"date": "2026-08", "value": 3500000}, {"date": "2026-11", "value": 6000000}],
@@ -89,7 +87,7 @@ window.ITEMS = [
   {
     id: "super-imperial-tank", name: "Super Imperial Tank", category: "Land",
     aliases: ["LE Imperial Tank", "Super Imperial", "리임페", "리임탱", "슈퍼 임페리얼"],
-    value: 4000000, basis: 5, demand: null, trend: "up", tradeable: true, limited: true, stock: null,
+    value: 4000000, demand: null, trend: "up", tradeable: true, limited: true, stock: null,
     stats: { pvp: 9, vfm: null },
     obtain: "Imperial Tank Crate", updated: "2026-11-17",
     history: [{"date": "2025-08", "value": 520000}, {"date": "2026-06", "value": 2600000}, {"date": "2026-11", "value": 4000000}],
@@ -162,7 +160,7 @@ window.ITEMS = [
   {
     id: "nuke-mortar", name: "Nuke Mortar Truck", category: "Land",
     aliases: ["Nuke Mortar", "핵박격", "핵모르타르"],
-    value: 2400000, basis: 5, range: [2400000, 2800000], demand: null, trend: "down", tradeable: true, limited: true, stock: null,
+    value: 2400000, range: [2400000, 2800000], demand: null, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: 9, vfm: null },
     obtain: "Nuke Mortar Truck Crate", updated: "2026-11-17",
     history: [{"date": "2025-11", "value": 610000}, {"date": "2026-06", "value": 500000}, {"date": "2026-11", "value": 2400000}],
@@ -213,34 +211,31 @@ window.ITEMS = [
   {
     id: "f35-billion", name: "F-35 Billion", category: "Air",
     aliases: ["F35 Billion", "F-35", "F35", "빌리언", "F35 빌리언"],
-    value: 48000, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
-    stars: { "0": 48000, "5": 300000 },
+    value: 300000, fresh: 48000, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: 8, vfm: 10 },
     obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 48000}],
+    history: [{"date": "2026-11", "value": 300000}],
     image: "images/f35-billion.png",
     note: "Fighter jet.", noteKo: "전투기.",
   },
   {
     id: "super-x32", name: "Super X-32", category: "Air",
     aliases: ["X-32", "X32", "Super X32", "슈퍼 X-32", "슈X32"],
-    value: 1890000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
-    stars: { "0": 1890000, "5": 2200000 },
+    value: 2200000, fresh: 1890000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 9, vfm: null },
     obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 1890000}],
+    history: [{"date": "2026-11", "value": 2200000}],
     image: "images/super-x32.png",
     video: "CESU-B_G7kY",
-    note: "Fighter jet. 0★ 1.89M, maxed (5★) 2.2M.", noteKo: "전투기. 0성 1.89M, 풀강(5성) 2.2M.",
+    note: "Fighter jet.", noteKo: "전투기.",
   },
   {
     id: "silkfire-x", name: "Silkfire X", category: "Air",
     aliases: ["SFX", "Silkfire", "SilkfireX", "실크파이어"],
-    value: 2700000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
-    stars: { "0": 2700000, "5": 3300000 },
+    value: 3300000, fresh: 2700000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 10, vfm: 6.5, diff: 6.5 },
     obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 2700000}],
+    history: [{"date": "2026-11", "value": 3300000}],
     image: "images/silkfire-x.png",
     video: "yKppVZa_08A",
     note: "Fighter jet.", noteKo: "전투기.",
@@ -371,7 +366,7 @@ window.ITEMS = [
   {
     id: "le-battle-tank", name: "LE Battle Tank", category: "Land",
     aliases: ["Battle Tank", "LE750 Battle Tank", "배틀탱크", "리배탱"],
-    value: 3000000, basis: 5, range: [3000000, 3500000], demand: null, trend: null, tradeable: true, limited: true, stock: 750,
+    value: 3000000, range: [3000000, 3500000], demand: null, trend: null, tradeable: true, limited: true, stock: 750,
     stats: { pvp: 7, vfm: null },
     obtain: "Battle Tank Crate", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 3000000}],
@@ -402,7 +397,7 @@ window.ITEMS = [
   {
     id: "platinum-sb12", name: "Platinum SB-12", category: "Air",
     aliases: ["Platinum SB12", "SB12", "SB-12", "플래티넘", "플래티넘 SB12"],
-    value: 6000000, basis: 5, range: [6000000, 6500000], demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    value: 6000000, range: [6000000, 6500000], demand: null, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 3, vfm: 1},
     obtain: "Platinum Crate", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 6000000}],
@@ -412,7 +407,7 @@ window.ITEMS = [
   {
     id: "super-razor", name: "Super Razor", category: "Air",
     aliases: ["Razor", "SM39 Razor", "레이저", "슈퍼 레이저"],
-    value: 3500000, basis: 5, range: [3500000, 4000000], demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    value: 3500000, range: [3500000, 4000000], demand: null, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 8, vfm: null },
     obtain: "SM39 Razor Crate", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 3500000}],
@@ -443,7 +438,7 @@ window.ITEMS = [
   {
     id: "super-a14", name: "Super A-14", category: "Air",
     aliases: ["Super A14", "A-14", "A14", "A-14 Wolf", "슈퍼 A14"],
-    value: 5000000, basis: 5, range: [5000000, 5500000], demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    value: 5000000, range: [5000000, 5500000], demand: null, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 10, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 5000000}],
@@ -453,7 +448,7 @@ window.ITEMS = [
   {
     id: "super-beam-tank", name: "Super Beam Tank", category: "Land",
     aliases: ["Beam Tank", "Super Beam", "빔탱크", "슈퍼 빔탱크"],
-    value: 6500000, basis: 5, range: [6500000, "+"], demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    value: 6500000, range: [6500000, "+"], demand: null, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 10, vfm: 4.5, diff: 3.5 },
     obtain: "Beam Tank Crate", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 6500000}],
@@ -543,7 +538,7 @@ window.ITEMS = [
   {
     id: "le-a10", name: "LE A-10", category: "Air",
     aliases: ["A-10", "A10", "LE A10", "리에이텐"],
-    value: 3000000, basis: 5, range: [3000000, 3500000], demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    value: 3000000, range: [3000000, 3500000], demand: null, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 6, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 3000000}],
@@ -683,7 +678,7 @@ window.ITEMS = [
   {
     id: "nuclear-saucer", name: "Nuclear Saucer", category: "Land",
     aliases: ["Nuke Saucer", "Saucer", "핵 원반"],
-    value: 5000000, basis: 5, range: [5000000, 5500000], demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    value: 5000000, range: [5000000, 5500000], demand: null, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 9, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 5000000}],
