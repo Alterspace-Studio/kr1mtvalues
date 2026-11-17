@@ -412,4 +412,14 @@ window.ITEMS = [
     image: "",
     note: "", noteKo: "",
   },
+  {
+    id: "boss-ghostwind", name: "Boss Ghostwind", category: "Air",
+    aliases: ["BOSS GhostWind", "Ghostwind", "GhostWind", "고스트윈드", "보스 고스트윈드"],
+    value: 1600000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "Boss Fight: The GhostWind", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 1600000}],
+    image: "https://static.wikia.nocookie.net/military-tycoon/images/c/c0/BOSS_GhostWind.png/revision/latest/scale-to-width-down/600",
+    note: "Helicopter. Released 2025-11-15.", noteKo: "헬기. 2025-11-15 출시.",
+  },
 ];
