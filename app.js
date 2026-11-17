@@ -135,7 +135,6 @@ function tags(it) {
     it.rarity ? `<span class="tag rarity ${esc(it.rarity.toLowerCase())}">${esc(it.rarity)}</span>` : "",
     "",
     it.sample ? `<span class="tag sample">${T().sample}</span>` : "",
-    vfmChip(it.stats?.vfm),
     `<span class="tag">${esc(T().cat[it.category] || it.category)}</span>`,
   ].join("");
 }
