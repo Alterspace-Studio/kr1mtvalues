@@ -195,7 +195,7 @@ window.ITEMS = [
     stats: { pvp: 8, boss: 1, vfm: 10 },
     obtain: "", updated: "2026-11-17",
     history: [],
-    image: "",
+    image: "https://static.wikia.nocookie.net/military-tycoon/images/b/b1/F-35_Billion.png/revision/latest",
     note: "Fighter jet.", noteKo: "전투기.",
   },
   {
