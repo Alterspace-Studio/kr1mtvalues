@@ -10,6 +10,7 @@
 //   trend      "up" | "down" | "stable"
 //   tradeable  거래 가능 여부
 //   limited    한정판(LE) 여부, stock: 한정 수량 (모르면 null)
+//   rarity     등급 (선택). "Exotic"이면 무지개 태그
 //   stars      별 단계별 가치 { "0": 숫자, "1": 숫자, ... "5": 숫자 } (별은 0~5). 빠진 단계는 SITE.starOffsets로 자동 계산. value는 0성 가치
 //   stats      성능 { pvp, vfm, diff } 0~10 (PVP, 가성비, 난이도=다루기 어려운 정도, 소수 가능). 모르면 null
 //   obtain     얻는 방법
@@ -91,7 +92,7 @@ window.ITEMS = [
   {
     id: "imperial-tank", name: "Imperial Tank", category: "Land",
     aliases: ["임페리얼", "임페", "임탱"],
-    value: 300000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    value: 300000, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "Imperial Tank Crate", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 300000}],
@@ -262,7 +263,7 @@ window.ITEMS = [
   {
     id: "super-exofighter", name: "Super Exo Fighter", category: "Air",
     aliases: ["Super Exofighter", "Exofighter", "Exo Fighter", "슈퍼 엑소", "엑소파이터"],
-    value: 600000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    value: 600000, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "Exofighter Crate", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 600000}],

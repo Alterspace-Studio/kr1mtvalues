@@ -137,6 +137,7 @@ function gauge(v, label, size = 72, cls = "") {
 function tags(it) {
   return [
     it.limited ? `<span class="tag le">LE${it.stock ? " · " + fmt(it.stock) : ""}</span>` : "",
+    it.rarity ? `<span class="tag rarity ${esc(it.rarity.toLowerCase())}">${esc(it.rarity)}</span>` : "",
     "",
     it.sample ? `<span class="tag sample">${T().sample}</span>` : "",
     `<span class="tag">${esc(T().cat[it.category] || it.category)}</span>`,

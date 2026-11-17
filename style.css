@@ -214,3 +214,12 @@ input[type=search]:focus, select:focus, .trade-input:focus { border-color: var(-
 .brand { color: var(--text); }
 .c-g1 { stop-color: var(--g1); } .c-g2 { stop-color: var(--g2); }
 .card .tags { justify-content: flex-start; }
+/* 등급 태그: Exotic = 무지개 */
+.tag.rarity { font-weight: 800; color: #fff; }
+.tag.exotic {
+  background: linear-gradient(90deg, #ff3b5c, #ff9f1c, #ffd60a, #2ec27e, #1fa2ff, #7b5cff, #ff3bd4, #ff3b5c);
+  background-size: 200% 100%; animation: rainbow 4s linear infinite;
+  text-shadow: 0 1px 2px rgba(0,0,0,.35);
+}
+@keyframes rainbow { to { background-position: 200% 0; } }
+@media (prefers-reduced-motion: reduce) { .tag.exotic { animation: none; } }
