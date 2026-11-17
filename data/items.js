@@ -249,4 +249,14 @@ window.ITEMS = [
     image: "https://static.wikia.nocookie.net/military-tycoon/images/f/f2/Overwatch.png/revision/latest/scale-to-width-down/600",
     note: "Fighter. Released 2026-06-06 (monthly event). Untradeable.", noteKo: "전투기. 2026-06-06 출시 (월간 이벤트). 거래 불가.",
   },
+  {
+    id: "infinity-car-x", name: "Infinity Car X", category: "Land",
+    aliases: ["Infinity Car", "인피니티 카", "인카"],
+    value: 550000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 550000}],
+    image: "",
+    note: "", noteKo: "",
+  },
 ];
