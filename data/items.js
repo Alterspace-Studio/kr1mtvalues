@@ -979,4 +979,14 @@ window.ITEMS = [
     image: "images/super-a50.png",
     note: "Radar plane.", noteKo: "조기경보기.",
   },
+  {
+    id: "le-pounce-mech", name: "LE Pounce Mech", category: "Land",
+    aliases: ["Pounce Mech", "Pounce", "LE Pounce", "파운스", "파운스 메카"],
+    value: 1100000, demand: null, trend: "down", tradeable: true, limited: true, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 1100000}],
+    image: "",
+    note: "Mech. New limited item.", noteKo: "메카. 새 한정판.",
+  },
 ];
