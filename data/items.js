@@ -101,12 +101,12 @@ window.ITEMS = [
   {
     id: "jetpack-fighter", name: "Jetpack Fighter", category: "Soldier",
     aliases: ["Jetpack", "제팩", "제트팩"],
-    value: 1600000, demand: null, trend: "up", tradeable: true, limited: false, stock: null,
+    value: 4200000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
     stats: { pvp: null, boss: null, vfm: null },
-    obtain: "", updated: "2026-08-26",
-    history: [{"date": "2025-11", "value": 610000}, {"date": "2026-03", "value": 720000}, {"date": "2026-05", "value": 1500000}],
+    obtain: "", updated: "2026-11-17",
+    history: [],
     image: "",
-    note: "Value estimated from KR trade chat (converted to gems).", noteKo: "가치는 한국 거래방 거래를 젬으로 환산한 추정값.",
+    note: "Soldier.", noteKo: "병사.",
   },
   {
     id: "master-reaper", name: "Master Reaper", category: "Air",
