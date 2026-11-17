@@ -362,4 +362,14 @@ window.ITEMS = [
     image: "https://static.wikia.nocookie.net/military-tycoon/images/4/48/LEBattleTankGold.png/revision/latest/scale-to-width-down/600",
     note: "Tank. Released 2025-01-11.", noteKo: "전차. 2025-01-11 출시.",
   },
+  {
+    id: "super-cfa44", name: "Super CFA-44", category: "Air",
+    aliases: ["Super CFA44", "CFA-44", "CFA44", "CFA 44", "슈퍼 CFA"],
+    value: 650000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "Limited Stock (2,800 Robux)", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 650000}],
+    image: "",
+    note: "Super fighter. Released 2026-08-08.", noteKo: "슈퍼 전투기. 2026-08-08 출시.",
+  },
 ];
