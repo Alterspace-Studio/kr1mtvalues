@@ -330,4 +330,14 @@ window.ITEMS = [
     image: "",
     note: "Mech.", noteKo: "메카.",
   },
+  {
+    id: "super-tesla-tank", name: "Super Tesla Tank", category: "Land",
+    aliases: ["Tesla Tank", "Super Tesla", "테슬라", "슈퍼 테슬라"],
+    value: 2300000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 2300000}],
+    image: "",
+    note: "Tank.", noteKo: "전차.",
+  },
 ];
