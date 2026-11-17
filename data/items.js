@@ -299,10 +299,10 @@ window.ITEMS = [
   {
     id: "super-mech-walker", name: "Super Mech Walker", category: "Land",
     aliases: ["SMW", "Mech Walker", "슈퍼 메카 워커", "슈메워", "메카워커"],
-    value: 6500000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    value: 7000000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 7, vfm: 2, diff: 0.5 },
     obtain: "Mech Walker Crate", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 6500000}],
+    history: [{"date": "2026-11", "value": 7000000}],
     image: "images/super-mech-walker.png",
     note: "Mech. Released 2026-03-07.", noteKo: "메카. 2026-03-07 출시.",
   },
