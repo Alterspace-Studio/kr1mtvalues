@@ -51,12 +51,12 @@ window.ITEMS = [
   {
     id: "le-rocket-plane", name: "LE Rocket Plane", category: "Air",
     aliases: ["Rocket Plane", "LERP", "리로플", "로플"],
-    value: 3500000, demand: null, trend: "up", tradeable: true, limited: true, stock: 1000,
+    value: 6000000, demand: null, trend: null, tradeable: true, limited: true, stock: 1000,
     stats: { pvp: 8.5, vfm: 5.5, diff: 9.5 },
-    obtain: "Rocket Plane Crate", updated: "2026-08-29",
-    history: [{"date": "2025-10", "value": 1600000}, {"date": "2025-11", "value": 1000000}, {"date": "2026-08", "value": 3500000}],
+    obtain: "Rocket Plane Crate", updated: "2026-11-17",
+    history: [],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/d/de/LE1000RocketPlaneInAction.png/revision/latest/scale-to-width-down/600",
-    note: "Bomber. Released 2025-02-08. Value estimated from KR trade chat (converted to gems).", noteKo: "폭격기. 2025-02-08 출시. 가치는 한국 거래방 거래를 젬으로 환산한 추정값.",
+    note: "Bomber. Released 2025-02-08.", noteKo: "폭격기. 2025-02-08 출시.",
   },
   {
     id: "le-blackbird", name: "LE Blackbird", category: "Air",
