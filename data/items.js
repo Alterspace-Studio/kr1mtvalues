@@ -162,12 +162,12 @@ window.ITEMS = [
   {
     id: "nuke-mortar", name: "Nuke Mortar Truck", category: "Land",
     aliases: ["Nuke Mortar", "핵박격", "핵모르타르"],
-    value: 2000000, demand: null, trend: "up", tradeable: true, limited: true, stock: null,
+    value: 2400000, basis: 5, range: [2400000, 2800000], demand: null, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: 9, vfm: null },
     obtain: "Nuke Mortar Truck Crate", updated: "2026-11-17",
-    history: [{"date": "2025-11", "value": 610000}, {"date": "2026-06", "value": 500000}, {"date": "2026-11", "value": 2000000}],
+    history: [{"date": "2025-11", "value": 610000}, {"date": "2026-06", "value": 500000}, {"date": "2026-11", "value": 2400000}],
     image: "images/nuke-mortar.png",
-    note: "Artillery. Released 2025-07-12.", noteKo: "포병. 2025-07-12 출시.",
+    note: "Artillery. Released 2025-07-12. Value uncertain, may be dropping.", noteKo: "포병. 2025-07-12 출시. 시세 불확실, 떨어지는 중일 수 있음.",
   },
   {
     id: "nuke-project", name: "Nuke Project 665", category: "Naval",
