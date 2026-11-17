@@ -77,10 +77,10 @@ window.ITEMS = [
   {
     id: "p1000-ratte", name: "P.1000 Ratte", category: "Land",
     aliases: ["Ratte", "라테", "라떼"],
-    value: 4000000, demand: null, trend: "up", tradeable: true, limited: true, stock: 750,
+    value: 4000000, demand: null, trend: "down", tradeable: true, limited: true, stock: 750,
     stats: { pvp: 7, vfm: null },
     obtain: "Golden Crate", updated: "2026-11-17",
-    history: [{"date": "2025-11", "value": 960000}, {"date": "2026-01", "value": 510000}, {"date": "2026-08", "value": 1400000}, {"date": "2026-10", "value": 2900000}, {"date": "2026-11", "value": 4000000}],
+    history: [{"date": "2025-11", "value": 960000}, {"date": "2026-01", "value": 510000}, {"date": "2026-08", "value": 1400000}, {"date": "2026-10", "value": 2900000}, {"date": "2026-11", "value": 5500000}, {"date": "2026-11-17", "value": 4000000}],
     image: "images/p1000-ratte.png",
     video: "l4xlnUWkv-M",
     note: "Tank. Released 2025-03-08.", noteKo: "전차. 2025-03-08 출시.",
