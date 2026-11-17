@@ -56,7 +56,7 @@ const STR = {
     untradeable: "Untradeable", sample: "Sample",
     value: "Value (Gems)", demand: "Demand", trendL: "Trend", obtain: "Obtain", byStars: "Value by stars",
     perf: "Performance", pvp: "PVP", vfm: "Value for money", diff: "Difficulty",
-    history: "Value history", lastChanged: "Last changed", lastChange: "Last change", close: "Close",
+    history: "Value history", showcase: "Showcase", lastChanged: "Last changed", lastChange: "Last change", close: "Close",
     pick: "— pick —", pickHint: "Pick items to compare.",
     youGive: "You give", youGet: "You get", addItem: "Add item…", add: "Add", total: "Total",
     star: "Stars", addFirst: "Add items to compare", fair: "FAIR", win: "WIN", lose: "LOSE",
@@ -75,7 +75,7 @@ const STR = {
     untradeable: "거래 불가", sample: "예시",
     value: "가치 (젬)", demand: "수요", trendL: "추세", obtain: "얻는 법", byStars: "별 단계별 가치",
     perf: "성능", pvp: "PVP", vfm: "가성비", diff: "난이도",
-    history: "가치 변화", lastChanged: "마지막 수정", lastChange: "최근 변동", close: "닫기",
+    history: "가치 변화", showcase: "쇼케이스", lastChanged: "마지막 수정", lastChange: "최근 변동", close: "닫기",
     pick: "— 선택 —", pickHint: "비교할 항목을 고르세요.",
     youGive: "내가 주는 것", youGet: "내가 받는 것", addItem: "항목 추가…", add: "추가", total: "합계",
     star: "별", addFirst: "항목을 넣어 비교하세요", fair: "공정", win: "이득", lose: "손해",
@@ -286,6 +286,7 @@ function openDetail(id) {
         </div></div>` : ""}
       <div><h4>${t.perf}</h4><div class="gauges">${gauge(s.pvp, t.pvp)}${gauge(s.vfm, t.vfm)}${gauge(s.diff, t.diff, 72, "diff")}</div></div>
       ${chart(it.history, t.history, gem)}
+      ${it.video ? `<div><h4>${t.showcase}</h4><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${esc(it.video)}" title="${esc(it.name)} ${t.showcase}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>` : ""}
       ${noteOf(it) ? `<p class="hint">${esc(noteOf(it))}</p>` : ""}
       <p class="hint">${t.lastChanged} ${esc(it.updated || "—")}</p>
     </div>`;

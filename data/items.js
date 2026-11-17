@@ -17,6 +17,7 @@
 //   updated    값을 마지막으로 바꾼 날 "YYYY-MM-DD"
 //   history    젬 가치 변화 [{ date, value }]. 가치를 바꿀 때마다 끝에 추가. date는 "YYYY-MM" 또는 같은 달 안 변화는 "YYYY-MM-DD"
 //   image      게임 아이콘 경로 images/<id>.png (없으면 빈 문자열)
+//   video      쇼케이스 유튜브 영상 ID (선택, @lionhe4rted 채널)
 //   note       메모 (영어), noteKo: 한국어 메모
 //   aliases    검색용 다른 이름 (예: ["Abrams", "에이브럼스"])
 
@@ -37,6 +38,7 @@ window.ITEMS = [
     obtain: "Golden Crate", updated: "2026-11-17",
     history: [{"date": "2025-07", "value": 1040000}, {"date": "2025-08", "value": 1007500}, {"date": "2025-12", "value": 2684000}, {"date": "2026-03", "value": 520000}, {"date": "2026-05", "value": 3850000}, {"date": "2026-10", "value": 1905000}, {"date": "2026-11", "value": 15000000}],
     image: "images/le-gold-bismarck.png",
+    video: "5HiemLJJCJo",
     note: "Battleship. Released 2024-11-09.", noteKo: "전함. 2024-11-09 출시.",
   },
   {
@@ -47,6 +49,7 @@ window.ITEMS = [
     obtain: "SeaBreacher-X Crate", updated: "2026-07-15",
     history: [{"date": "2026-05", "value": 3000000}, {"date": "2026-06", "value": 4000000}, {"date": "2026-07", "value": 3800000}],
     image: "images/seabreacher-x.png",
+    video: "uw6eHjOUtqM",
     note: "Submarine. Released 2025-06-28.", noteKo: "잠수함. 2025-06-28 출시.",
   },
   {
@@ -57,6 +60,7 @@ window.ITEMS = [
     obtain: "Rocket Plane Crate", updated: "2026-11-17",
     history: [{"date": "2025-10", "value": 1600000}, {"date": "2025-11", "value": 1000000}, {"date": "2026-08", "value": 3500000}, {"date": "2026-11", "value": 6000000}],
     image: "images/le-rocket-plane.png",
+    video: "_DSJCR6TNTg",
     note: "Bomber. Released 2025-02-08.", noteKo: "폭격기. 2025-02-08 출시.",
   },
   {
@@ -67,6 +71,7 @@ window.ITEMS = [
     obtain: "LE1000 Blackbird Crate", updated: "2026-11-17",
     history: [{"date": "2025-08", "value": 480000}, {"date": "2025-10", "value": 3200000}, {"date": "2025-11", "value": 2400000}, {"date": "2025-12", "value": 3700000}, {"date": "2026-06", "value": 2100000}, {"date": "2026-09", "value": 3000000}, {"date": "2026-11", "value": 4500000}],
     image: "images/le-blackbird.png",
+    video: "mBhquD11ldg",
     note: "Fighter jet. Released 2024-12-24.", noteKo: "전투기. 2024-12-24 출시.",
   },
   {
@@ -77,6 +82,7 @@ window.ITEMS = [
     obtain: "Golden Crate", updated: "2026-11-17",
     history: [{"date": "2025-11", "value": 960000}, {"date": "2026-01", "value": 510000}, {"date": "2026-08", "value": 1400000}, {"date": "2026-10", "value": 2900000}, {"date": "2026-11", "value": 5500000}],
     image: "images/p1000-ratte.png",
+    video: "l4xlnUWkv-M",
     note: "Tank. Released 2025-03-08.", noteKo: "전차. 2025-03-08 출시.",
   },
   {
@@ -87,6 +93,7 @@ window.ITEMS = [
     obtain: "Imperial Tank Crate", updated: "2026-06-13",
     history: [{"date": "2025-08", "value": 520000}, {"date": "2026-06", "value": 2600000}],
     image: "images/super-imperial-tank.png",
+    video: "bXjWkZ7gMjQ",
     note: "Tank. Released 2025-05-03.", noteKo: "전차. 2025-05-03 출시.",
   },
   {
@@ -137,6 +144,7 @@ window.ITEMS = [
     obtain: "LE Station", updated: "2026-11-08",
     history: [{"date": "2025-12", "value": 670000}, {"date": "2026-01", "value": 360000}, {"date": "2026-03", "value": 340000}, {"date": "2026-11", "value": 940000}],
     image: "images/darkstar-x.png",
+    video: "WSKKegSsx1U",
     note: "Bomber. Released 2025-06-12.", noteKo: "폭격기. 2025-06-12 출시.",
   },
   {
@@ -147,6 +155,7 @@ window.ITEMS = [
     obtain: "USS Missouri Crate", updated: "2026-05-12",
     history: [{"date": "2025-12", "value": 980000}, {"date": "2026-01", "value": 480000}, {"date": "2026-03", "value": 200000}, {"date": "2026-05", "value": 520000}],
     image: "images/le-missouri.png",
+    video: "Wcr1LF7sthA",
     note: "Warship. Released 2025-11-29.", noteKo: "전함. 2025-11-29 출시.",
   },
   {
@@ -167,6 +176,7 @@ window.ITEMS = [
     obtain: "Project 665 Crate", updated: "2026-10-29",
     history: [{"date": "2026-01", "value": 460000}, {"date": "2026-02", "value": 280000}, {"date": "2026-09", "value": 290000}, {"date": "2026-10", "value": 480000}],
     image: "images/nuke-project.png",
+    video: "pNcQ_4IdIls",
     note: "Submarine. Released 2025-10-04.", noteKo: "잠수함. 2025-10-04 출시.",
   },
   {
@@ -219,6 +229,7 @@ window.ITEMS = [
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 1890000}],
     image: "images/super-x32.png",
+    video: "CESU-B_G7kY",
     note: "Fighter jet. 0★ 1.89M, maxed (5★) 2.2M.", noteKo: "전투기. 0성 1.89M, 풀강(5성) 2.2M.",
   },
   {
@@ -230,6 +241,7 @@ window.ITEMS = [
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 2700000}],
     image: "images/silkfire-x.png",
+    video: "yKppVZa_08A",
     note: "Fighter jet.", noteKo: "전투기.",
   },
   {
@@ -250,6 +262,7 @@ window.ITEMS = [
     obtain: "Space Project: Overwatch", updated: "2026-11-17",
     history: [],
     image: "images/overwatch.png",
+    video: "t_0huL8ShLg",
     note: "Fighter. Released 2026-06-06 (monthly event). Untradeable.", noteKo: "전투기. 2026-06-06 출시 (월간 이벤트). 거래 불가.",
   },
   {
@@ -270,6 +283,7 @@ window.ITEMS = [
     obtain: "Exofighter Crate", updated: "2026-11-17",
     history: [{"date": "2026-05", "value": 250000}, {"date": "2026-11", "value": 600000}],
     image: "images/super-exofighter.png",
+    video: "xDySe1_QG_8",
     note: "Fighter jet. Released 2025-02-22.", noteKo: "전투기. 2025-02-22 출시.",
   },
   {
@@ -310,6 +324,7 @@ window.ITEMS = [
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11-03", "value": 2200000}, {"date": "2026-11-17", "value": 600000}],
     image: "",
+    video: "S_gYvesuMdY",
     note: "Artillery. Released around 2026-11-03.", noteKo: "포병. 2026-11-03쯤 출시."
   },
   {
@@ -370,6 +385,7 @@ window.ITEMS = [
     obtain: "Limited Stock (2,800 Robux)", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 650000}],
     image: "images/super-cfa44.png",
+    video: "7fK7V8kJ95A",
     note: "Super fighter. Released 2026-08-08.", noteKo: "슈퍼 전투기. 2026-08-08 출시.",
   },
   {
@@ -400,6 +416,7 @@ window.ITEMS = [
     obtain: "SM39 Razor Crate", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 3500000}],
     image: "images/super-razor.png",
+    video: "GMPKYgPbMx4",
     note: "Fighter jet. Released 2026-04-04.", noteKo: "전투기. 2026-04-04 출시.",
   },
   {
