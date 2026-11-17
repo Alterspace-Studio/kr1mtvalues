@@ -217,11 +217,22 @@ function chart(history, title, show) {
   const X = (m) => L + ((m - x0) / xspan) * (W - L - R);
   const Y = (v) => T + (1 - (v - lo) / (hi - lo || 1)) * (H - T - B);
   const pts = history.map((h, i) => [X(xs[i]), Y(h.value)]);
-  // 부드러운 곡선 (단조 유지: 제어점을 이웃 점 높이 사이로 제한)
+  // 부드러운 곡선 (monotone cubic: 점과 점 사이에서 위아래로 튀어나가지 않는다)
+  const n = pts.length, sl = [], m = [];
+  for (let i = 0; i < n - 1; i++) sl.push((pts[i + 1][1] - pts[i][1]) / (pts[i + 1][0] - pts[i][0] || 1));
+  for (let i = 0; i < n; i++) {
+    if (i === 0) m.push(sl[0]); else if (i === n - 1) m.push(sl[n - 2]);
+    else m.push(sl[i - 1] * sl[i] <= 0 ? 0 : (sl[i - 1] + sl[i]) / 2);
+  }
+  for (let i = 0; i < n - 1; i++) {
+    if (sl[i] === 0) { m[i] = 0; m[i + 1] = 0; continue; }
+    const a = m[i] / sl[i], b = m[i + 1] / sl[i], h = Math.hypot(a, b);
+    if (h > 3) { m[i] = (3 * a / h) * sl[i]; m[i + 1] = (3 * b / h) * sl[i]; }
+  }
   let d = `M${pts[0][0]},${pts[0][1]}`;
-  for (let i = 1; i < pts.length; i++) {
-    const [ax, ay] = pts[i - 1], [bx, by] = pts[i], dx = (bx - ax) / 2.5;
-    d += ` C${ax + dx},${ay} ${bx - dx},${by} ${bx},${by}`;
+  for (let i = 0; i < n - 1; i++) {
+    const [ax, ay] = pts[i], [bx, by] = pts[i + 1], dx = (bx - ax) / 3;
+    d += ` C${ax + dx},${ay + m[i] * dx} ${bx - dx},${by - m[i + 1] * dx} ${bx},${by}`;
   }
   const area = `${d} L${pts.at(-1)[0]},${H - B} L${pts[0][0]},${H - B} Z`;
   const ticks = []; for (let v = lo; v <= hi + step / 2; v += step) ticks.push(v);

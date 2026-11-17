@@ -31,10 +31,10 @@ window.ITEMS = [
   {
     id: "le-gold-bismarck", name: "LE Gold Bismarck", category: "Naval",
     aliases: ["Gold Bismarck", "Gold Bismark", "LE1000 Bismarck", "골비스", "골비", "골드 비스마르크"],
-    value: 15000000, demand: null, trend: null, tradeable: true, limited: true, stock: 1000,
+    value: 15000000, demand: null, trend: "up", tradeable: true, limited: true, stock: 1000,
     stats: { pvp: 10, vfm: null },
     obtain: "Golden Crate", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 15000000}],
+    history: [{"date": "2025-07", "value": 1040000}, {"date": "2025-08", "value": 1007500}, {"date": "2025-12", "value": 2684000}, {"date": "2026-03", "value": 520000}, {"date": "2026-05", "value": 3850000}, {"date": "2026-10", "value": 1905000}, {"date": "2026-11", "value": 15000000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/c/ce/LE1000BismarckInAction.png/revision/latest/scale-to-width-down/600",
     note: "Battleship. Released 2024-11-09.", noteKo: "전함. 2024-11-09 출시.",
   },
