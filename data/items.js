@@ -280,4 +280,14 @@ window.ITEMS = [
     image: "",
     note: "Stealth jet.", noteKo: "스텔스기.",
   },
+  {
+    id: "super-mech-walker", name: "Super Mech Walker", category: "Land",
+    aliases: ["Mech Walker", "슈퍼 메카 워커", "슈메워", "메카워커"],
+    value: 7000000, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "Mech Walker Crate", updated: "2026-11-17",
+    history: [{"date": "2026-11", "value": 7000000}],
+    image: "",
+    note: "Mech. Released 2026-03-07.", noteKo: "메카. 2026-03-07 출시.",
+  },
 ];
