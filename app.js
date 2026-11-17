@@ -39,11 +39,17 @@ const STAR_OFFSETS = SITE.starOffsets || { 1: 0, 2: 0, 3: 20000, 4: 110000, 5: 2
 ITEMS.forEach((it) => {
   if (it.category === "Soldier") { it.stars = null; return; } // 병사는 별 강화가 없다 (0성만)
   if (isUntradeable(it) || it.value == null) return;
-  const base = it.stars?.["0"] ?? it.value;
+  // basis: 5 이면 value가 5성(풀강) 기준 값이다. 0성은 기본 차이를 빼서 계산
+  const base = it.stars?.["0"] ?? (it.basis === 5 ? it.value - (STAR_OFFSETS[5] ?? 0) : it.value);
   const filled = { 0: base };
   for (let k = 1; k <= 5; k++) filled[k] = it.stars?.[k] ?? base + (STAR_OFFSETS[k] ?? 0);
+  if (it.basis === 5) filled[5] = it.value;
   it.stars = filled;
 });
+// 범위 표시: range [최소, 최대] 또는 [최소, "+"] → "5M~5.5M", "6M+"
+const rangeText = (it) => !it.range ? gem(it.value) : it.range[1] === "+" ? `${gem(it.range[0])}+` : `${gem(it.range[0])}~${compact(it.range[1])}`;
+// 별 단계 값 글자: 기준 별 단계에는 범위를 그대로 보여 준다
+const starText = (it, k) => (it.range && +k === (it.basis ?? 0) ? rangeText(it) : gem(it.stars?.[k]));
 
 // ---------- 언어 ----------
 const STR = {
@@ -163,7 +169,7 @@ function starSlider(it, star, tag) {
   const attr = typeof tag === "number" ? `data-i="${tag}"` : `data-slider="${tag}"`;
   return `<div class="slider"><input type="range" min="0" max="${keys.length - 1}" step="1" value="${idx}" ${attr} aria-label="${T().star}"><div class="ticks">${ticks}</div></div>`;
 }
-const valueOf = (it) => (isUntradeable(it) ? `<span class="untrade">${T().untradeable}</span>` : gem(it.value));
+const valueOf = (it) => (isUntradeable(it) ? `<span class="untrade">${T().untradeable}</span>` : `${rangeText(it)}${it.basis === 5 ? ` <small class="basis">★5</small>` : ""}`);
 const noteOf = (it) => (lang === "ko" ? it.noteKo ?? it.note : it.note ?? it.noteKo);
 
 // ---------- 가치 목록 ----------
@@ -284,8 +290,8 @@ function openDetail(id) {
       </div>
       ${stars.length && !isUntradeable(it) ? `<div><h4>${t.byStars}</h4>
         <div class="star-box">
-          <div class="star-read"><span class="star" id="dStar">${starLabel(starKeys(it)[0])}</span><b id="dStarVal">${gem(it.stars[starKeys(it)[0]])}</b></div>
-          ${starSlider(it, starKeys(it)[0], "detail")}
+          <div class="star-read"><span class="star" id="dStar">${starLabel(String(it.basis ?? starKeys(it)[0]))}</span><b id="dStarVal">${starText(it, it.basis ?? starKeys(it)[0])}</b></div>
+          ${starSlider(it, it.basis ?? starKeys(it)[0], "detail")}
         </div></div>` : ""}
       <div><h4>${t.perf}</h4><div class="gauges">${gauge(s.pvp, t.pvp)}${gauge(s.vfm, t.vfm)}${gauge(s.diff, t.diff, 72, "diff")}</div></div>
       ${chart(it.history, t.history, gem)}
@@ -299,7 +305,7 @@ function openDetail(id) {
   if (sl) sl.addEventListener("input", () => {
     const k = starKeys(it)[+sl.value];
     $("#dStar").innerHTML = starLabel(k);
-    $("#dStarVal").textContent = gem(it.stars[k]);
+    $("#dStarVal").textContent = starText(it, k);
   });
   if (!$("#detail").open) $("#detail").showModal();
 }
