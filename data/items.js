@@ -11,7 +11,7 @@
 //   tradeable  거래 가능 여부
 //   limited    한정판(LE) 여부, stock: 한정 수량 (모르면 null)
 //   stars      별 단계별 가치 { "0": 숫자, "1": 숫자, ... "5": 숫자 } (별은 0~5). 빠진 단계는 SITE.starOffsets로 자동 계산. value는 0성 가치
-//   stats      성능 { pvp, boss, vfm } 0~10 (PVP, 보스 레이드, 가성비, 소수 가능). 모르면 null
+//   stats      성능 { pvp, boss, vfm, diff } 0~10 (PVP, 보스 레이드, 가성비, 숙련도=다루기 어려운 정도, 소수 가능). 모르면 null
 //   obtain     얻는 방법
 //   updated    값을 마지막으로 바꾼 날 "YYYY-MM-DD"
 //   history    젬 가치 변화 [{ date, value }] (거래방 현금 거래를 그 달 "N:1" 젬 시세로 환산)

@@ -179,3 +179,4 @@ td .gauge { justify-items: end; }
   .top .tabs { order: 3; width: 100%; }
   .top .tab { flex: 1; padding: 6px 4px; font-size: 12px; }
 }
+.gauge.diff .g-fg { stroke: #c2423c; }

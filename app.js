@@ -41,14 +41,14 @@ const STR = {
   en: {
     tabValues: "Values", tabCompare: "Compare", tabTrade: "Trade Calc", updated: "Updated",
     search: "Search vehicles, soldiers, drones…",
-    sortValueDesc: "Value ↓", sortValueAsc: "Value ↑", sortDemand: "Demand ↓", sortPvp: "PVP ↓", sortBoss: "Boss Raid ↓", sortVfm: "Value for money ↓", sortName: "Name A–Z",
+    sortValueDesc: "Value ↓", sortValueAsc: "Value ↑", sortDemand: "Demand ↓", sortPvp: "PVP ↓", sortBoss: "Boss Raid ↓", sortVfm: "Value for money ↓", sortDiffAsc: "Easiest first", sortDiffDesc: "Hardest first", sortName: "Name A–Z",
     onlyTradeable: "Tradeable only", onlyLimited: "Limited only",
     items: (n) => `${n} item${n === 1 ? "" : "s"}`, noMatch: "No items match.",
     cat: { All: "All", Land: "Land", Air: "Air", Naval: "Naval", Soldier: "Soldier", Drone: "Drone", Other: "Other" },
     trend: { up: "Rising", down: "Falling", stable: "Stable" },
     untradeable: "Untradeable", sample: "Sample",
     value: "Value (Gems)", demand: "Demand", trendL: "Trend", obtain: "Obtain", byStars: "Value by stars",
-    perf: "Performance", pvp: "PVP", boss: "Boss Raid", vfm: "Value for money",
+    perf: "Performance", pvp: "PVP", boss: "Boss Raid", vfm: "Value for money", diff: "Difficulty",
     history: "Value history", lastChanged: "Last changed", close: "Close",
     pick: "— pick —", pickHint: "Pick items to compare.",
     youGive: "You give", youGet: "You get", addItem: "Add item…", add: "Add", total: "Total",
@@ -60,14 +60,14 @@ const STR = {
   ko: {
     tabValues: "가치", tabCompare: "비교", tabTrade: "거래 계산", updated: "업데이트",
     search: "탈것·병사·드론 검색…",
-    sortValueDesc: "가치 높은 순", sortValueAsc: "가치 낮은 순", sortDemand: "수요 높은 순", sortPvp: "PVP 높은 순", sortBoss: "보스 레이드 높은 순", sortVfm: "가성비 높은 순", sortName: "이름 순",
+    sortValueDesc: "가치 높은 순", sortValueAsc: "가치 낮은 순", sortDemand: "수요 높은 순", sortPvp: "PVP 높은 순", sortBoss: "보스 레이드 높은 순", sortVfm: "가성비 높은 순", sortDiffAsc: "쉬운 순", sortDiffDesc: "어려운 순", sortName: "이름 순",
     onlyTradeable: "거래 가능만", onlyLimited: "한정판만",
     items: (n) => `${n}개`, noMatch: "맞는 항목이 없어요.",
     cat: { All: "전체", Land: "지상", Air: "항공", Naval: "해군", Soldier: "병사", Drone: "드론", Other: "기타" },
     trend: { up: "오름", down: "내림", stable: "유지" },
     untradeable: "거래 불가", sample: "예시",
     value: "가치 (젬)", demand: "수요", trendL: "추세", obtain: "얻는 법", byStars: "별 단계별 가치",
-    perf: "성능", pvp: "PVP", boss: "보스 레이드", vfm: "가성비",
+    perf: "성능", pvp: "PVP", boss: "보스 레이드", vfm: "가성비", diff: "숙련도",
     history: "가치 변화", lastChanged: "마지막 수정", close: "닫기",
     pick: "— 선택 —", pickHint: "비교할 항목을 고르세요.",
     youGive: "내가 주는 것", youGet: "내가 받는 것", addItem: "항목 추가…", add: "추가", total: "합계",
@@ -116,10 +116,10 @@ function pips(n, max, title) {
 }
 const demandBar = (d) => pips((d ?? 0) / 2, 5, `${T().demand} ${d ?? "—"}/10`);
 // 성능 원형 게이지 (0~10)
-function gauge(v, label, size = 72) {
+function gauge(v, label, size = 72, cls = "") {
   const r = 30, c = 2 * Math.PI * r;
   const f = v == null ? 0 : Math.max(0, Math.min(10, v)) / 10;
-  return `<div class="gauge" style="--size:${size}px" title="${esc(label)} ${v ?? "—"}/10">
+  return `<div class="gauge ${cls}" style="--size:${size}px" title="${esc(label)} ${v ?? "—"}/10">
     <svg viewBox="0 0 72 72"><circle class="g-bg" cx="36" cy="36" r="${r}"/>
       ${f > 0 ? `<circle class="g-fg" cx="36" cy="36" r="${r}" stroke-dasharray="${(c * f).toFixed(1)} ${c.toFixed(1)}" transform="rotate(-90 36 36)"/>` : ""}
       <text x="36" y="41" text-anchor="middle">${v == null ? "—" : +(+v).toFixed(1)}</text></svg>
@@ -173,6 +173,7 @@ function renderGrid() {
     (!$("#onlyLimited").checked || it.limited)
   ).sort((a, b) => {
     const x = get(a), y = get(b);
+    if (x === -1 || y === -1) return x === y ? 0 : x === -1 ? 1 : -1; // 값 없는 아이템은 항상 맨 뒤
     const r = x < y ? -1 : x > y ? 1 : 0;
     return dir === "asc" ? r : -r;
   });
@@ -227,7 +228,7 @@ function openDetail(id) {
           <div class="star-read"><span class="star" id="dStar">${starLabel(starKeys(it)[0])}</span><b id="dStarVal">${gem(it.stars[starKeys(it)[0]])}</b></div>
           ${starSlider(it, starKeys(it)[0], "detail")}
         </div></div>` : ""}
-      <div><h4>${t.perf}</h4><div class="gauges">${gauge(s.pvp, t.pvp)}${gauge(s.boss, t.boss)}${gauge(s.vfm, t.vfm)}</div></div>
+      <div><h4>${t.perf}</h4><div class="gauges">${gauge(s.pvp, t.pvp)}${gauge(s.boss, t.boss)}${gauge(s.vfm, t.vfm)}${gauge(s.diff, t.diff, 72, "diff")}</div></div>
       ${chart(it.history, t.history, gem)}
       ${noteOf(it) ? `<p class="hint">${esc(noteOf(it))}</p>` : ""}
       <p class="hint">${t.lastChanged} ${esc(it.updated || "—")}</p>
@@ -247,7 +248,7 @@ $("#detail").addEventListener("click", (e) => { if (e.target.id === "detail") e.
 const ROWS = [
   ["value", (i) => (isUntradeable(i) ? null : i.value), "value"], ["demand", (i) => i.demand, "num"],
   ["pvp", (i) => i.stats?.pvp, "grade"], ["boss", (i) => i.stats?.boss, "grade"],
-  ["vfm", (i) => i.stats?.vfm, "grade"],
+  ["vfm", (i) => i.stats?.vfm, "grade"], ["diff", (i) => i.stats?.diff, "diff"],
 ];
 let pickers = ITEMS.slice(0, 3).map((i) => i.id);
 function renderPickers() {
@@ -265,6 +266,7 @@ function renderCompare() {
     const show = key === "value" ? gem : fmt;
     return `<tr><td>${T()[key]}</td>${vs.map((v, j) => {
       const best = v != null && v === max && picks.length > 1 ? "best" : "";
+      if (kind === "diff") return `<td>${gauge(v, "", 48, "diff")}</td>`; // 숙련도는 높다고 좋은 게 아니라 강조 안 함
       if (kind === "grade") return `<td class="${best}">${gauge(v, "", 48)}</td>`;
       if (kind === "value" && v == null) return `<td>${valueOf(picks[j])}</td>`;
       return `<td class="${best}">${show(v)}${v != null && max > 0 ? `<div class="bar" style="width:${(v / max) * 100}%"></div>` : ""}</td>`;
