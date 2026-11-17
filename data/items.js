@@ -219,4 +219,14 @@ window.ITEMS = [
     image: "",
     note: "Fighter jet.", noteKo: "전투기.",
   },
+  {
+    id: "le-gizumo", name: "LE Gizumo", category: "Other",
+    aliases: ["Gizumo", "Gizmo", "기즈모"],
+    value: null, demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    stats: { pvp: 4.5, vfm: 5, diff: 2 },
+    obtain: "", updated: "2026-11-17",
+    history: [],
+    image: "",
+    note: "", noteKo: "",
+  },
 ];
