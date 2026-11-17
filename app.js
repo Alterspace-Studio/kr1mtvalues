@@ -25,6 +25,16 @@ const isUntradeable = (it) => it.tradeable === false;
 const byId = (id) => ITEMS.find((i) => i.id === id);
 const catVar = (c) => `var(--${(c || "other").toLowerCase()})`;
 
+// 별 단계 값이 없으면 0성 가치에 기본 차이를 더해 채운다 (data/items.js의 SITE.starOffsets)
+const STAR_OFFSETS = SITE.starOffsets || { 1: 0, 2: 0, 3: 20000, 4: 110000, 5: 200000 };
+ITEMS.forEach((it) => {
+  if (isUntradeable(it) || it.value == null) return;
+  const base = it.stars?.["0"] ?? it.value;
+  const filled = { 0: base };
+  for (let k = 1; k <= 5; k++) filled[k] = it.stars?.[k] ?? base + (STAR_OFFSETS[k] ?? 0);
+  it.stars = filled;
+});
+
 // ---------- 언어 ----------
 const STR = {
   en: {

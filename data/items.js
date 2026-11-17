@@ -10,7 +10,7 @@
 //   trend      "up" | "down" | "stable"
 //   tradeable  거래 가능 여부
 //   limited    한정판(LE) 여부, stock: 한정 수량 (모르면 null)
-//   stars      별 단계별 가치 { "0": 숫자, "1": 숫자, ... "5": 숫자 } (별은 0~5, 모르는 단계는 빼도 됨). value는 0성 가치
+//   stars      별 단계별 가치 { "0": 숫자, "1": 숫자, ... "5": 숫자 } (별은 0~5). 빠진 단계는 SITE.starOffsets로 자동 계산. value는 0성 가치
 //   stats      성능 { pvp, boss, vfm } 0~10 (PVP, 보스 레이드, 가성비, 소수 가능). 모르면 null
 //   obtain     얻는 방법
 //   updated    값을 마지막으로 바꾼 날 "YYYY-MM-DD"
@@ -23,6 +23,8 @@ window.SITE = {
   title: "kr1mtvalues",
   valueUnit: "Gems",
   lastUpdated: "2026-11-17",
+  // 별 단계 값이 없을 때 0성 가치에 더하는 기본 차이 (젬). 아이템에 stars를 적으면 그 값이 우선
+  starOffsets: { 1: 0, 2: 0, 3: 20000, 4: 110000, 5: 200000 },
 };
 
 window.ITEMS = [
