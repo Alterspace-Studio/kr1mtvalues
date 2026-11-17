@@ -306,8 +306,8 @@ window.ITEMS = [
     value: 600000, demand: null, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 600000}],
+    history: [{"date": "2026-11-03", "value": 2200000}, {"date": "2026-11-17", "value": 600000}],
     image: "",
-    note: "Artillery. Was about 2.2M at release.", noteKo: "포병. 출시 초반에는 약 2.2M.",
+    note: "Artillery. Released around 2026-11-03.", noteKo: "포병. 2026-11-03쯤 출시."
   },
 ];
