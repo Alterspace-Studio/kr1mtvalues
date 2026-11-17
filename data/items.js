@@ -186,4 +186,14 @@ window.ITEMS = [
     image: "https://static.wikia.nocookie.net/military-tycoon/images/2/2e/Zumwalt_InGame.png/revision/latest/scale-to-width-down/600",
     note: "Frigate. Released 2024-08-25. Value estimated from KR trade chat (converted to gems).", noteKo: "호위함. 2024-08-25 출시. 가치는 한국 거래방 거래를 젬으로 환산한 추정값.",
   },
+  {
+    id: "f35-billion", name: "F-35 Billion", category: "Air",
+    aliases: ["F35 Billion", "F-35", "F35", "빌리언", "F35 빌리언"],
+    value: null, demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stats: { pvp: 8, boss: 1, vfm: 10 },
+    obtain: "", updated: "2026-11-17",
+    history: [],
+    image: "",
+    note: "Fighter jet.", noteKo: "전투기.",
+  },
 ];
