@@ -522,10 +522,10 @@ window.ITEMS = [
   {
     id: "super-x59", name: "Super X59", category: "Air",
     aliases: ["X59", "X-59"],
-    value: null, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
+    value: 480000, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: 4.5, vfm: null },
     obtain: "", updated: "2026-11-17",
-    history: [],
+    history: [{"date": "2026-11", "value": 480000}],
     image: "images/super-x59.png",
     note: "Aircraft.", noteKo: "항공기.",
   },
