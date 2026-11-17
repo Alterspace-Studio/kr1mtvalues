@@ -50,9 +50,9 @@ window.ITEMS = [
   },
   {
     id: "le-rocket-plane", name: "LE Rocket Plane", category: "Air",
-    aliases: ["Rocket Plane", "리로플", "로플"],
+    aliases: ["Rocket Plane", "LERP", "리로플", "로플"],
     value: 3500000, demand: null, trend: "up", tradeable: true, limited: true, stock: 1000,
-    stats: { pvp: 8.5, vfm: 10, diff: 9.5 },
+    stats: { pvp: 8.5, vfm: 5.5, diff: 9.5 },
     obtain: "Rocket Plane Crate", updated: "2026-08-29",
     history: [{"date": "2025-10", "value": 1600000}, {"date": "2025-11", "value": 1000000}, {"date": "2026-08", "value": 3500000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/d/de/LE1000RocketPlaneInAction.png/revision/latest/scale-to-width-down/600",
