@@ -42,14 +42,14 @@ const STR = {
   en: {
     tabValues: "Values", tabCompare: "Compare", tabTrade: "Trade Calc", tabChanges: "Changes", chSearch: "Search changes...", chDate: "Date", chItem: "Item", chFrom: "Before", chTo: "After", chDiff: "Change", chFirst: "Listed", chCount: (n) => `${n} changes`, allChanges: "All changes", updated: "Updated",
     search: "Search vehicles, soldiers, drones…",
-    sortValueDesc: "Value ↓", sortValueAsc: "Value ↑", sortDemand: "Demand ↓", sortPvp: "PVP ↓", sortVfm: "Value for money ↓", sortDiffAsc: "Easiest first", sortDiffDesc: "Hardest first", sortName: "Name A–Z",
+    sortValueDesc: "Value ↓", sortValueAsc: "Value ↑", sortDemand: "Demand ↓", sortVfm: "Value for money ↓", sortName: "Name A–Z",
     onlyTradeable: "Tradeable only", onlyLimited: "Limited only",
     items: (n) => `${n} item${n === 1 ? "" : "s"}`, noMatch: "No items match.",
     cat: { All: "All", Land: "Land", Air: "Air", Naval: "Naval", Soldier: "Soldier", Drone: "Drone", Other: "Other" },
     trend: { up: "Rising", down: "Falling", stable: "Stable" },
     untradeable: "Untradeable", sample: "Sample",
     value: "Value (Gems)", demand: "Demand", trendL: "Trend", obtain: "Obtain", fresh: "Fresh",
-    perf: "Performance", pvp: "PVP", vfm: "Value for money", diff: "Difficulty",
+    vfm: "Value for money", vfmShort: "VFM",
     history: "Value history", showcase: "Showcase", lastChanged: "Last changed", lastChange: "Last change", close: "Close",
     pick: "— pick —", pickHint: "Pick items to compare.",
     youGive: "You give", youGet: "You get", addItem: "Add item…", add: "Add", total: "Total",
@@ -61,14 +61,14 @@ const STR = {
   ko: {
     tabValues: "가치", tabCompare: "비교", tabTrade: "거래 계산", tabChanges: "변경 기록", chSearch: "아이템 이름으로 찾기...", chDate: "날짜", chItem: "아이템", chFrom: "이전", chTo: "이후", chDiff: "변동", chFirst: "등록", chCount: (n) => `기록 ${n}개`, allChanges: "전체 수정 기록", updated: "업데이트",
     search: "탈것·병사·드론 검색…",
-    sortValueDesc: "가치 높은 순", sortValueAsc: "가치 낮은 순", sortDemand: "수요 높은 순", sortPvp: "PVP 높은 순", sortVfm: "가성비 높은 순", sortDiffAsc: "쉬운 순", sortDiffDesc: "어려운 순", sortName: "이름 순",
+    sortValueDesc: "가치 높은 순", sortValueAsc: "가치 낮은 순", sortDemand: "수요 높은 순", sortVfm: "가성비 높은 순", sortName: "이름 순",
     onlyTradeable: "거래 가능만", onlyLimited: "한정판만",
     items: (n) => `${n}개`, noMatch: "맞는 항목이 없어요.",
     cat: { All: "전체", Land: "지상", Air: "항공", Naval: "해군", Soldier: "병사", Drone: "드론", Other: "기타" },
     trend: { up: "오름", down: "내림", stable: "유지" },
     untradeable: "거래 불가", sample: "예시",
     value: "가치 (젬)", demand: "수요", trendL: "추세", obtain: "얻는 법", fresh: "Fresh (0성)",
-    perf: "성능", pvp: "PVP", vfm: "가성비", diff: "난이도",
+    vfm: "가성비", vfmShort: "가성비",
     history: "가치 변화", showcase: "쇼케이스", lastChanged: "마지막 수정", lastChange: "최근 변동", close: "닫기",
     pick: "— 선택 —", pickHint: "비교할 항목을 고르세요.",
     youGive: "내가 주는 것", youGet: "내가 받는 것", addItem: "항목 추가…", add: "추가", total: "합계",
@@ -116,27 +116,26 @@ function pips(n, max, title) {
   return `<span class="pips" title="${esc(title)}">${Array.from({ length: max }, (_, i) => `<i class="${i < on ? "on" : ""}"></i>`).join("")}</span>`;
 }
 const demandBar = (d) => pips((d ?? 0) / 2, 5, `${T().demand} ${d ?? "—"}/10`);
-// 성능 원형 게이지 (0~10)
-function gauge(v, label, size = 72, cls = "") {
-  const r = 30, c = 2 * Math.PI * r;
-  const f = v == null ? 0 : Math.max(0, Math.min(10, v)) / 10;
-  // 낮으면 빨강 → 중간 노랑 → 높으면 초록 (세 색 사이를 섞는다)
-  const stops = [[229, 56, 59], [242, 184, 30], [34, 168, 80]];
-  if (cls === "diff") stops.reverse(); // 난이도는 반대: 쉬우면(낮으면) 초록, 어려우면(높으면) 빨강
+// 가성비 색: 낮으면 빨강 → 중간 노랑 → 높으면 초록
+function vfmColor(v) {
+  const f = Math.max(0, Math.min(10, v)) / 10, stops = [[229, 56, 59], [242, 184, 30], [34, 168, 80]];
   const [p0, p1, t] = f < .5 ? [stops[0], stops[1], f * 2] : [stops[1], stops[2], (f - .5) * 2];
-  const col = `rgb(${p0.map((c, k) => Math.round(c + (p1[k] - c) * t)).join(" ")})`;
-  return `<div class="gauge ${cls}" style="--size:${size}px;--g:${col}" title="${esc(label)} ${v ?? "—"}/10">
-    <svg viewBox="0 0 72 72"><circle class="g-bg" cx="36" cy="36" r="${r}"/>
-      ${f > 0 ? `<circle class="g-fg" cx="36" cy="36" r="${r}" stroke-dasharray="${(c * f).toFixed(1)} ${c.toFixed(1)}" transform="rotate(-90 36 36)"/>` : ""}
-      <text x="36" y="41" text-anchor="middle">${v == null ? "—" : +(+v).toFixed(1)}</text></svg>
-    ${label ? `<span>${esc(label)}</span>` : ""}</div>`;
+  return `rgb(${p0.map((c, k) => Math.round(c + (p1[k] - c) * t)).join(" ")})`;
 }
+// 가성비 막대 (0~10): 숫자 + 색 막대
+function vfmBar(v) {
+  if (v == null) return `<span class="muted">—</span>`;
+  return `<div class="vfm" style="--c:${vfmColor(v)}"><b>${+(+v).toFixed(1)}</b><small>/10</small><i><s style="width:${Math.max(0, Math.min(10, v)) * 10}%"></s></i></div>`;
+}
+// 카드용 작은 가성비 표시
+const vfmChip = (v) => v == null ? "" : `<span class="tag vfm-chip" style="--c:${vfmColor(v)}" title="${esc(T().vfm)} ${v}/10">${esc(T().vfmShort)} ${+(+v).toFixed(1)}</span>`;
 function tags(it) {
   return [
     it.limited ? `<span class="tag le">LE${it.stock ? " · " + fmt(it.stock) : ""}</span>` : "",
     it.rarity ? `<span class="tag rarity ${esc(it.rarity.toLowerCase())}">${esc(it.rarity)}</span>` : "",
     "",
     it.sample ? `<span class="tag sample">${T().sample}</span>` : "",
+    vfmChip(it.stats?.vfm),
     `<span class="tag">${esc(T().cat[it.category] || it.category)}</span>`,
   ].join("");
 }
@@ -261,11 +260,11 @@ function openDetail(id) {
       <div class="kv">
         <div><span>${t.value}</span><b>${valueOf(it)}</b>${lastChange(it) ? `<div class="kv-sub">${changeTag(lastChange(it), true)}</div>` : ""}</div>
         ${it.fresh != null && !isUntradeable(it) ? `<div><span>${t.fresh}</span><b>${gem(it.fresh)}</b></div>` : ""}
+        <div class="kv-vfm"><span>${t.vfm}</span>${vfmBar(it.stats?.vfm)}</div>
         <div><span>${t.demand}</span><b>${it.demand ?? "—"}/10</b></div>
         <div><span>${t.trendL}</span><b class="trend ${it.trend}">${TREND[it.trend] || ""} ${t.trend[it.trend] || "—"}</b></div>
         <div><span>${t.obtain}</span><b>${esc(it.obtain || "—")}</b></div>
       </div>
-      <div><h4>${t.perf}</h4><div class="gauges">${gauge(s.pvp, t.pvp)}${gauge(s.vfm, t.vfm)}${gauge(s.diff, t.diff, 72, "diff")}</div></div>
       ${chart(it.history, t.history, gem)}
       ${(it.history || []).length ? `<details class="hist"><summary>${t.allChanges} (${it.history.length})</summary>${histTable(it)}</details>` : ""}
       ${it.video ? `<div><h4>${t.showcase}</h4><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${esc(it.video)}" title="${esc(it.name)} ${t.showcase}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>` : ""}
@@ -280,8 +279,7 @@ $("#detail").addEventListener("click", (e) => { if (e.target.id === "detail") e.
 // ---------- 비교 ----------
 const ROWS = [
   ["value", (i) => (isUntradeable(i) ? null : i.value), "value"], ["demand", (i) => i.demand, "num"],
-  ["pvp", (i) => i.stats?.pvp, "grade"],
-  ["vfm", (i) => i.stats?.vfm, "grade"], ["diff", (i) => i.stats?.diff, "diff"],
+  ["vfm", (i) => i.stats?.vfm, "vfm"],
 ];
 let pickers = ITEMS.slice(0, 3).map((i) => i.id);
 function renderPickers() {
@@ -299,8 +297,7 @@ function renderCompare() {
     const show = key === "value" ? gem : fmt;
     return `<tr><td>${T()[key]}</td>${vs.map((v, j) => {
       const best = v != null && v === max && picks.length > 1 ? "best" : "";
-      if (kind === "diff") return `<td>${gauge(v, "", 48, "diff")}</td>`; // 난이도는 높다고 좋은 게 아니라 강조 안 함
-      if (kind === "grade") return `<td class="${best}">${gauge(v, "", 48)}</td>`;
+      if (kind === "vfm") return `<td>${vfmBar(v)}</td>`;
       if (kind === "value" && v == null) return `<td>${valueOf(picks[j])}</td>`;
       return `<td class="${best}">${show(v)}${v != null && max > 0 ? `<div class="bar" style="width:${(v / max) * 100}%"></div>` : ""}</td>`;
     }).join("")}</tr>`;

@@ -263,3 +263,14 @@ table.changes tbody tr[data-id]:hover { background: var(--panel-2); }
 .card .val { white-space: nowrap; } .card .meta { flex-wrap: wrap; row-gap: 2px; }
 .card .fresh { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: -4px; }
 .li-fresh { font-size: 12px; color: var(--muted); display: inline-flex; gap: 4px; align-items: center; cursor: pointer; }
+/* 가성비 막대 */
+.vfm { display: grid; grid-template-columns: auto auto 1fr; align-items: center; gap: 2px 6px; }
+.vfm b { color: var(--c); font-size: 18px; }
+.vfm small { color: var(--muted); font-size: 11px; }
+.vfm i { height: 8px; border-radius: var(--pill); background: var(--line); overflow: hidden; min-width: 50px; }
+.vfm i s { display: block; height: 100%; background: var(--c); border-radius: var(--pill); text-decoration: none; }
+.kv .kv-vfm { grid-column: span 2; }
+.kv-vfm .vfm { margin-top: 2px; }
+.tag.vfm-chip { background: color-mix(in srgb, var(--c) 18%, transparent); color: var(--c); font-weight: 800; text-transform: none; }
+.kv .vfm small { display: inline; font-size: 11px; color: var(--muted); }
+.kv .vfm b { font-size: 18px; }
