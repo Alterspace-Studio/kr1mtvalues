@@ -128,6 +128,7 @@ function gauge(v, label, size = 72, cls = "") {
   const f = v == null ? 0 : Math.max(0, Math.min(10, v)) / 10;
   // 낮으면 빨강 → 중간 노랑 → 높으면 초록 (세 색 사이를 섞는다)
   const stops = [[229, 56, 59], [242, 184, 30], [34, 168, 80]];
+  if (cls === "diff") stops.reverse(); // 난이도는 반대: 쉬우면(낮으면) 초록, 어려우면(높으면) 빨강
   const [p0, p1, t] = f < .5 ? [stops[0], stops[1], f * 2] : [stops[1], stops[2], (f - .5) * 2];
   const col = `rgb(${p0.map((c, k) => Math.round(c + (p1[k] - c) * t)).join(" ")})`;
   return `<div class="gauge ${cls}" style="--size:${size}px;--g:${col}" title="${esc(label)} ${v ?? "—"}/10">
