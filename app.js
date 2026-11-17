@@ -126,8 +126,10 @@ const demandBar = (d) => pips((d ?? 0) / 2, 5, `${T().demand} ${d ?? "—"}/10`)
 function gauge(v, label, size = 72, cls = "") {
   const r = 30, c = 2 * Math.PI * r;
   const f = v == null ? 0 : Math.max(0, Math.min(10, v)) / 10;
-  // 낮으면 파랑, 높을수록 빨강: 0점 파랑 → 5점 보라 → 10점 빨강
-  const col = `hsl(${Math.round(215 + 143 * f) % 360} ${Math.round(70 + 12 * f)}% ${Math.round(55 - 7 * f)}%)`;
+  // 낮으면 빨강 → 중간 노랑 → 높으면 초록 (세 색 사이를 섞는다)
+  const stops = [[229, 56, 59], [242, 184, 30], [34, 168, 80]];
+  const [p0, p1, t] = f < .5 ? [stops[0], stops[1], f * 2] : [stops[1], stops[2], (f - .5) * 2];
+  const col = `rgb(${p0.map((c, k) => Math.round(c + (p1[k] - c) * t)).join(" ")})`;
   return `<div class="gauge ${cls}" style="--size:${size}px;--g:${col}" title="${esc(label)} ${v ?? "—"}/10">
     <svg viewBox="0 0 72 72"><circle class="g-bg" cx="36" cy="36" r="${r}"/>
       ${f > 0 ? `<circle class="g-fg" cx="36" cy="36" r="${r}" stroke-dasharray="${(c * f).toFixed(1)} ${c.toFixed(1)}" transform="rotate(-90 36 36)"/>` : ""}
