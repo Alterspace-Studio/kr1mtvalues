@@ -102,10 +102,10 @@ window.ITEMS = [
   {
     id: "sb-21", name: "Super B21", category: "Air",
     aliases: ["SB-21", "SB21", "B21"],
-    value: 1900000, demand: null, trend: "up", tradeable: true, limited: false, stock: null,
+    value: 4300000, demand: null, trend: "up", tradeable: true, limited: false, stock: null,
     stats: { pvp: null, vfm: null },
-    obtain: "B21 Raider Crate", updated: "2026-06-12",
-    history: [{"date": "2025-10", "value": 1500000}, {"date": "2026-06", "value": 1900000}],
+    obtain: "B21 Raider Crate", updated: "2026-11-17",
+    history: [{"date": "2025-10", "value": 1500000}, {"date": "2026-06", "value": 1900000}, {"date": "2026-11", "value": 4300000}],
     image: "https://static.wikia.nocookie.net/military-tycoon/images/c/cd/Super_B21.png/revision/latest/scale-to-width-down/600",
     note: "Bomber. Released 2025-08-09.", noteKo: "폭격기. 2025-08-09 출시.",
   },
