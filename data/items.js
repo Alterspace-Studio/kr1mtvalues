@@ -293,8 +293,8 @@ window.ITEMS = [
   {
     id: "crimson-emergency-hauler", name: "Crimson Emergency Hauler", category: "Land",
     aliases: ["Emergency Hauler", "Crimson Hauler", "크림슨", "크림슨 헐러"],
-    value: 280000, demand: null, trend: "down", tradeable: true, limited: false, stock: null,
-    stats: { pvp: null, vfm: null },
+    value: 280000, demand: null, trend: "down", tradeable: true, limited: true, stock: null,
+    stats: { pvp: 8, vfm: 10 },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11-10", "value": 550000}, {"date": "2026-11-17", "value": 280000}],
     image: "",
