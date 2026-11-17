@@ -172,10 +172,10 @@ window.ITEMS = [
   {
     id: "super-mech", name: "Super Mech", category: "Land",
     aliases: ["슈퍼메카", "슈메카"],
-    value: 200000, demand: null, trend: "down", tradeable: true, limited: false, stock: null,
+    value: 350000, demand: null, trend: "up", tradeable: true, limited: false, stock: null,
     stats: { pvp: null, vfm: null },
-    obtain: "Super Mech Crate", updated: "2026-02-28",
-    history: [{"date": "2025-12", "value": 370000}, {"date": "2026-02", "value": 200000}],
+    obtain: "Super Mech Crate", updated: "2026-11-17",
+    history: [{"date": "2025-12", "value": 370000}, {"date": "2026-02", "value": 200000}, {"date": "2026-11", "value": 350000}],
     image: "",
     note: "Mech. Released 2025-12-13.", noteKo: "메카. 2025-12-13 출시.",
   },
