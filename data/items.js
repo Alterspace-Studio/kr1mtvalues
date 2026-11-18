@@ -558,10 +558,10 @@ window.ITEMS = [
   {
     id: "super-warspite", name: "Super Warspite", category: "Naval",
     aliases: ["Warspite", "워스파이트"],
-    value: 400000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    value: 450000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-18",
-    history: [{"date": "2026-11-18", "value": 400000}],
+    history: [{"date": "2026-11-18", "value": 450000}],
     image: "images/super-warspite.png",
     note: "Battleship.", noteKo: "전함.",
   },
