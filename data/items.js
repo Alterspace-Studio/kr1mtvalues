@@ -210,8 +210,8 @@ window.ITEMS = [
   },
   {
     id: "f35-billion", name: "F-35 Billion", category: "Air",
-    aliases: ["F35 Billion", "F-35", "F35", "빌리언", "F35 빌리언"],
-    value: 300000, fresh: 48000, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
+    aliases: ["F35B", "F35 Billion", "F-35", "F35", "빌리언", "F35 빌리언"],
+    value: 300000, fresh: 49000, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: 8, vfm: 10 },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 300000}],
