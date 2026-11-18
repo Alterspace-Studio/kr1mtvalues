@@ -407,10 +407,10 @@ window.ITEMS = [
   {
     id: "super-razor", name: "Super Razor", category: "Air",
     aliases: ["Razor", "SM39 Razor", "레이저", "슈퍼 레이저"],
-    value: 3500000, range: [3500000, 4000000], demand: 5, trend: null, tradeable: true, limited: true, stock: null,
+    value: 4000000, demand: 5, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 8, vfm: null },
-    obtain: "SM39 Razor Crate", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 3500000}],
+    obtain: "SM39 Razor Crate", updated: "2026-11-18",
+    history: [{"date": "2026-11", "value": 3500000}, {"date": "2026-11-18", "value": 4000000}],
     image: "images/super-razor.png",
     video: "GMPKYgPbMx4",
     note: "Fighter jet. Released 2026-04-04.", noteKo: "전투기. 2026-04-04 출시.",
