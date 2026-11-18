@@ -232,7 +232,7 @@ window.ITEMS = [
   {
     id: "silkfire-x", name: "Silkfire X", category: "Air",
     aliases: ["SFX", "Silkfire", "SilkfireX", "실크파이어"],
-    value: 2700000, demand: 5, trend: null, tradeable: true, limited: true, stock: null,
+    value: 2700000, range: [2700000, 2800000], demand: 5, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 10, vfm: 6.5, diff: 6.5 },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 2700000}],
