@@ -608,10 +608,10 @@ window.ITEMS = [
   {
     id: "armored-corvette", name: "Armored Corvette", category: "Naval",
     aliases: ["Corvette", "코르벳"],
-    value: null, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Legendary",
+    value: 20000, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
-    obtain: "", updated: "2026-11-17",
-    history: [],
+    obtain: "", updated: "2026-11-18",
+    history: [{"date": "2026-11-18", "value": 20000}],
     image: "images/armored-corvette.png",
     note: "Corvette.", noteKo: "초계함.",
   },
