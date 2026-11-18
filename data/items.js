@@ -11,7 +11,7 @@
 //   tradeable  거래 가능 여부
 //   limited    한정판(LE) 여부, stock: 한정 수량 (모르면 null)
 //   rarity     등급 (선택). "Exotic"이면 무지개 태그
-//   value      풀강(5성) 기준 가치. range: [최소, 최대] 또는 [최소, "+"] 로 범위 표시 (value는 최소값)
+//   value      가치 (강화 무시). range: [최소, 최대] 또는 [최소, "+"] 로 범위 표시 (value는 최소값)
 //   fresh      강화 안 한(0성) 가치가 다를 때만 적는다
 //   stats      성능 { pvp, vfm, diff } 0~10 (PVP, 가성비, 난이도=다루기 어려운 정도, 소수 가능). 모르면 null
 //   obtain     얻는 방법
@@ -211,20 +211,20 @@ window.ITEMS = [
   {
     id: "f35-billion", name: "F-35 Billion", category: "Air",
     aliases: ["F35B", "F35 Billion", "F-35", "F35", "빌리언", "F35 빌리언"],
-    value: 300000, fresh: 49000, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
+    value: 49000, demand: null, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: 8, vfm: 10 },
     obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 300000}],
+    history: [{"date": "2026-11", "value": 49000}],
     image: "images/f35-billion.png",
     note: "Fighter jet.", noteKo: "전투기.",
   },
   {
     id: "super-x32", name: "Super X-32", category: "Air",
     aliases: ["X-32", "X32", "Super X32", "슈퍼 X-32", "슈X32"],
-    value: 2200000, fresh: 1890000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    value: 1890000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 9, vfm: null },
     obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 2200000}],
+    history: [{"date": "2026-11", "value": 1890000}],
     image: "images/super-x32.png",
     video: "CESU-B_G7kY",
     note: "Fighter jet.", noteKo: "전투기.",
@@ -232,10 +232,10 @@ window.ITEMS = [
   {
     id: "silkfire-x", name: "Silkfire X", category: "Air",
     aliases: ["SFX", "Silkfire", "SilkfireX", "실크파이어"],
-    value: 3300000, fresh: 2700000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
+    value: 2700000, demand: null, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 10, vfm: 6.5, diff: 6.5 },
     obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 3300000}],
+    history: [{"date": "2026-11", "value": 2700000}],
     image: "images/silkfire-x.png",
     video: "yKppVZa_08A",
     note: "Fighter jet.", noteKo: "전투기.",
