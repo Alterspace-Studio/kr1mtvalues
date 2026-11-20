@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KR1 Military Tycoon Values</title>
   <meta name="description" content="Military Tycoon vehicle values and performance.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 2 15 14H1z' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%239b44e0'/%3E%3Cstop offset='1' stop-color='%231f3a93'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 2 15 14H1z' fill='%23f5b800'/%3E%3C/svg%3E">
+  <!-- 테마: 저장한 선택이 있으면 먼저 적용 (깜빡임 방지) -->
+  <script>try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
   <script>document.write('<link rel="stylesheet" href="style.css?v=' + Date.now() + '">');</script>
   <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 <body>
-  <!-- 게이지용 보라→남색 그라데이션 -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="gacc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" class="c-g1"/><stop offset="1" class="c-g2"/></linearGradient></defs></svg>
   <header class="top">
-    <div class="brand"><span class="logo">▲</span><span id="siteTitle">KR1 Military Tycoon Values</span><img class="flag" src="images/kr-flag.svg" alt="대한민국 국기" width="24" height="16"></div>
+    <div class="brand"><span class="logo" aria-hidden="true"></span><span id="siteTitle">KR1 Military Tycoon Values</span><img class="flag" src="images/kr-flag.svg" alt="대한민국 국기" width="24" height="16"></div>
     <nav class="tabs" role="tablist">
       <button class="tab active" data-view="values" data-i18n="tabValues"></button>
       <button class="tab" data-view="compare" data-i18n="tabCompare"></button>
@@ -22,6 +22,7 @@
     </nav>
     <div class="updated"><span data-i18n="updated"></span> <span id="lastUpdated"></span></div>
     <button class="lang" id="langBtn" aria-label="Language"></button>
+    <button class="theme-btn" id="themeBtn" aria-label="Theme"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
   </header>
 
   <main>

@@ -99,6 +99,15 @@ function applyLang() {
   renderChips(); renderGrid(); renderPickers(); renderCompare(); renderTrade(); renderChanges();
   if ($("#detail").open && openId) openDetail(openId);
 }
+// 테마: 기본은 시스템 설정을 따르고, 버튼으로 바꾸면 그 선택을 기억한다
+$("#themeBtn").addEventListener("click", () => {
+  const dark = document.documentElement.dataset.theme
+    ? document.documentElement.dataset.theme === "dark"
+    : matchMedia("(prefers-color-scheme: dark)").matches;
+  const next = dark ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem("theme", next); } catch {}
+});
 $("#langBtn").addEventListener("click", () => {
   lang = lang === "en" ? "ko" : "en";
   try { localStorage.setItem("lang", lang); } catch {}
