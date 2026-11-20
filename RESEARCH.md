@@ -9,7 +9,7 @@
 
 ## 거래·가치
 - 게임 안 거래가 있다. 일부 탈것은 거래 불가(예: 24k Golden Tank, Apache, F-18, Merkava, Tank, Rocket Truck 등).
-- 기존 가치 사이트(mtsvalues, Vaulted Values X, Value Vault X)가 쓰는 항목: 이름, 분류(Land·Air·Naval·Soldier·Drone·Tags·Other), 가치, 수요(0~10), 추세, 별 단계별 가치, RAP(최근 거래 평균).
+- 기존 가치 사이트(Vaulted Values X, Value Vault X)가 쓰는 항목: 이름, 분류(Land·Air·Naval·Soldier·Drone·Tags·Other), 가치, 수요(0~10), 추세, 별 단계별 가치, RAP(최근 거래 평균).
 - 한정판(LE): 수량 제한(LE Gold Izumo 1,000, LE A-10 750, LE Battle Tank·P.1000 Ratte 약 750). 기간이 끝나면 거래로만 얻는다.
 - 사이트마다 같은 장비 가치가 크게 다르다(예: Limited Patriot 25만~102만). 기준을 하나로 정해야 한다.
 
@@ -20,7 +20,6 @@
 
 ## 출처
 - [RoWatcher – Military Tycoon](https://rowatcher.com/games/2788648141/military-tycoon)
-- [MTS Values – Value List](https://mtsvalues.com/values)
 - [Vaulted Values X – Military Tycoon](https://www.vaultedvaluesx.com/military-tycoon)
 - [Value Vault X – Trade Calculator](https://www.valuevaultx.com/military-tycoon-trade-calcualtor)
 - [Military Tycoon Wiki – Trading](https://military-tycoon.fandom.com/wiki/Trade)
