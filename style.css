@@ -19,6 +19,7 @@
   --soldier: #b06d2c;
   --drone: #c2457a;
   --other: #8b95a3;
+  --tags: #b0578f;
   --radius: 18px;
   --pill: 999px;
   --shadow: 0 1px 2px rgba(40,20,70,.05), 0 4px 14px rgba(40,20,70,.06);
@@ -274,3 +275,12 @@ table.changes tbody tr[data-id]:hover { background: var(--panel-2); }
 .tag.vfm-chip { background: color-mix(in srgb, var(--c) 18%, transparent); color: var(--c); font-weight: 800; text-transform: none; }
 .kv .vfm small { display: inline; font-size: 11px; color: var(--muted); }
 .kv .vfm b { font-size: 18px; }
+/* 전체 목록(700개 이상): 아이콘은 보일 때만 불러온다 */
+.thumb { overflow: hidden; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+img.ch-ic { object-fit: cover; }
+.trend.unstable, .trend.hyped { color: #c98a1a; }
+.tag.epic { background: linear-gradient(120deg, #a25bf0, #6a2fc4); }
+.tag.rare { background: linear-gradient(120deg, #3f9bf5, #1f5fc4); }
+.tag.uncommon { background: linear-gradient(120deg, #3fbf7a, #1f8f55); }
+.tag.common { background: linear-gradient(120deg, #9aa3ad, #6d7681); }

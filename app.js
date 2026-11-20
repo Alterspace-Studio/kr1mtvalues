@@ -3,9 +3,9 @@
 
 const ITEMS = window.ITEMS || [];
 const SITE = window.SITE || {};
-const CATS = ["All", "Land", "Air", "Naval", "Soldier", "Drone", "Other"];
+const CATS = ["All", "Land", "Air", "Naval", "Soldier", "Drone", "Tags", "Other"];
 const CAT_ICON = { Land: "▰", Air: "✈", Naval: "⚓", Soldier: "♟", Drone: "✦", Other: "◆" };
-const TREND = { up: "▲", down: "▼", stable: "■" };
+const TREND = { up: "▲", down: "▼", stable: "■", unstable: "↕", hyped: "✦" };
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const fmt = (n) => (n == null || Number.isNaN(n) ? "—" : Number(n).toLocaleString("en-US"));
@@ -23,8 +23,16 @@ const compact = (n) => {
 const gem = (n) => (n == null ? "—" : `${GEM} ${compact(n)}`);
 const isUntradeable = (it) => it.tradeable === false;
 const byId = (id) => ITEMS.find((i) => i.id === id);
-// 등급 순서: 한정판(LE) 0, Exotic 1, Legendary 2, 그 외 3
-const grade = (it) => (it.limited ? 0 : it.rarity === "Exotic" ? 1 : it.rarity === "Legendary" ? 2 : 3);
+// 등급 순서: 한정판(LE) → Exotic → Legendary → Epic → Rare → Uncommon → Common → 그 외
+const GRADES = ["Exotic", "Legendary", "Epic", "Rare", "Uncommon", "Common"];
+const grade = (it) => (it.limited ? 0 : GRADES.includes(it.rarity) ? GRADES.indexOf(it.rarity) + 1 : GRADES.length + 1);
+// 검색: 띄어쓰기·기호를 무시하고도 찾는다 ("f16" → "F-16")
+const squash = (s) => String(s).toLowerCase().replace(/[^a-z0-9가-힣]/g, "");
+const matches = (it, q) => {
+  if (!q) return true;
+  const sq = squash(q), hay = [it.name, ...(it.aliases || [])];
+  return hay.some((a) => a.toLowerCase().includes(q) || (sq && squash(a).includes(sq)));
+};
 const catVar = (c) => `var(--${(c || "other").toLowerCase()})`;
 // 최근 변동: 가치 기록의 마지막 두 점 차이 { diff, pct, date }
 const lastChange = (it) => {
@@ -45,8 +53,8 @@ const STR = {
     sortValueDesc: "Value ↓", sortValueAsc: "Value ↑", sortDemand: "Demand ↓", sortVfm: "Value for money ↓", sortName: "Name A–Z",
     onlyTradeable: "Tradeable only", onlyLimited: "Limited only",
     items: (n) => `${n} item${n === 1 ? "" : "s"}`, noMatch: "No items match.",
-    cat: { All: "All", Land: "Land", Air: "Air", Naval: "Naval", Soldier: "Soldier", Drone: "Drone", Other: "Other" },
-    trend: { up: "Rising", down: "Falling", stable: "Stable" },
+    cat: { All: "All", Land: "Land", Air: "Air", Naval: "Naval", Soldier: "Soldier", Drone: "Drone", Tags: "Tags", Other: "Other" },
+    trend: { up: "Rising", down: "Falling", stable: "Stable", unstable: "Unstable", hyped: "Overhyped" },
     untradeable: "Untradeable", sample: "Sample",
     value: "Value (Gems)", demand: "Demand", trendL: "Trend", obtain: "Obtain", fresh: "Fresh",
     vfm: "Value for money", vfmShort: "VFM",
@@ -64,8 +72,8 @@ const STR = {
     sortValueDesc: "가치 높은 순", sortValueAsc: "가치 낮은 순", sortDemand: "수요 높은 순", sortVfm: "가성비 높은 순", sortName: "이름 순",
     onlyTradeable: "거래 가능만", onlyLimited: "한정판만",
     items: (n) => `${n}개`, noMatch: "맞는 항목이 없어요.",
-    cat: { All: "전체", Land: "지상", Air: "항공", Naval: "해군", Soldier: "병사", Drone: "드론", Other: "기타" },
-    trend: { up: "오름", down: "내림", stable: "유지" },
+    cat: { All: "전체", Land: "지상", Air: "항공", Naval: "해군", Soldier: "병사", Drone: "드론", Tags: "태그", Other: "기타" },
+    trend: { up: "오름", down: "내림", stable: "유지", unstable: "불안정", hyped: "과열" },
     untradeable: "거래 불가", sample: "예시",
     value: "가치 (젬)", demand: "수요", trendL: "추세", obtain: "얻는 법", fresh: "Fresh (0성)",
     vfm: "가성비", vfmShort: "가성비",
@@ -140,7 +148,7 @@ function tags(it) {
 }
 function thumb(it) {
   return it.image
-    ? `<div class="thumb" style="background-image:url('${esc(it.image)}')"></div>`
+    ? `<div class="thumb"><img src="${esc(it.image)}" alt="" loading="lazy" decoding="async"></div>`
     : `<div class="thumb noimg"><span>No Image</span></div>`;
 }
 const valueOf = (it) => (isUntradeable(it) ? `<span class="untrade">${T().untradeable}</span>` : rangeText(it));
@@ -163,7 +171,7 @@ function renderGrid() {
   const get = (it) => (key === "name" ? it.name.toLowerCase() : key === "value" ? (isUntradeable(it) ? -1 : it.value ?? -1) : key === "demand" ? it.demand ?? -1 : it.stats?.[key] ?? -1);
   const list = ITEMS.filter((it) =>
     (cat === "All" || it.category === cat) &&
-    (!q || it.name.toLowerCase().includes(q) || (it.aliases || []).some((a) => a.toLowerCase().includes(q))) &&
+    matches(it, q) &&
     (!$("#onlyTradeable").checked || it.tradeable !== false) &&
     (!$("#onlyLimited").checked || it.limited)
   ).sort((a, b) => {
@@ -371,10 +379,10 @@ function histTable(it) {
 function renderChanges() {
   const q = ($("#chSearch").value || "").trim().toLowerCase();
   const key = (d) => d.length === 7 ? d + "-00" : d; // 월 단위 기록은 그 달 맨 앞으로
-  const rows = ITEMS.filter((it) => !q || it.name.toLowerCase().includes(q) || (it.aliases || []).some((a) => a.toLowerCase().includes(q)))
+  const rows = ITEMS.filter((it) => matches(it, q))
     .flatMap(rowsOf).sort((a, b) => key(b.date).localeCompare(key(a.date)) || a.it.name.localeCompare(b.it.name));
   $("#chCount").textContent = T().chCount(rows.length);
-  $("#chBody").innerHTML = rows.map((r) => `<tr data-id="${esc(r.it.id)}"><td>${dcell(r.date)}</td><td class="ch-item">${r.it.image ? `<span class="ch-ic" style="background-image:url('${esc(r.it.image)}')"></span>` : ""}${esc(r.it.name)}</td><td>${r.from == null ? "—" : gem(r.from)}</td><td>${gem(r.to)}</td><td>${diffCell(r)}</td></tr>`).join("");
+  $("#chBody").innerHTML = rows.map((r) => `<tr data-id="${esc(r.it.id)}"><td>${dcell(r.date)}</td><td class="ch-item">${r.it.image ? `<img class="ch-ic" src="${esc(r.it.image)}" alt="" loading="lazy" decoding="async">` : ""}${esc(r.it.name)}</td><td>${r.from == null ? "—" : gem(r.from)}</td><td>${gem(r.to)}</td><td>${diffCell(r)}</td></tr>`).join("");
 }
 $("#chSearch").addEventListener("input", renderChanges);
 $("#chBody").addEventListener("click", (e) => { const tr = e.target.closest("tr[data-id]"); if (tr) openDetail(tr.dataset.id); });
