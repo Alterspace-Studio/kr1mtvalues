@@ -983,7 +983,7 @@ window.ITEMS = [
     value: 1100000, demand: 5, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 1100000}],
+    history: [{"date": "2026-11-14", "value": 2000000}, {"date": "2026-11-17", "value": 1100000}],
     image: "",
     note: "Mech. New limited item.", noteKo: "메카. 새 한정판.",
   },
