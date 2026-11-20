@@ -33,9 +33,9 @@ window.SITE = {
 window.ITEMS = [
   {
     id: "le-gold-bismarck", name: "LE Gold Bismarck", category: "Naval",
-    aliases: ["Gold Bismarck", "Gold Bismark", "LE1000 Bismarck", "골비스", "골비", "골드 비스마르크"],
+    aliases: ["Gbis", "Gold Bismarck", "Gold Bismark", "LE1000 Bismarck", "골비스", "골비", "골드 비스마르크"],
     value: 15000000, demand: 8, trend: "up", tradeable: true, limited: true, stock: 1000,
-    stats: { pvp: 10, vfm: null },
+    stats: { pvp: 10, vfm: 0.1},
     obtain: "Golden Crate", updated: "2026-11-17",
     history: [{"date": "2025-07", "value": 1040000}, {"date": "2025-08", "value": 1007500}, {"date": "2025-12", "value": 2684000}, {"date": "2026-03", "value": 520000}, {"date": "2026-05", "value": 3850000}, {"date": "2026-10", "value": 1905000}, {"date": "2026-11", "value": 15000000}],
     image: "images/le-gold-bismarck.png",
