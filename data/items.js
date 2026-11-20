@@ -5923,10 +5923,10 @@ window.ITEMS = [
   {
     id: "stalker-drone", name: "Stalker Drone", category: "Drone",
     aliases: [],
-    value: 30000000, demand: 4, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 400000, demand: 4, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
-    obtain: "", updated: "2026-11-02",
-    history: [{"date": "2026-09-10", "value": 22000000}, {"date": "2026-11-02", "value": 30000000}],
+    obtain: "", updated: "2026-11-20",
+    history: [{"date": "2026-11-20", "value": 400000}],
     image: "images/stalker-drone.png",
     note: "", noteKo: "",
   },
