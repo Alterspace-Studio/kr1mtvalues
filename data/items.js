@@ -17,7 +17,6 @@
 //   obtain     얻는 방법
 //   updated    값을 마지막으로 바꾼 날 "YYYY-MM-DD"
 //   history    젬 가치 변화 [{ date, value }]. 가치를 바꿀 때마다 끝에 추가. date는 "YYYY-MM" 또는 같은 달 안 변화는 "YYYY-MM-DD"
-//   src        "mts" = mtsvalues.com 공개 값에서 가져온 아이템/가치 (직접 정한 값이 아님)
 //   trend      "up" | "down" | "stable" | "unstable" | "hyped"
 //   image      게임 아이콘 경로 images/<id>.png (없으면 빈 문자열)
 //   video      쇼케이스 유튜브 영상 ID (선택, @lionhe4rted 채널)
@@ -570,7 +569,7 @@ window.ITEMS = [
   {
     id: "pacv-craft", name: "PACV Craft", category: "Naval",
     aliases: ["PACV", "호버크래프트"],
-    value: 5000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-09-10", "value": 5000}],
@@ -600,7 +599,7 @@ window.ITEMS = [
   {
     id: "stealth-boat", name: "Stealth Boat", category: "Naval",
     aliases: ["스텔스 보트"],
-    value: 7000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-09-10", "value": 7000}],
@@ -620,7 +619,7 @@ window.ITEMS = [
   {
     id: "surrogat", name: "Surrogat", category: "Naval",
     aliases: ["서로갓"],
-    value: 6000, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 6000, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-09-10", "value": 6000}],
@@ -710,7 +709,7 @@ window.ITEMS = [
   {
     id: "master-hellstorm", name: "Master Hellstorm", category: "Land",
     aliases: ["Hellstorm", "헬스톰"],
-    value: 800000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 800000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: 7, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-09-10", "value": 800000}],
@@ -780,7 +779,7 @@ window.ITEMS = [
   {
     id: "mech-transport-x", name: "Mech Transport X", category: "Land",
     aliases: ["Mech Transport", "메카 수송차"],
-    value: 850000, demand: 7, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 850000, demand: 7, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: 2, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-10-09", "value": 850000}],
@@ -810,7 +809,7 @@ window.ITEMS = [
   {
     id: "super-leonardo", name: "Super Leonardo", category: "Air",
     aliases: ["Leonardo", "레오나르도"],
-    value: 4500000, demand: 8, trend: "up", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 4500000, demand: 8, trend: "up", tradeable: true, limited: true, stock: null,
     stats: { pvp: 8, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-10-14", "value": 4500000}],
@@ -820,7 +819,7 @@ window.ITEMS = [
   {
     id: "super-titan-hauler", name: "Super Titan Hauler", category: "Air",
     aliases: ["Titan Hauler", "타이탄"],
-    value: 550000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 550000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: 7, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-06-12", "value": 550000}],
@@ -850,7 +849,7 @@ window.ITEMS = [
   {
     id: "zhi-19e", name: "Zhi 19E", category: "Air",
     aliases: ["Zhi-19E", "Zhi19", "즈히"],
-    value: 30000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 30000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: 7, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-10-04", "value": 30000}],
@@ -870,7 +869,7 @@ window.ITEMS = [
   {
     id: "super-yf1", name: "Super YF1", category: "Air",
     aliases: ["YF1", "YF-1", "Super YF-1"],
-    value: 75000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 75000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: 6, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-09-10", "value": 75000}],
@@ -890,7 +889,7 @@ window.ITEMS = [
   {
     id: "atomic-me323", name: "Atomic ME323", category: "Air",
     aliases: ["ME323", "Me 323", "아토믹"],
-    value: 350000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 350000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: 6, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-09-10", "value": 350000}],
@@ -910,7 +909,7 @@ window.ITEMS = [
   {
     id: "nuke-k7", name: "Nuke K7", category: "Air",
     aliases: ["K7", "핵 K7"],
-    value: 500000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 500000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: 2, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-09-10", "value": 500000}],
@@ -930,7 +929,7 @@ window.ITEMS = [
   {
     id: "super-tupolev", name: "Super Tupolev", category: "Air",
     aliases: ["Tupolev", "투폴레프"],
-    value: 400000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 400000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: 2, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-09-10", "value": 400000}],
@@ -950,7 +949,7 @@ window.ITEMS = [
   {
     id: "super-f24", name: "Super F24", category: "Air",
     aliases: ["F24", "F-24"],
-    value: 350000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 350000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: 2, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-09-10", "value": 350000}],
@@ -1000,7 +999,7 @@ window.ITEMS = [
   {
     id: "24k-golden-tank", name: "24K Golden Tank", category: "Land",
     aliases: [],
-    value: null, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: null, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [],
@@ -1010,7 +1009,7 @@ window.ITEMS = [
   {
     id: "5-star-general-emblem", name: "5-Star General (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -1020,7 +1019,7 @@ window.ITEMS = [
   {
     id: "a14-wolf", name: "A14 Wolf", category: "Air",
     aliases: [],
-    value: 150000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 150000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-20",
     history: [{"date": "2026-10-20", "value": 150000}],
@@ -1030,7 +1029,7 @@ window.ITEMS = [
   {
     id: "a37", name: "A37", category: "Air",
     aliases: [],
-    value: 7750, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7750, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 7750}],
@@ -1040,7 +1039,7 @@ window.ITEMS = [
   {
     id: "a50", name: "A50", category: "Air",
     aliases: [],
-    value: 120000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 120000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 120000}],
@@ -1050,7 +1049,7 @@ window.ITEMS = [
   {
     id: "aa-abram", name: "AA Abram", category: "Land",
     aliases: [],
-    value: 1000, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 1000, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 1000}],
@@ -1060,7 +1059,7 @@ window.ITEMS = [
   {
     id: "aa-akrep", name: "AA Akrep", category: "Land",
     aliases: [],
-    value: 6000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 6000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 6000}],
@@ -1070,7 +1069,7 @@ window.ITEMS = [
   {
     id: "aa-soldier", name: "AA Soldier", category: "Soldier",
     aliases: [],
-    value: 225, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 225, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 225}],
@@ -1080,7 +1079,7 @@ window.ITEMS = [
   {
     id: "aatank", name: "AATank", category: "Land",
     aliases: [],
-    value: 200, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 200, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 200}],
@@ -1090,7 +1089,7 @@ window.ITEMS = [
   {
     id: "aav", name: "AAV", category: "Land",
     aliases: [],
-    value: 100, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -1100,7 +1099,7 @@ window.ITEMS = [
   {
     id: "abram-tank", name: "Abram Tank", category: "Land",
     aliases: [],
-    value: 2000, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 2000, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2000}],
@@ -1110,7 +1109,7 @@ window.ITEMS = [
   {
     id: "abram-x", name: "Abram X", category: "Land",
     aliases: [],
-    value: 500, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 500, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 500}],
@@ -1120,7 +1119,7 @@ window.ITEMS = [
   {
     id: "ac-119k", name: "AC-119K", category: "Air",
     aliases: [],
-    value: 500, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 500, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 500}],
@@ -1130,7 +1129,7 @@ window.ITEMS = [
   {
     id: "ac-130", name: "AC-130", category: "Air",
     aliases: [],
-    value: 575, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 575, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 575}],
@@ -1141,7 +1140,7 @@ window.ITEMS = [
   {
     id: "ace-pilot", name: "Ace Pilot", category: "Soldier",
     aliases: [],
-    value: 100, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 100, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -1151,7 +1150,7 @@ window.ITEMS = [
   {
     id: "adf-01-falken", name: "ADF-01 Falken", category: "Air",
     aliases: [],
-    value: 12000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 12000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 12000}],
@@ -1161,7 +1160,7 @@ window.ITEMS = [
   {
     id: "admiral-kuznetsov", name: "Admiral Kuznetsov", category: "Naval",
     aliases: [],
-    value: 5200, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5200, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 5200}],
@@ -1171,7 +1170,7 @@ window.ITEMS = [
   {
     id: "advanced-f18", name: "Advanced F18", category: "Air",
     aliases: [],
-    value: 4800, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4800, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4800}],
@@ -1181,7 +1180,7 @@ window.ITEMS = [
   {
     id: "ahrlac", name: "AHRLAC", category: "Air",
     aliases: [],
-    value: 3000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 3000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3000}],
@@ -1191,7 +1190,7 @@ window.ITEMS = [
   {
     id: "air-carrier", name: "Air Carrier", category: "Air",
     aliases: [],
-    value: 75000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 75000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 75000}],
@@ -1201,7 +1200,7 @@ window.ITEMS = [
   {
     id: "air-commander", name: "Air Commander", category: "Soldier",
     aliases: [],
-    value: 200000, demand: 8, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 200000, demand: 8, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 200000}],
@@ -1211,7 +1210,7 @@ window.ITEMS = [
   {
     id: "akrep", name: "Akrep", category: "Land",
     aliases: [],
-    value: 6000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 6000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 6000}],
@@ -1221,7 +1220,7 @@ window.ITEMS = [
   {
     id: "alicorn", name: "Alicorn", category: "Naval",
     aliases: [],
-    value: 35000, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 35000, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 35000}],
@@ -1231,7 +1230,7 @@ window.ITEMS = [
   {
     id: "alien", name: "Alien", category: "Soldier",
     aliases: [],
-    value: 200, demand: 8, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 200, demand: 8, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 200}],
@@ -1241,7 +1240,7 @@ window.ITEMS = [
   {
     id: "alvis-stormer", name: "Alvis Stormer", category: "Land",
     aliases: [],
-    value: 200, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 200, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 200}],
@@ -1251,7 +1250,7 @@ window.ITEMS = [
   {
     id: "amber-banner", name: "Amber (Banner)", category: "Tags",
     aliases: [],
-    value: 4000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4000}],
@@ -1261,7 +1260,7 @@ window.ITEMS = [
   {
     id: "amethyst-banner", name: "Amethyst (Banner)", category: "Tags",
     aliases: [],
-    value: 4000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 4000}],
@@ -1271,7 +1270,7 @@ window.ITEMS = [
   {
     id: "anchor-emblem", name: "Anchor (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -1281,7 +1280,7 @@ window.ITEMS = [
   {
     id: "anti-nuke-jeep", name: "Anti Nuke Jeep", category: "Land",
     aliases: [],
-    value: 25000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 25000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 25000}],
@@ -1291,7 +1290,7 @@ window.ITEMS = [
   {
     id: "anti-air-turret", name: "Anti-Air Turret", category: "Other",
     aliases: [],
-    value: 5000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 5000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5000}],
@@ -1301,7 +1300,7 @@ window.ITEMS = [
   {
     id: "anti-vehicle-rifle", name: "Anti-Vehicle Rifle", category: "Other",
     aliases: [],
-    value: 175000, demand: 4, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 175000, demand: 4, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 175000}],
@@ -1311,7 +1310,7 @@ window.ITEMS = [
   {
     id: "antonov-a40", name: "Antonov A40", category: "Air",
     aliases: [],
-    value: 5000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5000}],
@@ -1321,7 +1320,7 @@ window.ITEMS = [
   {
     id: "apache", name: "Apache", category: "Air",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [],
@@ -1331,7 +1330,7 @@ window.ITEMS = [
   {
     id: "apc", name: "APC", category: "Land",
     aliases: [],
-    value: 100, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -1341,7 +1340,7 @@ window.ITEMS = [
   {
     id: "apocalypse", name: "Apocalypse", category: "Land",
     aliases: [],
-    value: 5000000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5000000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5000000}],
@@ -1351,7 +1350,7 @@ window.ITEMS = [
   {
     id: "arid-banner", name: "Arid (Banner)", category: "Tags",
     aliases: [],
-    value: 250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 250}],
@@ -1361,7 +1360,7 @@ window.ITEMS = [
   {
     id: "armed-hoverbike", name: "Armed Hoverbike", category: "Land",
     aliases: [],
-    value: 85000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 85000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-07",
     history: [{"date": "2026-10-07", "value": 85000}],
@@ -1371,7 +1370,7 @@ window.ITEMS = [
   {
     id: "armored-apc", name: "Armored APC", category: "Land",
     aliases: [],
-    value: 6000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 6000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 6000}],
@@ -1381,7 +1380,7 @@ window.ITEMS = [
   {
     id: "armored-jeep", name: "Armored Jeep", category: "Land",
     aliases: [],
-    value: 100, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -1391,7 +1390,7 @@ window.ITEMS = [
   {
     id: "armored-snow-mobile", name: "Armored Snow mobile", category: "Land",
     aliases: [],
-    value: 1500, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 1500, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1500}],
@@ -1401,7 +1400,7 @@ window.ITEMS = [
   {
     id: "armored-vehicle", name: "Armored Vehicle", category: "Land",
     aliases: [],
-    value: 2500, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 2500, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2500}],
@@ -1411,7 +1410,7 @@ window.ITEMS = [
   {
     id: "arrow-banner", name: "Arrow (Banner)", category: "Tags",
     aliases: [],
-    value: 8000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 8000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 8000}],
@@ -1421,7 +1420,7 @@ window.ITEMS = [
   {
     id: "arrow-emblem", name: "Arrow (Emblem)", category: "Tags",
     aliases: [],
-    value: 6000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 6000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 6000}],
@@ -1431,7 +1430,7 @@ window.ITEMS = [
   {
     id: "arrow-emote", name: "Arrow (Emote)", category: "Tags",
     aliases: [],
-    value: 6000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 6000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 6000}],
@@ -1441,7 +1440,7 @@ window.ITEMS = [
   {
     id: "artillery", name: "Artillery", category: "Land",
     aliases: [],
-    value: 100, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -1451,7 +1450,7 @@ window.ITEMS = [
   {
     id: "assassin", name: "Assassin", category: "Soldier",
     aliases: [],
-    value: 300, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 300, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 300}],
@@ -1461,7 +1460,7 @@ window.ITEMS = [
   {
     id: "assassin-sniper", name: "Assassin Sniper", category: "Other",
     aliases: [],
-    value: 20000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 20000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 20000}],
@@ -1471,7 +1470,7 @@ window.ITEMS = [
   {
     id: "astrum", name: "Astrum", category: "Air",
     aliases: [],
-    value: 55000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 55000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 55000}],
@@ -1481,7 +1480,7 @@ window.ITEMS = [
   {
     id: "at-akrep", name: "AT Akrep", category: "Land",
     aliases: [],
-    value: 12000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 12000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 12000}],
@@ -1491,7 +1490,7 @@ window.ITEMS = [
   {
     id: "at-6", name: "AT-6", category: "Air",
     aliases: [],
-    value: 3700, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3700, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3700}],
@@ -1501,7 +1500,7 @@ window.ITEMS = [
   {
     id: "atc-silkfire", name: "ATC Silkfire", category: "Air",
     aliases: [],
-    value: 85000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 85000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 85000}],
@@ -1511,7 +1510,7 @@ window.ITEMS = [
   {
     id: "attack-drone", name: "Attack Drone", category: "Drone",
     aliases: [],
-    value: 125, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 125, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 125}],
@@ -1521,7 +1520,7 @@ window.ITEMS = [
   {
     id: "attack-helicopter", name: "Attack Helicopter", category: "Air",
     aliases: [],
-    value: 70, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 70, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 70}],
@@ -1531,7 +1530,7 @@ window.ITEMS = [
   {
     id: "attack-submarine", name: "Attack Submarine", category: "Naval",
     aliases: [],
-    value: null, demand: 3, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: null, demand: 3, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [],
@@ -1541,7 +1540,7 @@ window.ITEMS = [
   {
     id: "atv", name: "ATV", category: "Land",
     aliases: [],
-    value: 99, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 99, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 99}],
@@ -1551,7 +1550,7 @@ window.ITEMS = [
   {
     id: "azure-banner", name: "Azure (Banner)", category: "Tags",
     aliases: [],
-    value: 2500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 2500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2500}],
@@ -1561,7 +1560,7 @@ window.ITEMS = [
   {
     id: "b-17", name: "B-17", category: "Air",
     aliases: [],
-    value: 100, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -1571,7 +1570,7 @@ window.ITEMS = [
   {
     id: "b-52-bomber", name: "B-52 Bomber", category: "Air",
     aliases: [],
-    value: 10500, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10500, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10500}],
@@ -1581,7 +1580,7 @@ window.ITEMS = [
   {
     id: "b1", name: "B1", category: "Air",
     aliases: [],
-    value: 7000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 7000}],
@@ -1591,7 +1590,7 @@ window.ITEMS = [
   {
     id: "b1-liberty", name: "B1 Liberty", category: "Air",
     aliases: [],
-    value: 7500, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7500, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 7500}],
@@ -1601,7 +1600,7 @@ window.ITEMS = [
   {
     id: "b2-liberty", name: "B2 Liberty", category: "Air",
     aliases: [],
-    value: 6000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 6000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 6000}],
@@ -1611,7 +1610,7 @@ window.ITEMS = [
   {
     id: "b2-sleigh", name: "B2 Sleigh", category: "Air",
     aliases: [],
-    value: 25000, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 25000, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 25000}],
@@ -1621,7 +1620,7 @@ window.ITEMS = [
   {
     id: "b2-spirit", name: "B2 Spirit", category: "Air",
     aliases: [],
-    value: 3000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-26",
     history: [{"date": "2026-10-26", "value": 3000}],
@@ -1632,7 +1631,7 @@ window.ITEMS = [
   {
     id: "b21-raider", name: "B21 Raider", category: "Air",
     aliases: [],
-    value: 280000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 280000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-14",
     history: [{"date": "2026-10-14", "value": 280000}],
@@ -1642,7 +1641,7 @@ window.ITEMS = [
   {
     id: "b29-bomber", name: "B29 Bomber", category: "Air",
     aliases: [],
-    value: 550, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 550, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 550}],
@@ -1652,7 +1651,7 @@ window.ITEMS = [
   {
     id: "b36", name: "B36", category: "Air",
     aliases: [],
-    value: 9100, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 9100, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 9100}],
@@ -1662,7 +1661,7 @@ window.ITEMS = [
   {
     id: "ballistic-shield", name: "Ballistic Shield", category: "Other",
     aliases: [],
-    value: 200000, demand: 7, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 200000, demand: 7, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-18",
     history: [{"date": "2026-10-18", "value": 200000}],
@@ -1672,7 +1671,7 @@ window.ITEMS = [
   {
     id: "baseball-banner", name: "Baseball (Banner)", category: "Tags",
     aliases: [],
-    value: 20000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 20000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 20000}],
@@ -1682,7 +1681,7 @@ window.ITEMS = [
   {
     id: "baseball-emblem", name: "Baseball (Emblem)", category: "Tags",
     aliases: [],
-    value: 9000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 9000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 9000}],
@@ -1692,7 +1691,7 @@ window.ITEMS = [
   {
     id: "baseball-emote", name: "Baseball (Emote)", category: "Tags",
     aliases: [],
-    value: 20000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 20000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 20000}],
@@ -1702,7 +1701,7 @@ window.ITEMS = [
   {
     id: "basic-emblem", name: "Basic (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: null, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -1712,7 +1711,7 @@ window.ITEMS = [
   {
     id: "battle-tank", name: "Battle Tank", category: "Land",
     aliases: [],
-    value: 215000, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 215000, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 215000}],
@@ -1722,7 +1721,7 @@ window.ITEMS = [
   {
     id: "battle-yacht", name: "Battle Yacht", category: "Naval",
     aliases: [],
-    value: 70000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 70000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 70000}],
@@ -1732,7 +1731,7 @@ window.ITEMS = [
   {
     id: "battlecruiser", name: "Battlecruiser", category: "Naval",
     aliases: [],
-    value: 9200, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 9200, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 9200}],
@@ -1742,7 +1741,7 @@ window.ITEMS = [
   {
     id: "battleship", name: "Battleship", category: "Naval",
     aliases: [],
-    value: 12000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 12000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 12000}],
@@ -1752,7 +1751,7 @@ window.ITEMS = [
   {
     id: "beam-tank", name: "Beam Tank", category: "Land",
     aliases: [],
-    value: 300000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 300000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-24",
     history: [{"date": "2026-09-24", "value": 300000}],
@@ -1762,7 +1761,7 @@ window.ITEMS = [
   {
     id: "bf-109", name: "Bf-109", category: "Air",
     aliases: [],
-    value: 7100, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7100, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 7100}],
@@ -1772,7 +1771,7 @@ window.ITEMS = [
   {
     id: "binoculars-emblem", name: "Binoculars (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -1782,7 +1781,7 @@ window.ITEMS = [
   {
     id: "biplane", name: "Biplane", category: "Air",
     aliases: [],
-    value: 80, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 80, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-22",
     history: [{"date": "2026-09-22", "value": 80}],
@@ -1792,7 +1791,7 @@ window.ITEMS = [
   {
     id: "black-hawk-trooper", name: "Black Hawk Trooper", category: "Soldier",
     aliases: [],
-    value: 200, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 200, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 200}],
@@ -1802,7 +1801,7 @@ window.ITEMS = [
   {
     id: "blackbird", name: "Blackbird", category: "Air",
     aliases: [],
-    value: 25000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 25000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 25000}],
@@ -1812,7 +1811,7 @@ window.ITEMS = [
   {
     id: "blackhawk-helicopter", name: "Blackhawk Helicopter", category: "Air",
     aliases: [],
-    value: 100, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -1822,7 +1821,7 @@ window.ITEMS = [
   {
     id: "blackout-banner", name: "Blackout (Banner)", category: "Tags",
     aliases: [],
-    value: 2500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 2500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2500}],
@@ -1832,7 +1831,7 @@ window.ITEMS = [
   {
     id: "blue-f22", name: "Blue F22", category: "Air",
     aliases: [],
-    value: 10000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10000}],
@@ -1842,7 +1841,7 @@ window.ITEMS = [
   {
     id: "boat", name: "Boat", category: "Naval",
     aliases: [],
-    value: 100, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -1852,7 +1851,7 @@ window.ITEMS = [
   {
     id: "bombardino", name: "Bombardino", category: "Air",
     aliases: [],
-    value: 10000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10000}],
@@ -1862,7 +1861,7 @@ window.ITEMS = [
   {
     id: "bomber", name: "Bomber", category: "Air",
     aliases: [],
-    value: 1200, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 1200, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1200}],
@@ -1872,7 +1871,7 @@ window.ITEMS = [
   {
     id: "boss-blackbird", name: "Boss Blackbird", category: "Air",
     aliases: [],
-    value: 10000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10000}],
@@ -1882,7 +1881,7 @@ window.ITEMS = [
   {
     id: "boss-buggy", name: "Boss Buggy", category: "Land",
     aliases: [],
-    value: 200, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 200, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 200}],
@@ -1892,7 +1891,7 @@ window.ITEMS = [
   {
     id: "boss-f-117", name: "Boss F-117", category: "Air",
     aliases: [],
-    value: 3200, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3200, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 3200}],
@@ -1902,7 +1901,7 @@ window.ITEMS = [
   {
     id: "boss-j-20", name: "Boss J-20", category: "Air",
     aliases: [],
-    value: 6400, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 6400, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 6400}],
@@ -1912,7 +1911,7 @@ window.ITEMS = [
   {
     id: "boss-ka-29", name: "Boss Ka-29", category: "Air",
     aliases: [],
-    value: 18000, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 18000, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 18000}],
@@ -1922,7 +1921,7 @@ window.ITEMS = [
   {
     id: "boss-killer", name: "Boss Killer", category: "Soldier",
     aliases: [],
-    value: 5000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 5000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-29",
     history: [{"date": "2026-09-29", "value": 5000}],
@@ -1932,7 +1931,7 @@ window.ITEMS = [
   {
     id: "boss-mi-28", name: "Boss Mi-28", category: "Air",
     aliases: [],
-    value: 3300, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 3300, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3300}],
@@ -1942,7 +1941,7 @@ window.ITEMS = [
   {
     id: "boss-mlrs", name: "BOSS MLRS", category: "Land",
     aliases: [],
-    value: 45000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 45000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 45000}],
@@ -1952,7 +1951,7 @@ window.ITEMS = [
   {
     id: "boss-north-carolina", name: "Boss North Carolina", category: "Naval",
     aliases: [],
-    value: 2500, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 2500, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-04",
     history: [{"date": "2026-10-04", "value": 2500}],
@@ -1962,7 +1961,7 @@ window.ITEMS = [
   {
     id: "boss-reaper", name: "Boss Reaper", category: "Soldier",
     aliases: [],
-    value: 80000, demand: 7, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 80000, demand: 7, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-26",
     history: [{"date": "2026-10-26", "value": 80000}],
@@ -1972,7 +1971,7 @@ window.ITEMS = [
   {
     id: "boss-sea-tank", name: "Boss Sea Tank", category: "Land",
     aliases: [],
-    value: 18000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 18000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-24",
     history: [{"date": "2026-09-24", "value": 18000}],
@@ -1982,7 +1981,7 @@ window.ITEMS = [
   {
     id: "boss-stormer", name: "Boss Stormer", category: "Land",
     aliases: [],
-    value: 800, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 800, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 800}],
@@ -1992,7 +1991,7 @@ window.ITEMS = [
   {
     id: "boss-su-57", name: "Boss Su-57", category: "Air",
     aliases: [],
-    value: 3700, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3700, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3700}],
@@ -2002,7 +2001,7 @@ window.ITEMS = [
   {
     id: "boss-viper", name: "Boss Viper", category: "Air",
     aliases: [],
-    value: 18000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 18000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 18000}],
@@ -2012,7 +2011,7 @@ window.ITEMS = [
   {
     id: "boss-war-shrike", name: "BOSS War Shrike", category: "Air",
     aliases: [],
-    value: 60000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 60000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 60000}],
@@ -2022,7 +2021,7 @@ window.ITEMS = [
   {
     id: "boss-yal-1", name: "Boss Yal-1", category: "Air",
     aliases: [],
-    value: 30000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 30000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 30000}],
@@ -2032,7 +2031,7 @@ window.ITEMS = [
   {
     id: "bradley", name: "Bradley", category: "Land",
     aliases: [],
-    value: 4700, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4700, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4700}],
@@ -2042,7 +2041,7 @@ window.ITEMS = [
   {
     id: "brigadier-general-emblem", name: "Brigadier General (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -2052,7 +2051,7 @@ window.ITEMS = [
   {
     id: "bronze-banner", name: "Bronze (Banner)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -2062,7 +2061,7 @@ window.ITEMS = [
   {
     id: "brush-camo-banner", name: "Brush Camo (Banner)", category: "Tags",
     aliases: [],
-    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 750}],
@@ -2072,7 +2071,7 @@ window.ITEMS = [
   {
     id: "bullet-emblem", name: "Bullet (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -2082,7 +2081,7 @@ window.ITEMS = [
   {
     id: "bv238", name: "BV238", category: "Air",
     aliases: [],
-    value: 5300, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5300, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5300}],
@@ -2092,7 +2091,7 @@ window.ITEMS = [
   {
     id: "c-17", name: "C-17", category: "Air",
     aliases: [],
-    value: 7100, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7100, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 7100}],
@@ -2102,7 +2101,7 @@ window.ITEMS = [
   {
     id: "c17-liberty", name: "C17 Liberty", category: "Air",
     aliases: [],
-    value: 10000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10000}],
@@ -2112,7 +2111,7 @@ window.ITEMS = [
   {
     id: "calzone-cannon", name: "Calzone Cannon", category: "Land",
     aliases: [],
-    value: 12000, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 12000, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 12000}],
@@ -2122,7 +2121,7 @@ window.ITEMS = [
   {
     id: "canberra", name: "Canberra", category: "Air",
     aliases: [],
-    value: 8300, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 8300, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 8300}],
@@ -2132,7 +2131,7 @@ window.ITEMS = [
   {
     id: "cannon-emblem", name: "Cannon (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -2142,7 +2141,7 @@ window.ITEMS = [
   {
     id: "captain-emblem", name: "Captain (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -2152,7 +2151,7 @@ window.ITEMS = [
   {
     id: "cardboard-steel-rain", name: "Cardboard Steel Rain", category: "Naval",
     aliases: [],
-    value: null, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: null, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [],
@@ -2162,7 +2161,7 @@ window.ITEMS = [
   {
     id: "carrier", name: "Carrier", category: "Naval",
     aliases: [],
-    value: 400, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 400, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 400}],
@@ -2172,7 +2171,7 @@ window.ITEMS = [
   {
     id: "carrier-emblem", name: "Carrier (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -2182,7 +2181,7 @@ window.ITEMS = [
   {
     id: "celebrate-emote", name: "Celebrate (Emote)", category: "Tags",
     aliases: [],
-    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 750}],
@@ -2192,7 +2191,7 @@ window.ITEMS = [
   {
     id: "cfa44", name: "CFA44", category: "Air",
     aliases: [],
-    value: 30000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 30000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 30000}],
@@ -2202,7 +2201,7 @@ window.ITEMS = [
   {
     id: "challenger", name: "Challenger", category: "Land",
     aliases: [],
-    value: 1000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 1000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1000}],
@@ -2212,7 +2211,7 @@ window.ITEMS = [
   {
     id: "chief-warrant-officer-emblem", name: "Chief Warrant Officer (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -2222,7 +2221,7 @@ window.ITEMS = [
   {
     id: "chinook", name: "Chinook", category: "Air",
     aliases: [],
-    value: 1090, demand: 1, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 1090, demand: 1, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1090}],
@@ -2232,7 +2231,7 @@ window.ITEMS = [
   {
     id: "chinook-ch-47", name: "Chinook CH-47", category: "Air",
     aliases: [],
-    value: 5000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 5000}],
@@ -2242,7 +2241,7 @@ window.ITEMS = [
   {
     id: "chrome-banner", name: "Chrome (Banner)", category: "Tags",
     aliases: [],
-    value: 4000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 4000}],
@@ -2252,7 +2251,7 @@ window.ITEMS = [
   {
     id: "chrysler", name: "Chrysler", category: "Land",
     aliases: [],
-    value: 10000, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10000, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10000}],
@@ -2262,7 +2261,7 @@ window.ITEMS = [
   {
     id: "colonel-emblem", name: "Colonel (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -2272,7 +2271,7 @@ window.ITEMS = [
   {
     id: "comanche", name: "Comanche", category: "Air",
     aliases: [],
-    value: 12000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 12000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 12000}],
@@ -2282,7 +2281,7 @@ window.ITEMS = [
   {
     id: "combat-tank-emblem", name: "Combat Tank (Emblem)", category: "Tags",
     aliases: [],
-    value: 100, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 100, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 100}],
@@ -2292,7 +2291,7 @@ window.ITEMS = [
   {
     id: "combat-transport", name: "Combat Transport", category: "Land",
     aliases: [],
-    value: 40000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 40000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-09",
     history: [{"date": "2026-10-09", "value": 40000}],
@@ -2302,7 +2301,7 @@ window.ITEMS = [
   {
     id: "commander-x", name: "Commander X", category: "Soldier",
     aliases: [],
-    value: 1000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 1000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 1000}],
@@ -2312,7 +2311,7 @@ window.ITEMS = [
   {
     id: "copper-banner", name: "Copper (Banner)", category: "Tags",
     aliases: [],
-    value: 2500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 2500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2500}],
@@ -2322,7 +2321,7 @@ window.ITEMS = [
   {
     id: "corporal-emblem", name: "Corporal (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: null, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -2332,7 +2331,7 @@ window.ITEMS = [
   {
     id: "corsair", name: "Corsair", category: "Naval",
     aliases: [],
-    value: 7000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 7000}],
@@ -2342,7 +2341,7 @@ window.ITEMS = [
   {
     id: "corsair-x", name: "Corsair-X", category: "Naval",
     aliases: [],
-    value: 500000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 500000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-02",
     history: [{"date": "2026-11-02", "value": 500000}],
@@ -2352,7 +2351,7 @@ window.ITEMS = [
   {
     id: "crimson-banner", name: "Crimson (Banner)", category: "Tags",
     aliases: [],
-    value: 250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 250}],
@@ -2362,7 +2361,7 @@ window.ITEMS = [
   {
     id: "crosshair-emblem", name: "Crosshair (Emblem)", category: "Tags",
     aliases: [],
-    value: 75, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 75, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 75}],
@@ -2372,7 +2371,7 @@ window.ITEMS = [
   {
     id: "cyan-banner", name: "Cyan (Banner)", category: "Tags",
     aliases: [],
-    value: 2500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 2500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2500}],
@@ -2382,7 +2381,7 @@ window.ITEMS = [
   {
     id: "cyber-banner", name: "Cyber (Banner)", category: "Tags",
     aliases: [],
-    value: 25000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 25000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 25000}],
@@ -2392,7 +2391,7 @@ window.ITEMS = [
   {
     id: "dab-emote", name: "Dab (Emote)", category: "Tags",
     aliases: [],
-    value: 500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 500}],
@@ -2402,7 +2401,7 @@ window.ITEMS = [
   {
     id: "dark-digital-banner", name: "Dark Digital (Banner)", category: "Tags",
     aliases: [],
-    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 750}],
@@ -2412,7 +2411,7 @@ window.ITEMS = [
   {
     id: "darkstar", name: "DarkStar", category: "Air",
     aliases: [],
-    value: 700, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 700, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 700}],
@@ -2423,7 +2422,7 @@ window.ITEMS = [
   {
     id: "darkstar-mk-2", name: "Darkstar MK-2", category: "Air",
     aliases: [],
-    value: 3000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 3000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 3000}],
@@ -2433,7 +2432,7 @@ window.ITEMS = [
   {
     id: "defiant", name: "Defiant", category: "Air",
     aliases: [],
-    value: 550, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 550, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 550}],
@@ -2443,7 +2442,7 @@ window.ITEMS = [
   {
     id: "defiant-x", name: "Defiant-X", category: "Air",
     aliases: [],
-    value: 30000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 30000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-15",
     history: [{"date": "2026-09-15", "value": 30000}],
@@ -2453,7 +2452,7 @@ window.ITEMS = [
   {
     id: "demolisher", name: "Demolisher", category: "Land",
     aliases: [],
-    value: 10300, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10300, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10300}],
@@ -2464,7 +2463,7 @@ window.ITEMS = [
   {
     id: "desert-banner", name: "Desert (Banner)", category: "Tags",
     aliases: [],
-    value: 250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 250}],
@@ -2474,7 +2473,7 @@ window.ITEMS = [
   {
     id: "destroyer", name: "Destroyer", category: "Naval",
     aliases: [],
-    value: 300, demand: 1, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 300, demand: 1, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 300}],
@@ -2484,7 +2483,7 @@ window.ITEMS = [
   {
     id: "dive-bomber", name: "Dive Bomber", category: "Air",
     aliases: [],
-    value: 100, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -2494,7 +2493,7 @@ window.ITEMS = [
   {
     id: "doomsday-truck", name: "Doomsday Truck", category: "Land",
     aliases: [],
-    value: 250000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 250000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-15",
     history: [{"date": "2026-11", "value": 60000}, {"date": "2026-11-15", "value": 250000}],
@@ -2504,7 +2503,7 @@ window.ITEMS = [
   {
     id: "douglas-a-20", name: "Douglas A-20", category: "Air",
     aliases: [],
-    value: 5000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5000}],
@@ -2514,7 +2513,7 @@ window.ITEMS = [
   {
     id: "drill-worker", name: "Drill Worker", category: "Soldier",
     aliases: [],
-    value: 225, demand: 8, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 225, demand: 8, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 225}],
@@ -2524,7 +2523,7 @@ window.ITEMS = [
   {
     id: "driller", name: "Driller", category: "Land",
     aliases: [],
-    value: 1850, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 1850, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1850}],
@@ -2534,7 +2533,7 @@ window.ITEMS = [
   {
     id: "drone-carrier", name: "Drone carrier", category: "Naval",
     aliases: [],
-    value: 50000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 50000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50000}],
@@ -2544,7 +2543,7 @@ window.ITEMS = [
   {
     id: "dual-minigun", name: "Dual Minigun", category: "Other",
     aliases: [],
-    value: 350000, demand: 5, trend: "up", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 350000, demand: 5, trend: "up", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-18",
     history: [{"date": "2026-10-18", "value": 350000}],
@@ -2554,7 +2553,7 @@ window.ITEMS = [
   {
     id: "dual-minigunner", name: "Dual Minigunner", category: "Soldier",
     aliases: [],
-    value: 200000, demand: 8, trend: "down", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 200000, demand: 8, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-28",
     history: [{"date": "2026-10-28", "value": 200000}],
@@ -2564,7 +2563,7 @@ window.ITEMS = [
   {
     id: "dune-banner", name: "Dune (Banner)", category: "Tags",
     aliases: [],
-    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 750}],
@@ -2574,7 +2573,7 @@ window.ITEMS = [
   {
     id: "dune-buggy", name: "Dune Buggy", category: "Land",
     aliases: [],
-    value: 100, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -2584,7 +2583,7 @@ window.ITEMS = [
   {
     id: "eagle-emblem", name: "Eagle (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -2594,7 +2593,7 @@ window.ITEMS = [
   {
     id: "earth-banner", name: "Earth (Banner)", category: "Tags",
     aliases: [],
-    value: 100, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -2604,7 +2603,7 @@ window.ITEMS = [
   {
     id: "edjer", name: "Edjer", category: "Land",
     aliases: [],
-    value: null, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: null, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [],
@@ -2614,7 +2613,7 @@ window.ITEMS = [
   {
     id: "egg-banner", name: "Egg (Banner)", category: "Tags",
     aliases: [],
-    value: 20000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 20000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 20000}],
@@ -2624,7 +2623,7 @@ window.ITEMS = [
   {
     id: "egg-emblem", name: "Egg (Emblem)", category: "Tags",
     aliases: [],
-    value: 10000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 10000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10000}],
@@ -2634,7 +2633,7 @@ window.ITEMS = [
   {
     id: "egg-emote", name: "Egg (Emote)", category: "Tags",
     aliases: [],
-    value: 20000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 20000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 20000}],
@@ -2644,7 +2643,7 @@ window.ITEMS = [
   {
     id: "egg-launcher", name: "Egg Launcher", category: "Soldier",
     aliases: [],
-    value: 5500, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5500, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5500}],
@@ -2654,7 +2653,7 @@ window.ITEMS = [
   {
     id: "elite-grenadier", name: "Elite Grenadier", category: "Soldier",
     aliases: [],
-    value: 225, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 225, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 225}],
@@ -2664,7 +2663,7 @@ window.ITEMS = [
   {
     id: "elite-hacker", name: "Elite Hacker", category: "Soldier",
     aliases: [],
-    value: 17500, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 17500, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 17500}],
@@ -2674,7 +2673,7 @@ window.ITEMS = [
   {
     id: "elite-lancer", name: "Elite Lancer", category: "Land",
     aliases: [],
-    value: 16000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 16000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 16000}],
@@ -2684,7 +2683,7 @@ window.ITEMS = [
   {
     id: "elite-soldier", name: "Elite soldier", category: "Soldier",
     aliases: [],
-    value: 900, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 900, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 900}],
@@ -2694,7 +2693,7 @@ window.ITEMS = [
   {
     id: "elite-zeplin-x", name: "Elite Zeplin-X", category: "Air",
     aliases: [],
-    value: 25000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 25000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 25000}],
@@ -2704,7 +2703,7 @@ window.ITEMS = [
   {
     id: "emergency-hauler", name: "Emergency Hauler", category: "Land",
     aliases: [],
-    value: null, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: null, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-01",
     history: [],
@@ -2714,7 +2713,7 @@ window.ITEMS = [
   {
     id: "emp-f35", name: "EMP F35", category: "Air",
     aliases: [],
-    value: 14000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 14000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 14000}],
@@ -2724,7 +2723,7 @@ window.ITEMS = [
   {
     id: "enraged-werewolf", name: "Enraged Werewolf", category: "Soldier",
     aliases: [],
-    value: 40000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 40000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 40000}],
@@ -2734,7 +2733,7 @@ window.ITEMS = [
   {
     id: "enrageed-vampire", name: "Enrageed Vampire", category: "Soldier",
     aliases: [],
-    value: 30000, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 30000, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 30000}],
@@ -2744,7 +2743,7 @@ window.ITEMS = [
   {
     id: "exo-bismarck", name: "EXO BISMARCK", category: "Naval",
     aliases: [],
-    value: 760000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 760000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-15",
     history: [{"date": "2025-08", "value": 98000}, {"date": "2026-11", "value": 450000}, {"date": "2026-11-15", "value": 760000}],
@@ -2754,7 +2753,7 @@ window.ITEMS = [
   {
     id: "exofighter", name: "ExoFighter", category: "Air",
     aliases: [],
-    value: 12500, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 12500, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 12500}],
@@ -2764,7 +2763,7 @@ window.ITEMS = [
   {
     id: "exotic-yal-1", name: "Exotic YAL-1", category: "Air",
     aliases: [],
-    value: 150000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 150000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 150000}],
@@ -2774,7 +2773,7 @@ window.ITEMS = [
   {
     id: "explosion-emblem", name: "Explosion (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -2784,7 +2783,7 @@ window.ITEMS = [
   {
     id: "explosive-crossbow", name: "Explosive Crossbow", category: "Tags",
     aliases: [],
-    value: 400000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 400000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-06",
     history: [{"date": "2026-10-06", "value": 400000}],
@@ -2794,7 +2793,7 @@ window.ITEMS = [
   {
     id: "f-117", name: "F-117", category: "Air",
     aliases: [],
-    value: 850, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 850, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 850}],
@@ -2804,7 +2803,7 @@ window.ITEMS = [
   {
     id: "f-15", name: "F-15", category: "Air",
     aliases: [],
-    value: 1200, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 1200, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1200}],
@@ -2814,7 +2813,7 @@ window.ITEMS = [
   {
     id: "f-16", name: "F-16", category: "Air",
     aliases: [],
-    value: 325, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 325, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 325}],
@@ -2825,7 +2824,7 @@ window.ITEMS = [
   {
     id: "f-16-falcon", name: "F-16 Falcon", category: "Air",
     aliases: [],
-    value: 4700, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4700, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4700}],
@@ -2835,7 +2834,7 @@ window.ITEMS = [
   {
     id: "f-18", name: "F-18", category: "Air",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [],
@@ -2846,7 +2845,7 @@ window.ITEMS = [
   {
     id: "f-22", name: "F-22", category: "Air",
     aliases: [],
-    value: 325, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 325, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 325}],
@@ -2857,7 +2856,7 @@ window.ITEMS = [
   {
     id: "f-4", name: "F-4", category: "Air",
     aliases: [],
-    value: 5500, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5500, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 5500}],
@@ -2867,7 +2866,7 @@ window.ITEMS = [
   {
     id: "f-5", name: "F-5", category: "Air",
     aliases: [],
-    value: 3500, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3500, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3500}],
@@ -2877,7 +2876,7 @@ window.ITEMS = [
   {
     id: "f111", name: "F111", category: "Air",
     aliases: [],
-    value: 5000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5000}],
@@ -2887,7 +2886,7 @@ window.ITEMS = [
   {
     id: "f14", name: "F14", category: "Air",
     aliases: [],
-    value: 4700, demand: 3, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4700, demand: 3, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4700}],
@@ -2898,7 +2897,7 @@ window.ITEMS = [
   {
     id: "f24", name: "F24", category: "Air",
     aliases: [],
-    value: 40000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 40000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 40000}],
@@ -2908,7 +2907,7 @@ window.ITEMS = [
   {
     id: "f35", name: "F35", category: "Air",
     aliases: [],
-    value: 1900, demand: 3, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 1900, demand: 3, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1900}],
@@ -2918,7 +2917,7 @@ window.ITEMS = [
   {
     id: "fc31", name: "FC31", category: "Air",
     aliases: [],
-    value: 900, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 900, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 900}],
@@ -2928,7 +2927,7 @@ window.ITEMS = [
   {
     id: "festive-bf109", name: "Festive BF109", category: "Air",
     aliases: [],
-    value: 65000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 65000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 65000}],
@@ -2938,7 +2937,7 @@ window.ITEMS = [
   {
     id: "fighter-biplane", name: "Fighter Biplane", category: "Air",
     aliases: [],
-    value: 80, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 80, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-14",
     history: [{"date": "2026-06-14", "value": 80}],
@@ -2948,7 +2947,7 @@ window.ITEMS = [
   {
     id: "fighter-jet", name: "Fighter Jet", category: "Air",
     aliases: [],
-    value: null, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: null, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [],
@@ -2958,7 +2957,7 @@ window.ITEMS = [
   {
     id: "fireworks-rpg", name: "Fireworks RPG", category: "Other",
     aliases: [],
-    value: 7500, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 7500, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 7500}],
@@ -2968,7 +2967,7 @@ window.ITEMS = [
   {
     id: "first-lieutenant-emblem", name: "First Lieutenant (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -2978,7 +2977,7 @@ window.ITEMS = [
   {
     id: "flag-emblem", name: "Flag (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -2988,7 +2987,7 @@ window.ITEMS = [
   {
     id: "flak-halftrack", name: "Flak Halftrack", category: "Land",
     aliases: [],
-    value: 1750, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 1750, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1750}],
@@ -2998,7 +2997,7 @@ window.ITEMS = [
   {
     id: "flecktarn-banner", name: "Flecktarn (Banner)", category: "Tags",
     aliases: [],
-    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 750}],
@@ -3008,7 +3007,7 @@ window.ITEMS = [
   {
     id: "flora-banner", name: "Flora (Banner)", category: "Tags",
     aliases: [],
-    value: 250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 250}],
@@ -3018,7 +3017,7 @@ window.ITEMS = [
   {
     id: "flush-emote", name: "Flush (Emote)", category: "Tags",
     aliases: [],
-    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 750}],
@@ -3028,7 +3027,7 @@ window.ITEMS = [
   {
     id: "flying-eagle-emblem", name: "Flying Eagle (Emblem)", category: "Tags",
     aliases: [],
-    value: 250, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 250, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 250}],
@@ -3038,7 +3037,7 @@ window.ITEMS = [
   {
     id: "foch-155", name: "Foch 155", category: "Land",
     aliases: [],
-    value: 3000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3000}],
@@ -3048,7 +3047,7 @@ window.ITEMS = [
   {
     id: "forest-banner", name: "Forest (Banner)", category: "Tags",
     aliases: [],
-    value: 100, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -3058,7 +3057,7 @@ window.ITEMS = [
   {
     id: "frost-banner", name: "Frost (Banner)", category: "Tags",
     aliases: [],
-    value: 2500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 2500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2500}],
@@ -3068,7 +3067,7 @@ window.ITEMS = [
   {
     id: "frost-zeplin", name: "Frost Zeplin", category: "Air",
     aliases: [],
-    value: 22000, demand: 8, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 22000, demand: 8, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 22000}],
@@ -3078,7 +3077,7 @@ window.ITEMS = [
   {
     id: "fx-1", name: "FX-1", category: "Air",
     aliases: [],
-    value: 1000, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 1000, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1000}],
@@ -3089,7 +3088,7 @@ window.ITEMS = [
   {
     id: "general-emblem", name: "General (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -3099,7 +3098,7 @@ window.ITEMS = [
   {
     id: "ghost-bird", name: "Ghost Bird", category: "Air",
     aliases: [],
-    value: null, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: null, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-01",
     history: [],
@@ -3109,7 +3108,7 @@ window.ITEMS = [
   {
     id: "ghostwind", name: "Ghostwind", category: "Air",
     aliases: [],
-    value: 30000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 30000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 30000}],
@@ -3119,7 +3118,7 @@ window.ITEMS = [
   {
     id: "gloves-emblem", name: "Gloves (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -3129,7 +3128,7 @@ window.ITEMS = [
   {
     id: "gold-banner", name: "Gold (Banner)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -3139,7 +3138,7 @@ window.ITEMS = [
   {
     id: "gold-b2", name: "Gold B2", category: "Air",
     aliases: [],
-    value: 26000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 26000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 26000}],
@@ -3149,7 +3148,7 @@ window.ITEMS = [
   {
     id: "gold-falken", name: "Gold Falken", category: "Air",
     aliases: [],
-    value: 45000, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 45000, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 45000}],
@@ -3159,7 +3158,7 @@ window.ITEMS = [
   {
     id: "gold-ka-52", name: "Gold Ka-52", category: "Air",
     aliases: [],
-    value: 5700, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5700, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5700}],
@@ -3169,7 +3168,7 @@ window.ITEMS = [
   {
     id: "gold-m10", name: "Gold M10", category: "Land",
     aliases: [],
-    value: 9000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 9000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 9000}],
@@ -3179,7 +3178,7 @@ window.ITEMS = [
   {
     id: "gold-mi35", name: "Gold MI35", category: "Air",
     aliases: [],
-    value: 12500, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 12500, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 12500}],
@@ -3189,7 +3188,7 @@ window.ITEMS = [
   {
     id: "gold-mig-29", name: "Gold MiG-29", category: "Air",
     aliases: [],
-    value: 9500, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 9500, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 9500}],
@@ -3199,7 +3198,7 @@ window.ITEMS = [
   {
     id: "gold-pyro-tank", name: "Gold Pyro Tank", category: "Land",
     aliases: [],
-    value: 20000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 20000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 20000}],
@@ -3209,7 +3208,7 @@ window.ITEMS = [
   {
     id: "gold-star-emblem", name: "Gold Star (Emblem)", category: "Tags",
     aliases: [],
-    value: 250, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 250, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 250}],
@@ -3219,7 +3218,7 @@ window.ITEMS = [
   {
     id: "gold-tks20", name: "Gold TKS20", category: "Land",
     aliases: [],
-    value: 15000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 15000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 15000}],
@@ -3229,7 +3228,7 @@ window.ITEMS = [
   {
     id: "gold-typhoon", name: "Gold Typhoon", category: "Naval",
     aliases: [],
-    value: 7000000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7000000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-09",
     history: [{"date": "2026-10-09", "value": 7000000}],
@@ -3239,7 +3238,7 @@ window.ITEMS = [
   {
     id: "goldac119", name: "GoldAC119", category: "Air",
     aliases: [],
-    value: 25000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 25000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 25000}],
@@ -3249,7 +3248,7 @@ window.ITEMS = [
   {
     id: "golden-ac-130", name: "Golden AC-130", category: "Air",
     aliases: [],
-    value: 2600, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 2600, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2600}],
@@ -3259,7 +3258,7 @@ window.ITEMS = [
   {
     id: "golden-f-16", name: "Golden F-16", category: "Air",
     aliases: [],
-    value: 800, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 800, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 800}],
@@ -3269,7 +3268,7 @@ window.ITEMS = [
   {
     id: "golden-f22", name: "Golden F22", category: "Air",
     aliases: [],
-    value: 1800, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 1800, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1800}],
@@ -3279,7 +3278,7 @@ window.ITEMS = [
   {
     id: "golden-f35", name: "Golden F35", category: "Air",
     aliases: [],
-    value: 4900, demand: 3, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4900, demand: 3, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4900}],
@@ -3289,7 +3288,7 @@ window.ITEMS = [
   {
     id: "golden-interceptor", name: "Golden Interceptor", category: "Naval",
     aliases: [],
-    value: 5000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5000}],
@@ -3299,7 +3298,7 @@ window.ITEMS = [
   {
     id: "golden-pl-01", name: "Golden PL-01", category: "Land",
     aliases: [],
-    value: 6500, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 6500, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 6500}],
@@ -3309,7 +3308,7 @@ window.ITEMS = [
   {
     id: "golden-soldier", name: "Golden Soldier", category: "Soldier",
     aliases: [],
-    value: 500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 500}],
@@ -3319,7 +3318,7 @@ window.ITEMS = [
   {
     id: "golden-spitfire", name: "Golden Spitfire", category: "Air",
     aliases: [],
-    value: 5300, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5300, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 5300}],
@@ -3329,7 +3328,7 @@ window.ITEMS = [
   {
     id: "grapple-atv", name: "Grapple ATV", category: "Land",
     aliases: [],
-    value: 150, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 150, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 150}],
@@ -3339,7 +3338,7 @@ window.ITEMS = [
   {
     id: "green-abram-tank", name: "Green Abram Tank", category: "Land",
     aliases: [],
-    value: 100000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-11",
     history: [{"date": "2026-10-11", "value": 100000}],
@@ -3349,7 +3348,7 @@ window.ITEMS = [
   {
     id: "grenade-emblem", name: "Grenade (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -3359,7 +3358,7 @@ window.ITEMS = [
   {
     id: "grenade-bunny", name: "Grenade Bunny", category: "Soldier",
     aliases: [],
-    value: 1750, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 1750, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1750}],
@@ -3369,7 +3368,7 @@ window.ITEMS = [
   {
     id: "grenadier", name: "Grenadier", category: "Soldier",
     aliases: [],
-    value: 85, demand: 7, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 85, demand: 7, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 85}],
@@ -3379,7 +3378,7 @@ window.ITEMS = [
   {
     id: "greyhound", name: "Greyhound", category: "Air",
     aliases: [],
-    value: 10000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10000}],
@@ -3389,7 +3388,7 @@ window.ITEMS = [
   {
     id: "griddy-emote", name: "Griddy (Emote)", category: "Tags",
     aliases: [],
-    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 750}],
@@ -3399,7 +3398,7 @@ window.ITEMS = [
   {
     id: "gripen", name: "Gripen", category: "Air",
     aliases: [],
-    value: 4500, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4500, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4500}],
@@ -3409,7 +3408,7 @@ window.ITEMS = [
   {
     id: "grumpy-killer", name: "Grumpy Killer", category: "Soldier",
     aliases: [],
-    value: 13000, demand: 4, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 13000, demand: 4, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-12",
     history: [{"date": "2026-10-12", "value": 13000}],
@@ -3419,7 +3418,7 @@ window.ITEMS = [
   {
     id: "grumpy-rpg", name: "Grumpy RPG", category: "Other",
     aliases: [],
-    value: 8500, demand: 3, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 8500, demand: 3, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-26",
     history: [{"date": "2026-09-26", "value": 8500}],
@@ -3429,7 +3428,7 @@ window.ITEMS = [
   {
     id: "gun-boat", name: "Gun Boat", category: "Naval",
     aliases: [],
-    value: 100, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -3439,7 +3438,7 @@ window.ITEMS = [
   {
     id: "hacker", name: "Hacker", category: "Soldier",
     aliases: [],
-    value: 225, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 225, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 225}],
@@ -3449,7 +3448,7 @@ window.ITEMS = [
   {
     id: "hacker-truck", name: "Hacker Truck", category: "Land",
     aliases: [],
-    value: 40000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 40000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 40000}],
@@ -3459,7 +3458,7 @@ window.ITEMS = [
   {
     id: "halftrack", name: "Halftrack", category: "Land",
     aliases: [],
-    value: 750, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 750, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 750}],
@@ -3469,7 +3468,7 @@ window.ITEMS = [
   {
     id: "hammerhead", name: "Hammerhead", category: "Other",
     aliases: [],
-    value: 7000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-18",
     history: [{"date": "2026-10-18", "value": 7000}],
@@ -3479,7 +3478,7 @@ window.ITEMS = [
   {
     id: "handgun-emblem", name: "Handgun (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -3489,7 +3488,7 @@ window.ITEMS = [
   {
     id: "harrier", name: "Harrier", category: "Air",
     aliases: [],
-    value: 15000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 15000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 15000}],
@@ -3499,7 +3498,7 @@ window.ITEMS = [
   {
     id: "haunted-jet", name: "Haunted Jet", category: "Air",
     aliases: [],
-    value: 5500, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5500, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5500}],
@@ -3509,7 +3508,7 @@ window.ITEMS = [
   {
     id: "heavy", name: "Heavy", category: "Soldier",
     aliases: [],
-    value: 50, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 50, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -3519,7 +3518,7 @@ window.ITEMS = [
   {
     id: "heavy-t28", name: "Heavy T28", category: "Land",
     aliases: [],
-    value: 50000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 50000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50000}],
@@ -3529,7 +3528,7 @@ window.ITEMS = [
   {
     id: "heavy-zombie", name: "Heavy Zombie", category: "Soldier",
     aliases: [],
-    value: 500, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 500, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 500}],
@@ -3539,7 +3538,7 @@ window.ITEMS = [
   {
     id: "helicopter", name: "Helicopter", category: "Air",
     aliases: [],
-    value: 70, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 70, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-14",
     history: [{"date": "2026-06-14", "value": 70}],
@@ -3549,7 +3548,7 @@ window.ITEMS = [
   {
     id: "hellstorm", name: "Hellstorm", category: "Land",
     aliases: [],
-    value: 15000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 15000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 15000}],
@@ -3559,7 +3558,7 @@ window.ITEMS = [
   {
     id: "helm-emblem", name: "Helm (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -3569,7 +3568,7 @@ window.ITEMS = [
   {
     id: "helmet-emblem", name: "Helmet (Emblem)", category: "Tags",
     aliases: [],
-    value: 350, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 350, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 350}],
@@ -3579,7 +3578,7 @@ window.ITEMS = [
   {
     id: "himars", name: "Himars", category: "Land",
     aliases: [],
-    value: 100, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -3589,7 +3588,7 @@ window.ITEMS = [
   {
     id: "horten-229", name: "Horten 229", category: "Air",
     aliases: [],
-    value: 90000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 90000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-15",
     history: [{"date": "2026-11-15", "value": 90000}],
@@ -3599,7 +3598,7 @@ window.ITEMS = [
   {
     id: "hovercraft", name: "Hovercraft", category: "Naval",
     aliases: [],
-    value: 55, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 55, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 55}],
@@ -3609,7 +3608,7 @@ window.ITEMS = [
   {
     id: "humvee", name: "Humvee", category: "Land",
     aliases: [],
-    value: 100, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -3619,7 +3618,7 @@ window.ITEMS = [
   {
     id: "hunt-spitfire", name: "Hunt Spitfire", category: "Air",
     aliases: [],
-    value: null, demand: 0, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: null, demand: 0, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [],
@@ -3629,7 +3628,7 @@ window.ITEMS = [
   {
     id: "hx3", name: "HX3", category: "Land",
     aliases: [],
-    value: 2800, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 2800, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 2800}],
@@ -3639,7 +3638,7 @@ window.ITEMS = [
   {
     id: "infinity-blackbird", name: "Infinity Blackbird", category: "Air",
     aliases: [],
-    value: 15000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 15000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 15000}],
@@ -3649,7 +3648,7 @@ window.ITEMS = [
   {
     id: "infinity-car", name: "Infinity Car", category: "Land",
     aliases: [],
-    value: 125000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 125000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-26",
     history: [{"date": "2026-09-26", "value": 125000}],
@@ -3659,7 +3658,7 @@ window.ITEMS = [
   {
     id: "interceptor", name: "Interceptor", category: "Naval",
     aliases: [],
-    value: 750, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 750, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 750}],
@@ -3669,7 +3668,7 @@ window.ITEMS = [
   {
     id: "invictus", name: "Invictus", category: "Air",
     aliases: [],
-    value: 225, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 225, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 225}],
@@ -3679,7 +3678,7 @@ window.ITEMS = [
   {
     id: "ironhawk", name: "Ironhawk", category: "Air",
     aliases: [],
-    value: 25000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 25000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 25000}],
@@ -3689,7 +3688,7 @@ window.ITEMS = [
   {
     id: "j20", name: "J20", category: "Air",
     aliases: [],
-    value: 900, demand: 1, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 900, demand: 1, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 900}],
@@ -3699,7 +3698,7 @@ window.ITEMS = [
   {
     id: "jagdpanther", name: "Jagdpanther", category: "Land",
     aliases: [],
-    value: 7000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 7000}],
@@ -3709,7 +3708,7 @@ window.ITEMS = [
   {
     id: "jeep", name: "Jeep", category: "Land",
     aliases: [],
-    value: 100, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-14",
     history: [{"date": "2026-06-14", "value": 100}],
@@ -3719,7 +3718,7 @@ window.ITEMS = [
   {
     id: "jet-emblem", name: "Jet (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 50}],
@@ -3729,7 +3728,7 @@ window.ITEMS = [
   {
     id: "jet-engineer", name: "Jet Engineer", category: "Soldier",
     aliases: [],
-    value: 450000, demand: 3, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 450000, demand: 3, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-18",
     history: [{"date": "2026-10-18", "value": 450000}],
@@ -3739,7 +3738,7 @@ window.ITEMS = [
   {
     id: "jetpack-armor", name: "Jetpack Armor", category: "Other",
     aliases: [],
-    value: 400000, demand: 8, trend: "up", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 400000, demand: 8, trend: "up", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-11",
     history: [{"date": "2026-10-11", "value": 400000}],
@@ -3749,7 +3748,7 @@ window.ITEMS = [
   {
     id: "jetski", name: "Jetski", category: "Naval",
     aliases: [],
-    value: 100, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -3759,7 +3758,7 @@ window.ITEMS = [
   {
     id: "js-atago", name: "JS Atago", category: "Naval",
     aliases: [],
-    value: 85000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 85000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 85000}],
@@ -3769,7 +3768,7 @@ window.ITEMS = [
   {
     id: "juggernaut", name: "Juggernaut", category: "Soldier",
     aliases: [],
-    value: 600, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 600, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 600}],
@@ -3779,7 +3778,7 @@ window.ITEMS = [
   {
     id: "k7", name: "K7", category: "Air",
     aliases: [],
-    value: 50000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 50000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 50000}],
@@ -3789,7 +3788,7 @@ window.ITEMS = [
   {
     id: "k9-demon", name: "K9 Demon", category: "Land",
     aliases: [],
-    value: 3300, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3300, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 3300}],
@@ -3799,7 +3798,7 @@ window.ITEMS = [
   {
     id: "ka-52", name: "Ka-52", category: "Air",
     aliases: [],
-    value: 750, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 750, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 750}],
@@ -3809,7 +3808,7 @@ window.ITEMS = [
   {
     id: "katyusha", name: "Katyusha", category: "Land",
     aliases: [],
-    value: 1600, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 1600, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 1600}],
@@ -3819,7 +3818,7 @@ window.ITEMS = [
   {
     id: "keiler", name: "Keiler", category: "Land",
     aliases: [],
-    value: 7500, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7500, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 7500}],
@@ -3829,7 +3828,7 @@ window.ITEMS = [
   {
     id: "kill-you-emote", name: "Kill You (Emote)", category: "Tags",
     aliases: [],
-    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 750}],
@@ -3839,7 +3838,7 @@ window.ITEMS = [
   {
     id: "king-tiger", name: "King Tiger", category: "Land",
     aliases: [],
-    value: 3000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3000}],
@@ -3849,7 +3848,7 @@ window.ITEMS = [
   {
     id: "kirov-battleship", name: "Kirov Battleship", category: "Naval",
     aliases: [],
-    value: 60000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 60000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-25",
     history: [{"date": "2026-09-25", "value": 60000}],
@@ -3859,7 +3858,7 @@ window.ITEMS = [
   {
     id: "knife-emblem", name: "Knife (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -3869,7 +3868,7 @@ window.ITEMS = [
   {
     id: "knife-flip-emote", name: "Knife Flip (Emote)", category: "Tags",
     aliases: [],
-    value: 4500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4500}],
@@ -3879,7 +3878,7 @@ window.ITEMS = [
   {
     id: "korkut", name: "Korkut", category: "Land",
     aliases: [],
-    value: 4000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4000}],
@@ -3889,7 +3888,7 @@ window.ITEMS = [
   {
     id: "lance-corporal-emblem", name: "Lance Corporal (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: null, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -3899,7 +3898,7 @@ window.ITEMS = [
   {
     id: "laser-truck", name: "Laser Truck", category: "Land",
     aliases: [],
-    value: 99, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 99, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 99}],
@@ -3909,7 +3908,7 @@ window.ITEMS = [
   {
     id: "laugh-emote", name: "Laugh (Emote)", category: "Tags",
     aliases: [],
-    value: 500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 500}],
@@ -3919,7 +3918,7 @@ window.ITEMS = [
   {
     id: "launcher-emblem", name: "Launcher (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -3929,7 +3928,7 @@ window.ITEMS = [
   {
     id: "le-healingdrone", name: "LE_HealingDrone", category: "Drone",
     aliases: [],
-    value: 140000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 140000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-18",
     history: [{"date": "2026-10-18", "value": 140000}],
@@ -3939,7 +3938,7 @@ window.ITEMS = [
   {
     id: "le5000-izumo", name: "LE5000 Izumo", category: "Naval",
     aliases: [],
-    value: 25000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 25000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 25000}],
@@ -3949,7 +3948,7 @@ window.ITEMS = [
   {
     id: "legendary-cobra", name: "Legendary Cobra", category: "Air",
     aliases: [],
-    value: 35000, demand: 4, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 35000, demand: 4, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 35000}],
@@ -3959,7 +3958,7 @@ window.ITEMS = [
   {
     id: "leonardo", name: "Leonardo", category: "Air",
     aliases: [],
-    value: 300000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 300000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-19",
     history: [{"date": "2026-10-19", "value": 300000}],
@@ -3969,7 +3968,7 @@ window.ITEMS = [
   {
     id: "leopard-2a7", name: "Leopard 2A7", category: "Land",
     aliases: [],
-    value: 4000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4000}],
@@ -3979,7 +3978,7 @@ window.ITEMS = [
   {
     id: "leopard-tank", name: "Leopard Tank", category: "Land",
     aliases: [],
-    value: 100, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -3989,7 +3988,7 @@ window.ITEMS = [
   {
     id: "liberty-foch", name: "Liberty Foch", category: "Land",
     aliases: [],
-    value: 7000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 7000}],
@@ -3999,7 +3998,7 @@ window.ITEMS = [
   {
     id: "lieutenant-colonel-emblem", name: "Lieutenant Colonel (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -4009,7 +4008,7 @@ window.ITEMS = [
   {
     id: "lieutenant-general-emblem", name: "Lieutenant General (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -4019,7 +4018,7 @@ window.ITEMS = [
   {
     id: "lime-banner", name: "Lime (Banner)", category: "Tags",
     aliases: [],
-    value: 2500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 2500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2500}],
@@ -4029,7 +4028,7 @@ window.ITEMS = [
   {
     id: "limited-sonar", name: "Limited SONAR", category: "Naval",
     aliases: [],
-    value: 210000, demand: 3, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 210000, demand: 3, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-24",
     history: [{"date": "2026-09-24", "value": 210000}],
@@ -4039,7 +4038,7 @@ window.ITEMS = [
   {
     id: "loser-emote", name: "Loser (Emote)", category: "Tags",
     aliases: [],
-    value: 1250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 1250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1250}],
@@ -4049,7 +4048,7 @@ window.ITEMS = [
   {
     id: "love-buggy", name: "Love Buggy", category: "Land",
     aliases: [],
-    value: 5000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5000}],
@@ -4059,7 +4058,7 @@ window.ITEMS = [
   {
     id: "lovebird", name: "Lovebird", category: "Air",
     aliases: [],
-    value: 25000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 25000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-18",
     history: [{"date": "2026-10-18", "value": 25000}],
@@ -4069,7 +4068,7 @@ window.ITEMS = [
   {
     id: "m10-booker", name: "M10 Booker", category: "Land",
     aliases: [],
-    value: 4000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 4000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4000}],
@@ -4079,7 +4078,7 @@ window.ITEMS = [
   {
     id: "m1e3", name: "M1E3", category: "Land",
     aliases: [],
-    value: 50000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 50000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50000}],
@@ -4089,7 +4088,7 @@ window.ITEMS = [
   {
     id: "m50", name: "M50", category: "Air",
     aliases: [],
-    value: 8000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 8000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 8000}],
@@ -4099,7 +4098,7 @@ window.ITEMS = [
   {
     id: "major-emblem", name: "Major (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -4109,7 +4108,7 @@ window.ITEMS = [
   {
     id: "major-general-emblem", name: "Major General (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -4119,7 +4118,7 @@ window.ITEMS = [
   {
     id: "manti-core", name: "Manti Core", category: "Land",
     aliases: [],
-    value: 6600, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 6600, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 6600}],
@@ -4129,7 +4128,7 @@ window.ITEMS = [
   {
     id: "marasesti", name: "Marasesti", category: "Naval",
     aliases: [],
-    value: 50000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 50000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50000}],
@@ -4139,7 +4138,7 @@ window.ITEMS = [
   {
     id: "marine", name: "Marine", category: "Soldier",
     aliases: [],
-    value: 50, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -4149,7 +4148,7 @@ window.ITEMS = [
   {
     id: "mask-emblem", name: "Mask (Emblem)", category: "Tags",
     aliases: [],
-    value: 75, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 75, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 75}],
@@ -4159,7 +4158,7 @@ window.ITEMS = [
   {
     id: "master-overlord", name: "Master Overlord", category: "Land",
     aliases: [],
-    value: 70000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 70000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-18",
     history: [{"date": "2026-10-18", "value": 70000}],
@@ -4169,7 +4168,7 @@ window.ITEMS = [
   {
     id: "master-rain", name: "Master Rain", category: "Naval",
     aliases: [],
-    value: 42500, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 42500, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 42500}],
@@ -4179,7 +4178,7 @@ window.ITEMS = [
   {
     id: "master-warmaul", name: "Master Warmaul", category: "Land",
     aliases: [],
-    value: 120000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 120000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 120000}],
@@ -4189,7 +4188,7 @@ window.ITEMS = [
   {
     id: "maus-tank", name: "Maus Tank", category: "Land",
     aliases: [],
-    value: 1500, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 1500, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 1500}],
@@ -4199,7 +4198,7 @@ window.ITEMS = [
   {
     id: "me-262", name: "Me-262", category: "Air",
     aliases: [],
-    value: 4700, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4700, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4700}],
@@ -4210,7 +4209,7 @@ window.ITEMS = [
   {
     id: "me323", name: "ME323", category: "Air",
     aliases: [],
-    value: 45000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 45000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 45000}],
@@ -4220,7 +4219,7 @@ window.ITEMS = [
   {
     id: "mech-destroyer", name: "Mech Destroyer", category: "Land",
     aliases: [],
-    value: 65000, demand: 7, trend: "unstable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 65000, demand: 7, trend: "unstable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-05",
     history: [{"date": "2026-10-05", "value": 65000}],
@@ -4230,7 +4229,7 @@ window.ITEMS = [
   {
     id: "mech-transport", name: "Mech Transport", category: "Land",
     aliases: [],
-    value: 115000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 115000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 115000}],
@@ -4240,7 +4239,7 @@ window.ITEMS = [
   {
     id: "mech-walker", name: "Mech Walker", category: "Land",
     aliases: [],
-    value: 110000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 110000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 110000}],
@@ -4250,7 +4249,7 @@ window.ITEMS = [
   {
     id: "medal-emblem", name: "Medal (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -4260,7 +4259,7 @@ window.ITEMS = [
   {
     id: "medic", name: "Medic", category: "Soldier",
     aliases: [],
-    value: 20, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 20, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 20}],
@@ -4270,7 +4269,7 @@ window.ITEMS = [
   {
     id: "medic-emblem", name: "Medic (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [{"date": "2026-08-29", "value": 50}],
@@ -4280,7 +4279,7 @@ window.ITEMS = [
   {
     id: "medic-helicopter", name: "Medic Helicopter", category: "Air",
     aliases: [],
-    value: 60000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 60000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 60000}],
@@ -4290,7 +4289,7 @@ window.ITEMS = [
   {
     id: "medic-truck", name: "Medic Truck", category: "Land",
     aliases: [],
-    value: 5000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 5000}],
@@ -4300,7 +4299,7 @@ window.ITEMS = [
   {
     id: "medkit-emblem", name: "Medkit (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -4310,7 +4309,7 @@ window.ITEMS = [
   {
     id: "merkava", name: "Merkava", category: "Land",
     aliases: [],
-    value: null, demand: 8, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: null, demand: 8, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [],
@@ -4320,7 +4319,7 @@ window.ITEMS = [
   {
     id: "metal-helm-emblem", name: "Metal Helm (Emblem)", category: "Tags",
     aliases: [],
-    value: 100, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 100, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -4330,7 +4329,7 @@ window.ITEMS = [
   {
     id: "mi-28", name: "Mi-28", category: "Air",
     aliases: [],
-    value: 900, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 900, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 900}],
@@ -4340,7 +4339,7 @@ window.ITEMS = [
   {
     id: "mi35", name: "MI35", category: "Air",
     aliases: [],
-    value: 2000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 2000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2000}],
@@ -4350,7 +4349,7 @@ window.ITEMS = [
   {
     id: "mic-drop-emote", name: "Mic Drop (Emote)", category: "Tags",
     aliases: [],
-    value: 4500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4500}],
@@ -4360,7 +4359,7 @@ window.ITEMS = [
   {
     id: "midas-banner", name: "Midas (Banner)", category: "Tags",
     aliases: [],
-    value: 4000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4000}],
@@ -4370,7 +4369,7 @@ window.ITEMS = [
   {
     id: "mig-29", name: "MiG-29", category: "Air",
     aliases: [],
-    value: 700, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 700, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 700}],
@@ -4380,7 +4379,7 @@ window.ITEMS = [
   {
     id: "mig25", name: "Mig25", category: "Air",
     aliases: [],
-    value: 15000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 15000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 15000}],
@@ -4390,7 +4389,7 @@ window.ITEMS = [
   {
     id: "mig31", name: "Mig31", category: "Air",
     aliases: [],
-    value: 15000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 15000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 15000}],
@@ -4400,7 +4399,7 @@ window.ITEMS = [
   {
     id: "minigun-drone", name: "Minigun Drone", category: "Drone",
     aliases: [],
-    value: 200000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 200000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-18",
     history: [{"date": "2026-09-18", "value": 200000}],
@@ -4410,7 +4409,7 @@ window.ITEMS = [
   {
     id: "minigun-edjer", name: "Minigun Edjer", category: "Land",
     aliases: [],
-    value: 1750, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 1750, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1750}],
@@ -4420,7 +4419,7 @@ window.ITEMS = [
   {
     id: "miron", name: "Miron", category: "Air",
     aliases: [],
-    value: 5000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5000}],
@@ -4430,7 +4429,7 @@ window.ITEMS = [
   {
     id: "missile-emblem", name: "Missile (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -4440,7 +4439,7 @@ window.ITEMS = [
   {
     id: "missile-boat", name: "Missile Boat", category: "Naval",
     aliases: [],
-    value: 400, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 400, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 400}],
@@ -4450,7 +4449,7 @@ window.ITEMS = [
   {
     id: "missile-drone", name: "Missile Drone", category: "Drone",
     aliases: [],
-    value: 525, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 525, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 525}],
@@ -4460,7 +4459,7 @@ window.ITEMS = [
   {
     id: "missile-truck", name: "Missile Truck", category: "Land",
     aliases: [],
-    value: 700, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 700, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 700}],
@@ -4470,7 +4469,7 @@ window.ITEMS = [
   {
     id: "mlrs", name: "MLRS", category: "Land",
     aliases: [],
-    value: 12500, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 12500, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 12500}],
@@ -4480,7 +4479,7 @@ window.ITEMS = [
   {
     id: "mortar-emblem", name: "Mortar (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -4490,7 +4489,7 @@ window.ITEMS = [
   {
     id: "mortar-truck", name: "Mortar Truck", category: "Land",
     aliases: [],
-    value: 45000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 45000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-29",
     history: [{"date": "2026-09-29", "value": 45000}],
@@ -4500,7 +4499,7 @@ window.ITEMS = [
   {
     id: "mothership", name: "Mothership", category: "Air",
     aliases: [],
-    value: 90000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 90000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 90000}],
@@ -4510,7 +4509,7 @@ window.ITEMS = [
   {
     id: "motorbike", name: "Motorbike", category: "Land",
     aliases: [],
-    value: 5000, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 5000, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5000}],
@@ -4520,7 +4519,7 @@ window.ITEMS = [
   {
     id: "mq4c-jet", name: "MQ4C Jet", category: "Air",
     aliases: [],
-    value: 15000, demand: 8, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 15000, demand: 8, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 15000}],
@@ -4530,7 +4529,7 @@ window.ITEMS = [
   {
     id: "mzkt", name: "MZKT", category: "Land",
     aliases: [],
-    value: 3800, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3800, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3800}],
@@ -4540,7 +4539,7 @@ window.ITEMS = [
   {
     id: "naval-banner", name: "Naval (Banner)", category: "Tags",
     aliases: [],
-    value: 250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 250}],
@@ -4550,7 +4549,7 @@ window.ITEMS = [
   {
     id: "naval-officer", name: "Naval Officer", category: "Soldier",
     aliases: [],
-    value: 500, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 500, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 500}],
@@ -4560,7 +4559,7 @@ window.ITEMS = [
   {
     id: "navy-banner", name: "Navy (Banner)", category: "Tags",
     aliases: [],
-    value: 100, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -4570,7 +4569,7 @@ window.ITEMS = [
   {
     id: "ngad", name: "NGAD", category: "Air",
     aliases: [],
-    value: 13000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 13000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 13000}],
@@ -4580,7 +4579,7 @@ window.ITEMS = [
   {
     id: "nimitz", name: "Nimitz", category: "Naval",
     aliases: [],
-    value: 2000, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 2000, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2000}],
@@ -4590,7 +4589,7 @@ window.ITEMS = [
   {
     id: "north-carolina", name: "North Carolina", category: "Naval",
     aliases: [],
-    value: 700, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 700, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 700}],
@@ -4600,7 +4599,7 @@ window.ITEMS = [
   {
     id: "noscope-bunny", name: "Noscope Bunny", category: "Soldier",
     aliases: [],
-    value: 19000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 19000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 19000}],
@@ -4610,7 +4609,7 @@ window.ITEMS = [
   {
     id: "nova", name: "Nova", category: "Air",
     aliases: [],
-    value: 20000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 20000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 20000}],
@@ -4620,7 +4619,7 @@ window.ITEMS = [
   {
     id: "nova-blitz", name: "Nova Blitz", category: "Air",
     aliases: [],
-    value: 55000, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 55000, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 55000}],
@@ -4630,7 +4629,7 @@ window.ITEMS = [
   {
     id: "nuke-b36", name: "Nuke B36", category: "Air",
     aliases: [],
-    value: 50000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 50000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50000}],
@@ -4640,7 +4639,7 @@ window.ITEMS = [
   {
     id: "nuke-chrysler", name: "Nuke Chrysler", category: "Land",
     aliases: [],
-    value: 70000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 70000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 70000}],
@@ -4650,7 +4649,7 @@ window.ITEMS = [
   {
     id: "nuke-f35", name: "Nuke F35", category: "Air",
     aliases: [],
-    value: 200000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 200000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-02",
     history: [{"date": "2026-09-10", "value": 50000}, {"date": "2026-11-02", "value": 200000}],
@@ -4660,7 +4659,7 @@ window.ITEMS = [
   {
     id: "nuke-railgun-tank", name: "Nuke Railgun Tank", category: "Land",
     aliases: [],
-    value: 54000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 54000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 54000}],
@@ -4670,7 +4669,7 @@ window.ITEMS = [
   {
     id: "nuke-sniper-soldier", name: "Nuke Sniper Soldier", category: "Soldier",
     aliases: [],
-    value: 620000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 620000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-26",
     history: [{"date": "2026-10-26", "value": 620000}],
@@ -4680,7 +4679,7 @@ window.ITEMS = [
   {
     id: "nuke-sub", name: "Nuke Sub", category: "Naval",
     aliases: [],
-    value: 63000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 63000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-26",
     history: [{"date": "2026-10-26", "value": 63000}],
@@ -4690,7 +4689,7 @@ window.ITEMS = [
   {
     id: "nuke-xb-70", name: "Nuke XB-70", category: "Air",
     aliases: [],
-    value: 200000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 200000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 200000}],
@@ -4700,7 +4699,7 @@ window.ITEMS = [
   {
     id: "object-279", name: "Object 279", category: "Land",
     aliases: [],
-    value: 100000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 100000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-26",
     history: [{"date": "2026-10-26", "value": 100000}],
@@ -4710,7 +4709,7 @@ window.ITEMS = [
   {
     id: "oj-emote", name: "OJ (Emote)", category: "Tags",
     aliases: [],
-    value: 1250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 1250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1250}],
@@ -4720,7 +4719,7 @@ window.ITEMS = [
   {
     id: "olive-banner", name: "Olive (Banner)", category: "Tags",
     aliases: [],
-    value: 100, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -4730,7 +4729,7 @@ window.ITEMS = [
   {
     id: "onyx-banner", name: "Onyx (Banner)", category: "Tags",
     aliases: [],
-    value: 250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 250}],
@@ -4740,7 +4739,7 @@ window.ITEMS = [
   {
     id: "overlord", name: "Overlord", category: "Land",
     aliases: [],
-    value: 10500, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10500, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10500}],
@@ -4750,7 +4749,7 @@ window.ITEMS = [
   {
     id: "pantsir", name: "Pantsir", category: "Land",
     aliases: [],
-    value: 15000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 15000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 15000}],
@@ -4760,7 +4759,7 @@ window.ITEMS = [
   {
     id: "parachute-emblem", name: "Parachute (Emblem)", category: "Tags",
     aliases: [],
-    value: 75, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 75, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-14",
     history: [{"date": "2026-06-14", "value": 75}],
@@ -4770,7 +4769,7 @@ window.ITEMS = [
   {
     id: "patria", name: "Patria", category: "Naval",
     aliases: [],
-    value: 1750, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 1750, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1750}],
@@ -4780,7 +4779,7 @@ window.ITEMS = [
   {
     id: "patriot-boat", name: "Patriot Boat", category: "Naval",
     aliases: [],
-    value: 7000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 7000}],
@@ -4790,7 +4789,7 @@ window.ITEMS = [
   {
     id: "patriot-truck", name: "Patriot truck", category: "Land",
     aliases: [],
-    value: 2000, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 2000, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-24",
     history: [{"date": "2026-09-24", "value": 2000}],
@@ -4800,7 +4799,7 @@ window.ITEMS = [
   {
     id: "pearl-banner", name: "Pearl (Banner)", category: "Tags",
     aliases: [],
-    value: 20000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 20000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 20000}],
@@ -4810,7 +4809,7 @@ window.ITEMS = [
   {
     id: "pelican", name: "Pelican", category: "Air",
     aliases: [],
-    value: 25000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 25000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 25000}],
@@ -4820,7 +4819,7 @@ window.ITEMS = [
   {
     id: "phanter", name: "Phanter", category: "Land",
     aliases: [],
-    value: 550, demand: 3, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 550, demand: 3, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 550}],
@@ -4830,7 +4829,7 @@ window.ITEMS = [
   {
     id: "phantom-banner", name: "Phantom (Banner)", category: "Tags",
     aliases: [],
-    value: 4000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4000}],
@@ -4840,7 +4839,7 @@ window.ITEMS = [
   {
     id: "phantom-jet", name: "Phantom Jet", category: "Air",
     aliases: [],
-    value: 10800, demand: 4, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10800, demand: 4, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 10800}],
@@ -4850,7 +4849,7 @@ window.ITEMS = [
   {
     id: "phl-03", name: "PHL-03", category: "Land",
     aliases: [],
-    value: 3000, demand: 4, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3000, demand: 4, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3000}],
@@ -4860,7 +4859,7 @@ window.ITEMS = [
   {
     id: "phoenix-shotgun", name: "Phoenix Shotgun", category: "Other",
     aliases: [],
-    value: 300000, demand: 8, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 300000, demand: 8, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 300000}],
@@ -4870,7 +4869,7 @@ window.ITEMS = [
   {
     id: "pistol-emblem", name: "Pistol (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -4880,7 +4879,7 @@ window.ITEMS = [
   {
     id: "pl-01", name: "PL-01", category: "Land",
     aliases: [],
-    value: 325, demand: 3, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 325, demand: 3, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 325}],
@@ -4890,7 +4889,7 @@ window.ITEMS = [
   {
     id: "pl-01-liberty", name: "PL-01 Liberty", category: "Land",
     aliases: [],
-    value: 10000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 10000}],
@@ -4900,7 +4899,7 @@ window.ITEMS = [
   {
     id: "plane-emblem", name: "Plane (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 50}],
@@ -4910,7 +4909,7 @@ window.ITEMS = [
   {
     id: "platinum-banner", name: "Platinum (Banner)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -4920,7 +4919,7 @@ window.ITEMS = [
   {
     id: "platinum-f-16", name: "Platinum F-16", category: "Air",
     aliases: [],
-    value: 3500, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3500, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 3500}],
@@ -4931,7 +4930,7 @@ window.ITEMS = [
   {
     id: "plum-banner", name: "Plum (Banner)", category: "Tags",
     aliases: [],
-    value: 100, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -4941,7 +4940,7 @@ window.ITEMS = [
   {
     id: "police-ahrlac", name: "Police AHRLAC", category: "Air",
     aliases: [],
-    value: 75000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 75000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 75000}],
@@ -4951,7 +4950,7 @@ window.ITEMS = [
   {
     id: "police-apc", name: "Police APC", category: "Land",
     aliases: [],
-    value: 7500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 7500}],
@@ -4961,7 +4960,7 @@ window.ITEMS = [
   {
     id: "police-heli", name: "Police Heli", category: "Air",
     aliases: [],
-    value: 12000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 12000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 12000}],
@@ -4971,7 +4970,7 @@ window.ITEMS = [
   {
     id: "police-jeep", name: "Police Jeep", category: "Land",
     aliases: [],
-    value: 7500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 7500}],
@@ -4981,7 +4980,7 @@ window.ITEMS = [
   {
     id: "presentlauncher", name: "PresentLauncher", category: "Other",
     aliases: [],
-    value: 10000, demand: 8, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10000, demand: 8, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 10000}],
@@ -4991,7 +4990,7 @@ window.ITEMS = [
   {
     id: "prey", name: "Prey", category: "Air",
     aliases: [],
-    value: 85000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 85000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-15",
     history: [{"date": "2026-11-15", "value": 85000}],
@@ -5001,7 +5000,7 @@ window.ITEMS = [
   {
     id: "private", name: "Private", category: "Soldier",
     aliases: [],
-    value: 20, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 20, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 20}],
@@ -5011,7 +5010,7 @@ window.ITEMS = [
   {
     id: "private-emblem", name: "Private (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: null, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -5021,7 +5020,7 @@ window.ITEMS = [
   {
     id: "private-first-class-emblem", name: "Private First Class (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: null, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -5031,7 +5030,7 @@ window.ITEMS = [
   {
     id: "project-665", name: "Project 665", category: "Naval",
     aliases: [],
-    value: 40000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 40000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 40000}],
@@ -5041,7 +5040,7 @@ window.ITEMS = [
   {
     id: "prowler", name: "Prowler", category: "Air",
     aliases: [],
-    value: 13000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 13000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 13000}],
@@ -5051,7 +5050,7 @@ window.ITEMS = [
   {
     id: "puckmonster", name: "Puckmonster", category: "Soldier",
     aliases: [],
-    value: 25000, demand: 2, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 25000, demand: 2, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 25000}],
@@ -5061,7 +5060,7 @@ window.ITEMS = [
   {
     id: "puma-recon", name: "Puma Recon", category: "Land",
     aliases: [],
-    value: 5000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5000}],
@@ -5071,7 +5070,7 @@ window.ITEMS = [
   {
     id: "pumpkin-soldier", name: "Pumpkin Soldier", category: "Soldier",
     aliases: [],
-    value: 2000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 2000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2000}],
@@ -5081,7 +5080,7 @@ window.ITEMS = [
   {
     id: "pyro", name: "Pyro", category: "Soldier",
     aliases: [],
-    value: 1100, demand: 8, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 1100, demand: 8, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1100}],
@@ -5091,7 +5090,7 @@ window.ITEMS = [
   {
     id: "pyro-tank", name: "Pyro Tank", category: "Land",
     aliases: [],
-    value: 5000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 5000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5000}],
@@ -5101,7 +5100,7 @@ window.ITEMS = [
   {
     id: "qn506", name: "QN506", category: "Land",
     aliases: [],
-    value: 200, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 200, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 200}],
@@ -5111,7 +5110,7 @@ window.ITEMS = [
   {
     id: "quad-shock-rpg", name: "Quad Shock RPG", category: "Other",
     aliases: [],
-    value: 500000, demand: 7, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 500000, demand: 7, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-05",
     history: [{"date": "2026-10-05", "value": 500000}],
@@ -5121,7 +5120,7 @@ window.ITEMS = [
   {
     id: "rad-katyusha", name: "Rad katyusha", category: "Land",
     aliases: [],
-    value: 18000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 18000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-18",
     history: [{"date": "2026-10-18", "value": 18000}],
@@ -5131,7 +5130,7 @@ window.ITEMS = [
   {
     id: "radar-emblem", name: "Radar (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -5141,7 +5140,7 @@ window.ITEMS = [
   {
     id: "rafale", name: "Rafale", category: "Air",
     aliases: [],
-    value: 6000, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 6000, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 6000}],
@@ -5151,7 +5150,7 @@ window.ITEMS = [
   {
     id: "raid-soldier", name: "Raid Soldier", category: "Soldier",
     aliases: [],
-    value: 250, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 250, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 250}],
@@ -5161,7 +5160,7 @@ window.ITEMS = [
   {
     id: "railgun", name: "Railgun", category: "Other",
     aliases: [],
-    value: 60000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 60000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 60000}],
@@ -5171,7 +5170,7 @@ window.ITEMS = [
   {
     id: "railgun-destroyer", name: "Railgun Destroyer", category: "Naval",
     aliases: [],
-    value: 15000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 15000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 15000}],
@@ -5181,7 +5180,7 @@ window.ITEMS = [
   {
     id: "railgun-killer", name: "Railgun Killer", category: "Soldier",
     aliases: [],
-    value: 250000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 250000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 250000}],
@@ -5191,7 +5190,7 @@ window.ITEMS = [
   {
     id: "railgun-tank", name: "Railgun Tank", category: "Land",
     aliases: [],
-    value: 13000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 13000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 13000}],
@@ -5202,7 +5201,7 @@ window.ITEMS = [
   {
     id: "railgun-x-destroyer", name: "Railgun-X Destroyer", category: "Naval",
     aliases: [],
-    value: 600000, demand: 5, trend: "down", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 600000, demand: 5, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-06",
     history: [{"date": "2026-10-06", "value": 600000}],
@@ -5212,7 +5211,7 @@ window.ITEMS = [
   {
     id: "rainbow-darkstar", name: "Rainbow Darkstar", category: "Air",
     aliases: [],
-    value: null, demand: 10, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: null, demand: 10, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [],
@@ -5222,7 +5221,7 @@ window.ITEMS = [
   {
     id: "raptor", name: "Raptor", category: "Air",
     aliases: [],
-    value: 1250, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 1250, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1250}],
@@ -5232,7 +5231,7 @@ window.ITEMS = [
   {
     id: "ravage-soldier", name: "Ravage Soldier", category: "Soldier",
     aliases: [],
-    value: 50000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 50000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50000}],
@@ -5242,7 +5241,7 @@ window.ITEMS = [
   {
     id: "razor", name: "Razor", category: "Air",
     aliases: [],
-    value: 120000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 120000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-14",
     history: [{"date": "2026-09-14", "value": 120000}],
@@ -5262,7 +5261,7 @@ window.ITEMS = [
   {
     id: "recon-destroyer", name: "Recon Destroyer", category: "Naval",
     aliases: [],
-    value: 12500, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 12500, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 12500}],
@@ -5272,7 +5271,7 @@ window.ITEMS = [
   {
     id: "recon-helicopter", name: "Recon Helicopter", category: "Air",
     aliases: [],
-    value: 550, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 550, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 550}],
@@ -5282,7 +5281,7 @@ window.ITEMS = [
   {
     id: "red-f14", name: "Red F14", category: "Air",
     aliases: [],
-    value: 3000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3000}],
@@ -5292,7 +5291,7 @@ window.ITEMS = [
   {
     id: "repair-drone", name: "Repair Drone", category: "Drone",
     aliases: [],
-    value: 4000, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4000, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 4000}],
@@ -5302,7 +5301,7 @@ window.ITEMS = [
   {
     id: "rg-1-railgun-car", name: "Rg-1 Railgun Car", category: "Land",
     aliases: [],
-    value: 13000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 13000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 13000}],
@@ -5312,7 +5311,7 @@ window.ITEMS = [
   {
     id: "rocket-he177", name: "Rocket HE177", category: "Air",
     aliases: [],
-    value: 13000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 13000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 13000}],
@@ -5322,7 +5321,7 @@ window.ITEMS = [
   {
     id: "rocket-tank", name: "Rocket Tank", category: "Land",
     aliases: [],
-    value: 400, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 400, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 400}],
@@ -5332,7 +5331,7 @@ window.ITEMS = [
   {
     id: "rocket-truck", name: "Rocket Truck", category: "Land",
     aliases: [],
-    value: null, demand: 4, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: null, demand: 4, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [],
@@ -5342,7 +5341,7 @@ window.ITEMS = [
   {
     id: "rpg-soldier", name: "RPG Soldier", category: "Soldier",
     aliases: [],
-    value: 175, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 175, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 175}],
@@ -5352,7 +5351,7 @@ window.ITEMS = [
   {
     id: "rpg-zombie", name: "RPG Zombie", category: "Soldier",
     aliases: [],
-    value: 2000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 2000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2000}],
@@ -5362,7 +5361,7 @@ window.ITEMS = [
   {
     id: "rt01", name: "RT01", category: "Land",
     aliases: [],
-    value: 8000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 8000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 8000}],
@@ -5372,7 +5371,7 @@ window.ITEMS = [
   {
     id: "ruby-banner", name: "Ruby (Banner)", category: "Tags",
     aliases: [],
-    value: 4000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4000}],
@@ -5382,7 +5381,7 @@ window.ITEMS = [
   {
     id: "s-tank-barrage", name: "S-tank Barrage", category: "Land",
     aliases: [],
-    value: 3500, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 3500, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3500}],
@@ -5392,7 +5391,7 @@ window.ITEMS = [
   {
     id: "s-tank-gatling", name: "S-tank Gatling", category: "Land",
     aliases: [],
-    value: 8000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 8000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 8000}],
@@ -5402,7 +5401,7 @@ window.ITEMS = [
   {
     id: "s-tank-railgun", name: "S-tank Railgun", category: "Land",
     aliases: [],
-    value: 40000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 40000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 40000}],
@@ -5412,7 +5411,7 @@ window.ITEMS = [
   {
     id: "s-a-m-truck", name: "S.A.M. Truck", category: "Land",
     aliases: [],
-    value: 15000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 15000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 15000}],
@@ -5422,7 +5421,7 @@ window.ITEMS = [
   {
     id: "s-w-a-r-m", name: "S.W.A.R.M", category: "Air",
     aliases: [],
-    value: 55000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 55000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 55000}],
@@ -5432,7 +5431,7 @@ window.ITEMS = [
   {
     id: "s67", name: "S67", category: "Air",
     aliases: [],
-    value: 45000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 45000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 45000}],
@@ -5442,7 +5441,7 @@ window.ITEMS = [
   {
     id: "sachsen-frigate", name: "Sachsen Frigate", category: "Naval",
     aliases: [],
-    value: 400, demand: 1, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 400, demand: 1, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 400}],
@@ -5452,7 +5451,7 @@ window.ITEMS = [
   {
     id: "salute-emote", name: "Salute (Emote)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -5462,7 +5461,7 @@ window.ITEMS = [
   {
     id: "sand-hyena", name: "Sand Hyena", category: "Land",
     aliases: [],
-    value: 530, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 530, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 530}],
@@ -5472,7 +5471,7 @@ window.ITEMS = [
   {
     id: "santa-assassin", name: "Santa Assassin", category: "Soldier",
     aliases: [],
-    value: 1250, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 1250, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1250}],
@@ -5482,7 +5481,7 @@ window.ITEMS = [
   {
     id: "santa-killer", name: "Santa Killer", category: "Soldier",
     aliases: [],
-    value: 6000000, demand: 8, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 6000000, demand: 8, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-24",
     history: [{"date": "2026-09-24", "value": 6000000}],
@@ -5492,7 +5491,7 @@ window.ITEMS = [
   {
     id: "santa-maus", name: "Santa Maus", category: "Land",
     aliases: [],
-    value: 63000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 63000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 63000}],
@@ -5502,7 +5501,7 @@ window.ITEMS = [
   {
     id: "santa-medic", name: "Santa Medic", category: "Soldier",
     aliases: [],
-    value: 2500, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 2500, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2500}],
@@ -5512,7 +5511,7 @@ window.ITEMS = [
   {
     id: "santa-minigun", name: "Santa Minigun", category: "Other",
     aliases: [],
-    value: 40000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 40000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 40000}],
@@ -5522,7 +5521,7 @@ window.ITEMS = [
   {
     id: "santa-private", name: "Santa Private", category: "Soldier",
     aliases: [],
-    value: 235, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 235, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 235}],
@@ -5532,7 +5531,7 @@ window.ITEMS = [
   {
     id: "scorpion", name: "Scorpion", category: "Air",
     aliases: [],
-    value: 4250, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4250, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 4250}],
@@ -5542,7 +5541,7 @@ window.ITEMS = [
   {
     id: "scythe", name: "Scythe", category: "Other",
     aliases: [],
-    value: 5500, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 5500, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5500}],
@@ -5552,7 +5551,7 @@ window.ITEMS = [
   {
     id: "sea-dragon", name: "Sea Dragon", category: "Naval",
     aliases: [],
-    value: 55000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 55000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 55000}],
@@ -5562,7 +5561,7 @@ window.ITEMS = [
   {
     id: "sea-tank", name: "Sea Tank", category: "Land",
     aliases: [],
-    value: 700, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 700, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 700}],
@@ -5573,7 +5572,7 @@ window.ITEMS = [
   {
     id: "seabreacher", name: "SeaBreacher", category: "Naval",
     aliases: [],
-    value: 350000, demand: 8, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 350000, demand: 8, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-14",
     history: [{"date": "2026-09-14", "value": 350000}],
@@ -5583,7 +5582,7 @@ window.ITEMS = [
   {
     id: "seacraft-dpc", name: "Seacraft DPC", category: "Other",
     aliases: [],
-    value: 4500, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 4500, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-18",
     history: [{"date": "2026-10-18", "value": 4500}],
@@ -5593,7 +5592,7 @@ window.ITEMS = [
   {
     id: "seahawk", name: "SeaHawk", category: "Air",
     aliases: [],
-    value: 6500, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 6500, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 6500}],
@@ -5603,7 +5602,7 @@ window.ITEMS = [
   {
     id: "second-lieutenant-emblem", name: "Second Lieutenant (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -5613,7 +5612,7 @@ window.ITEMS = [
   {
     id: "sergeant-emblem", name: "Sergeant (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -5623,7 +5622,7 @@ window.ITEMS = [
   {
     id: "sergeant-major-emblem", name: "Sergeant Major (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -5633,7 +5632,7 @@ window.ITEMS = [
   {
     id: "shield-emblem", name: "Shield (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -5643,7 +5642,7 @@ window.ITEMS = [
   {
     id: "shock-trooper", name: "Shock Trooper", category: "Soldier",
     aliases: [],
-    value: 2000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 2000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2000}],
@@ -5653,7 +5652,7 @@ window.ITEMS = [
   {
     id: "shocker", name: "Shocker", category: "Land",
     aliases: [],
-    value: 10000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10000}],
@@ -5663,7 +5662,7 @@ window.ITEMS = [
   {
     id: "shopping-cart", name: "Shopping Cart", category: "Land",
     aliases: [],
-    value: 4500, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4500, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 4500}],
@@ -5673,7 +5672,7 @@ window.ITEMS = [
   {
     id: "shotgun-banner", name: "Shotgun (Banner)", category: "Tags",
     aliases: [],
-    value: 20000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 20000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 20000}],
@@ -5683,7 +5682,7 @@ window.ITEMS = [
   {
     id: "shotgun-emblem", name: "Shotgun (Emblem)", category: "Tags",
     aliases: [],
-    value: 10000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 10000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10000}],
@@ -5693,7 +5692,7 @@ window.ITEMS = [
   {
     id: "shotgun-emote", name: "Shotgun (Emote)", category: "Tags",
     aliases: [],
-    value: 20000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 20000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 20000}],
@@ -5703,7 +5702,7 @@ window.ITEMS = [
   {
     id: "shovel-emblem", name: "Shovel (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -5713,7 +5712,7 @@ window.ITEMS = [
   {
     id: "silver-banner", name: "Silver (Banner)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -5723,7 +5722,7 @@ window.ITEMS = [
   {
     id: "silver-howl", name: "Silver Howl", category: "Air",
     aliases: [],
-    value: 8000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 8000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 8000}],
@@ -5733,7 +5732,7 @@ window.ITEMS = [
   {
     id: "skull-emblem", name: "Skull (Emblem)", category: "Tags",
     aliases: [],
-    value: 75, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 75, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 75}],
@@ -5743,7 +5742,7 @@ window.ITEMS = [
   {
     id: "skull-helm-emblem", name: "Skull Helm (Emblem)", category: "Tags",
     aliases: [],
-    value: 35000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 35000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 35000}],
@@ -5753,7 +5752,7 @@ window.ITEMS = [
   {
     id: "sky-reaper", name: "Sky Reaper", category: "Air",
     aliases: [],
-    value: 50000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 50000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-04",
     history: [{"date": "2026-10-04", "value": 50000}],
@@ -5763,7 +5762,7 @@ window.ITEMS = [
   {
     id: "skyfox", name: "Skyfox", category: "Air",
     aliases: [],
-    value: 20000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 20000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 20000}],
@@ -5773,7 +5772,7 @@ window.ITEMS = [
   {
     id: "skyhammer", name: "Skyhammer", category: "Air",
     aliases: [],
-    value: 40000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 40000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-29",
     history: [{"date": "2026-10-29", "value": 40000}],
@@ -5783,7 +5782,7 @@ window.ITEMS = [
   {
     id: "skynex", name: "Skynex", category: "Land",
     aliases: [],
-    value: 13000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 13000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-26",
     history: [{"date": "2026-09-26", "value": 13000}],
@@ -5793,7 +5792,7 @@ window.ITEMS = [
   {
     id: "slash-bunny", name: "Slash Bunny", category: "Soldier",
     aliases: [],
-    value: 1500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 1500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1500}],
@@ -5803,7 +5802,7 @@ window.ITEMS = [
   {
     id: "slow-clap-emote", name: "Slow Clap (Emote)", category: "Tags",
     aliases: [],
-    value: 500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 500}],
@@ -5813,7 +5812,7 @@ window.ITEMS = [
   {
     id: "sm-27", name: "SM-27", category: "Air",
     aliases: [],
-    value: 3500, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3500, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3500}],
@@ -5823,7 +5822,7 @@ window.ITEMS = [
   {
     id: "smoke-emblem", name: "Smoke (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -5833,7 +5832,7 @@ window.ITEMS = [
   {
     id: "snakeskin-banner", name: "Snakeskin (Banner)", category: "Tags",
     aliases: [],
-    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 750}],
@@ -5843,7 +5842,7 @@ window.ITEMS = [
   {
     id: "sniper", name: "Sniper", category: "Soldier",
     aliases: [],
-    value: 50, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -5853,7 +5852,7 @@ window.ITEMS = [
   {
     id: "snow-grenade", name: "Snow Grenade", category: "Other",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -5863,7 +5862,7 @@ window.ITEMS = [
   {
     id: "snow-mobile", name: "Snow mobile", category: "Land",
     aliases: [],
-    value: 100, demand: 1, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 1, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-24",
     history: [{"date": "2026-09-24", "value": 100}],
@@ -5873,7 +5872,7 @@ window.ITEMS = [
   {
     id: "snowball-smg", name: "Snowball SMG", category: "Other",
     aliases: [],
-    value: 2000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 2000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2000}],
@@ -5883,7 +5882,7 @@ window.ITEMS = [
   {
     id: "specialist-emblem", name: "Specialist (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: null, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -5893,7 +5892,7 @@ window.ITEMS = [
   {
     id: "spitfire", name: "Spitfire", category: "Air",
     aliases: [],
-    value: 210, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 210, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 210}],
@@ -5903,7 +5902,7 @@ window.ITEMS = [
   {
     id: "spitfire-mk2", name: "Spitfire MK2", category: "Air",
     aliases: [],
-    value: null, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: null, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [],
@@ -5913,7 +5912,7 @@ window.ITEMS = [
   {
     id: "ssbn", name: "SSBN", category: "Naval",
     aliases: [],
-    value: 2500, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 2500, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2500}],
@@ -5933,7 +5932,7 @@ window.ITEMS = [
   {
     id: "stallion", name: "Stallion", category: "Air",
     aliases: [],
-    value: 5000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5000}],
@@ -5943,7 +5942,7 @@ window.ITEMS = [
   {
     id: "star-emblem", name: "Star (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -5953,7 +5952,7 @@ window.ITEMS = [
   {
     id: "star-eagle-emblem", name: "Star Eagle (Emblem)", category: "Tags",
     aliases: [],
-    value: 550, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 550, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 550}],
@@ -5963,7 +5962,7 @@ window.ITEMS = [
   {
     id: "stealth-banner", name: "Stealth (Banner)", category: "Tags",
     aliases: [],
-    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 750}],
@@ -5973,7 +5972,7 @@ window.ITEMS = [
   {
     id: "stealth-f14", name: "Stealth F14", category: "Air",
     aliases: [],
-    value: 4500, demand: 4, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4500, demand: 4, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4500}],
@@ -5983,7 +5982,7 @@ window.ITEMS = [
   {
     id: "stealth-f35", name: "Stealth F35", category: "Air",
     aliases: [],
-    value: 600, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 600, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 600}],
@@ -5993,7 +5992,7 @@ window.ITEMS = [
   {
     id: "steel-rain", name: "Steel Rain", category: "Naval",
     aliases: [],
-    value: 8000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 8000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 8000}],
@@ -6003,7 +6002,7 @@ window.ITEMS = [
   {
     id: "stomper", name: "Stomper", category: "Land",
     aliases: [],
-    value: 300000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 300000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 300000}],
@@ -6013,7 +6012,7 @@ window.ITEMS = [
   {
     id: "strela", name: "Strela", category: "Land",
     aliases: [],
-    value: 6500, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 6500, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 6500}],
@@ -6023,7 +6022,7 @@ window.ITEMS = [
   {
     id: "strike-mech", name: "Strike Mech", category: "Land",
     aliases: [],
-    value: 50000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 50000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50000}],
@@ -6033,7 +6032,7 @@ window.ITEMS = [
   {
     id: "striker", name: "Striker", category: "Land",
     aliases: [],
-    value: 5000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 5000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5000}],
@@ -6043,7 +6042,7 @@ window.ITEMS = [
   {
     id: "strong-helm-emblem", name: "Strong Helm (Emblem)", category: "Tags",
     aliases: [],
-    value: 550, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 550, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 550}],
@@ -6053,7 +6052,7 @@ window.ITEMS = [
   {
     id: "strong-shield-emblem", name: "Strong Shield (Emblem)", category: "Tags",
     aliases: [],
-    value: 100, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 100, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -6063,7 +6062,7 @@ window.ITEMS = [
   {
     id: "sturmtank", name: "Sturmtank", category: "Land",
     aliases: [],
-    value: 400000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 400000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-26",
     history: [{"date": "2026-10-26", "value": 400000}],
@@ -6073,7 +6072,7 @@ window.ITEMS = [
   {
     id: "su-24", name: "Su-24", category: "Air",
     aliases: [],
-    value: 1500, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 1500, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1500}],
@@ -6083,7 +6082,7 @@ window.ITEMS = [
   {
     id: "su-34", name: "Su-34", category: "Air",
     aliases: [],
-    value: 3500, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3500, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3500}],
@@ -6093,7 +6092,7 @@ window.ITEMS = [
   {
     id: "su-47", name: "Su-47", category: "Air",
     aliases: [],
-    value: 1300, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 1300, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1300}],
@@ -6104,7 +6103,7 @@ window.ITEMS = [
   {
     id: "su25", name: "SU25", category: "Air",
     aliases: [],
-    value: 6000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 6000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 6000}],
@@ -6114,7 +6113,7 @@ window.ITEMS = [
   {
     id: "su57", name: "SU57", category: "Air",
     aliases: [],
-    value: 5700, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5700, demand: 2, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5700}],
@@ -6124,7 +6123,7 @@ window.ITEMS = [
   {
     id: "submarine-c", name: "Submarine (C)", category: "Naval",
     aliases: [],
-    value: 60, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 60, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 60}],
@@ -6134,7 +6133,7 @@ window.ITEMS = [
   {
     id: "submarine-emblem", name: "Submarine (Emblem)", category: "Tags",
     aliases: [],
-    value: 75, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 75, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 75}],
@@ -6144,7 +6143,7 @@ window.ITEMS = [
   {
     id: "submarine-rare", name: "Submarine (Rare)", category: "Naval",
     aliases: [],
-    value: 180, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 180, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 180}],
@@ -6154,7 +6153,7 @@ window.ITEMS = [
   {
     id: "sukhoi-su25", name: "Sukhoi SU25", category: "Air",
     aliases: [],
-    value: 8000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 8000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 8000}],
@@ -6164,7 +6163,7 @@ window.ITEMS = [
   {
     id: "super-a37", name: "Super A37", category: "Air",
     aliases: [],
-    value: 70000, demand: 8, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 70000, demand: 8, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 70000}],
@@ -6174,7 +6173,7 @@ window.ITEMS = [
   {
     id: "super-ahrlac", name: "Super AHRLAC", category: "Air",
     aliases: [],
-    value: 4000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4000}],
@@ -6184,7 +6183,7 @@ window.ITEMS = [
   {
     id: "super-akrep", name: "Super Akrep", category: "Land",
     aliases: [],
-    value: 15000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 15000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-14",
     history: [{"date": "2026-06-14", "value": 15000}],
@@ -6194,7 +6193,7 @@ window.ITEMS = [
   {
     id: "super-alien", name: "Super Alien", category: "Soldier",
     aliases: [],
-    value: 80000, demand: 4, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 80000, demand: 4, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 80000}],
@@ -6204,7 +6203,7 @@ window.ITEMS = [
   {
     id: "super-atomic-annie", name: "Super Atomic Annie", category: "Land",
     aliases: [],
-    value: null, demand: 6, trend: "up", tradeable: true, limited: true, stock: null, src: "mts",
+    value: null, demand: 6, trend: "up", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-28",
     history: [],
@@ -6214,7 +6213,7 @@ window.ITEMS = [
   {
     id: "super-battle-yacht", name: "Super Battle Yacht", category: "Naval",
     aliases: [],
-    value: 750000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 750000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-21",
     history: [{"date": "2026-09-21", "value": 750000}],
@@ -6224,7 +6223,7 @@ window.ITEMS = [
   {
     id: "super-darkstar-mk-2", name: "Super Darkstar MK-2", category: "Air",
     aliases: [],
-    value: 3250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3250}],
@@ -6234,7 +6233,7 @@ window.ITEMS = [
   {
     id: "super-drone-carrier", name: "Super Drone Carrier", category: "Naval",
     aliases: [],
-    value: 275000, demand: 3, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 275000, demand: 3, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 275000}],
@@ -6244,7 +6243,7 @@ window.ITEMS = [
   {
     id: "super-edjer", name: "Super Edjer", category: "Land",
     aliases: [],
-    value: 2000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 2000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2000}],
@@ -6254,7 +6253,7 @@ window.ITEMS = [
   {
     id: "super-f111", name: "Super F111", category: "Air",
     aliases: [],
-    value: 30000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 30000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 30000}],
@@ -6264,7 +6263,7 @@ window.ITEMS = [
   {
     id: "super-f14", name: "Super F14", category: "Air",
     aliases: [],
-    value: 5000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5000}],
@@ -6274,7 +6273,7 @@ window.ITEMS = [
   {
     id: "super-f15", name: "Super F15", category: "Air",
     aliases: [],
-    value: 3100, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3100, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3100}],
@@ -6284,7 +6283,7 @@ window.ITEMS = [
   {
     id: "super-ghost-bird", name: "Super Ghost Bird", category: "Air",
     aliases: [],
-    value: null, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: null, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-01",
     history: [],
@@ -6294,7 +6293,7 @@ window.ITEMS = [
   {
     id: "super-halftrack", name: "Super Halftrack", category: "Land",
     aliases: [],
-    value: 6000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 6000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 6000}],
@@ -6304,7 +6303,7 @@ window.ITEMS = [
   {
     id: "super-he177", name: "Super He177", category: "Air",
     aliases: [],
-    value: 75000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 75000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 75000}],
@@ -6314,7 +6313,7 @@ window.ITEMS = [
   {
     id: "super-hovercraft", name: "Super Hovercraft", category: "Naval",
     aliases: [],
-    value: 2750, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 2750, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2750}],
@@ -6324,7 +6323,7 @@ window.ITEMS = [
   {
     id: "super-ironhawk", name: "Super Ironhawk", category: "Air",
     aliases: [],
-    value: 60000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 60000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 60000}],
@@ -6334,7 +6333,7 @@ window.ITEMS = [
   {
     id: "super-kieler", name: "Super Kieler", category: "Land",
     aliases: [],
-    value: 30000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 30000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 30000}],
@@ -6344,7 +6343,7 @@ window.ITEMS = [
   {
     id: "super-kirov-battleship", name: "Super Kirov Battleship", category: "Naval",
     aliases: [],
-    value: 850000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 850000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-15",
     history: [{"date": "2026-11-15", "value": 850000}],
@@ -6354,7 +6353,7 @@ window.ITEMS = [
   {
     id: "super-laser-truck", name: "Super Laser Truck", category: "Land",
     aliases: [],
-    value: 3500, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 3500, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3500}],
@@ -6364,7 +6363,7 @@ window.ITEMS = [
   {
     id: "super-m50", name: "Super M50", category: "Air",
     aliases: [],
-    value: 60000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 60000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 60000}],
@@ -6374,7 +6373,7 @@ window.ITEMS = [
   {
     id: "super-marasesti", name: "Super Marasesti", category: "Naval",
     aliases: [],
-    value: 365000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 365000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-25",
     history: [{"date": "2026-09-25", "value": 365000}],
@@ -6384,7 +6383,7 @@ window.ITEMS = [
   {
     id: "super-mig25", name: "Super Mig25", category: "Air",
     aliases: [],
-    value: 205000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 205000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 205000}],
@@ -6394,7 +6393,7 @@ window.ITEMS = [
   {
     id: "super-phanter", name: "Super Phanter", category: "Land",
     aliases: [],
-    value: 9000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 9000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 9000}],
@@ -6404,7 +6403,7 @@ window.ITEMS = [
   {
     id: "super-pumpkin", name: "Super Pumpkin", category: "Soldier",
     aliases: [],
-    value: 30000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 30000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 30000}],
@@ -6414,7 +6413,7 @@ window.ITEMS = [
   {
     id: "super-rafale", name: "Super Rafale", category: "Air",
     aliases: [],
-    value: 45000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 45000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 45000}],
@@ -6424,7 +6423,7 @@ window.ITEMS = [
   {
     id: "super-raptor", name: "Super Raptor", category: "Air",
     aliases: [],
-    value: 22500, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 22500, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 22500}],
@@ -6435,7 +6434,7 @@ window.ITEMS = [
   {
     id: "super-recon-destroyer", name: "Super Recon Destroyer", category: "Naval",
     aliases: [],
-    value: 50000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 50000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50000}],
@@ -6455,7 +6454,7 @@ window.ITEMS = [
   {
     id: "super-scorpion", name: "Super Scorpion", category: "Air",
     aliases: [],
-    value: 175000, demand: 7, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 175000, demand: 7, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 175000}],
@@ -6465,7 +6464,7 @@ window.ITEMS = [
   {
     id: "super-sea-dragon", name: "Super Sea Dragon", category: "Naval",
     aliases: [],
-    value: 500000, demand: 6, trend: "down", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 500000, demand: 6, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 500000}],
@@ -6475,7 +6474,7 @@ window.ITEMS = [
   {
     id: "super-shield-emblem", name: "Super Shield (Emblem)", category: "Tags",
     aliases: [],
-    value: 250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 250}],
@@ -6485,7 +6484,7 @@ window.ITEMS = [
   {
     id: "super-skyfox", name: "Super Skyfox", category: "Air",
     aliases: [],
-    value: 80000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 80000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 80000}],
@@ -6495,7 +6494,7 @@ window.ITEMS = [
   {
     id: "super-sniper", name: "Super Sniper", category: "Soldier",
     aliases: [],
-    value: 150, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 150, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 150}],
@@ -6505,7 +6504,7 @@ window.ITEMS = [
   {
     id: "super-speeder", name: "Super Speeder", category: "Land",
     aliases: [],
-    value: null, demand: 10, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: null, demand: 10, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [],
@@ -6515,7 +6514,7 @@ window.ITEMS = [
   {
     id: "super-star-emblem", name: "Super Star (Emblem)", category: "Tags",
     aliases: [],
-    value: 550, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 550, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 550}],
@@ -6525,7 +6524,7 @@ window.ITEMS = [
   {
     id: "super-stealth-boat", name: "Super Stealth Boat", category: "Naval",
     aliases: [],
-    value: 250000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 250000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-07",
     history: [{"date": "2026-10-07", "value": 250000}],
@@ -6535,7 +6534,7 @@ window.ITEMS = [
   {
     id: "super-striker", name: "Super Striker", category: "Land",
     aliases: [],
-    value: 25000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 25000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 25000}],
@@ -6545,7 +6544,7 @@ window.ITEMS = [
   {
     id: "super-sub", name: "Super Sub", category: "Naval",
     aliases: [],
-    value: 400, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 400, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 400}],
@@ -6555,7 +6554,7 @@ window.ITEMS = [
   {
     id: "super-t-14", name: "Super T-14", category: "Land",
     aliases: [],
-    value: 125000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 125000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-17",
     history: [{"date": "2026-09-17", "value": 125000}],
@@ -6565,7 +6564,7 @@ window.ITEMS = [
   {
     id: "super-tos1", name: "Super TOS1", category: "Land",
     aliases: [],
-    value: 80000, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 80000, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-19",
     history: [{"date": "2026-10-19", "value": 80000}],
@@ -6575,7 +6574,7 @@ window.ITEMS = [
   {
     id: "super-tu-160", name: "Super TU-160", category: "Air",
     aliases: [],
-    value: 95000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 95000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-15",
     history: [{"date": "2026-11-15", "value": 95000}],
@@ -6585,7 +6584,7 @@ window.ITEMS = [
   {
     id: "super-tu95", name: "Super TU95", category: "Air",
     aliases: [],
-    value: 70000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 70000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 70000}],
@@ -6595,7 +6594,7 @@ window.ITEMS = [
   {
     id: "super-tucano", name: "Super Tucano", category: "Air",
     aliases: [],
-    value: 3750, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3750, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 3750}],
@@ -6605,7 +6604,7 @@ window.ITEMS = [
   {
     id: "super-uav-carrier", name: "Super UAV Carrier", category: "Naval",
     aliases: [],
-    value: 300000, demand: 4, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 300000, demand: 4, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 300000}],
@@ -6615,7 +6614,7 @@ window.ITEMS = [
   {
     id: "super-vespa-tap", name: "Super Vespa Tap", category: "Land",
     aliases: [],
-    value: 55000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 55000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 55000}],
@@ -6625,7 +6624,7 @@ window.ITEMS = [
   {
     id: "super-volk", name: "Super Volk", category: "Land",
     aliases: [],
-    value: 7500, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7500, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 7500}],
@@ -6635,7 +6634,7 @@ window.ITEMS = [
   {
     id: "super-warship", name: "Super Warship", category: "Naval",
     aliases: [],
-    value: 50000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 50000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50000}],
@@ -6645,7 +6644,7 @@ window.ITEMS = [
   {
     id: "super-yamato", name: "Super Yamato", category: "Naval",
     aliases: [],
-    value: 800000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 800000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 800000}],
@@ -6655,7 +6654,7 @@ window.ITEMS = [
   {
     id: "super-yf-23", name: "Super YF-23", category: "Air",
     aliases: [],
-    value: 8000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 8000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 8000}],
@@ -6665,7 +6664,7 @@ window.ITEMS = [
   {
     id: "superapc", name: "SuperAPC", category: "Land",
     aliases: [],
-    value: 5500, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5500, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5500}],
@@ -6675,7 +6674,7 @@ window.ITEMS = [
   {
     id: "t-pose-emote", name: "T Pose (Emote)", category: "Tags",
     aliases: [],
-    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 750}],
@@ -6685,7 +6684,7 @@ window.ITEMS = [
   {
     id: "t-14", name: "T-14", category: "Land",
     aliases: [],
-    value: 13000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 13000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-17",
     history: [{"date": "2026-09-17", "value": 13000}],
@@ -6695,7 +6694,7 @@ window.ITEMS = [
   {
     id: "t-90m", name: "T-90M", category: "Land",
     aliases: [],
-    value: 4700, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4700, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-04",
     history: [{"date": "2026-10-04", "value": 4700}],
@@ -6705,7 +6704,7 @@ window.ITEMS = [
   {
     id: "t90-tank", name: "T90 Tank", category: "Land",
     aliases: [],
-    value: 400, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 400, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 400}],
@@ -6715,7 +6714,7 @@ window.ITEMS = [
   {
     id: "tags-emblem", name: "Tags (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -6725,7 +6724,7 @@ window.ITEMS = [
   {
     id: "tank", name: "Tank", category: "Land",
     aliases: [],
-    value: null, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: null, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [],
@@ -6735,7 +6734,7 @@ window.ITEMS = [
   {
     id: "tank-emblem", name: "Tank (Emblem)", category: "Tags",
     aliases: [],
-    value: 75, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 75, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [{"date": "2026-08-29", "value": 75}],
@@ -6745,7 +6744,7 @@ window.ITEMS = [
   {
     id: "tank-boat", name: "Tank Boat", category: "Naval",
     aliases: [],
-    value: 10000, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10000, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10000}],
@@ -6755,7 +6754,7 @@ window.ITEMS = [
   {
     id: "target-emblem", name: "Target (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 50}],
@@ -6765,7 +6764,7 @@ window.ITEMS = [
   {
     id: "terracotta-banner", name: "Terracotta (Banner)", category: "Tags",
     aliases: [],
-    value: 100, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -6775,7 +6774,7 @@ window.ITEMS = [
   {
     id: "terrorbyte", name: "Terrorbyte", category: "Land",
     aliases: [],
-    value: 400, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 400, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 400}],
@@ -6785,7 +6784,7 @@ window.ITEMS = [
   {
     id: "tesla-tank", name: "Tesla Tank", category: "Land",
     aliases: [],
-    value: 150000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 150000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 150000}],
@@ -6795,7 +6794,7 @@ window.ITEMS = [
   {
     id: "the-annihilator", name: "The Annihilator", category: "Land",
     aliases: [],
-    value: 75000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 75000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-22",
     history: [{"date": "2026-09-22", "value": 75000}],
@@ -6805,7 +6804,7 @@ window.ITEMS = [
   {
     id: "tiger-mech", name: "Tiger Mech", category: "Land",
     aliases: [],
-    value: 60000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 60000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 60000}],
@@ -6815,7 +6814,7 @@ window.ITEMS = [
   {
     id: "tiger-tank", name: "Tiger Tank", category: "Land",
     aliases: [],
-    value: 100, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -6825,7 +6824,7 @@ window.ITEMS = [
   {
     id: "titan-hauler", name: "Titan Hauler", category: "Air",
     aliases: [],
-    value: 55000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 55000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 55000}],
@@ -6835,7 +6834,7 @@ window.ITEMS = [
   {
     id: "tixplane", name: "Tixplane", category: "Air",
     aliases: [],
-    value: 1200, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 1200, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1200}],
@@ -6845,7 +6844,7 @@ window.ITEMS = [
   {
     id: "tks-20", name: "TKS-20", category: "Land",
     aliases: [],
-    value: 2000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 2000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2000}],
@@ -6855,7 +6854,7 @@ window.ITEMS = [
   {
     id: "top-5-steel-rain", name: "Top 5 Steel Rain", category: "Naval",
     aliases: [],
-    value: null, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: null, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [],
@@ -6865,7 +6864,7 @@ window.ITEMS = [
   {
     id: "top3-shrike", name: "Top3 Shrike", category: "Air",
     aliases: [],
-    value: null, demand: 10, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: null, demand: 10, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [],
@@ -6875,7 +6874,7 @@ window.ITEMS = [
   {
     id: "top5-an-jeep", name: "Top5 AN Jeep", category: "Land",
     aliases: [],
-    value: null, demand: 10, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: null, demand: 10, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [],
@@ -6885,7 +6884,7 @@ window.ITEMS = [
   {
     id: "top5-mlrs", name: "Top5 MLRS", category: "Land",
     aliases: [],
-    value: null, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: null, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [],
@@ -6895,7 +6894,7 @@ window.ITEMS = [
   {
     id: "top5-overlord", name: "Top5 Overlord", category: "Land",
     aliases: [],
-    value: null, demand: 8, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: null, demand: 8, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [],
@@ -6905,7 +6904,7 @@ window.ITEMS = [
   {
     id: "tower-emblem", name: "Tower (Emblem)", category: "Tags",
     aliases: [],
-    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 50, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 50}],
@@ -6915,7 +6914,7 @@ window.ITEMS = [
   {
     id: "toxic-trooper", name: "Toxic Trooper", category: "Soldier",
     aliases: [],
-    value: 900, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 900, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-06",
     history: [{"date": "2026-10-06", "value": 900}],
@@ -6925,7 +6924,7 @@ window.ITEMS = [
   {
     id: "toy-b-17", name: "Toy B-17", category: "Air",
     aliases: [],
-    value: 10100, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 10100, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10100}],
@@ -6935,7 +6934,7 @@ window.ITEMS = [
   {
     id: "tralalero", name: "Tralalero", category: "Naval",
     aliases: [],
-    value: 10000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10000}],
@@ -6945,7 +6944,7 @@ window.ITEMS = [
   {
     id: "truck", name: "Truck", category: "Land",
     aliases: [],
-    value: 100, demand: 0, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 0, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -6955,7 +6954,7 @@ window.ITEMS = [
   {
     id: "tu-160", name: "TU-160", category: "Air",
     aliases: [],
-    value: 15000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 15000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 15000}],
@@ -6965,7 +6964,7 @@ window.ITEMS = [
   {
     id: "tu-22m", name: "Tu-22M", category: "Air",
     aliases: [],
-    value: 3100, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 3100, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 3100}],
@@ -6975,7 +6974,7 @@ window.ITEMS = [
   {
     id: "tu95", name: "TU95", category: "Air",
     aliases: [],
-    value: 12500, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 12500, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 12500}],
@@ -6985,7 +6984,7 @@ window.ITEMS = [
   {
     id: "tupolev-tb3", name: "Tupolev TB3", category: "Air",
     aliases: [],
-    value: 45000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 45000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 45000}],
@@ -6995,7 +6994,7 @@ window.ITEMS = [
   {
     id: "turret-chinook", name: "Turret Chinook", category: "Air",
     aliases: [],
-    value: 350, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 350, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 350}],
@@ -7005,7 +7004,7 @@ window.ITEMS = [
   {
     id: "turret-helicopter", name: "Turret Helicopter", category: "Air",
     aliases: [],
-    value: 70, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 70, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 70}],
@@ -7015,7 +7014,7 @@ window.ITEMS = [
   {
     id: "turret-truck", name: "Turret Truck", category: "Land",
     aliases: [],
-    value: 100, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: 100, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 100}],
@@ -7025,7 +7024,7 @@ window.ITEMS = [
   {
     id: "tv-juggernaut", name: "TV Juggernaut", category: "Soldier",
     aliases: [],
-    value: 7300, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7300, demand: 7, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 7300}],
@@ -7035,7 +7034,7 @@ window.ITEMS = [
   {
     id: "tv-soldier", name: "TV Soldier", category: "Soldier",
     aliases: [],
-    value: 2000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 2000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 2000}],
@@ -7045,7 +7044,7 @@ window.ITEMS = [
   {
     id: "tv-tank", name: "TV Tank", category: "Land",
     aliases: [],
-    value: 10000, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10000, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10000}],
@@ -7055,7 +7054,7 @@ window.ITEMS = [
   {
     id: "typhoon", name: "Typhoon", category: "Air",
     aliases: [],
-    value: 1800, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 1800, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 1800}],
@@ -7066,7 +7065,7 @@ window.ITEMS = [
   {
     id: "typhoon-sub", name: "Typhoon (Sub)", category: "Naval",
     aliases: [],
-    value: 5500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5500, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5500}],
@@ -7076,7 +7075,7 @@ window.ITEMS = [
   {
     id: "typhoon-x", name: "Typhoon-X", category: "Air",
     aliases: [],
-    value: 15000, demand: 8, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 15000, demand: 8, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 15000}],
@@ -7087,7 +7086,7 @@ window.ITEMS = [
   {
     id: "u2", name: "U2", category: "Air",
     aliases: [],
-    value: 5500, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 5500, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 5500}],
@@ -7097,7 +7096,7 @@ window.ITEMS = [
   {
     id: "uav-carrier", name: "UAV Carrier", category: "Naval",
     aliases: [],
-    value: 35000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 35000, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 35000}],
@@ -7107,7 +7106,7 @@ window.ITEMS = [
   {
     id: "ufo", name: "UFO", category: "Air",
     aliases: [],
-    value: 2000, demand: 3, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 2000, demand: 3, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 2000}],
@@ -7117,7 +7116,7 @@ window.ITEMS = [
   {
     id: "urban-banner", name: "Urban (Banner)", category: "Tags",
     aliases: [],
-    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 750}],
@@ -7127,7 +7126,7 @@ window.ITEMS = [
   {
     id: "uss-missouri", name: "USS Missouri", category: "Naval",
     aliases: [],
-    value: 65000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 65000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 65000}],
@@ -7137,7 +7136,7 @@ window.ITEMS = [
   {
     id: "uzi", name: "UZI", category: "Tags",
     aliases: [],
-    value: null, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common", src: "mts",
+    value: null, demand: 1, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Common",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -7147,7 +7146,7 @@ window.ITEMS = [
   {
     id: "v22", name: "V22", category: "Air",
     aliases: [],
-    value: 800, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 800, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 800}],
@@ -7157,7 +7156,7 @@ window.ITEMS = [
   {
     id: "valor", name: "Valor", category: "Air",
     aliases: [],
-    value: 10000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10000}],
@@ -7167,7 +7166,7 @@ window.ITEMS = [
   {
     id: "vampire", name: "Vampire", category: "Soldier",
     aliases: [],
-    value: 1300, demand: 8, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 1300, demand: 8, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1300}],
@@ -7177,7 +7176,7 @@ window.ITEMS = [
   {
     id: "vault-raider", name: "Vault Raider", category: "Soldier",
     aliases: [],
-    value: 35, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 35, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 35}],
@@ -7187,7 +7186,7 @@ window.ITEMS = [
   {
     id: "vespa-tap", name: "Vespa Tap", category: "Land",
     aliases: [],
-    value: 20000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 20000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 20000}],
@@ -7197,7 +7196,7 @@ window.ITEMS = [
   {
     id: "veteran-banner", name: "Veteran (Banner)", category: "Tags",
     aliases: [],
-    value: 25000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 25000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 25000}],
@@ -7207,7 +7206,7 @@ window.ITEMS = [
   {
     id: "violet-banner", name: "Violet (Banner)", category: "Tags",
     aliases: [],
-    value: 4000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4000}],
@@ -7217,7 +7216,7 @@ window.ITEMS = [
   {
     id: "volk", name: "Volk", category: "Land",
     aliases: [],
-    value: 1250, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 1250, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1250}],
@@ -7227,7 +7226,7 @@ window.ITEMS = [
   {
     id: "vulcan", name: "Vulcan", category: "Land",
     aliases: [],
-    value: 7000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7000, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 7000}],
@@ -7237,7 +7236,7 @@ window.ITEMS = [
   {
     id: "war-bunny", name: "War Bunny", category: "Soldier",
     aliases: [],
-    value: 1000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 1000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1000}],
@@ -7247,7 +7246,7 @@ window.ITEMS = [
   {
     id: "war-shrike", name: "War Shrike", category: "Air",
     aliases: [],
-    value: 20000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 20000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 20000}],
@@ -7257,7 +7256,7 @@ window.ITEMS = [
   {
     id: "warlord-bunny", name: "Warlord Bunny", category: "Soldier",
     aliases: [],
-    value: 20000, demand: 8, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 20000, demand: 8, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 20000}],
@@ -7267,7 +7266,7 @@ window.ITEMS = [
   {
     id: "warmaul", name: "Warmaul", category: "Land",
     aliases: [],
-    value: 12500, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 12500, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 12500}],
@@ -7277,7 +7276,7 @@ window.ITEMS = [
   {
     id: "warplane", name: "Warplane", category: "Air",
     aliases: [],
-    value: 380, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 380, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 380}],
@@ -7287,7 +7286,7 @@ window.ITEMS = [
   {
     id: "warrant-officer-emblem", name: "Warrant Officer (Emblem)", category: "Tags",
     aliases: [],
-    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: null, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-08-29",
     history: [],
@@ -7297,7 +7296,7 @@ window.ITEMS = [
   {
     id: "warship", name: "Warship", category: "Naval",
     aliases: [],
-    value: 17500, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 17500, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 17500}],
@@ -7307,7 +7306,7 @@ window.ITEMS = [
   {
     id: "warspite", name: "Warspite", category: "Naval",
     aliases: [],
-    value: 70000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 70000, demand: 4, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 70000}],
@@ -7317,7 +7316,7 @@ window.ITEMS = [
   {
     id: "weiner-wagon", name: "Weiner Wagon", category: "Land",
     aliases: [],
-    value: 4300, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 4300, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 4300}],
@@ -7327,7 +7326,7 @@ window.ITEMS = [
   {
     id: "werewolf", name: "Werewolf", category: "Soldier",
     aliases: [],
-    value: 1800, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 1800, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1800}],
@@ -7337,7 +7336,7 @@ window.ITEMS = [
   {
     id: "win-medal-emblem", name: "Win Medal (Emblem)", category: "Tags",
     aliases: [],
-    value: 550, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 550, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 550}],
@@ -7347,7 +7346,7 @@ window.ITEMS = [
   {
     id: "woodland-banner", name: "Woodland (Banner)", category: "Tags",
     aliases: [],
-    value: 250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon", src: "mts",
+    value: 250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Uncommon",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 250}],
@@ -7357,7 +7356,7 @@ window.ITEMS = [
   {
     id: "worm-emote", name: "Worm (Emote)", category: "Tags",
     aliases: [],
-    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 750, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 750}],
@@ -7367,7 +7366,7 @@ window.ITEMS = [
   {
     id: "wrapped-c17", name: "Wrapped C17", category: "Air",
     aliases: [],
-    value: 25000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 25000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 25000}],
@@ -7377,7 +7376,7 @@ window.ITEMS = [
   {
     id: "wulf", name: "Wulf", category: "Air",
     aliases: [],
-    value: 7200, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7200, demand: 4, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 7200}],
@@ -7387,7 +7386,7 @@ window.ITEMS = [
   {
     id: "x-32", name: "X-32", category: "Air",
     aliases: [],
-    value: 85000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 85000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-29",
     history: [{"date": "2026-10-29", "value": 85000}],
@@ -7397,7 +7396,7 @@ window.ITEMS = [
   {
     id: "x-59", name: "X-59", category: "Air",
     aliases: [],
-    value: 6000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 6000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 6000}],
@@ -7407,7 +7406,7 @@ window.ITEMS = [
   {
     id: "x-76", name: "X-76", category: "Air",
     aliases: [],
-    value: 75000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 75000, demand: 7, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-07",
     history: [{"date": "2026-11", "value": 80000}, {"date": "2026-11-07", "value": 75000}],
@@ -7417,7 +7416,7 @@ window.ITEMS = [
   {
     id: "xb-70", name: "XB-70", category: "Air",
     aliases: [],
-    value: 12000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 12000, demand: 3, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 12000}],
@@ -7427,7 +7426,7 @@ window.ITEMS = [
   {
     id: "xf12", name: "XF12", category: "Air",
     aliases: [],
-    value: 500000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
+    value: 500000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-12",
     history: [{"date": "2026-10-12", "value": 500000}],
@@ -7437,7 +7436,7 @@ window.ITEMS = [
   {
     id: "yamato", name: "Yamato", category: "Naval",
     aliases: [],
-    value: 600, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 600, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 600}],
@@ -7447,7 +7446,7 @@ window.ITEMS = [
   {
     id: "yf-23", name: "YF-23", category: "Air",
     aliases: [],
-    value: 800, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare", src: "mts",
+    value: 800, demand: 1, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Rare",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 800}],
@@ -7457,7 +7456,7 @@ window.ITEMS = [
   {
     id: "yf1", name: "YF1", category: "Air",
     aliases: [],
-    value: 12000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 12000, demand: 5, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 12000}],
@@ -7467,7 +7466,7 @@ window.ITEMS = [
   {
     id: "zen-emote", name: "Zen (Emote)", category: "Tags",
     aliases: [],
-    value: 1250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic", src: "mts",
+    value: 1250, demand: 5, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 1250}],
@@ -7477,7 +7476,7 @@ window.ITEMS = [
   {
     id: "zeplin-x", name: "Zeplin-X", category: "Air",
     aliases: [],
-    value: 15000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 15000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 15000}],
@@ -7487,7 +7486,7 @@ window.ITEMS = [
   {
     id: "zeplin-x-nuke", name: "Zeplin-X Nuke", category: "Air",
     aliases: [],
-    value: 48000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
+    value: 48000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-06-12",
     history: [{"date": "2026-06-12", "value": 48000}],
@@ -7497,7 +7496,7 @@ window.ITEMS = [
   {
     id: "zombie-ac-130", name: "Zombie AC-130", category: "Air",
     aliases: [],
-    value: 10600, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 10600, demand: 2, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 10600}],
@@ -7507,7 +7506,7 @@ window.ITEMS = [
   {
     id: "zombie-juggernaut", name: "Zombie Juggernaut", category: "Soldier",
     aliases: [],
-    value: 7000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7000, demand: 6, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 7000}],
@@ -7517,7 +7516,7 @@ window.ITEMS = [
   {
     id: "zubr", name: "ZUBR", category: "Naval",
     aliases: [],
-    value: 6000, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 6000, demand: 5, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 6000}],
@@ -7527,7 +7526,7 @@ window.ITEMS = [
   {
     id: "zumwalt", name: "Zumwalt", category: "Naval",
     aliases: [],
-    value: 7100, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary", src: "mts",
+    value: 7100, demand: 3, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
     history: [{"date": "2026-09-10", "value": 7100}],
