@@ -6803,16 +6803,6 @@ window.ITEMS = [
     note: "", noteKo: "",
   },
   {
-    id: "theicezombieslayer", name: "TheIceZombieSlayer", category: "Soldier",
-    aliases: [],
-    value: 3000000, demand: 2, trend: "stable", tradeable: true, limited: true, stock: null, src: "mts",
-    stats: { pvp: null, vfm: null },
-    obtain: "", updated: "2026-11-02",
-    history: [{"date": "2026-09-10", "value": 2500000}, {"date": "2026-11-02", "value": 3000000}],
-    image: "images/theicezombieslayer.png",
-    note: "", noteKo: "",
-  },
-  {
     id: "tiger-mech", name: "Tiger Mech", category: "Land",
     aliases: [],
     value: 60000, demand: 6, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Exotic", src: "mts",
