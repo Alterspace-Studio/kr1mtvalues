@@ -959,7 +959,7 @@ window.ITEMS = [
   {
     id: "super-doomsday-truck", name: "Super Doomsday Truck", category: "Land",
     aliases: ["S Doomsday", "Super Doomsday", "Doomsday", "Doomsday Truck", "둠스데이"],
-    value: 2800000, demand: 8, trend: "down", tradeable: true, limited: true, stock: null,
+    value: 2800000, demand: 4, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: 6, vfm: null },
     obtain: "", updated: "2026-11-21",
     history: [{"date": "2026-11-10", "value": 6000000}, {"date": "2026-11-14", "value": 2000000}, {"date": "2026-11-17", "value": 3500000}, {"date": "2026-11-21", "value": 2800000}],
