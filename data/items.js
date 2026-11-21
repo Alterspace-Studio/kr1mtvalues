@@ -839,7 +839,7 @@ window.ITEMS = [
   {
     id: "super-medic-helicopter", name: "Super Medic Helicopter", category: "Air",
     aliases: ["LE Medic Heli", "Medic Heli", "Medic Helicopter", "메딕 헬기"],
-    value: 1000000, demand: 6, trend: "up", tradeable: true, limited: true, stock: null,
+    value: 1000000, range: [1000000, "+"], demand: 6, trend: "up", tradeable: true, limited: true, stock: null,
     stats: { pvp: 7, vfm: null },
     obtain: "", updated: "2026-11-21",
     history: [{"date": "2026-11-18", "value": 800000}, {"date": "2026-11-21", "value": 1000000}],
