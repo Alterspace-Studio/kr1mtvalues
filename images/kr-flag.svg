@@ -1,8 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-36 -24 72 48">
   <rect x="-36" y="-24" width="72" height="48" fill="#fff"/>
-  <g transform="rotate(-33.69)">
-    <path d="M-12 0a12 12 0 0 1 24 0a6 6 0 0 1-12 0a6 6 0 0 0-12 0z" fill="#cd2e3a"/>
-    <path d="M-12 0a12 12 0 0 0 24 0a6 6 0 0 0-12 0a6 6 0 0 1-12 0z" fill="#0047a0"/>
+  <g transform="rotate(33.69)">
+    <circle r="12" fill="#0047a0"/>
+    <path d="M-12 0a12 12 0 0 1 24 0z" fill="#cd2e3a"/>
+    <circle cx="-6" r="6" fill="#cd2e3a"/>
+    <circle cx="6" r="6" fill="#0047a0"/>
   </g>
   <g fill="#000">
     <!-- 건 (왼쪽 위) -->
