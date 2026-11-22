@@ -398,10 +398,10 @@ window.ITEMS = [
   {
     id: "platinum-sb12", name: "Platinum SB-12", category: "Air",
     aliases: ["Platinum SB12", "SB12", "SB-12", "플래티넘", "플래티넘 SB12"],
-    value: 6000000, range: [6000000, 6500000], demand: 3, trend: null, tradeable: true, limited: true, stock: null,
+    value: 6000000, demand: 3, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: 3, vfm: 1},
-    obtain: "Platinum Crate", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 6000000}],
+    obtain: "Platinum Crate", updated: "2026-11-22",
+    history: [{"date": "2026-11", "value": 6000000}, {"date": "2026-11-22", "value": 6000000}],
     image: "images/platinum-sb12.png",
     note: "Sky fortress. Released 2025-12-23.", noteKo: "하늘 요새. 2025-12-23 출시.",
   },
