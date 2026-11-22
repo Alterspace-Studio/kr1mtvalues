@@ -6,28 +6,4 @@
     <circle cx="-6" r="6" fill="#cd2e3a"/>
     <circle cx="6" r="6" fill="#0047a0"/>
   </g>
-  <g fill="#000">
-    <!-- 건 (왼쪽 위) -->
-    <g transform="rotate(-56.31) translate(0,-19)">
-      <rect x="-6" y="-3" width="12" height="1.5"/><rect x="-6" y="-0.75" width="12" height="1.5"/><rect x="-6" y="1.5" width="12" height="1.5"/>
-    </g>
-    <!-- 곤 (오른쪽 아래) -->
-    <g transform="rotate(123.69) translate(0,-19)">
-      <rect x="-6" y="-3" width="5.5" height="1.5"/><rect x="0.5" y="-3" width="5.5" height="1.5"/>
-      <rect x="-6" y="-0.75" width="5.5" height="1.5"/><rect x="0.5" y="-0.75" width="5.5" height="1.5"/>
-      <rect x="-6" y="1.5" width="5.5" height="1.5"/><rect x="0.5" y="1.5" width="5.5" height="1.5"/>
-    </g>
-    <!-- 감 (오른쪽 위) -->
-    <g transform="rotate(56.31) translate(0,-19)">
-      <rect x="-6" y="-3" width="5.5" height="1.5"/><rect x="0.5" y="-3" width="5.5" height="1.5"/>
-      <rect x="-6" y="-0.75" width="12" height="1.5"/>
-      <rect x="-6" y="1.5" width="5.5" height="1.5"/><rect x="0.5" y="1.5" width="5.5" height="1.5"/>
-    </g>
-    <!-- 리 (왼쪽 아래) -->
-    <g transform="rotate(-123.69) translate(0,-19)">
-      <rect x="-6" y="-3" width="12" height="1.5"/>
-      <rect x="-6" y="-0.75" width="5.5" height="1.5"/><rect x="0.5" y="-0.75" width="5.5" height="1.5"/>
-      <rect x="-6" y="1.5" width="12" height="1.5"/>
-    </g>
-  </g>
 </svg>
