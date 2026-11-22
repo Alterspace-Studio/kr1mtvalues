@@ -139,10 +139,10 @@ window.ITEMS = [
   {
     id: "darkstar-x", name: "Darkstar X", category: "Air",
     aliases: ["DSX", "Darkstar", "닼스", "다크스타"],
-    value: 740000, demand: 6, trend: "down", tradeable: true, limited: true, stock: null,
+    value: 650000, demand: 6, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: 6, vfm: null },
-    obtain: "LE Station", updated: "2026-11-18",
-    history: [{"date": "2025-12", "value": 670000}, {"date": "2026-01", "value": 360000}, {"date": "2026-03", "value": 340000}, {"date": "2026-11", "value": 940000}, {"date": "2026-11-18", "value": 740000}],
+    obtain: "LE Station", updated: "2026-11-22",
+    history: [{"date": "2025-12", "value": 670000}, {"date": "2026-01", "value": 360000}, {"date": "2026-03", "value": 340000}, {"date": "2026-11", "value": 940000}, {"date": "2026-11-18", "value": 740000}, {"date": "2026-11-22", "value": 650000}],
     image: "images/darkstar-x.png",
     video: "WSKKegSsx1U",
     note: "Bomber. Released 2025-06-12.", noteKo: "폭격기. 2025-06-12 출시.",
