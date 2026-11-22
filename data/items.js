@@ -829,10 +829,10 @@ window.ITEMS = [
   {
     id: "super-air-carrier", name: "Super Air Carrier", category: "Air",
     aliases: ["Air Carrier", "에어캐리어", "에어케리어"],
-    value: 1200000, demand: 6, trend: null, tradeable: true, limited: true, stock: null,
+    value: 900000, range: [900000, 1000000], demand: 6, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: 7, vfm: null },
-    obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 1200000}],
+    obtain: "", updated: "2026-11-22",
+    history: [{"date": "2026-11", "value": 1200000}, {"date": "2026-11-22", "value": 900000}],
     image: "images/super-air-carrier.png",
     note: "Aircraft.", noteKo: "항공기.",
   },
