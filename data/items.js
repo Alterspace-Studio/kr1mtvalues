@@ -749,10 +749,10 @@ window.ITEMS = [
   {
     id: "haunted-tank", name: "Haunted Tank", category: "Land",
     aliases: ["유령 탱크"],
-    value: 1200000, demand: 5, trend: null, tradeable: true, limited: true, stock: null,
+    value: 1100000, demand: 5, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: 4.5, vfm: null },
-    obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 1200000}],
+    obtain: "", updated: "2026-11-22",
+    history: [{"date": "2026-11", "value": 1200000}, {"date": "2026-11-22", "value": 1100000}],
     image: "images/haunted-tank.png",
     note: "", noteKo: "",
   },
