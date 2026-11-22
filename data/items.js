@@ -669,10 +669,10 @@ window.ITEMS = [
   {
     id: "super-an-jeep", name: "Super Anti Nuke Jeep", category: "Land",
     aliases: ["SANJ", "Super AN Jeep", "Anti Nuke Jeep", "AN Jeep", "Jeep", "안티 뉴크 지프", "지프"],
-    value: 1500000, range: [1500000, "+"], demand: 8, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic",
+    value: 1300000, range: [1300000, 1550000], demand: 8, trend: "up", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: 10, vfm: null },
     obtain: "", updated: "2026-11-22",
-    history: [{"date": "2026-11-18", "value": 700000}, {"date": "2026-11-22", "value": 1500000}],
+    history: [{"date": "2026-11-18", "value": 700000}, {"date": "2026-11-22", "value": 1550000}],
     image: "images/super-an-jeep.png",
     note: "", noteKo: "",
   },
