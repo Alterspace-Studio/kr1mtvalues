@@ -7424,16 +7424,6 @@ window.ITEMS = [
     note: "Fighter. Released 2024-12-14.", noteKo: "2024-12-14 출시.",
   },
   {
-    id: "xf12", name: "XF12", category: "Air",
-    aliases: [],
-    value: 500000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null,
-    stats: { pvp: null, vfm: null },
-    obtain: "", updated: "2026-10-12",
-    history: [{"date": "2026-10-12", "value": 500000}],
-    image: "images/xf12.png",
-    note: "Bomber. Released 2026-06-27.", noteKo: "2026-06-27 출시.",
-  },
-  {
     id: "yamato", name: "Yamato", category: "Naval",
     aliases: [],
     value: 600, demand: 0, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Epic",
