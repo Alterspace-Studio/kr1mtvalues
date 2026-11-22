@@ -11,7 +11,7 @@
 //   tradeable  거래 가능 여부
 //   limited    한정판(LE) 여부, stock: 한정 수량 (모르면 null)
 //   rarity     등급 (선택). "Exotic"이면 무지개 태그
-//   value      가치 (강화 무시). range: [최소, 최대] 또는 [최소, "+"] 로 범위 표시 (value는 최소값)
+//   value      가치 (강화 무시). range: [최소, 최대] 또는 [최소, "+"] 로 범위 표시 (value는 최소값, 그래프 기록은 최대값)
 //   fresh      강화 안 한(0성) 가치가 다를 때만 적는다
 //   stats      성능 { pvp, vfm, diff } 0~10 (PVP, 가성비, 난이도=다루기 어려운 정도, 소수 가능). 모르면 null
 //   obtain     얻는 방법
@@ -832,7 +832,7 @@ window.ITEMS = [
     value: 900000, range: [900000, 1000000], demand: 6, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: 7, vfm: null },
     obtain: "", updated: "2026-11-22",
-    history: [{"date": "2026-11", "value": 1200000}, {"date": "2026-11-22", "value": 900000}],
+    history: [{"date": "2026-11", "value": 1200000}, {"date": "2026-11-22", "value": 1000000}],
     image: "images/super-air-carrier.png",
     note: "Aircraft.", noteKo: "항공기.",
   },
