@@ -171,10 +171,10 @@ window.ITEMS = [
   {
     id: "nuke-project", name: "Nuke Project 665", category: "Naval",
     aliases: ["Project 665", "핵프젝"],
-    value: 480000, demand: 5, trend: "stable", tradeable: true, limited: true, stock: null,
+    value: 480000, range: [480000, 550000], demand: 5, trend: "up", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
-    obtain: "Project 665 Crate", updated: "2026-10-29",
-    history: [{"date": "2026-01", "value": 460000}, {"date": "2026-02", "value": 280000}, {"date": "2026-09", "value": 290000}, {"date": "2026-10", "value": 480000}],
+    obtain: "Project 665 Crate", updated: "2026-11-22",
+    history: [{"date": "2026-01", "value": 460000}, {"date": "2026-02", "value": 280000}, {"date": "2026-09", "value": 290000}, {"date": "2026-10", "value": 480000}, {"date": "2026-11-22", "value": 550000}],
     image: "images/nuke-project.png",
     video: "pNcQ_4IdIls",
     note: "Submarine. Released 2025-10-04.", noteKo: "잠수함. 2025-10-04 출시.",
