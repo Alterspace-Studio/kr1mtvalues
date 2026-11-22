@@ -679,10 +679,10 @@ window.ITEMS = [
   {
     id: "nuclear-saucer", name: "Nuclear Saucer", category: "Land",
     aliases: ["Nuke Saucer", "Saucer", "핵 원반"],
-    value: 5000000, range: [5000000, 5500000], demand: 8, trend: null, tradeable: true, limited: true, stock: null,
+    value: 5500000, demand: 8, trend: "up", tradeable: true, limited: true, stock: null,
     stats: { pvp: 9, vfm: null },
-    obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 5000000}],
+    obtain: "", updated: "2026-11-22",
+    history: [{"date": "2026-11", "value": 5000000}, {"date": "2026-11-22", "value": 5500000}],
     image: "images/nuclear-saucer.png",
     note: "", noteKo: "",
   },
