@@ -43,6 +43,8 @@ const lastChange = (it) => {
 const changeTag = (c, withPct) => !c ? "" : `<span class="chg ${c.diff > 0 ? "up" : c.diff < 0 ? "down" : "stable"}" title="${esc(c.date)}">${c.diff > 0 ? "▲ +" : c.diff < 0 ? "▼ -" : "■ "}${compact(Math.abs(c.diff))}${withPct ? ` <small>(${c.pct > 0 ? "+" : ""}${c.pct}%)</small>` : ""}</span>`;
 
 // 범위 표시: range [최소, 최대] 또는 [최소, "+"] → "5M~5.5M", "6M+"
+// 정렬·거래 계산·비교는 범위의 최대값 기준 ("6M+"처럼 위가 열린 범위는 아래 값)
+const topValue = (it) => (it.range && typeof it.range[1] === "number" ? it.range[1] : it.value);
 const rangeText = (it) => !it.range ? gem(it.value) : it.range[1] === "+" ? `${gem(it.range[0])}+` : `${gem(it.range[0])}~${compact(it.range[1])}`;
 
 // ---------- 언어 ----------
@@ -177,7 +179,7 @@ $("#categoryChips").addEventListener("click", (e) => {
 function renderGrid() {
   const q = $("#search").value.trim().toLowerCase();
   const [key, dir] = $("#sort").value.split("-");
-  const get = (it) => (key === "name" ? it.name.toLowerCase() : key === "value" ? (isUntradeable(it) ? -1 : it.value ?? -1) : key === "demand" ? it.demand ?? -1 : it.stats?.[key] ?? -1);
+  const get = (it) => (key === "name" ? it.name.toLowerCase() : key === "value" ? (isUntradeable(it) ? -1 : topValue(it) ?? -1) : key === "demand" ? it.demand ?? -1 : it.stats?.[key] ?? -1);
   const list = ITEMS.filter((it) =>
     (cat === "All" || it.category === cat) &&
     matches(it, q) &&
@@ -293,7 +295,7 @@ $("#detail").addEventListener("click", (e) => { if (e.target.id === "detail") e.
 
 // ---------- 비교 ----------
 const ROWS = [
-  ["value", (i) => (isUntradeable(i) ? null : i.value), "value"], ["demand", (i) => i.demand, "num"],
+  ["value", (i) => (isUntradeable(i) ? null : topValue(i)), "value"], ["demand", (i) => i.demand, "num"],
   ["vfm", (i) => i.stats?.vfm, "vfm"],
 ];
 let pickers = ITEMS.slice(0, 3).map((i) => i.id);
@@ -327,7 +329,7 @@ function renderCompare() {
 // 별 단계를 고르면 그 단계 가치로 더한다.
 $("#itemList").innerHTML = ITEMS.filter((i) => i.tradeable !== false).map((i) => `<option value="${esc(i.name)}">`).join("");
 const trade = { you: [], them: [] };
-const entryValue = (e) => { const it = byId(e.id); return (e.fresh && it.fresh != null ? it.fresh : it.value) ?? 0; };
+const entryValue = (e) => { const it = byId(e.id); return (e.fresh && it.fresh != null ? it.fresh : topValue(it)) ?? 0; };
 $$(".side").forEach((side) => {
   const input = $(".trade-input", side);
   const list = trade[side.dataset.side];
