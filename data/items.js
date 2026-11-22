@@ -327,10 +327,10 @@ window.ITEMS = [
   {
     id: "super-horten", name: "Super Horten", category: "Air",
     aliases: ["Horten", "Horten Ho 229", "호르텐", "슈퍼 호르텐"],
-    value: 1500000, demand: 7, trend: null, tradeable: true, limited: true, stock: null,
+    value: 1600000, demand: 7, trend: "up", tradeable: true, limited: true, stock: null,
     stats: { pvp: 2, vfm: null },
-    obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 1500000}],
+    obtain: "", updated: "2026-11-22",
+    history: [{"date": "2026-11", "value": 1500000}, {"date": "2026-11-22", "value": 1600000}],
     image: "images/super-horten.png",
     note: "Flying-wing aircraft.", noteKo: "전익기.",
   },
