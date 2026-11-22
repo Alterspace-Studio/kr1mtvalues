@@ -899,10 +899,10 @@ window.ITEMS = [
   {
     id: "super-swarm", name: "Super S.W.A.R.M", category: "Air",
     aliases: ["Super SWARM", "SWARM", "스웜", "슈퍼스왐", "슈퍼 스웜", "스왐"],
-    value: 800000, demand: 5, trend: null, tradeable: true, limited: true, stock: null,
+    value: 750000, demand: 5, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: 4.5, vfm: null },
-    obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 800000}],
+    obtain: "", updated: "2026-11-22",
+    history: [{"date": "2026-11", "value": 800000}, {"date": "2026-11-22", "value": 750000}],
     image: "images/super-swarm.png",
     note: "Aircraft.", noteKo: "항공기.",
   },
