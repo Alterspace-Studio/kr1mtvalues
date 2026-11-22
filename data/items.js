@@ -699,10 +699,10 @@ window.ITEMS = [
   {
     id: "super-hoverbike", name: "Super Hoverbike", category: "Land",
     aliases: ["Hoverbike", "호버바이크"],
-    value: 1200000, demand: 7, trend: null, tradeable: true, limited: true, stock: null,
+    value: 1000000, range: [1000000, 1200000], demand: 7, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: 7, vfm: null },
-    obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-08", "value": 720000}, {"date": "2026-11", "value": 1200000}],
+    obtain: "", updated: "2026-11-22",
+    history: [{"date": "2026-08", "value": 720000}, {"date": "2026-11", "value": 1200000}, {"date": "2026-11-22", "value": 1200000}],
     image: "images/super-hoverbike.png",
     note: "", noteKo: "",
   },
