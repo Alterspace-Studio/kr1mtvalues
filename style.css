@@ -89,7 +89,7 @@ input[type=search], select, .trade-input { background: var(--bg); border: 0; box
   position: relative;
 }
 .logo::before { content: ""; width: 14px; height: 13px; background: var(--grad); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
-.flag { width: 22px; height: 15px; border-radius: 3px; box-shadow: 0 0 0 1px var(--line); flex: none; }
+.flag { width: 18px; height: 18px; flex: none; }
 .tabs { display: flex; gap: 8px; }
 .tab {
   padding: 7px 16px; border-radius: var(--pill); color: var(--muted); cursor: pointer;
@@ -301,7 +301,7 @@ table.changes tbody tr[data-id]:hover { background: var(--sunk); }
   .brand { flex: 1 1 auto; min-width: 0; font-size: 14px; gap: 7px; }
   .brand #siteTitle { overflow: hidden; text-overflow: ellipsis; }
   .logo { width: 28px; height: 28px; }
-  .flag { width: 20px; height: 14px; }
+  .flag { width: 16px; height: 16px; }
   .lang { padding: 6px 11px; font-size: 13px; }
   .theme-btn { width: 34px; height: 34px; }
   .kv .kv-vfm { grid-column: 1 / -1; }
