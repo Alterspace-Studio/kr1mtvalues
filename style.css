@@ -314,3 +314,16 @@ table.changes tbody tr[data-id]:hover { background: var(--sunk); }
 .star-one small { font-size: 12px; font-weight: 500; color: var(--faint); margin-left: 6px; }
 .star-empty { background: var(--sunk); box-shadow: var(--sh-in); border-radius: var(--r-box); padding: 12px 16px; }
 .star-tag { display: inline-block; font-size: 11px; font-weight: 800; color: var(--accent); background: var(--sunk); box-shadow: var(--sh-in); border-radius: var(--pill); padding: 0 7px; margin-left: 4px; vertical-align: 1px; }
+/* 1~3성 겹친 그래프 */
+:root { --s1: #f48fca; --s2: #e0218a; --s3: #6d1fa0; }
+:root[data-theme="dark"] { --s1: #ffb3dc; --s2: #ff6fbf; --s3: #b98cff; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --s1: #ffb3dc; --s2: #ff6fbf; --s3: #b98cff; } }
+.s-line polyline { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.s-line .s-dot { stroke: var(--sunk); stroke-width: 2.5; }
+.s1 polyline { stroke: var(--s1); } .s1 .s-dot, .s-key.s1 i { fill: var(--s1); background: var(--s1); }
+.s2 polyline { stroke: var(--s2); } .s2 .s-dot, .s-key.s2 i { fill: var(--s2); background: var(--s2); }
+.s3 polyline { stroke: var(--s3); } .s3 .s-dot, .s-key.s3 i { fill: var(--s3); background: var(--s3); }
+.s-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 10px; font-size: 13px; color: var(--muted); }
+.s-key { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
+.s-key i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.s-key b { color: var(--text); font-variant-numeric: tabular-nums; }

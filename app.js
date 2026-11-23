@@ -60,7 +60,7 @@ const STR = {
     untradeable: "Untradeable", sample: "Sample",
     value: "Value (Gems)", demand: "Demand", trendL: "Trend", obtain: "Obtain", fresh: "Fresh",
     vfm: "Value for money", vfmShort: "VFM",
-    history: "Value history", starHist: (k) => `${k}★ value history`, starNone: "No records yet", showcase: "Showcase", lastChanged: "Last changed", lastChange: "Last change", close: "Close",
+    history: "Value history", starHist: "1–3★ value history", starNone: "No records yet", showcase: "Showcase", lastChanged: "Last changed", lastChange: "Last change", close: "Close",
     pick: "— pick —", pickHint: "Pick items to compare.",
     youGive: "You give", youGet: "You get", addItem: "Add item…", add: "Add", total: "Total",
     star: "Stars", addFirst: "Add items to compare", fair: "FAIR", win: "WIN", lose: "LOSE",
@@ -79,7 +79,7 @@ const STR = {
     untradeable: "거래 불가", sample: "예시",
     value: "가치 (젬)", demand: "수요", trendL: "추세", obtain: "얻는 법", fresh: "Fresh (0성)",
     vfm: "가성비", vfmShort: "가성비",
-    history: "가치 변화", starHist: (k) => `${k}성 가치 변화`, starNone: "아직 기록이 없어요", showcase: "쇼케이스", lastChanged: "마지막 수정", lastChange: "최근 변동", close: "닫기",
+    history: "가치 변화", starHist: "1~3성 가치 변화", starNone: "아직 기록이 없어요", showcase: "쇼케이스", lastChanged: "마지막 수정", lastChange: "최근 변동", close: "닫기",
     pick: "— 선택 —", pickHint: "비교할 항목을 고르세요.",
     youGive: "내가 주는 것", youGet: "내가 받는 것", addItem: "항목 추가…", add: "추가", total: "합계",
     star: "별", addFirst: "항목을 넣어 비교하세요", fair: "공정", win: "이득", lose: "손해",
@@ -282,7 +282,8 @@ function openDetail(id) {
         <div><span>${t.demand}</span><b>${it.demand ?? "—"}/10</b></div>
         <div><span>${t.trendL}</span><b class="trend ${it.trend}">${TREND[it.trend] || ""} ${t.trend[it.trend] || "—"}</b></div>
       </div>
-      ${it.starHistory ? ["0", ...starKeysOf(it)].map((k) => starBlock(it, k)).join("") : chart(it.history, t.history, gem)}
+      ${chart(it.history, t.history, gem)}
+      ${it.starHistory ? starChart(it) : ""}
       ${rowsOf(it).length ? `<details class="hist"><summary>${t.allChanges} (${rowsOf(it).length})</summary>${histTable(it)}</details>` : ""}
       ${it.video ? `<div><h4>${t.showcase}</h4><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${esc(it.video)}" title="${esc(it.name)} ${t.showcase}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>` : ""}
       ${noteOf(it) ? `<p class="hint">${esc(noteOf(it))}</p>` : ""}
@@ -377,13 +378,39 @@ function updateTotals() {
 
 // ---------- 변경 기록 ----------
 // 아이템 하나의 기록을 [날짜, 이전, 이후] 줄로 (첫 기록은 "등록")
-// 별 단계 기록: starHistory: { "1": [...], "2": [...], "3": [...] }. 기본 history는 0성
-const starKeysOf = (it) => !it.starHistory ? [] : [...new Set(["1", "2", "3", ...Object.keys(it.starHistory)])].sort((a, b) => a - b);
-function starBlock(it, k) {
-  const h = (k === "0" ? it.history : it.starHistory?.[k]) || [], t = T(), title = t.starHist(k);
-  if (h.length >= 2) return chart(h, title, gem);
-  if (h.length === 1) return `<div><h4>${title}</h4><div class="star-one">${gem(h[0].value)} <small>${esc(h[0].date)}</small></div></div>`;
-  return `<div><h4>${title}</h4><p class="hint star-empty">${t.starNone}</p></div>`;
+// 별 단계 기록: starHistory: { "1": [...], "2": [...], "3": [...] }. 기본 history는 0성 (그래프 따로)
+// 1~3성은 한 그래프에 선을 겹쳐 그린다. 메인 목록·변경 기록 탭에는 나오지 않는다
+function starChart(it) {
+  const t = T(), keys = Object.keys(it.starHistory).filter((k) => (it.starHistory[k] || []).length).sort((a, b) => a - b);
+  if (!keys.length) return "";
+  const W = 480, H = 210, L = 50, R = 24, TP = 30, B = 30;
+  const mon = (d) => { const [y, m, dd] = d.split("-").map(Number); return y * 12 + (m || 1) - 1 + ((dd || 1) - 1) / 31; };
+  const dlabel = (d) => { const [y, m, dd] = d.split("-"); return dd ? `${+m}.${+dd}` : `${y.slice(2)}.${m}`; };
+  const all = keys.flatMap((k) => it.starHistory[k]);
+  const xs = all.map((p) => mon(p.date)), x0 = Math.min(...xs), x1 = Math.max(...xs), single = x1 === x0;
+  const vs = all.map((p) => p.value), rawLo = Math.min(...vs), rawHi = Math.max(...vs);
+  const step0 = (rawHi - rawLo || rawHi || 1) / 3, mag = 10 ** Math.floor(Math.log10(step0));
+  const step = [1, 2, 5, 10].map((k) => k * mag).find((v) => v >= step0);
+  const lo = Math.max(0, Math.floor((rawLo === rawHi ? rawLo - step : rawLo) / step) * step), hi = Math.ceil((rawLo === rawHi ? rawHi + step : rawHi) / step) * step || step;
+  const X = (m) => single ? (L + W - R) / 2 : L + ((m - x0) / (x1 - x0)) * (W - L - R);
+  const Y = (v) => TP + (1 - (v - lo) / (hi - lo || 1)) * (H - TP - B);
+  const ticks = []; for (let v = lo; v <= hi + step / 2; v += step) ticks.push(v);
+  const dates = [...new Set(all.map((p) => p.date))].sort((a, b) => mon(a) - mon(b));
+  const xl = []; dates.forEach((d) => { const x = X(mon(d)); if (!xl.length || x - X(mon(xl.at(-1))) >= 56) xl.push(d); });
+  const series = keys.map((k) => {
+    const h = [...it.starHistory[k]].sort((a, b) => mon(a.date) - mon(b.date)), pts = h.map((p) => [X(mon(p.date)), Y(p.value)]);
+    return `<g class="s-line s${esc(k)}">${pts.length > 1 ? `<polyline points="${pts.map((p) => p.join(",")).join(" ")}"/>` : ""}${pts.map((p, i) => `<g class="c-pt"><circle class="c-hit" cx="${p[0]}" cy="${p[1]}" r="12"/><circle class="s-dot" cx="${p[0]}" cy="${p[1]}" r="${i === pts.length - 1 ? 5 : 3.5}"/><title>${esc(k)}★ ${esc(h[i].date)}: ${gem(h[i].value)}</title></g>`).join("")}</g>`;
+  }).join("");
+  const legend = ["1", "2", "3", ...keys.filter((k) => !["1", "2", "3"].includes(k))].map((k) => {
+    const h = it.starHistory[k] || [];
+    return `<span class="s-key s${esc(k)}"><i></i>${esc(k)}★ <b>${h.length ? gem(h.at(-1).value) : "—"}</b></span>`;
+  }).join("");
+  return `<div><div class="c-head"><h4>${t.starHist}</h4></div>
+  <svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(t.starHist)}">
+    ${ticks.map((v) => `<line class="c-grid" x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}"/><text class="c-axis" x="${L - 8}" y="${Y(v) + 3}" text-anchor="end">${esc(compact(v))}</text>`).join("")}
+    ${series}
+    ${xl.map((d) => `<text class="c-axis" x="${X(mon(d))}" y="${H - 8}" text-anchor="middle">${esc(dlabel(d))}</text>`).join("")}
+  </svg><div class="s-legend">${legend}</div></div>`;
 }
 function rowsOf(it) {
   const one = (h, star) => h.map((p, i) => ({ it, star, date: p.date, from: i ? h[i - 1].value : null, to: p.value }));
@@ -401,7 +428,7 @@ function renderChanges() {
   const q = ($("#chSearch").value || "").trim().toLowerCase();
   const key = (d) => d.length === 7 ? d + "-00" : d; // 월 단위 기록은 그 달 맨 앞으로
   const rows = ITEMS.filter((it) => matches(it, q))
-    .flatMap(rowsOf).sort((a, b) => key(b.date).localeCompare(key(a.date)) || a.it.name.localeCompare(b.it.name));
+    .flatMap(rowsOf).filter((r) => !r.star).sort((a, b) => key(b.date).localeCompare(key(a.date)) || a.it.name.localeCompare(b.it.name));
   $("#chCount").textContent = T().chCount(rows.length);
   $("#chBody").innerHTML = rows.map((r) => `<tr data-id="${esc(r.it.id)}"><td>${dcell(r.date)}</td><td class="ch-item">${r.it.image ? `<img class="ch-ic" src="${esc(r.it.image)}" alt="" loading="lazy" decoding="async">` : ""}${esc(r.it.name)}${starTag(r)}</td><td>${r.from == null ? "—" : gem(r.from)}</td><td>${gem(r.to)}</td><td>${diffCell(r)}</td></tr>`).join("");
 }
