@@ -83,6 +83,7 @@ window.ITEMS = [
     stats: { pvp: 7, vfm: 2.4, diff: 5 },
     obtain: "Golden Crate", updated: "2026-11-22",
     history: [{"date": "2025-10-30", "value": 800000}, {"date": "2025-11", "value": 960000}, {"date": "2026-01", "value": 510000}, {"date": "2026-08", "value": 1400000}, {"date": "2026-10", "value": 2900000}, {"date": "2026-11", "value": 4000000}, {"date": "2026-11-22", "value": 3500000}],
+    starHistory: {"fresh": [{"date": "2026-11-23", "value": 5000000}]},
     image: "images/p1000-ratte.png",
     video: "l4xlnUWkv-M",
     note: "Tank. Released 2025-03-08.", noteKo: "전차. 2025-03-08 출시.",
