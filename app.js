@@ -217,8 +217,9 @@ function chart(history, title, show) {
   const W = 480, H = 210, L = 50, R = 24, T = 30, B = 30;
   // 날짜는 "YYYY-MM" 또는 "YYYY-MM-DD" (같은 달 안의 변화는 일 단위로 기록)
   const mon = (d) => { const [y, m, dd] = d.split("-").map(Number); return y * 12 + (m || 1) - 1 + ((dd || 1) - 1) / 31; };
-  const dlabel = (d) => { const [y, m, dd] = d.split("-"); return dd ? `${+m}.${+dd}` : `${y.slice(2)}.${m}`; };
+  const dlabel = (d) => { const [y, m, dd] = d.split("-"); return dd ? (multiYear ? `${y.slice(2)}.${+m}.${+dd}` : `${+m}.${+dd}`) : `${y.slice(2)}.${m}`; };
   const xs = history.map((h) => mon(h.date)), x0 = xs[0], xspan = xs.at(-1) - x0 || 1;
+  var multiYear = history[0].date.slice(0, 4) !== history.at(-1).date.slice(0, 4);
   const vs = history.map((h) => h.value);
   // 보기 좋은 눈금 (1·2·5 단위)
   const rawLo = Math.min(...vs), rawHi = Math.max(...vs);
@@ -388,8 +389,9 @@ function starChart(it) {
   if (!keys.length) return "";
   const W = 480, H = 210, L = 50, R = 24, TP = 30, B = 30;
   const mon = (d) => { const [y, m, dd] = d.split("-").map(Number); return y * 12 + (m || 1) - 1 + ((dd || 1) - 1) / 31; };
-  const dlabel = (d) => { const [y, m, dd] = d.split("-"); return dd ? `${+m}.${+dd}` : `${y.slice(2)}.${m}`; };
+  const dlabel = (d) => { const [y, m, dd] = d.split("-"); return dd ? (multiYear ? `${y.slice(2)}.${+m}.${+dd}` : `${+m}.${+dd}`) : `${y.slice(2)}.${m}`; };
   const all = keys.flatMap((k) => it.starHistory[k]);
+  var multiYear = new Set(all.map((p) => p.date.slice(0, 4))).size > 1;
   const xs = all.map((p) => mon(p.date)), x0 = Math.min(...xs), x1 = Math.max(...xs), single = x1 === x0;
   const vs = all.map((p) => p.value), rawLo = Math.min(...vs), rawHi = Math.max(...vs);
   const step0 = (rawHi - rawLo || rawHi || 1) / 3, mag = 10 ** Math.floor(Math.log10(step0));
@@ -399,7 +401,7 @@ function starChart(it) {
   const Y = (v) => TP + (1 - (v - lo) / (hi - lo || 1)) * (H - TP - B);
   const ticks = []; for (let v = lo; v <= hi + step / 2; v += step) ticks.push(v);
   const dates = [...new Set(all.map((p) => p.date))].sort((a, b) => mon(a) - mon(b));
-  const xl = []; dates.forEach((d) => { const x = X(mon(d)); if (!xl.length || x - X(mon(xl.at(-1))) >= 56) xl.push(d); });
+  const xl = []; dates.forEach((d, i) => { const x = X(mon(d)); if (i === dates.length - 1) { while (xl.length && x - X(mon(xl.at(-1))) < 70) xl.pop(); xl.push(d); } else if (!xl.length || x - X(mon(xl.at(-1))) >= 70) xl.push(d); });
   const series = keys.map((k) => {
     const h = [...it.starHistory[k]].sort((a, b) => mon(a.date) - mon(b.date)), pts = h.map((p) => [X(mon(p.date)), Y(p.value)]);
     return `<g class="s-line s${esc(k)}">${pts.length > 1 ? `<polyline points="${pts.map((p) => p.join(",")).join(" ")}"/>` : ""}${pts.map((p, i) => `<g class="c-pt"><circle class="c-hit" cx="${p[0]}" cy="${p[1]}" r="12"/><circle class="s-dot" cx="${p[0]}" cy="${p[1]}" r="${i === pts.length - 1 ? 5 : 3.5}"/><title>${esc(lab(k))} ${esc(h[i].date)}: ${gem(h[i].value)}</title></g>`).join("")}</g>`;
@@ -410,7 +412,7 @@ function starChart(it) {
   <svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(title)}">
     ${ticks.map((v) => `<line class="c-grid" x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}"/><text class="c-axis" x="${L - 8}" y="${Y(v) + 3}" text-anchor="end">${esc(compact(v))}</text>`).join("")}
     ${series}
-    ${xl.map((d) => `<text class="c-axis" x="${X(mon(d))}" y="${H - 8}" text-anchor="middle">${esc(dlabel(d))}</text>`).join("")}
+    ${xl.map((d, i) => `<text class="c-axis" x="${X(mon(d))}" y="${H - 8}" text-anchor="${single ? "middle" : i === 0 ? "start" : i === xl.length - 1 ? "end" : "middle"}">${esc(dlabel(d))}</text>`).join("")}
   </svg><div class="s-legend">${legend}</div></div>`;
 }
 function rowsOf(it) {

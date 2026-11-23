@@ -331,3 +331,8 @@ table.changes tbody tr[data-id]:hover { background: var(--sunk); }
 :root[data-theme="dark"] { --sfresh: #c3bdd0; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --sfresh: #c3bdd0; } }
 .sfresh polyline { stroke: var(--sfresh); } .sfresh .s-dot, .s-key.sfresh i { fill: var(--sfresh); background: var(--sfresh); }
+:root { --s4: #a35be8; --s5: #3a1f63; }
+:root[data-theme="dark"] { --s4: #d3a6ff; --s5: #8f7ad6; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --s4: #d3a6ff; --s5: #8f7ad6; } }
+.s4 polyline { stroke: var(--s4); } .s4 .s-dot, .s-key.s4 i { fill: var(--s4); background: var(--s4); }
+.s5 polyline { stroke: var(--s5); } .s5 .s-dot, .s-key.s5 i { fill: var(--s5); background: var(--s5); }
