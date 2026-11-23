@@ -889,10 +889,10 @@ window.ITEMS = [
   {
     id: "atomic-me323", name: "Atomic ME323", category: "Air",
     aliases: ["ATM", "ME323", "Me 323", "아토믹"],
-    value: 1500000, demand: 6, trend: "up", tradeable: true, limited: true, stock: null,
+    value: 450000, demand: 6, trend: "up", tradeable: true, limited: true, stock: null,
     stats: { pvp: 6, vfm: null },
     obtain: "", updated: "2026-11-22",
-    history: [{"date": "2026-09-10", "value": 350000}, {"date": "2026-11-22", "value": 1500000}],
+    history: [{"date": "2026-09-10", "value": 350000}, {"date": "2026-11-22", "value": 450000}],
     image: "images/atomic-me323.png",
     note: "Transport plane.", noteKo: "수송기.",
   },
