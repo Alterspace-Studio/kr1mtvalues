@@ -994,7 +994,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11", "value": 700000}],
-    starHistory: { "2": [{"date": "2026-11-23", "value": 16000000}] },
+    starHistory: {"2": [{"date": "2026-11-23", "value": 16000000}], "1": [{"date": "2026-11-23", "value": 3500000}]},
     image: "images/super-ace-pilot.png",
     note: "Soldier.", noteKo: "병사.",
   },
