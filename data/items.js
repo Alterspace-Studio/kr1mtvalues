@@ -455,6 +455,7 @@ window.ITEMS = [
     stats: { pvp: 10, vfm: 1.9, diff: 3.5 },
     obtain: "Beam Tank Crate", updated: "2026-11-20",
     history: [{"date": "2026-11", "value": 6500000}, {"date": "2026-11-20", "value": 6000000}],
+    starHistory: {"fresh": [{"date": "2026-11-23", "value": 6900000}]},
     image: "images/super-beam-tank.png",
     note: "Tank. Released 2026-04-18.", noteKo: "전차. 2026-04-18 출시.",
   },
