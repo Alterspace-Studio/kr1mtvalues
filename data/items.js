@@ -250,6 +250,7 @@ window.ITEMS = [
     stats: { pvp: 4.5, vfm: 5, diff: 2 },
     obtain: "Golden Crate", updated: "2026-11-17",
     history: [{"date": "2025-10-30", "value": 400000}, {"date": "2026-11", "value": 700000}],
+    starHistory: {"fresh": [{"date": "2026-11-23", "value": 2300000}]},
     image: "images/le-gold-izumo.png",
     note: "Aircraft carrier. Released 2024-12-07. Image is a fan-made render.", noteKo: "항공모함. 2024-12-07 출시. 이미지는 팬메이드 렌더.",
   },
