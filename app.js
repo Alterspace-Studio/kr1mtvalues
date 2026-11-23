@@ -60,7 +60,7 @@ const STR = {
     untradeable: "Untradeable", sample: "Sample",
     value: "Value (Gems)", demand: "Demand", trendL: "Trend", obtain: "Obtain", fresh: "Fresh",
     vfm: "Value for money", vfmShort: "VFM",
-    history: "Value history", showcase: "Showcase", lastChanged: "Last changed", lastChange: "Last change", close: "Close",
+    history: "Value history", starHist: (k) => `${k}★ value history`, starNone: "No records yet", showcase: "Showcase", lastChanged: "Last changed", lastChange: "Last change", close: "Close",
     pick: "— pick —", pickHint: "Pick items to compare.",
     youGive: "You give", youGet: "You get", addItem: "Add item…", add: "Add", total: "Total",
     star: "Stars", addFirst: "Add items to compare", fair: "FAIR", win: "WIN", lose: "LOSE",
@@ -79,7 +79,7 @@ const STR = {
     untradeable: "거래 불가", sample: "예시",
     value: "가치 (젬)", demand: "수요", trendL: "추세", obtain: "얻는 법", fresh: "Fresh (0성)",
     vfm: "가성비", vfmShort: "가성비",
-    history: "가치 변화", showcase: "쇼케이스", lastChanged: "마지막 수정", lastChange: "최근 변동", close: "닫기",
+    history: "가치 변화", starHist: (k) => `${k}성 가치 변화`, starNone: "아직 기록이 없어요", showcase: "쇼케이스", lastChanged: "마지막 수정", lastChange: "최근 변동", close: "닫기",
     pick: "— 선택 —", pickHint: "비교할 항목을 고르세요.",
     youGive: "내가 주는 것", youGet: "내가 받는 것", addItem: "항목 추가…", add: "추가", total: "합계",
     star: "별", addFirst: "항목을 넣어 비교하세요", fair: "공정", win: "이득", lose: "손해",
@@ -282,8 +282,8 @@ function openDetail(id) {
         <div><span>${t.demand}</span><b>${it.demand ?? "—"}/10</b></div>
         <div><span>${t.trendL}</span><b class="trend ${it.trend}">${TREND[it.trend] || ""} ${t.trend[it.trend] || "—"}</b></div>
       </div>
-      ${chart(it.history, t.history, gem)}
-      ${(it.history || []).length ? `<details class="hist"><summary>${t.allChanges} (${it.history.length})</summary>${histTable(it)}</details>` : ""}
+      ${it.starHistory ? ["0", ...starKeysOf(it)].map((k) => starBlock(it, k)).join("") : chart(it.history, t.history, gem)}
+      ${rowsOf(it).length ? `<details class="hist"><summary>${t.allChanges} (${rowsOf(it).length})</summary>${histTable(it)}</details>` : ""}
       ${it.video ? `<div><h4>${t.showcase}</h4><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${esc(it.video)}" title="${esc(it.name)} ${t.showcase}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>` : ""}
       ${noteOf(it) ? `<p class="hint">${esc(noteOf(it))}</p>` : ""}
       <p class="hint">${t.lastChanged} ${esc(it.updated || "—")}</p>
@@ -377,15 +377,25 @@ function updateTotals() {
 
 // ---------- 변경 기록 ----------
 // 아이템 하나의 기록을 [날짜, 이전, 이후] 줄로 (첫 기록은 "등록")
-function rowsOf(it) {
-  const h = it.history || [];
-  return h.map((p, i) => ({ it, date: p.date, from: i ? h[i - 1].value : null, to: p.value }));
+// 별 단계 기록: starHistory: { "1": [...], "2": [...], "3": [...] }. 기본 history는 0성
+const starKeysOf = (it) => !it.starHistory ? [] : [...new Set(["1", "2", "3", ...Object.keys(it.starHistory)])].sort((a, b) => a - b);
+function starBlock(it, k) {
+  const h = (k === "0" ? it.history : it.starHistory?.[k]) || [], t = T(), title = t.starHist(k);
+  if (h.length >= 2) return chart(h, title, gem);
+  if (h.length === 1) return `<div><h4>${title}</h4><div class="star-one">${gem(h[0].value)} <small>${esc(h[0].date)}</small></div></div>`;
+  return `<div><h4>${title}</h4><p class="hint star-empty">${t.starNone}</p></div>`;
 }
+function rowsOf(it) {
+  const one = (h, star) => h.map((p, i) => ({ it, star, date: p.date, from: i ? h[i - 1].value : null, to: p.value }));
+  return [...one(it.history || [], null), ...Object.entries(it.starHistory || {}).flatMap(([k, h]) => one(h, k))];
+}
+const starTag = (r) => (r.star ? ` <span class="star-tag">${esc(r.star)}★</span>` : "");
 const dcell = (d) => { const p = d.split("-"); return p.length === 3 ? `<span class="y">${esc(p[0])}-</span>${esc(p[1] + "-" + p[2])}` : `<span class="y">20</span>${esc(p[0].slice(2) + "-" + p[1])}`; }; // 휴대폰에서는 연도를 숨긴다
 const diffCell = (r) => r.from == null ? `<span class="muted">${T().chFirst}</span>` : changeTag({ diff: r.to - r.from, pct: r.from ? Math.round(((r.to - r.from) / r.from) * 100) : 0, date: r.date }, true);
 function histTable(it) {
-  const rows = rowsOf(it).reverse();
-  return `<div class="table-wrap"><table class="changes"><tbody>${rows.map((r) => `<tr><td>${dcell(r.date)}</td><td>${r.from == null ? "—" : gem(r.from)}</td><td>${gem(r.to)}</td><td>${diffCell(r)}</td></tr>`).join("")}</tbody></table></div>`;
+  const key = (d) => d.length === 7 ? d + "-00" : d;
+  const rows = rowsOf(it).sort((a, b) => key(b.date).localeCompare(key(a.date)));
+  return `<div class="table-wrap"><table class="changes"><tbody>${rows.map((r) => `<tr><td>${dcell(r.date)}${starTag(r)}</td><td>${r.from == null ? "—" : gem(r.from)}</td><td>${gem(r.to)}</td><td>${diffCell(r)}</td></tr>`).join("")}</tbody></table></div>`;
 }
 function renderChanges() {
   const q = ($("#chSearch").value || "").trim().toLowerCase();
@@ -393,7 +403,7 @@ function renderChanges() {
   const rows = ITEMS.filter((it) => matches(it, q))
     .flatMap(rowsOf).sort((a, b) => key(b.date).localeCompare(key(a.date)) || a.it.name.localeCompare(b.it.name));
   $("#chCount").textContent = T().chCount(rows.length);
-  $("#chBody").innerHTML = rows.map((r) => `<tr data-id="${esc(r.it.id)}"><td>${dcell(r.date)}</td><td class="ch-item">${r.it.image ? `<img class="ch-ic" src="${esc(r.it.image)}" alt="" loading="lazy" decoding="async">` : ""}${esc(r.it.name)}</td><td>${r.from == null ? "—" : gem(r.from)}</td><td>${gem(r.to)}</td><td>${diffCell(r)}</td></tr>`).join("");
+  $("#chBody").innerHTML = rows.map((r) => `<tr data-id="${esc(r.it.id)}"><td>${dcell(r.date)}</td><td class="ch-item">${r.it.image ? `<img class="ch-ic" src="${esc(r.it.image)}" alt="" loading="lazy" decoding="async">` : ""}${esc(r.it.name)}${starTag(r)}</td><td>${r.from == null ? "—" : gem(r.from)}</td><td>${gem(r.to)}</td><td>${diffCell(r)}</td></tr>`).join("");
 }
 $("#chSearch").addEventListener("input", renderChanges);
 $("#chBody").addEventListener("click", (e) => { const tr = e.target.closest("tr[data-id]"); if (tr) openDetail(tr.dataset.id); });

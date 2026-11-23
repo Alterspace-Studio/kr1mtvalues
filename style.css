@@ -309,3 +309,8 @@ table.changes tbody tr[data-id]:hover { background: var(--sunk); }
 .foot { display: grid; gap: 6px; }
 .powered { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--faint); }
 .powered b { color: var(--text); font-weight: 800; letter-spacing: .18em; }
+/* 별 단계 기록 */
+.star-one { background: var(--sunk); box-shadow: var(--sh-in); border-radius: var(--r-box); padding: 12px 16px; font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.star-one small { font-size: 12px; font-weight: 500; color: var(--faint); margin-left: 6px; }
+.star-empty { background: var(--sunk); box-shadow: var(--sh-in); border-radius: var(--r-box); padding: 12px 16px; }
+.star-tag { display: inline-block; font-size: 11px; font-weight: 800; color: var(--accent); background: var(--sunk); box-shadow: var(--sh-in); border-radius: var(--pill); padding: 0 7px; margin-left: 4px; vertical-align: 1px; }
