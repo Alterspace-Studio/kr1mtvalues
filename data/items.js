@@ -7530,10 +7530,10 @@ window.ITEMS = [
   {
     id: "super-x15", name: "Super X-15", category: "Air",
     aliases: ["Super X15", "X15", "X-15", "슈퍼 X15"],
-    value: 1400000, demand: 5, trend: null, tradeable: true, limited: true, stock: null,
+    value: 960000, demand: 5, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
-    obtain: "", updated: "2026-11-22",
-    history: [{"date": "2026-11-22", "value": 1400000}],
+    obtain: "", updated: "2026-11-23",
+    history: [{"date": "2026-11-22", "value": 1400000}, {"date": "2026-11-23", "value": 960000}],
     image: "",
     note: "", noteKo: "",
   },
