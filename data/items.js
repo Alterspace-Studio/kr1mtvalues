@@ -16,7 +16,7 @@
 //   stats      성능 { pvp, vfm, diff } 0~10 (PVP, 가성비, 난이도=다루기 어려운 정도, 소수 가능). 모르면 null
 //   obtain     얻는 방법
 //   updated    값을 마지막으로 바꾼 날 "YYYY-MM-DD"
-//   starHistory 별 단계 기록 (선택) { "1": [{date, value}], "2": [...], "3": [...] }. history는 0성
+//   starHistory 별 단계 기록 (선택) { "fresh": [{date, value}], "1": [...], "2": [...], "3": [...] }. history는 0성
 //   history    젬 가치 변화 [{ date, value }]. 가치를 바꿀 때마다 끝에 추가. date는 "YYYY-MM" 또는 같은 달 안 변화는 "YYYY-MM-DD"
 //   trend      "up" | "down" | "stable" | "unstable" | "hyped"
 //   image      게임 아이콘 경로 images/<id>.png (없으면 빈 문자열)

@@ -60,7 +60,7 @@ const STR = {
     untradeable: "Untradeable", sample: "Sample",
     value: "Value (Gems)", demand: "Demand", trendL: "Trend", obtain: "Obtain", fresh: "Fresh",
     vfm: "Value for money", vfmShort: "VFM",
-    history: "Value history", starHist: "1–3★ value history", starNone: "No records yet", showcase: "Showcase", lastChanged: "Last changed", lastChange: "Last change", close: "Close",
+    history: "Value history", starHist: (l) => `${l} value history`, starNone: "No records yet", showcase: "Showcase", lastChanged: "Last changed", lastChange: "Last change", close: "Close",
     pick: "— pick —", pickHint: "Pick items to compare.",
     youGive: "You give", youGet: "You get", addItem: "Add item…", add: "Add", total: "Total",
     star: "Stars", addFirst: "Add items to compare", fair: "FAIR", win: "WIN", lose: "LOSE",
@@ -79,7 +79,7 @@ const STR = {
     untradeable: "거래 불가", sample: "예시",
     value: "가치 (젬)", demand: "수요", trendL: "추세", obtain: "얻는 법", fresh: "Fresh (0성)",
     vfm: "가성비", vfmShort: "가성비",
-    history: "가치 변화", starHist: "1~3성 가치 변화", starNone: "아직 기록이 없어요", showcase: "쇼케이스", lastChanged: "마지막 수정", lastChange: "최근 변동", close: "닫기",
+    history: "가치 변화", starHist: (l) => `${l} 가치 변화`, starNone: "아직 기록이 없어요", showcase: "쇼케이스", lastChanged: "마지막 수정", lastChange: "최근 변동", close: "닫기",
     pick: "— 선택 —", pickHint: "비교할 항목을 고르세요.",
     youGive: "내가 주는 것", youGet: "내가 받는 것", addItem: "항목 추가…", add: "추가", total: "합계",
     star: "별", addFirst: "항목을 넣어 비교하세요", fair: "공정", win: "이득", lose: "손해",
@@ -283,7 +283,7 @@ function openDetail(id) {
         <div><span>${t.trendL}</span><b class="trend ${it.trend}">${TREND[it.trend] || ""} ${t.trend[it.trend] || "—"}</b></div>
       </div>
       ${chart(it.history, t.history, gem)}
-      ${it.starHistory ? starChart(it) : ""}
+      ${starChart(it)}
       ${rowsOf(it).length ? `<details class="hist"><summary>${t.allChanges} (${rowsOf(it).length})</summary>${histTable(it)}</details>` : ""}
       ${it.video ? `<div><h4>${t.showcase}</h4><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${esc(it.video)}" title="${esc(it.name)} ${t.showcase}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>` : ""}
       ${noteOf(it) ? `<p class="hint">${esc(noteOf(it))}</p>` : ""}
@@ -381,7 +381,10 @@ function updateTotals() {
 // 별 단계 기록: starHistory: { "1": [...], "2": [...], "3": [...] }. 기본 history는 0성 (그래프 따로)
 // 1~3성은 한 그래프에 선을 겹쳐 그린다. 메인 목록·변경 기록 탭에는 나오지 않는다
 function starChart(it) {
-  const t = T(), keys = Object.keys(it.starHistory).filter((k) => (it.starHistory[k] || []).length).sort((a, b) => a - b);
+  if (!it.starHistory) return "";
+  const t = T(), ord = (k) => (k === "fresh" ? -1 : +k), keys = Object.keys(it.starHistory).filter((k) => (it.starHistory[k] || []).length).sort((a, b) => ord(a) - ord(b));
+  const lab = (k) => (k === "fresh" ? "Fresh" : `${k}★`);
+  const title = t.starHist(keys.map(lab).join(" · "));
   if (!keys.length) return "";
   const W = 480, H = 210, L = 50, R = 24, TP = 30, B = 30;
   const mon = (d) => { const [y, m, dd] = d.split("-").map(Number); return y * 12 + (m || 1) - 1 + ((dd || 1) - 1) / 31; };
@@ -399,14 +402,12 @@ function starChart(it) {
   const xl = []; dates.forEach((d) => { const x = X(mon(d)); if (!xl.length || x - X(mon(xl.at(-1))) >= 56) xl.push(d); });
   const series = keys.map((k) => {
     const h = [...it.starHistory[k]].sort((a, b) => mon(a.date) - mon(b.date)), pts = h.map((p) => [X(mon(p.date)), Y(p.value)]);
-    return `<g class="s-line s${esc(k)}">${pts.length > 1 ? `<polyline points="${pts.map((p) => p.join(",")).join(" ")}"/>` : ""}${pts.map((p, i) => `<g class="c-pt"><circle class="c-hit" cx="${p[0]}" cy="${p[1]}" r="12"/><circle class="s-dot" cx="${p[0]}" cy="${p[1]}" r="${i === pts.length - 1 ? 5 : 3.5}"/><title>${esc(k)}★ ${esc(h[i].date)}: ${gem(h[i].value)}</title></g>`).join("")}</g>`;
+    return `<g class="s-line s${esc(k)}">${pts.length > 1 ? `<polyline points="${pts.map((p) => p.join(",")).join(" ")}"/>` : ""}${pts.map((p, i) => `<g class="c-pt"><circle class="c-hit" cx="${p[0]}" cy="${p[1]}" r="12"/><circle class="s-dot" cx="${p[0]}" cy="${p[1]}" r="${i === pts.length - 1 ? 5 : 3.5}"/><title>${esc(lab(k))} ${esc(h[i].date)}: ${gem(h[i].value)}</title></g>`).join("")}</g>`;
   }).join("");
-  const legend = ["1", "2", "3", ...keys.filter((k) => !["1", "2", "3"].includes(k))].map((k) => {
-    const h = it.starHistory[k] || [];
-    return `<span class="s-key s${esc(k)}"><i></i>${esc(k)}★ <b>${h.length ? gem(h.at(-1).value) : "—"}</b></span>`;
-  }).join("");
-  return `<div><div class="c-head"><h4>${t.starHist}</h4></div>
-  <svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(t.starHist)}">
+  // 값이 있는 단계만 표시
+  const legend = keys.map((k) => `<span class="s-key s${esc(k)}"><i></i>${esc(lab(k))} <b>${gem(it.starHistory[k].at(-1).value)}</b></span>`).join("");
+  return `<div><div class="c-head"><h4>${title}</h4></div>
+  <svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(title)}">
     ${ticks.map((v) => `<line class="c-grid" x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}"/><text class="c-axis" x="${L - 8}" y="${Y(v) + 3}" text-anchor="end">${esc(compact(v))}</text>`).join("")}
     ${series}
     ${xl.map((d) => `<text class="c-axis" x="${X(mon(d))}" y="${H - 8}" text-anchor="middle">${esc(dlabel(d))}</text>`).join("")}
@@ -416,7 +417,7 @@ function rowsOf(it) {
   const one = (h, star) => h.map((p, i) => ({ it, star, date: p.date, from: i ? h[i - 1].value : null, to: p.value }));
   return [...one(it.history || [], null), ...Object.entries(it.starHistory || {}).flatMap(([k, h]) => one(h, k))];
 }
-const starTag = (r) => (r.star ? ` <span class="star-tag">${esc(r.star)}★</span>` : "");
+const starTag = (r) => (r.star ? ` <span class="star-tag">${r.star === "fresh" ? "Fresh" : esc(r.star) + "★"}</span>` : "");
 const dcell = (d) => { const p = d.split("-"); return p.length === 3 ? `<span class="y">${esc(p[0])}-</span>${esc(p[1] + "-" + p[2])}` : `<span class="y">20</span>${esc(p[0].slice(2) + "-" + p[1])}`; }; // 휴대폰에서는 연도를 숨긴다
 const diffCell = (r) => r.from == null ? `<span class="muted">${T().chFirst}</span>` : changeTag({ diff: r.to - r.from, pct: r.from ? Math.round(((r.to - r.from) / r.from) * 100) : 0, date: r.date }, true);
 function histTable(it) {

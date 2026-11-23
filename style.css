@@ -327,3 +327,7 @@ table.changes tbody tr[data-id]:hover { background: var(--sunk); }
 .s-key { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
 .s-key i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
 .s-key b { color: var(--text); font-variant-numeric: tabular-nums; }
+:root { --sfresh: #8f88a0; }
+:root[data-theme="dark"] { --sfresh: #c3bdd0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --sfresh: #c3bdd0; } }
+.sfresh polyline { stroke: var(--sfresh); } .sfresh .s-dot, .s-key.sfresh i { fill: var(--sfresh); background: var(--sfresh); }

@@ -28,7 +28,7 @@ Military Tycoon(로블록스) 가치 사이트 "KR1 Military Tycoon Values". 정
 5. **추세(trend)**: 새 기록과 직전 기록을 비교해 `"up"` / `"down"` / `"stable"`.
 6. 사용자가 쓴 별명은 `aliases`에 추가해서 검색되게 한다.
 7. 수요(demand) 0~10, 가성비(stats.vfm) 0~10. PVP·난이도는 화면에 안 보이지만 데이터에는 남겨 둔다.
-8. 기본 가치·`history`는 0성 기준. 별 단계 값(예: "2성 16M")을 받으면 `starHistory: { "2": [{date, value}] }`에 넣는다. 상세 화면에서 0성 그래프는 그대로, 그 아래 1~3성을 한 그래프에 선으로 겹쳐 보여 준다. 별 단계 기록은 메인 목록과 변경 기록 탭에는 나오지 않는다.
+8. 기본 가치·`history`는 0성 기준. 별 단계 값(예: "2성 16M")을 받으면 `starHistory: { "2": [{date, value}] }`에, Fresh 값은 `starHistory.fresh`에 넣는다. 상세 화면에서 0성 그래프는 그대로, 그 아래 Fresh·1~3성을 한 그래프에 선으로 겹쳐 보여 준다 (값이 있는 단계만, 하나도 없으면 섹션 자체를 숨김). 별 단계 기록은 메인 목록과 변경 기록 탭에는 나오지 않는다.
 9. 새 아이템: 아이콘 배경색으로 등급을 정한다 — 빨강=한정판(`limited: true`), 무지개=`rarity: "Exotic"`, 주황=`"Legendary"`. 아이콘이 없으면 `image: ""` (화면에 No Image).
 10. 거래 불가 아이템은 `tradeable: false`.
 11. 다른 가치 사이트를 출처로 적지 않는다 (코드·README·커밋 어디에도).
