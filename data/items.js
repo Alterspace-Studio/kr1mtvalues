@@ -817,10 +817,10 @@ window.ITEMS = [
   {
     id: "super-leonardo", name: "Super Leonardo", category: "Air",
     aliases: ["SLEO", "Leonardo", "레오나르도"],
-    value: 5500000, range: [5500000, 6000000], demand: 8, trend: "up", tradeable: true, limited: true, stock: null,
+    value: 6000000, range: [6000000, 6500000], demand: 8, trend: "up", tradeable: true, limited: true, stock: null,
     stats: { pvp: 8, vfm: null },
-    obtain: "", updated: "2026-11-22",
-    history: [{"date": "2026-10-14", "value": 4500000}, {"date": "2026-11-22", "value": 6000000}],
+    obtain: "", updated: "2026-11-24",
+    history: [{"date": "2026-10-14", "value": 4500000}, {"date": "2026-11-22", "value": 6000000}, {"date": "2026-11-24", "value": 6500000}],
     image: "images/super-leonardo.png",
     note: "Helicopter.", noteKo: "헬기.",
   },
