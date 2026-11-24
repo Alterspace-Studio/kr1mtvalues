@@ -21,7 +21,7 @@ def to_data_uri(data: bytes, mime: str) -> str:
 
 
 def fetch_data_uri(url: str) -> str:
-    url = re.sub(r"/scale-to-width-down/\\d+", "", url)
+    url = re.sub(r"/scale-to-width-down/\d+", "", url)
     if "/revision/latest" in url:
         url = url.split("/revision/latest")[0] + f"/revision/latest/scale-to-width-down/{IMG_WIDTH}"
     req = urllib.request.Request(url, headers={"User-Agent": "kr1mtvalues-build"})
@@ -76,20 +76,20 @@ def main() -> None:
     items = re.sub(r'image: "([^"]*)"', swap, items)
 
     # 공개 페이지 보정: 상단 고정바가 휴대폰 상태표시줄에 가리지 않게
-    css += "\\n.top { top: env(safe-area-inset-top, 0px); }\\nbody { background: var(--bg); }\\n"
+    css += "\n.top { top: env(safe-area-inset-top, 0px); }\nbody { background: var(--bg); }\n"
 
-    head_match = re.search(r"<title>.*?</title>\\s*<meta name=\\"description\\"[^>]*>", html, re.S)
+    head_match = re.search(r"<title>.*?</title>\s*<meta name=\"description\"[^>]*>", html, re.S)
     body_match = re.search(r"<body>(.*)</body>", html, re.S)
     if not head_match or not body_match:
         raise ValueError("index.html에서 title/description 또는 body 영역을 찾지 못했습니다.")
 
     head_extra = head_match.group(0)
     body = body_match.group(1)
-    body = re.sub(r'\\s*<script src="[^"]+"></script>', "", body)
+    body = re.sub(r'\s*<script src="[^"]+"></script>', "", body)
 
     out = (
-        f"{head_extra}\\n<style>\\n{css}</style>\\n{body.strip()}\\n"
-        f"<script>\\n{items}\\n</script>\\n<script>\\n{app}\\n</script>\\n"
+        f"{head_extra}\n<style>\n{css}</style>\n{body.strip()}\n"
+        f"<script>\n{items}\n</script>\n<script>\n{app}\n</script>\n"
     )
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(out, encoding="utf-8")
