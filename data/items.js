@@ -123,10 +123,10 @@ window.ITEMS = [
   {
     id: "jetpack-fighter", name: "Jetpack Fighter", category: "Soldier",
     aliases: ["Jetpack", "제팩", "제트팩"],
-    value: 4200000, demand: 8, trend: "up", tradeable: true, limited: true, stock: null,
+    value: 4000000, range: [4000000, 4500000], demand: 8, trend: "up", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
-    obtain: "", updated: "2026-11-17",
-    history: [{"date": "2025-10-30", "value": 200000}, {"date": "2025-11", "value": 610000}, {"date": "2026-03", "value": 720000}, {"date": "2026-05", "value": 1500000}, {"date": "2026-11", "value": 4200000}],
+    obtain: "", updated: "2026-11-25",
+    history: [{"date": "2025-10-30", "value": 200000}, {"date": "2025-11", "value": 610000}, {"date": "2026-03", "value": 720000}, {"date": "2026-05", "value": 1500000}, {"date": "2026-11", "value": 4200000}, {"date": "2026-11-25", "value": 4500000}],
     image: "images/jetpack-fighter.png",
     note: "Soldier.", noteKo: "병사.",
   },
