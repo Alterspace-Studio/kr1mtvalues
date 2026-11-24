@@ -6668,9 +6668,9 @@ window.ITEMS = [
     value: 8000, demand: 2, trend: "stable", tradeable: true, limited: false, stock: null, rarity: "Legendary",
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-09-10",
-    history: [{"date": "2025-10-30", "value": 50000}, {"date": "2026-09-10", "value": 8000}],
+    history: [{"date": "2023-09-16", "value": 75000}, {"date": "2025-10-30", "value": 50000}, {"date": "2026-09-10", "value": 8000}],
     image: "images/super-yf-23.png",
-    note: "", noteKo: "",
+    note: "Super Fighter. Released 2023-09-16.", noteKo: "슈퍼 전투기. 2023-09-16 출시.",
   },
   {
     id: "superapc", name: "SuperAPC", category: "Land",
