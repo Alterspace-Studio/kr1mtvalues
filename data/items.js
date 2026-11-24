@@ -5262,10 +5262,10 @@ window.ITEMS = [
   {
     id: "reaper-drone", name: "Reaper Drone", category: "Drone",
     aliases: ["LE Reaper Drone", ],
-    value: 900000, demand: 6, trend: "up", tradeable: true, limited: true, stock: null,
+    value: 850000, demand: 6, trend: "up", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
-    obtain: "", updated: "2026-11-20",
-    history: [{"date": "2025-10-30", "value": 200000}, {"date": "2026-10-26", "value": 850000}, {"date": "2026-11-20", "value": 900000}],
+    obtain: "", updated: "2026-11-24",
+    history: [{"date": "2025-10-30", "value": 200000}, {"date": "2026-10-26", "value": 850000}, {"date": "2026-11-20", "value": 900000}, {"date": "2026-11-24", "value": 850000}],
     image: "images/reaper-drone.png",
     note: "", noteKo: "",
   },
