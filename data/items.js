@@ -997,10 +997,10 @@ window.ITEMS = [
   {
     id: "super-ace-pilot", name: "Super Ace Pilot", category: "Soldier",
     aliases: ["Ace Pilot", "에이스 파일럿", "슈퍼 에이스"],
-    value: 700000, demand: 8, trend: null, tradeable: true, limited: true, stock: null,
+    value: 800000, range: [800000, 900000], demand: 8, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
-    obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 700000}],
+    obtain: "", updated: "2026-11-24",
+    history: [{"date": "2026-11", "value": 700000}, {"date": "2026-11-24", "value": 900000}],
     starHistory: {"2": [{"date": "2026-11-23", "value": 16000000}], "1": [{"date": "2026-11-23", "value": 3500000}]},
     image: "images/super-ace-pilot.png",
     note: "Soldier.", noteKo: "병사.",
