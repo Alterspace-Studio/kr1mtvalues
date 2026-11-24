@@ -80,9 +80,9 @@ window.ITEMS = [
   {
     id: "p1000-ratte", name: "P.1000 Ratte", category: "Land",
     aliases: ["Ratte", "라테", "라떼"],
-    value: 3500000, demand: 5, trend: "down", tradeable: true, limited: true, stock: 750,
+    value: 3500000, range: [3500000, 4000000], demand: 5, trend: "down", tradeable: true, limited: true, stock: 750,
     stats: { pvp: 7, vfm: 2.4, diff: 5 },
-    obtain: "Golden Crate", updated: "2026-11-22",
+    obtain: "Golden Crate", updated: "2026-11-24",
     history: [{"date": "2025-10-30", "value": 800000}, {"date": "2025-11", "value": 960000}, {"date": "2026-01", "value": 510000}, {"date": "2026-08", "value": 1400000}, {"date": "2026-10", "value": 2900000}, {"date": "2026-11", "value": 4000000}, {"date": "2026-11-22", "value": 3500000}],
     starHistory: {"fresh": [{"date": "2026-11-23", "value": 5000000}]},
     image: "images/p1000-ratte.png",
