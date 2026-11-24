@@ -37,7 +37,7 @@ window.ITEMS = [
     value: 14000000, demand: 8, trend: "up", tradeable: true, limited: true, stock: 1000,
     stats: { pvp: 10, vfm: 0.1},
     obtain: "Golden Crate", updated: "2026-11-24",
-    history: [{"date": "2024-11-09", "value": 90000}, {"date": "2025-07", "value": 1040000}, {"date": "2025-08", "value": 1007500}, {"date": "2025-10-30", "value": 2300000}, {"date": "2025-12", "value": 2684000}, {"date": "2026-03", "value": 520000}, {"date": "2026-11", "value": 15000000}, {"date": "2026-11-24", "value": 14000000}],
+    history: [{"date": "2024-11-09", "value": 90000}, {"date": "2025-07", "value": 1040000}, {"date": "2025-08", "value": 1007500}, {"date": "2025-10-30", "value": 2300000}, {"date": "2025-12", "value": 2684000}, {"date": "2026-03", "value": 520000}, {"date": "2026-05", "value": 3850000}, {"date": "2026-11-24", "value": 14000000}],
     starHistory: {"fresh": [{"date": "2024-11-09", "value": 90000}, {"date": "2026-11-23", "value": 250000000}], "1": [{"date": "2024-11-09", "value": 90000}], "2": [{"date": "2024-11-09", "value": 90000}], "3": [{"date": "2024-11-09", "value": 90000}], "4": [{"date": "2024-11-09", "value": 90000}], "5": [{"date": "2024-11-09", "value": 90000}]},
     image: "images/le-gold-bismarck.png",
     video: "5HiemLJJCJo",
