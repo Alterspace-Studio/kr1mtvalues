@@ -98,7 +98,12 @@
   <!-- 상세 창 -->
   <dialog id="detail"><div id="detailBody"></div></dialog>
 
-  <footer class="foot"><span data-i18n="footer"></span><span class="powered">Powered by <b>ALTERSPACE</b></span></footer>
+  <footer class="foot"><span data-i18n="footer"></span><span class="visit-counter"><span>누적 방문</span><img id="visitCounter" alt="누적 방문 수" loading="eager"></span><span class="powered">Powered by <b>ALTERSPACE</b></span></footer>
+  <script>
+    // Count each page load as one visit.
+    document.getElementById("visitCounter").src =
+      "https://hits.sh/alterspace-studio.github.io/kr1mtvalues.svg?label=visits&color=e0218a&labelColor=555555&v=" + Date.now();
+  </script>
 
   <!-- 브라우저가 예전 파일을 쓰지 않도록 열 때마다 새로 받는다 -->
   <script>
