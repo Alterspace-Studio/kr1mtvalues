@@ -98,7 +98,7 @@ function applyLang() {
   $$("[data-i18n]").forEach((el) => (el.textContent = T()[el.dataset.i18n]));
   $$("[data-i18n-ph]").forEach((el) => (el.placeholder = T()[el.dataset.i18nPh]));
   $("#langBtn").textContent = T().langBtn;
-  renderChips(); renderGrid(); renderPickers(); renderCompare(); renderTrade(); renderChanges();
+  renderChips(); renderGrid(); renderTrade(); renderChanges();
   if ($("#detail").open && openId) openDetail(openId);
 }
 // 테마: 기본은 시스템 설정을 따르고, 버튼으로 바꾸면 그 선택을 기억한다
@@ -295,38 +295,6 @@ function openDetail(id) {
 }
 $("#detail").addEventListener("click", (e) => { if (e.target.id === "detail") e.target.close(); });
 
-// ---------- 비교 ----------
-const ROWS = [
-  ["value", (i) => (isUntradeable(i) ? null : topValue(i)), "value"], ["demand", (i) => i.demand, "num"],
-  ["vfm", (i) => i.stats?.vfm, "vfm"],
-];
-let pickers = ITEMS.slice(0, 3).map((i) => i.id);
-function renderPickers() {
-  const opts = `<option value="">${T().pick}</option>` + ITEMS.map((i) => `<option value="${esc(i.id)}">${esc(i.name)}</option>`).join("");
-  $$(".cmp-pick").forEach((s, n) => { s.innerHTML = opts; s.value = pickers[n] || ""; });
-}
-$$(".cmp-pick").forEach((s, n) => s.addEventListener("input", () => { pickers[n] = s.value; renderCompare(); }));
-
-function renderCompare() {
-  const picks = pickers.map(byId).filter(Boolean);
-  if (!picks.length) { $("#compareTable").innerHTML = `<div class="empty">${T().pickHint}</div>`; return; }
-  const rows = ROWS.map(([key, f, kind]) => {
-    const vs = picks.map(f);
-    const max = Math.max(...vs.filter((v) => v != null));
-    const show = key === "value" ? gem : fmt;
-    return `<tr><td>${T()[key]}</td>${vs.map((v, j) => {
-      const best = v != null && v === max && picks.length > 1 ? "best" : "";
-      if (kind === "vfm") return `<td>${vfmBar(v)}</td>`;
-      if (kind === "value" && v == null) return `<td>${valueOf(picks[j])}</td>`;
-      return `<td class="${best}">${show(v)}${v != null && max > 0 ? `<div class="bar" style="width:${(v / max) * 100}%"></div>` : ""}</td>`;
-    }).join("")}</tr>`;
-  }).join("");
-  $("#compareTable").innerHTML = `<div class="table-wrap"><table>
-    <thead><tr><th></th>${picks.map((p) => `<th>${esc(p.name)}</th>`).join("")}</tr></thead>
-    <tbody>${rows}</tbody>
-  </table></div>`;
-}
-
 // ---------- 거래 계산기 ----------
 // 별 단계를 고르면 그 단계 가치로 더한다.
 $("#itemList").innerHTML = ITEMS.filter((i) => i.tradeable !== false).map((i) => `<option value="${esc(i.name)}">`).join("");
@@ -441,4 +409,4 @@ $("#chBody").addEventListener("click", (e) => { const tr = e.target.closest("tr[
 // 시작
 applyLang();
 const start = location.hash.slice(1);
-if (["values", "compare", "trade", "changes"].includes(start)) showView(start);
+if (["values", "trade", "changes"].includes(start)) showView(start);
