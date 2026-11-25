@@ -360,6 +360,32 @@ $$(".side").forEach((side) => {
     list[+c.dataset.fresh].fresh = c.checked; renderTrade();
   });
 });
+function renderTrade() {
+  $(".side").forEach((side) => {
+    const list = trade[side.dataset.side];
+    $(".trade-list", side).innerHTML = list.map((e, i) => {
+      const it = byId(e.id);
+      if (!it) return "";
+      const slider = it.fresh != null ? `<label class="li-fresh"><input type="checkbox" data-fresh="${i}" ${e.fresh ? "checked" : ""}> ${T().fresh}</label>` : "";
+      return `<li><div class="li-top"><span>${esc(it.name)}</span><span><span class="entry-val">${gem(entryValue(e))}</span> <button type="button" data-i="${i}" aria-label="Remove item">×</button></span></div>${slider}</li>`;
+    }).join("");
+  });
+  updateTotals();
+}
+function updateTotals() {
+  const sums = {};
+  $(".side").forEach((side) => {
+    sums[side.dataset.side] = trade[side.dataset.side].reduce((a, e) => a + entryValue(e), 0);
+    $(".sum", side).textContent = gem(sums[side.dataset.side]);
+  });
+  const v = $("#verdict"), { you, them } = sums, t = T();
+  if (!you && !them) { v.className = "verdict"; v.textContent = t.addFirst; return; }
+  const diff = them - you, pct = you ? Math.abs(diff) / you : 1;
+  if (pct <= 0.05) { v.className = "verdict fair"; v.textContent = t.fair; }
+  else if (diff > 0) { v.className = "verdict win"; v.textContent = `${t.win} +${gem(diff)}`; }
+  else { v.className = "verdict lose"; v.textContent = `${t.lose} −${gem(-diff)}`; }
+}
+
 // ---------- 변경 기록 ----------
 // 아이템 하나의 기록을 [날짜, 이전, 이후] 줄로 (첫 기록은 "등록")
 // 별 단계 기록: starHistory: { "1": [...], "2": [...], "3": [...] }. 기본 history는 0성 (그래프 따로)
