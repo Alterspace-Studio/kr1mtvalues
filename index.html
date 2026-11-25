@@ -60,19 +60,18 @@
       <div class="trade">
         <div class="side" data-side="you">
           <h2 data-i18n="youGive"></h2>
-          <div class="add"><input list="itemList" data-i18n-ph="addItem" class="trade-input"><button class="btn add-btn" data-i18n="add"></button></div>
+          <div class="add"><div class="trade-search-wrap"><input type="search" data-i18n-ph="addItem" class="trade-input" autocomplete="off" aria-label="Search items"><div class="trade-suggestions" hidden></div></div><button class="btn add-btn" data-i18n="add"></button></div>
           <ul class="trade-list"></ul>
           <div class="total"><span data-i18n="total"></span> <b class="sum">💎 0</b></div>
         </div>
         <div class="verdict" id="verdict"></div>
         <div class="side" data-side="them">
           <h2 data-i18n="youGet"></h2>
-          <div class="add"><input list="itemList" data-i18n-ph="addItem" class="trade-input"><button class="btn add-btn" data-i18n="add"></button></div>
+          <div class="add"><div class="trade-search-wrap"><input type="search" data-i18n-ph="addItem" class="trade-input" autocomplete="off" aria-label="Search items"><div class="trade-suggestions" hidden></div></div><button class="btn add-btn" data-i18n="add"></button></div>
           <ul class="trade-list"></ul>
           <div class="total"><span data-i18n="total"></span> <b class="sum">💎 0</b></div>
         </div>
       </div>
-      <datalist id="itemList"></datalist>
       <p class="hint" data-i18n="tradeHint"></p>
     </section>
 
