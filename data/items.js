@@ -978,10 +978,10 @@ window.ITEMS = [
   {
     id: "super-doomsday-truck", name: "Super Doomsday Truck", category: "Land",
     aliases: ["S Doomsday", "Super Doomsday", "Doomsday", "Doomsday Truck", "둠스데이"],
-    value: 3000000, demand: 4, trend: "up", tradeable: true, limited: true, stock: null,
+    value: 3500000, range: [3500000, "+"], demand: 4, trend: "up", tradeable: true, limited: true, stock: null,
     stats: { pvp: 6, vfm: null },
-    obtain: "", updated: "2026-11-22",
-    history: [{"date": "2026-11-10", "value": 6000000}, {"date": "2026-11-14", "value": 2000000}, {"date": "2026-11-17", "value": 3500000}, {"date": "2026-11-21", "value": 2800000}, {"date": "2026-11-22", "value": 3000000}],
+    obtain: "", updated: "2026-11-25",
+    history: [{"date": "2026-11-10", "value": 6000000}, {"date": "2026-11-14", "value": 2000000}, {"date": "2026-11-17", "value": 3500000}, {"date": "2026-11-21", "value": 2800000}, {"date": "2026-11-22", "value": 3000000}, {"date": "2026-11-25", "value": 3500000}],
     image: "images/super-doomsday-truck.png",
     note: "Missile launcher truck.", noteKo: "미사일 발사 트럭.",
   },
