@@ -158,7 +158,7 @@ window.ITEMS = [
     value: 1500000, range: [1500000, "+"], demand: null, trend: null, tradeable: true, limited: false, stock: null,
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-25",
-    history: [{"date": "2026-11-25", "value": 1500000}],
+    history: [{"date": "2026-11-18", "value": 1100000}, {"date": "2026-11-25", "value": 1500000}],
     image: "",
     note: "Battleship.", noteKo: "전함.",
   },
