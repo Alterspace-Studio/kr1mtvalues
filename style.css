@@ -261,6 +261,8 @@ table.changes tbody tr[data-id]:hover { background: var(--sunk); }
 .verdict.win { color: var(--up); } .verdict.lose { color: var(--down); } .verdict.fair { color: var(--accent); }
 
 .foot { max-width: 1000px; margin: 8px auto 0; padding: 20px 24px 32px; text-align: center; color: var(--faint); font-size: 12px; border-top: 1px solid var(--line); }
+.visit-counter { display: inline-flex; align-items: center; gap: 7px; margin: 0 14px; vertical-align: middle; }
+.visit-counter img { display: inline-block; height: 18px; min-width: 42px; vertical-align: middle; }
 
 /* ---------- 반응형 ---------- */
 @media (max-width: 900px) {
