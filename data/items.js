@@ -153,6 +153,16 @@ window.ITEMS = [
     note: "Bomber. Released 2025-06-12.", noteKo: "폭격기. 2025-06-12 출시.",
   },
   {
+    id: "super-iowa", name: "Super Iowa", category: "Naval",
+    aliases: ["SIowa", "Iowa"],
+    value: 1500000, range: [1500000, "+"], demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    stats: { pvp: null, vfm: null },
+    obtain: "", updated: "2026-11-25",
+    history: [{"date": "2026-11-25", "value": 1500000}],
+    image: "",
+    note: "Battleship.", noteKo: "전함.",
+  },
+  {
     id: "le-missouri", name: "LE Missouri", category: "Naval",
     aliases: ["Missouri", "USS Missouri", "리주리", "리미주리", "미주리"],
     value: 520000, demand: 6, trend: "up", tradeable: true, limited: true, stock: null,
