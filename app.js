@@ -62,7 +62,7 @@ const STR = {
     vfm: "Value for money", vfmShort: "VFM",
     history: "Value history", starHist: (l) => `${l} value history`, starNone: "No records yet", showcase: "Showcase", lastChanged: "Last changed", lastChange: "Last change", close: "Close",
     pick: "— pick —", pickHint: "Pick items to compare.",
-    youGive: "You give", youGet: "You get", addItem: "Add item…", add: "Add", total: "Total",
+    youGive: "You give", youGet: "You get", addItem: "Search item name or alias…", add: "Add", total: "Total",
     star: "Stars", addFirst: "Add items to compare", fair: "FAIR", win: "WIN", lose: "LOSE",
     tradeHint: "Values are community estimates. Always double-check before trading.",
     footer: "Fan-made site. Not affiliated with Roblox or the Military Tycoon developers.",
@@ -81,7 +81,7 @@ const STR = {
     vfm: "가성비", vfmShort: "가성비",
     history: "가치 변화", starHist: (l) => `${l} 가치 변화`, starNone: "아직 기록이 없어요", showcase: "쇼케이스", lastChanged: "마지막 수정", lastChange: "최근 변동", close: "닫기",
     pick: "— 선택 —", pickHint: "비교할 항목을 고르세요.",
-    youGive: "내가 주는 것", youGet: "내가 받는 것", addItem: "항목 추가…", add: "추가", total: "합계",
+    youGive: "내가 주는 것", youGet: "내가 받는 것", addItem: "아이템 이름 또는 별칭 검색…", add: "추가", total: "합계",
     star: "별", addFirst: "항목을 넣어 비교하세요", fair: "공정", win: "이득", lose: "손해",
     tradeHint: "가치는 커뮤니티 추정값이에요. 거래 전에 꼭 다시 확인하세요.",
     footer: "팬 사이트예요. Roblox나 Military Tycoon 개발사와 관계없어요.",
@@ -296,55 +296,70 @@ function openDetail(id) {
 $("#detail").addEventListener("click", (e) => { if (e.target.id === "detail") e.target.close(); });
 
 // ---------- 거래 계산기 ----------
-// 별 단계를 고르면 그 단계 가치로 더한다.
-$("#itemList").innerHTML = ITEMS.filter((i) => i.tradeable !== false).map((i) => `<option value="${esc(i.name)}">`).join("");
+// 아이템 이름과 별칭을 검색해 후보를 즉시 표시한다.
 const trade = { you: [], them: [] };
 const entryValue = (e) => { const it = byId(e.id); return (e.fresh && it.fresh != null ? it.fresh : topValue(it)) ?? 0; };
 $$(".side").forEach((side) => {
   const input = $(".trade-input", side);
+  const suggestions = $(".trade-suggestions", side);
   const list = trade[side.dataset.side];
-  const add = () => {
-    const it = ITEMS.find((i) => i.name.toLowerCase() === input.value.trim().toLowerCase());
-    if (!it || it.tradeable === false) { input.select(); return; }
-    list.push({ id: it.id, fresh: false }); input.value = ""; renderTrade();
+  let matches = [];
+  let active = -1;
+  const findMatches = (query) => {
+    const q = query.trim().toLocaleLowerCase();
+    if (!q) return [];
+    return ITEMS.filter((it) => it.tradeable !== false &&
+      [it.name, ...(it.aliases || [])].some((name) => String(name).toLocaleLowerCase().includes(q)))
+      .sort((a, b) => {
+        const starts = (it) => [it.name, ...(it.aliases || [])].some((n) => String(n).toLocaleLowerCase().startsWith(q)) ? 0 : 1;
+        return starts(a) - starts(b) || a.name.localeCompare(b.name);
+      }).slice(0, 8);
   };
+  const closeSuggestions = () => { suggestions.hidden = true; suggestions.innerHTML = ""; matches = []; active = -1; };
+  const showSuggestions = () => {
+    matches = findMatches(input.value);
+    active = matches.length ? 0 : -1;
+    if (!input.value.trim()) { closeSuggestions(); return; }
+    suggestions.innerHTML = matches.length
+      ? matches.map((it, i) => `<button type="button" class="trade-suggestion${i === active ? " active" : ""}" data-id="${esc(it.id)}"><span>${it.image ? `<img src="${esc(it.image)}" alt="" loading="lazy">` : ""}<b>${esc(it.name)}</b><small>${esc((it.aliases || []).slice(0, 2).join(" · "))}</small></span><em>${gem(topValue(it))}</em></button>`).join("")
+      : `<div class="trade-no-results">${lang === "ko" ? "일치하는 아이템이 없어요." : "No matching items."}</div>`;
+    suggestions.hidden = false;
+  };
+  const addItem = (it) => {
+    if (!it || it.tradeable === false) return;
+    list.push({ id: it.id, fresh: false });
+    input.value = ""; closeSuggestions(); renderTrade(); input.focus();
+  };
+  const add = () => {
+    const q = input.value.trim().toLocaleLowerCase();
+    const exact = ITEMS.find((it) => it.tradeable !== false &&
+      [it.name, ...(it.aliases || [])].some((name) => String(name).toLocaleLowerCase() === q));
+    const it = exact || findMatches(input.value)[0];
+    if (!it) { showSuggestions(); input.focus(); return; }
+    addItem(it);
+  };
+  input.addEventListener("input", showSuggestions);
+  input.addEventListener("focus", () => { if (input.value.trim()) showSuggestions(); });
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown" && matches.length) { e.preventDefault(); active = (active + 1) % matches.length; [...suggestions.children].forEach((el, i) => el.classList.toggle("active", i === active)); }
+    else if (e.key === "Enter") { e.preventDefault(); add(); }
+    else if (e.key === "Escape") closeSuggestions();
+  });
+  suggestions.addEventListener("click", (e) => {
+    const button = e.target.closest("button[data-id]");
+    if (button) addItem(byId(button.dataset.id));
+  });
+  document.addEventListener("click", (e) => { if (!side.contains(e.target)) closeSuggestions(); });
   $(".add-btn", side).addEventListener("click", add);
-  input.addEventListener("keydown", (e) => { if (e.key === "Enter") add(); });
   $(".trade-list", side).addEventListener("click", (e) => {
     const b = e.target.closest("button[data-i]"); if (!b) return;
     list.splice(+b.dataset.i, 1); renderTrade();
   });
-  // Fresh 체크: 강화 안 한 가치로 계산
   $(".trade-list", side).addEventListener("change", (e) => {
     const c = e.target.closest("input[data-fresh]"); if (!c) return;
     list[+c.dataset.fresh].fresh = c.checked; renderTrade();
   });
 });
-function renderTrade() {
-  $$(".side").forEach((side) => {
-    const list = trade[side.dataset.side];
-    $(".trade-list", side).innerHTML = list.map((e, i) => {
-      const it = byId(e.id);
-      const slider = it.fresh != null ? `<label class="li-fresh"><input type="checkbox" data-fresh="${i}" ${e.fresh ? "checked" : ""}> ${T().fresh}</label>` : "";
-      return `<li><div class="li-top"><span>${esc(it.name)}</span><span><span class="entry-val">${gem(entryValue(e))}</span> <button data-i="${i}" aria-label="×">×</button></span></div>${slider}</li>`;
-    }).join("");
-  });
-  updateTotals();
-}
-function updateTotals() {
-  const sums = {};
-  $$(".side").forEach((side) => {
-    sums[side.dataset.side] = trade[side.dataset.side].reduce((a, e) => a + entryValue(e), 0);
-    $(".sum", side).textContent = gem(sums[side.dataset.side]);
-  });
-  const v = $("#verdict"), { you, them } = sums, t = T();
-  if (!you && !them) { v.className = "verdict"; v.textContent = t.addFirst; return; }
-  const diff = them - you, pct = you ? Math.abs(diff) / you : 1;
-  if (pct <= 0.05) { v.className = "verdict fair"; v.textContent = t.fair; }
-  else if (diff > 0) { v.className = "verdict win"; v.textContent = `${t.win} +${gem(diff)}`; }
-  else { v.className = "verdict lose"; v.textContent = `${t.lose} −${gem(-diff)}`; }
-}
-
 // ---------- 변경 기록 ----------
 // 아이템 하나의 기록을 [날짜, 이전, 이후] 줄로 (첫 기록은 "등록")
 // 별 단계 기록: starHistory: { "1": [...], "2": [...], "3": [...] }. 기본 history는 0성 (그래프 따로)
