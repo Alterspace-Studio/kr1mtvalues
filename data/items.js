@@ -2793,7 +2793,7 @@ window.ITEMS = [
     note: "", noteKo: "",
   },
   {
-    id: "explosive-crossbow", name: "Explosive Crossbow", category: "Tags",
+    id: "explosive-crossbow", name: "Explosive Crossbow", category: "Other",
     aliases: [],
     value: 400000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
