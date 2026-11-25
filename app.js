@@ -361,7 +361,7 @@ $$(".side").forEach((side) => {
   });
 });
 function renderTrade() {
-  $(".side").forEach((side) => {
+  $$(".side").forEach((side) => {
     const list = trade[side.dataset.side];
     $(".trade-list", side).innerHTML = list.map((e, i) => {
       const it = byId(e.id);
@@ -374,7 +374,7 @@ function renderTrade() {
 }
 function updateTotals() {
   const sums = {};
-  $(".side").forEach((side) => {
+  $$(".side").forEach((side) => {
     sums[side.dataset.side] = trade[side.dataset.side].reduce((a, e) => a + entryValue(e), 0);
     $(".sum", side).textContent = gem(sums[side.dataset.side]);
   });
