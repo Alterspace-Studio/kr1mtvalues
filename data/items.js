@@ -4671,10 +4671,10 @@ window.ITEMS = [
   {
     id: "nuke-f35", name: "Nuke F35", category: "Air",
     aliases: [],
-    value: 200000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic",
+    value: 69000, demand: 6, trend: "down", tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
-    obtain: "", updated: "2026-11-02",
-    history: [{"date": "2025-10-30", "value": 50000}, {"date": "2026-09-10", "value": 50000}, {"date": "2026-11-02", "value": 200000}],
+    obtain: "", updated: "2026-11-26",
+    history: [{"date": "2025-10-30", "value": 50000}, {"date": "2026-09-10", "value": 50000}, {"date": "2026-11-02", "value": 200000}, {"date": "2026-11-26", "value": 69000}],
     image: "images/nuke-f35.png",
     note: "", noteKo: "",
   },
