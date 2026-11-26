@@ -374,10 +374,10 @@ window.ITEMS = [
   {
     id: "super-s67", name: "Super S67", category: "Air",
     aliases: ["SS67", "S67", "S-67", "Super S-67", "슈퍼 S67"],
-    value: 800000, demand: 7, trend: "down", tradeable: true, limited: true, stock: null,
+    value: 900000, demand: 7, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: 8, vfm: null },
-    obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-10-21", "value": 1000000}, {"date": "2026-11", "value": 800000}],
+    obtain: "", updated: "2026-11-26",
+    history: [{"date": "2026-10-21", "value": 1000000}, {"date": "2026-11", "value": 800000}, {"date": "2026-11-26", "value": 900000}],
     image: "images/super-s67.png",
     note: "Helicopter.", noteKo: "헬기.",
   },
