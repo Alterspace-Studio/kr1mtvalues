@@ -260,10 +260,10 @@ window.ITEMS = [
   {
     id: "le-gold-izumo", name: "LE Gold Izumo", category: "Naval",
     aliases: ["Gold Izumo", "LE Gizumo", "Gizumo", "LE1000 Izumo", "골드 이즈모", "골이즈"],
-    value: 700000, demand: 3, trend: "stable", tradeable: true, limited: true, stock: 1000,
+    value: 1100000, demand: 3, trend: "stable", tradeable: true, limited: true, stock: 1000,
     stats: { pvp: 4.5, vfm: 5, diff: 2 },
-    obtain: "Golden Crate", updated: "2026-11-24",
-    history: [{"date": "2025-10-30", "value": 400000}, {"date": "2026-11", "value": 700000}],
+    obtain: "Golden Crate", updated: "2026-11-26",
+    history: [{"date": "2025-10-30", "value": 400000}, {"date": "2026-11", "value": 700000}, {"date": "2026-11-26", "value": 1100000}],
     starHistory: {"fresh": [{"date": "2026-11-23", "value": 2300000}], "2": [{"date": "2026-11-24", "value": 2300000}]},
     image: "images/le-gold-izumo.png",
     note: "Aircraft carrier. Released 2024-12-07. Image is a fan-made render.", noteKo: "항공모함. 2024-12-07 출시. 이미지는 팬메이드 렌더.",
