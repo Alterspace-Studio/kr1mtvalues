@@ -878,10 +878,10 @@ window.ITEMS = [
   {
     id: "sukhoi-su57", name: "Sukhoi SU57", category: "Air",
     aliases: ["LE Sukhoi 57", "LE Su-57", "Su-57", "SU57", "수호이"],
-    value: 1200000, demand: 7, trend: "up", tradeable: true, limited: true, stock: null,
+    value: 1800000, demand: 7, trend: "up", tradeable: true, limited: true, stock: null,
     stats: { pvp: 7, vfm: null },
-    obtain: "", updated: "2026-11-22",
-    history: [{"date": "2025-10-30", "value": 400000}, {"date": "2026-11", "value": 700000}, {"date": "2026-11-22", "value": 1200000}],
+    obtain: "", updated: "2026-11-26",
+    history: [{"date": "2025-10-30", "value": 400000}, {"date": "2026-11", "value": 700000}, {"date": "2026-11-22", "value": 1200000}, {"date": "2026-11-26", "value": 1800000}],
     image: "images/sukhoi-su57.png",
     note: "Fighter jet.", noteKo: "전투기.",
   },
