@@ -6222,16 +6222,7 @@ window.ITEMS = [
     image: "images/super-alien.png",
     note: "", noteKo: "",
   },
-  {
-    id: "super-atomic-annie", name: "Super Atomic Annie", category: "Land",
-    aliases: [],
-    value: null, demand: 6, trend: "up", tradeable: true, limited: true, stock: null,
-    stats: { pvp: null, vfm: null },
-    obtain: "", updated: "2026-10-28",
-    history: [],
-    image: "",
-    note: "", noteKo: "",
-  },
+
   {
     id: "super-battle-yacht", name: "Super Battle Yacht", category: "Naval",
     aliases: [],
@@ -6305,10 +6296,10 @@ window.ITEMS = [
   {
     id: "super-ghost-bird", name: "Super Ghost Bird", category: "Air",
     aliases: [],
-    value: null, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null,
+    value: 750000, demand: 6, trend: "stable", tradeable: true, limited: true, stock: null,
     stats: { pvp: null, vfm: null },
-    obtain: "", updated: "2026-11-01",
-    history: [],
+    obtain: "", updated: "2026-11-26",
+    history: [{"date": "2026-11-26", "value": 750000}],
     image: "images/super-ghost-bird.png",
     note: "", noteKo: "",
   },
