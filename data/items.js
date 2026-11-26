@@ -498,10 +498,10 @@ window.ITEMS = [
   {
     id: "super-b52", name: "Super B52", category: "Air",
     aliases: ["B-52 Super Bomber", "B52", "B-52", "슈퍼 B52"],
-    value: 55000, demand: 6, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
+    value: 120000, demand: 6, trend: null, tradeable: true, limited: false, stock: null, rarity: "Exotic",
     stats: { pvp: null, vfm: null },
-    obtain: "", updated: "2026-11-17",
-    history: [{"date": "2025-10-30", "value": 50000}, {"date": "2026-11", "value": 55000}],
+    obtain: "", updated: "2026-11-26",
+    history: [{"date": "2026-11-26", "value": 120000}],
     image: "images/super-b52.png",
     note: "Bomber.", noteKo: "폭격기.",
   },
