@@ -337,7 +337,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-11-17",
     history: [{"date": "2026-11-03", "value": 2200000}, {"date": "2026-11-17", "value": 600000}],
-    image: "",
+    image: "images/super-atomic-annie.png",
     video: "S_gYvesuMdY",
     note: "Artillery. Released around 2026-11-03.", noteKo: "포병. 2026-11-03쯤 출시."
   },
@@ -6229,7 +6229,7 @@ window.ITEMS = [
     stats: { pvp: null, vfm: null },
     obtain: "", updated: "2026-10-28",
     history: [],
-    image: "images/super-atomic-annie.png",
+    image: "",
     note: "", noteKo: "",
   },
   {
