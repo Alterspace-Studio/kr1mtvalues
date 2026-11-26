@@ -92,10 +92,10 @@ window.ITEMS = [
   {
     id: "super-imperial-tank", name: "Super Imperial Tank", category: "Land",
     aliases: ["SIMP", "LE Imperial Tank", "Super Imperial", "리임페", "리임탱", "슈퍼 임페리얼"],
-    value: 3500000, demand: 6, trend: "down", tradeable: true, limited: true, stock: null,
+    value: 3400000, demand: 6, trend: "down", tradeable: true, limited: true, stock: null,
     stats: { pvp: 9, vfm: null },
-    obtain: "Imperial Tank Crate", updated: "2026-11-22",
-    history: [{"date": "2025-08", "value": 520000}, {"date": "2025-10-30", "value": 2200000}, {"date": "2026-06", "value": 2600000}, {"date": "2026-11", "value": 4000000}, {"date": "2026-11-22", "value": 3500000}],
+    obtain: "Imperial Tank Crate", updated: "2026-11-26",
+    history: [{"date": "2025-08", "value": 520000}, {"date": "2025-10-30", "value": 2200000}, {"date": "2026-06", "value": 2600000}, {"date": "2026-11", "value": 4000000}, {"date": "2026-11-22", "value": 3500000}, {"date": "2026-11-26", "value": 3400000}],
     image: "images/super-imperial-tank.png",
     video: "bXjWkZ7gMjQ",
     note: "Tank. Released 2025-05-03.", noteKo: "전차. 2025-05-03 출시.",
