@@ -238,10 +238,10 @@ window.ITEMS = [
   {
     id: "super-x32", name: "Super X-32", category: "Air",
     aliases: ["SX32", "X-32", "X32", "Super X32", "슈퍼 X-32", "슈X32"],
-    value: 2000000, demand: 8, trend: "up", tradeable: true, limited: true, stock: null,
+    value: 2000000, range: [2000000, 2200000], demand: 8, trend: "up", tradeable: true, limited: true, stock: null,
     stats: { pvp: 9, vfm: null },
-    obtain: "", updated: "2026-11-22",
-    history: [{"date": "2026-11", "value": 2200000}, {"date": "2026-11-18", "value": 1890000}, {"date": "2026-11-22", "value": 2000000}],
+    obtain: "", updated: "2026-11-26",
+    history: [{"date": "2026-11", "value": 2200000}, {"date": "2026-11-18", "value": 1890000}, {"date": "2026-11-22", "value": 2000000}, {"date": "2026-11-26", "value": 2200000}],
     image: "images/super-x32.png",
     video: "CESU-B_G7kY",
     note: "Fighter jet.", noteKo: "전투기.",
