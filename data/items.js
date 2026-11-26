@@ -405,10 +405,10 @@ window.ITEMS = [
   {
     id: "raptor-x", name: "Super Raptor X", category: "Air",
     aliases: ["SRX", "Raptor X", "RaptorX", "랩터", "랩터 X"],
-    value: 1700000, demand: 8, trend: null, tradeable: true, limited: true, stock: null,
+    value: 1400000, range: [1400000, 1600000], demand: 8, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 9, vfm: null },
-    obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 1700000}],
+    obtain: "", updated: "2026-11-26",
+    history: [{"date": "2026-11", "value": 1700000}, {"date": "2026-11-26", "value": 1600000}],
     image: "images/raptor-x.png",
     note: "Fighter jet. Released 2026-08-01 (limited stock).", noteKo: "전투기. 2026-08-01 출시 (수량 한정).",
   },
