@@ -303,10 +303,10 @@ window.ITEMS = [
   {
     id: "f117-x", name: "F117 X", category: "Air",
     aliases: ["F-117 X", "F117X", "F-117X", "F117", "나이트호크"],
-    value: 1300000, demand: 6, trend: null, tradeable: true, limited: true, stock: null,
+    value: 1400000, range: [1400000, 1700000], demand: 6, trend: null, tradeable: true, limited: true, stock: null,
     stats: { pvp: 9, vfm: null },
-    obtain: "", updated: "2026-11-17",
-    history: [{"date": "2026-11", "value": 1300000}],
+    obtain: "", updated: "2026-11-26",
+    history: [{"date": "2026-11", "value": 1300000}, {"date": "2026-11-26", "value": 1700000}],
     image: "images/f117-x.png",
     note: "Stealth jet.", noteKo: "스텔스기.",
   },
