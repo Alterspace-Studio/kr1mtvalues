@@ -155,10 +155,10 @@ window.ITEMS = [
   {
     id: "super-iowa", name: "Super Iowa", category: "Naval",
     aliases: ["SIowa", "Iowa"],
-    value: 1500000, range: [1500000, "+"], demand: null, trend: null, tradeable: true, limited: false, stock: null,
+    value: 2500000, range: [1500000, "+"], demand: null, trend: null, tradeable: true, limited: false, stock: null,
     stats: { pvp: null, vfm: null },
-    obtain: "", updated: "2026-11-25",
-    history: [{"date": "2026-11-18", "value": 1100000}, {"date": "2026-11-25", "value": 1500000}],
+    obtain: "", updated: "2026-11-26",
+    history: [{"date": "2026-11-18", "value": 1100000}, {"date": "2026-11-25", "value": 1500000}, {"date": "2026-11-26", "value": 2500000}],
     image: "",
     note: "Battleship.", noteKo: "전함.",
   },
